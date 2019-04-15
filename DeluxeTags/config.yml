@@ -1778,3 +1778,7 @@ deluxetags:
     order: 427
     tag: '&1[&2Spammer&r&1]'
     description: Wait a sec... how?
+  mythical:
+    order: 428
+    tag: '&b&k:&8[&a&lM&b&ly&c&lt&d&lh&e&li&5&lc&6&la&9&ll&8]&b&k:'
+    description: Extremely colorful

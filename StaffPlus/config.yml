@@ -21,14 +21,14 @@ warnings-module:
   clear: 604800
   show-issuer: true
 staff-chat-module:
-  enabled: true
+  enabled: false
   handle: '@'
 vanish-module:
   enabled: true
   tab-list: true
   show-away: false
 chat-module:
-  enabled: true
+  enabled: false
   lines: 100
   slow: 5
   blacklist-module:

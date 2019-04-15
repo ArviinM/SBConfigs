@@ -8,7 +8,7 @@ BotToken: "MzA3MTU1NDU3Njg2ODk2NjQx.DyQOJA.zTs3wjcHFGTxN4xVKINbEdWHha0"
 # syntax is Channels: {"in-game channel name": "numerical channel ID from Discord", "another in-game channel name": "another numerical channel ID from Discord"}
 # The first channel pair specified in this config option will be the "main" channel, used for sending player joins/quits/deaths/achievements/etc
 #
-Channels: {"global": "535434896873619467"}
+Channels: {"global": "535434896873619467", "staff": "536114938624737280", "donator": "552856978720817153", "cool": "559280498577244170"}
 
 # Console channel numerical ID (NOT NAME), leave blank to disable the console channel all together
 DiscordConsoleChannelId: "535434929300045825"
@@ -31,7 +31,7 @@ PrintGuildsAndChannels: false
 DisabledPluginHooks: []
 
 # Game information, this sets the "Playing ______" indicator for the bot, set to "" to disable
-DiscordGameStatus: "dupe please?"
+DiscordGameStatus: "Thank you _DrStrange"
 
 # Chat channel information
 # The chat channel is the text channel that all messages in-game will be sent to and all messages sent
@@ -56,7 +56,7 @@ DiscordChatChannelTranslateMentions: true
 DiscordChatChannelPrefix: ""
 DiscordChatChannelRolesAllowedToUseColorCodesInChat: ["Developer", "Owner", "Admin", "Moderator"]
 DiscordChatChannelBroadcastDiscordMessagesToConsole: true
-DiscordChatChannelRequireLinkedAccount: true
+DiscordChatChannelRequireLinkedAccount: false
 DiscordChatChannelBlockBots: true
 DiscordChatChannelBlockedIds: ["000000000000000000", "000000000000000000", "000000000000000000"]
 DiscordChatChannelColorTranslations: {

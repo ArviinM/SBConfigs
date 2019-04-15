@@ -18,7 +18,7 @@ display:
     score: 13
   line-3:
     text:
-    - '&8&l│ &7Username: &c%player_name%'
+    - '&8&l│ &7Name: &c%player_name%'
     random: false
     interval: 1000
     score: 12
@@ -28,12 +28,6 @@ display:
     random: false
     interval: 20
     score: 11
-  line-5:
-    text:
-    - '&8&l│ &7Ping: &c%player_ping%'
-    random: false
-    interval: 20
-    score: 10
   line-6:
     text:
     - '&8&l│ &7Kills: &a%statistic_player_kills%'
@@ -60,7 +54,7 @@ display:
     score: 6
   line-10:
     text:
-    - '&8&l┌ &6&lIsland'
+    - '&8&l┌ &6&lISLAND'
     random: false
     interval: 1000
     score: 5

@@ -5,6 +5,11 @@ groups:
       prefix: '&8[&7Spirit&8]&7 '
       weight: '13'
     permissions:
+    - venturechat.chwho
+    - venturechat.json.default
+    - elevator.use
+    - rfchairs.use
+    - rfchairs.mute
     - authme.player.unregister
     - authme.player.logout
     - authme.player.login
@@ -128,6 +133,12 @@ groups:
       prefix: '&8[&aPhantom&8]&a '
       weight: '12'
     permissions:
+    - venturechat.color
+    - venturechat.format
+    - venturechat.donator
+    - marry.user
+    - ultimatetimber.toggle
+    - ultimatetimber.chop
     - essentials.itemdb
     - crazyauctions.bid.9
     - crazyauctions.sell.9
@@ -169,6 +180,7 @@ groups:
       prefix: '&8[&6Ghoul&8]&6 '
       weight: '10'
     permissions:
+    - deluxetags.tag.mythical
     - crazyauctions.bid.11
     - crazyauctions.sell.11
     - essentials.kits.ghoul
@@ -194,6 +206,8 @@ groups:
       prefix: '&8[&cDemon&8]&c '
       weight: '9'
     permissions:
+    - coloredanvils.*
+    - elevator.commands
     - crazyauctions.bid.12
     - crazyauctions.sell.12
     - essentials.kits.demon
@@ -239,6 +253,8 @@ groups:
       prefix: '&8[&2Helper&8]&a '
       weight: '7'
     permissions:
+    - venturechat.message.bypass
+    - venturechat.staff
     - ab.kick.use
     - essentials.kick
     - ab.kick.notify
@@ -287,6 +303,7 @@ groups:
       prefix: '&8[&3Moderator&8]&b '
       weight: '6'
     permissions:
+    - venturechat.*
     - ab.ban.temp
     - ab.warn.undo
     - essentials.chat.spy

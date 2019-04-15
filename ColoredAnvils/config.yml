@@ -1,0 +1,10 @@
+Use Permissions: true
+Use_Permissions_If_Not_Changing_Name: false
+Filter_Enabled: true
+Filter:
+- ¤
+- Ð
+- ⤊
+- ⏣
+- War Token
+- Crate Key

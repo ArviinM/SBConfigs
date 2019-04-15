@@ -19,8 +19,8 @@
 #
 # DiscordToMinecraftAllRolesSeparator: the separator used in between roles in %allroles%
 #
-DiscordToMinecraftChatMessageFormat: "&1[Discord] &9[%toprole%] %username% » &7%message%"
-DiscordToMinecraftChatMessageFormatNoRole: "[&bDiscord&r] %username% » %message%"
+DiscordToMinecraftChatMessageFormat: "&1[%toprolecolor%%toprole%&1] &1%username%: &9%message%"
+DiscordToMinecraftChatMessageFormatNoRole: "&1%username%: &9%message%"
 DiscordToMinecraftAllRolesSeparator: " | "
 
 # Minecraft -> Discord message
@@ -47,8 +47,8 @@ DiscordToMinecraftAllRolesSeparator: " | "
 #                  example: Global
 # PlaceholderAPI placeholders are also supported
 #
-MinecraftChatToDiscordMessageFormat: "[%askyblock_level%] %player_displayname% %deluxetags_tag% » %message%"
-MinecraftChatToDiscordMessageFormatNoPrimaryGroup: "%displayname% » %message%"
+MinecraftChatToDiscordMessageFormat: "**[%askyblock_level%] %player_displayname% %deluxetags_tag%**» %message%"
+MinecraftChatToDiscordMessageFormatNoPrimaryGroup: "**%displayname%**» %message%"
 
 # Chat channel plugin message
 # This is a special message that's only used when a supported chat channel plugin is hooked
@@ -64,7 +64,7 @@ MinecraftChatToDiscordMessageFormatNoPrimaryGroup: "%displayname% » %message%"
 # %message%:         the message after processing through DiscordToMinecraftChatMessageFormat / DiscordToMinecraftChatMessageFormatNoRole
 #                     example: jeb_ > Hello from the server!
 #
-ChatChannelHookMessageFormat: "%channelcolor%[%channelnickname%]&r %message%"
+ChatChannelHookMessageFormat: "&1[%channelcolor%%channelname%&1]&r %message%"
 
 # Discord console channel message
 # This is the format used when sending a line from the console to the console channel, if enabled
@@ -134,7 +134,7 @@ MinecraftPlayerLeaveMessageFormat: "[:wave:] **%displayname% left**"
 # %date%:         current date & time
 # PlaceholderAPI placeholders are also supported
 #
-MinecraftPlayerDeathMessageFormat: "[:skull:] %deathmessage%"
+MinecraftPlayerDeathMessageFormat: "[:skull:] **%deathmessage%**"
 
 # Minecraft -> Discord achievement/advancement messages
 #
@@ -182,7 +182,7 @@ ChannelTopicUpdaterConsoleChannelTopicAtServerShutdownFormat: ""
 # Discord command message
 # This is the message sent to players when they run "/discord". It's recommended to leave command syntax as a part of this
 #
-DiscordCommandFormat: "&bJoin us on Discord at https://discord.wessex.site . For command help, do \"/discord ?\""
+DiscordCommandFormat: "&1[&9Discord&1] &7Join us on &9Discord &7at &ehttps://discord.wessex.site &7. For command help, do &a\"/discord ?\""
 
 # Server startup/shutdown messages
 # DiscordChatChannelServerStartupMessage: message to be sent when server starts; leave blank to disable
@@ -215,6 +215,6 @@ ServerWatchdogMessage: "`%date%` %guildowner%, the server room is on :fire::bang
 # MinecraftAccountLinked: %id%:       the discord id of the Discord user that the user's Minecraft account was linked to
 #                         %username%: the discord name of the Discord user that the user's Minecraft account was linked to
 #
-CodeGenerated: "&7Your &alink code&7 is &a&l%code%&7. Message &6&l%botname%&7 the &acode&7 to link your accounts."
-DiscordAccountLinked: "Your Discord account has been linked to &a%name% (%uuid%)&7."
-MinecraftAccountLinked: "&7Your MC Username has been &asuccessfully&7 linked to &9&l%username%&7 &9(&o%id%&9)&7."
+CodeGenerated: "&1[&9Discord&1] &7Your &alink code&7 is &a&l%code%&7. Message the Bot &6&l%botname%&7 the &alink code&7 to link your accounts."
+DiscordAccountLinked: "Your Discord account has been linked to %name% (%uuid%)."
+MinecraftAccountLinked: "&1[&9Discord&1] &7Your MC Username has been &asuccessfully&7 linked to &9&l%username%&7 &9(&o%id%&9)&7."
