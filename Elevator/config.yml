@@ -38,6 +38,7 @@ combinations:
 # Leave blank to enable all worlds.
 enabledworlds:
   - world
+  - ASkyBlock
 
 # Max Elevator distance:
 # Set to 255 or higher to ignore completely.
