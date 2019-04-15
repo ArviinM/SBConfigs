@@ -47,7 +47,7 @@ DiscordToMinecraftAllRolesSeparator: " | "
 #                  example: Global
 # PlaceholderAPI placeholders are also supported
 #
-MinecraftChatToDiscordMessageFormat: "**[%askyblock_level%] %player_displayname% %deluxetags_tag%**» %message%"
+MinecraftChatToDiscordMessageFormat: "**[%askyblock_level%] %vault_prefix% %player_displayname% %deluxetags_tag%**» %message%"
 MinecraftChatToDiscordMessageFormatNoPrimaryGroup: "**%displayname%**» %message%"
 
 # Chat channel plugin message
