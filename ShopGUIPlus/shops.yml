@@ -1833,6 +1833,167 @@ shops:
         buyPrice: 50
         sellPrice: 5
         slot: 32
+
+      20:
+        type: item
+        item:
+          material: CONCRETE_POWDER
+          damage: 0
+          quantity: 16
+        buyPrice: 36.40
+        sellPrice: 16.38
+        slot: 10
+        page: 2
+      21:
+        type: item
+        item:
+          material: CONCRETE_POWDER
+          damage: 1
+          quantity: 16
+        buyPrice: 36.40
+        sellPrice: 16.38
+        slot: 11
+        page: 2
+      22:
+        type: item
+        item:
+          material: CONCRETE_POWDER
+          damage: 2
+          quantity: 16
+        buyPrice: 36.40
+        sellPrice: 16.38
+        slot: 12
+        page: 2
+      23:
+        type: item
+        item:
+          material: CONCRETE_POWDER
+          damage: 3
+          quantity: 16
+        buyPrice: 36.40
+        sellPrice: 16.38
+        slot: 13
+        page: 2
+      24:
+        type: item
+        item:
+          material: CONCRETE_POWDER
+          damage: 4
+          quantity: 16
+        buyPrice: 34.30
+        sellPrice: 15.44
+        slot: 14
+        page: 2
+      25:
+        type: item
+        item:
+          material: CONCRETE_POWDER
+          damage: 5
+          quantity: 16
+        buyPrice: 37.59
+        sellPrice: 16.92
+        slot: 15
+        page: 2
+      26:
+        type: item
+        item:
+          material: CONCRETE_POWDER
+          damage: 6
+          quantity: 16
+        buyPrice: 42.40
+        sellPrice: 19.08
+        slot: 16
+        page: 2
+      27:
+        type: item
+        item:
+          material: CONCRETE_POWDER
+          damage: 7
+          quantity: 16
+        buyPrice: 44.40
+        sellPrice: 19.98
+        slot: 19
+        page: 2
+      28:
+        type: item
+        item:
+          material: CONCRETE_POWDER
+          damage: 8
+          quantity: 16
+        buyPrice: 36.40
+        sellPrice: 16.38
+        slot: 20
+        page: 2
+      29:
+        type: item
+        item:
+          material: CONCRETE_POWDER
+          damage: 9
+          quantity: 16
+        buyPrice: 43.49
+        sellPrice: 19.57
+        slot: 21
+        page: 2
+      30:
+        type: item
+        item:
+          material: CONCRETE_POWDER
+          damage: 10
+          quantity: 16
+        buyPrice: 41.85
+        sellPrice: 18.83
+        slot: 22
+        page: 2
+      31:
+        type: item
+        item:
+          material: CONCRETE_POWDER
+          damage: 11
+          quantity: 16
+        buyPrice: 48.20
+        sellPrice: 21.69
+        slot: 23
+        page: 2
+      32:
+        type: item
+        item:
+          material: CONCRETE_POWDER
+          damage: 12
+          quantity: 16
+        buyPrice: 36.20
+        sellPrice: 16.29
+        slot: 24
+        page: 2
+      33:
+        type: item
+        item:
+          material: CONCRETE_POWDER
+          damage: 13
+          quantity: 16
+        buyPrice: 928.18
+        sellPrice: 417.18
+        slot: 25
+        page: 2
+      34:
+        type: item
+        item:
+          material: CONCRETE_POWDER
+          damage: 14
+          quantity: 16
+        buyPrice: 35.30
+        sellPrice: 15.89
+        slot: 30
+        page: 2
+      35:
+        type: item
+        item:
+          material: CONCRETE_POWDER
+          damage: 15
+          quantity: 16
+        buyPrice: 52.20
+        sellPrice: 23.49
+        slot: 32
+        page: 2
   claynew:
     name: "&c&nTerracotta&r &8(&f%page%&7/&f1&8)"
     fillItem:

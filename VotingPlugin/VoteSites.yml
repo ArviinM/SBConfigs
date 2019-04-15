@@ -1,16 +1,4 @@
 VoteSites:
-  Minecraft Multiplayer:
-    Enabled: true
-    ServiceSite: Minecraft-MP.com
-    VoteURL: http://bit.ly/2GSoHfS
-    VoteDelay: 24
-    Priority: 1
-    Item:
-      Material: DIAMOND
-      Amount: 1
-    Rewards:
-      Commands:
-      - crate give p Magma 1 %player%
   ServerPact:
     Enabled: true
     ServiceSite: SERVERPACT.COM
@@ -44,6 +32,18 @@ VoteSites:
     VoteURL: http://bit.ly/2UdEtVF
     VoteDelay: 24
     Priority: 5
+    Rewards:
+      Commands:
+      - crate give p Magma 1 %player%
+  Minecraft Multiplayer:
+    Enabled: true
+    ServiceSite: Minecraft-MP.com
+    VoteURL: http://bit.ly/2GSoHfS
+    VoteDelay: 24
+    Priority: 1
+    Item:
+      Material: DIAMOND
+      Amount: 1
     Rewards:
       Commands:
       - crate give p Magma 1 %player%
