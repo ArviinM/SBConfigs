@@ -322,7 +322,7 @@ channels:
     bungeecord: false
     alias: g
     permissions: None
-    format: '&2[&lG&2]&r {luckperms_prefix} {nickname} {deluxetags_tag}&2:&r'
+    format: '&2[&lG&2]&r {vault_prefix} {nickname} {deluxetags_tag}&2:&r'
     irc: false
   staff:
     color: dark_red
@@ -336,7 +336,7 @@ channels:
     bungeecord: true
     alias: s
     permissions: staff
-    format: '&4[&lS&4]&r {luckperms_prefix} {name}&f:&r'
+    format: '&4[&lS&4]&r {vault_prefix} {name}&f:&r'
     irc: false
   donator:
     color: gold
@@ -350,7 +350,7 @@ channels:
     bungeecord: true
     alias: d
     permissions: donator
-    format: '&6[&lD&6]&r {luckperms_prefix} {nickname} {deluxetags_tag}&6:&r'
+    format: '&6[&lD&6]&r {vault_prefix} {nickname} {deluxetags_tag}&6:&r'
     irc: false
   cool:
     color: dark_blue
@@ -364,5 +364,5 @@ channels:
     bungeecord: true
     alias: c
     permissions: cool
-    format: '&9[&lC&9]&l {luckperms_prefix} {nickname} {deluxetags_tag}&9:&r'
+    format: '&9[&lC&9]&l {vault_prefix} {nickname} {deluxetags_tag}&9:&r'
     irc: false
