@@ -976,24 +976,24 @@ Crate:
       Messages:
         - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Wizard GKit&r&c.'
       BlackListed-Permissions: []
-    50:
-      DisplayName: '&8◆ &c&nGKit:&r &c"&aSpring&c" &8◆'
-      DisplayItem: '378'
-      DisplayAmount: 1
-      Lore:
-        - "&7This will give you a voucher to"
-        - "&7unlock the gkit on this server."
-        - "&r"
-        - "&4◆ &7Chance: &c0.2%"
-      MaxRange: 1000
-      Chance: 2
-      Firework: true
-      Glowing: true
-      Player: ''
-      Unbreakable: false
-      Commands:
-        - 'voucher give %Player% SpringGKit 1'
-        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Spring GKit&r&c.'
-      Messages:
-        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Spring GKit&r&c.'
-      BlackListed-Permissions: []
+    #50:
+    #  DisplayName: '&8◆ &c&nGKit:&r &c"&aSpring&c" &8◆'
+    #  DisplayItem: '378'
+    #  DisplayAmount: 1
+    #  Lore:
+    #    - "&7This will give you a voucher to"
+    #    - "&7unlock the gkit on this server."
+    #    - "&r"
+    #    - "&4◆ &7Chance: &c0.2%"
+    #  MaxRange: 1000
+    #  Chance: 2
+    #  Firework: true
+    #  Glowing: true
+    #  Player: ''
+    #  Unbreakable: false
+    #  Commands:
+    #    - 'voucher give %Player% SpringGKit 1'
+    #    - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Spring GKit&r&c.'
+    #  Messages:
+    #    - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Spring GKit&r&c.'
+    #  BlackListed-Permissions: []
