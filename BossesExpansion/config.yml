@@ -1,0 +1,65 @@
+
+#-1 = it will broadcast with any damagers size
+damagersRequiredToBroadcast: 1
+
+#Don't want your chat get spammed? Limit this to your wanted size, recommended 4.
+placesToBroadcast: 4
+
+#customColors let's you add custom color for any place, for example you want so first place has a cyan color, and second place lime.
+#Format is: <place>/default:<color>
+#Default applies for places that aren't set here.
+#Example: 1:&b = applies for place 1, with color cyan
+customColors:
+  - "1:&b"
+  - "2:&e"
+  - "3:&c"
+  - "default:&7"
+
+options:
+
+  #Should broadcast when boss spawns
+  spawnBroadcastEnabled: true
+
+  #Should broadcast when boss dies (the top chart)
+  deathBroadcastEnabled: true
+
+whitelist:
+
+  regionsEnabled: true
+  bossesEnabled: true
+
+  regions:
+    - "warzone"
+  bosses:
+    - "AncientWitch"
+    - "MagmaLord"
+    - "SkeletonKing"
+
+messages:
+
+  #Available custom placeholders: %player%, %boss_displayName%, %boss_internalName%
+
+  death:
+    center: false
+    offlineVar: "&8(&cOffline&8)&7"
+    main: "&8(%place_color%#%place%&r&8)&7 - %place_color%%player% &7- &c%damage% ❤ &7- &b%percentage%%" #You can either use percentage(%percentage%) or a number of damage(%damage%) done
+    message:
+    - ""
+    - "       &4&l&m----&r&7&l&m[--&r    &4&l&nWARZONE EVENT&r    &7&l&m--]&r&4&l&m----&r"
+    - ""
+    - "%boss_displayName% &7has been slained by a group of heroes..."
+    - "%places%"
+    - ""
+    - "&7&oFor their bravery, they received &6&o&nlegendary treasure&r&7&o!"
+    - ""
+  spawn:
+    center: false
+    teleportHoverMessage: "&aClick to teleport!" #Players with permission be.teleport will see this message.
+    teleportMessage: "&aClick to teleport to the boss!"
+    message:
+    - ""
+    - "       &4&l&m----&r&7&l&m[--&r    &4&l&nWARZONE EVENT&r    &7&l&m--]&r&4&l&m----&r"
+    - ""
+    - "%boss_displayName% &7has been spotted at X: %x%, Y: %y%, Z: %z%"
+    - "    &7&oDefeat the boss and obtain &6&o&nlegendary treasure&r&7&o!"
+    - ""

@@ -1,0 +1,33 @@
+settings:
+  lose-xp-rate: 1000
+  fly-speed: 1
+  level-to-warn: 10
+  disable-on-touchdown: false
+  lose-xp-ground: false
+  use-messages: true
+  use-titles: true
+  lose-more-while-sprinting: true
+  disable-on-damage: true
+messages:
+  enable-message: '&c(!) Your flight has now been &a&nenabled&r&c! Be careful!'
+  disable-message: '&c(!) Your flight has now been &ndisabled&r&c!'
+  disable-on-ground: '&c(!) You are on the ground!'
+  out-of-xp: '&c(!) You ran out of experience!'
+  disable-combat-message: '&c(!) You are in combat, flight disabled!'
+  almost-out-of-xp: '&c(!) You will run out of experience soon!'
+  not-enough-xp: '&c(!) You don''t have enough experience to fly!'
+  can-fly-already: '&c(!) You already have the ability to fly.'
+titles:
+  title: '&7&nXP Fly'
+  enabled: '&a&lENABLED'
+  disabled: '&c&lDISABLED'
+other-features:
+  enabled: true
+  settings:
+    max-fly-height: 256
+    fly-too-high: '&a(!) You cannot use fly higher than &7%maxheight% &cblocks!'
+    speed-inventory-title: '&nChange your speed'
+    fly-particles: true
+    blocked-worlds:
+    - exampleworld
+    - anotherexampleworld

@@ -1,0 +1,34 @@
+XpWithDraw:
+ NotEnough: "&c(!) You only have &7&n%pxp%&r &cexperience."
+ Xpb:
+  - "&e/xpbottle <amount>"
+  - "&7Convert <amount> xp into bottle form."
+  - "&7Use &e/xp &7to view your current exp points."
+ XpTransferred: 
+  - "&aYour Xp is Transfered to bottle!"
+  - "&c-%takenxp% Xp"
+ FullInventory: "&c(!) Your inventory is full."
+ MinXpMessage: "&c(!) You must withdraw at least %&7minxp%&r &cexperience per bottle."
+ MaxXpMessage: "&c(!) You cannot exceed &7%maxxp%&r &cexperience in a single bottle."
+ CantFind: "&c(!) Unable to find &7%target%&c."
+ BottleReceived: "&e(!) The player has received &7%xp%&e."
+ NoPermission: "&c(!) You do not have permission to do this."
+ NoNumber: "&c(!) That is not a whole number."
+ AutoCollect: "&a&l+%xp% EXP &7(Bottle)"
+WithDraw:
+ NotEnough: "&c(!) You only have &7$%balance%&c."
+ Cash:
+  - "&e/withdraw <amount>"
+  - "&7Deposit your money to paper."
+  - "&7Use &e/balance &7to view your current Cash."
+ CashTransferred: 
+  - "&aYou have successfully withdraw Cash!"
+  - "&c-$%takenCash%"
+ FullInventory: "&c(!) Your inventory is full."
+ MinMessage: "&c(!) You must withdraw at least &7$%MinCash%&c."
+ MaxMessage: "&c(!) You cannot exceed &7$%MaxCash% &cin a single note."
+ CashDeposit: "&a(!) You have deposited &7&n$%Cash%&r&a!"
+ CantFind: "&c(!) Unable to find &7%target%&c."
+ CashReceived: "&e(!) The player has received &7%money%&e."
+ NoPermission: "&c(!) You do not have permission to do this."
+ NoNumber: "&c(!) That is not a whole number."

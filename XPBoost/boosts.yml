@@ -1,0 +1,271 @@
+##########################################################
+# EXAMPLE BOOST (And all possible values you can change) #
+##########################################################
+#
+#boost:
+#  boost1:
+#   enabled: true #|Enable or disable boost option *REQUIRED*
+#   boost: 2.0 #|XP multiplier *REQUIRED*
+#   cost: 500.0 #|Currency cost *REQUIRED*
+#   time: 300 #|Duration of the effect in seconds *REQUIRED*
+#   title: '&4%boost%x XPBoost &f(%money% $) Custom Title' #|You can specify custom titles for different boosts if title is not present default preset will be used Placeholders: %boost%,%money%,%time% *OPTIONAL*
+#   item_type: SLIME_BALL #|*OPTIONAL*
+#   glowing: true #|Do you want this boost to appear enchanted/glowing? *OPTIONAL*
+#   lore: #|Yep, you can set custom lore for the boost, this is optional. If lore is not set, default preset will be used.
+#   - 'Boost with custom lore'
+#   - '%boost%x for %time% Seconds' #| %boost%, %money% and %time% placeholders are avaliable inside lore.
+#   permissons: #|*OPTIONAL*
+#     required_permission: 'xpboost.guest' #|Permission that is required to buy this boost
+#     fail_message: '&cNo permission' #|Message when player does not have a permission
+#   behaviour:  #|You can specify a 'behaviour' of each boost and set which XP will be affected, this is optional. Default everything is true *OPTIONAL*
+#     VANILLA: true  #|This XP Boost will be only viable for vanilla xp.
+#     SKILLAPI: false #|This XP boost will be disabled for skillapi if you've got one.
+#     MCMMO: false #|Same but for mcmmo
+#     RPGME: false #|Same but for rgme
+#     HEROES: false #|Same but for heroes
+#     JOBS: false #|Same but for JobsReborn
+#   advanced: *OPTIONAL*
+#    //Here you can set specifically what kind of exp you want to be affected for each supported plugin. 
+#    //The format is:
+#
+#    // PLUGIN: | The name of the plugin SKILLAPI/MCMMO/RPGME etc.
+#    //   default: true/false | Default setting for every experience type
+#    //   experience_type: true/false | Individual setting for each experience type
+#
+#    //If nothing is set here, all experience will be affected otherwise it will affect only the ones that are listed below.
+#    //If you wish to block some type of experience just add ' block' at the end.
+#    //example for MCMMO, this boost will affect only MCMMO swords experience
+#    MCMMO:
+#      default: false //disabling everyhting by default
+#      swords: true //enabling swords experience
+#
+
+boost1:
+  enabled: true
+  boost: 1.25
+  cost: 20000.0
+  time: 300
+  title: ' &8◆ &b&nExperience Booster&r &b(Tier I) &8◆'
+  item_type: EXP_BOTTLE
+  glowing: true
+  lore:
+  - '&7Once purchased, &nyou&r &7will have an'
+  - '&7   active experience multiplier.'
+  - '&r'
+  - '&7&nBooster Information...'
+  - '&b * &7Multiplier: &b1.25x'
+  - '&b * &7Duration: &b5 minutes'
+  - '&b * &7Cost: &b20,000 ⛃'
+  - '&r'
+  - ' &7&nClick&r &7to purchase this booster.'
+  permissions:
+    required_permission: 'xpboost.t1'
+    fail_message: '&c(!) You are not allowed to use this booster.'
+  behaviour:
+    VANILLA: true
+    SKILLAPI: false
+    HEROES: false
+    JOBS: false
+    MCMMO: false
+  advanced:
+    #Here you can choose specifically what kind of experience will be affected by the boost
+    SKILLAPI: #this boost will ignore crafting experience from SKILLAPI
+      default: false
+      crafting: false
+    MCMMO: #this boost will ONLY affect EXCAVATION experience from MCMMO
+      default: false
+      excavation: false
+    HEROES: #this boost will ignore farming and killing experience from HEROES
+      farming: false
+      killing: false
+boost2:
+  enabled: true
+  boost: 1.5
+  cost: 40000.0
+  time: 300
+  title: ' &8◆ &a&nExperience Booster&r &a(Tier II) &8◆'
+  item_type: EXP_BOTTLE
+  glowing: true
+  lore:
+  - '&7Once purchased, &nyou&r &7will have an'
+  - '&7   active experience multiplier.'
+  - '&r'
+  - '&7&nBooster Information...'
+  - '&a * &7Multiplier: &a1.5x'
+  - '&a * &7Duration: &a5 minutes'
+  - '&a * &7Cost: &a40,000 ⛃'
+  - '&r'
+  - ' &7&nClick&r &7to purchase this booster.'
+  permissions:
+    required_permission: 'xpboost.t2'
+    fail_message: '&c(!) You are not allowed to use this booster.'
+  behaviour:
+    VANILLA: true
+    SKILLAPI: false
+    HEROES: false
+    JOBS: false
+    MCMMO: false
+  advanced:
+    #Here you can choose specifically what kind of experience will be affected by the boost
+    SKILLAPI: #this boost will ignore crafting experience from SKILLAPI
+      default: false
+      crafting: false
+    MCMMO: #this boost will ONLY affect EXCAVATION experience from MCMMO
+      default: false
+      excavation: false
+    HEROES: #this boost will ignore farming and killing experience from HEROES
+      farming: false
+      killing: false
+boost3:
+  enabled: true
+  boost: 2.0
+  cost: 75000.0
+  time: 600
+  title: '&8◆ &d&nExperience Booster&r &d(Tier III) &8◆'
+  item_type: EXP_BOTTLE
+  glowing: true
+  lore:
+  - '&7Once purchased, &nyou&r &7will have an'
+  - '&7   active experience multiplier.'
+  - '&r'
+  - '&7&nBooster Information...'
+  - '&d * &7Multiplier: &d2.0x'
+  - '&d * &7Duration: &d10 minutes'
+  - '&d * &7Cost: &d75,000 ⛃'
+  - '&r'
+  - ' &7&nClick&r &7to purchase this booster.'
+  permissions:
+    required_permission: 'xpboost.t3'
+    fail_message: '&c(!) You are not allowed to use this booster.'
+  behaviour:
+    VANILLA: true
+    SKILLAPI: false
+    HEROES: false
+    JOBS: false
+    MCMMO: false
+  advanced:
+    #Here you can choose specifically what kind of experience will be affected by the boost
+    SKILLAPI: #this boost will ignore crafting experience from SKILLAPI
+      default: false
+      crafting: false
+    MCMMO: #this boost will ONLY affect EXCAVATION experience from MCMMO
+      default: false
+      excavation: false
+    HEROES: #this boost will ignore farming and killing experience from HEROES
+      farming: false
+      killing: false
+boost4:
+  enabled: true
+  boost: 2.0
+  cost: 125000.0
+  time: 1800
+  title: ' &8◆ &c&nExperience Booster&r &c(Tier IV) &8◆'
+  item_type: EXP_BOTTLE
+  glowing: true
+  lore:
+  - '&7Once purchased, &nyou&r &7will have an'
+  - '&7   active experience multiplier.'
+  - '&r'
+  - '&7&nBooster Information...'
+  - '&c * &7Multiplier: &c2.0x'
+  - '&c * &7Duration: &c30 minutes'
+  - '&c * &7Cost: &c125,000 ⛃'
+  - '&r'
+  - ' &7&nClick&r &7to purchase this booster.'
+  permissions:
+    required_permission: 'xpboost.t4'
+    fail_message: '&c(!) You are not allowed to use this booster.'
+  behaviour:
+    VANILLA: true
+    SKILLAPI: false
+    HEROES: false
+    JOBS: false
+    MCMMO: false
+  advanced:
+    #Here you can choose specifically what kind of experience will be affected by the boost
+    SKILLAPI: #this boost will ignore crafting experience from SKILLAPI
+      default: false
+      crafting: false
+    MCMMO: #this boost will ONLY affect EXCAVATION experience from MCMMO
+      default: false
+      excavation: false
+    HEROES: #this boost will ignore farming and killing experience from HEROES
+      farming: false
+      killing: false
+boost5:
+  enabled: true
+  boost: 2.0
+  cost: 150000.0
+  time: 3600
+  title: ' &8◆ &e&nExperience Booster&r &e(Tier V) &8◆'
+  item_type: EXP_BOTTLE
+  glowing: true
+  lore:
+  - '&7Once purchased, &nyou&r &7will have an'
+  - '&7   active experience multiplier.'
+  - '&r'
+  - '&7&nBooster Information...'
+  - '&e * &7Multiplier: &e2.0x'
+  - '&e * &7Duration: &e60 minutes'
+  - '&e * &7Cost: &e150,000 ⛃'
+  - '&r'
+  - ' &7&nClick&r &7to purchase this booster.'
+  permissions:
+    required_permission: 'xpboost.t5'
+    fail_message: '&c(!) You are not allowed to use this booster.'
+  behaviour:
+    VANILLA: true
+    SKILLAPI: false
+    HEROES: false
+    JOBS: false
+    MCMMO: false
+  advanced:
+    #Here you can choose specifically what kind of experience will be affected by the boost
+    SKILLAPI: #this boost will ignore crafting experience from SKILLAPI
+      default: false
+      crafting: false
+    MCMMO: #this boost will ONLY affect EXCAVATION experience from MCMMO
+      default: false
+      excavation: false
+    HEROES: #this boost will ignore farming and killing experience from HEROES
+      farming: false
+      killing: false
+boost6:
+  enabled: true
+  boost: 2.5
+  cost: 200000.0
+  time: 1800
+  title: ' &8◆ &6&nExperience Booster&r &6(Tier VI) &8◆'
+  item_type: EXP_BOTTLE
+  glowing: true
+  lore:
+  - '&7Once purchased, &nyou&r &7will have an'
+  - '&7   active experience multiplier.'
+  - '&r'
+  - '&7&nBooster Information...'
+  - '&6 * &7Multiplier: &62.5x'
+  - '&6 * &7Duration: &630 minutes'
+  - '&6 * &7Cost: &6200,000 ⛃'
+  - '&6 * &7This is for &ndonators&r &7only.'
+  - '&r'
+  - ' &7&nClick&r &7to purchase this booster.'
+  permissions:
+    required_permission: 'xpboost.t6'
+    fail_message: '&c(!) You are not allowed to use this booster.'
+  behaviour:
+    VANILLA: true
+    SKILLAPI: false
+    HEROES: false
+    JOBS: false
+    MCMMO: false
+  advanced:
+    #Here you can choose specifically what kind of experience will be affected by the boost
+    SKILLAPI: #this boost will ignore crafting experience from SKILLAPI
+      default: false
+      crafting: false
+    MCMMO: #this boost will ONLY affect EXCAVATION experience from MCMMO
+      default: false
+      excavation: false
+    HEROES: #this boost will ignore farming and killing experience from HEROES
+      farming: false
+      killing: false

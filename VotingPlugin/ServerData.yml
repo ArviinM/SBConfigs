@@ -1,0 +1,21 @@
+VotingPlugin:
+  Version: 'git-Paper-1600 (MC: 1.12.2)'
+  VoteParty:
+    Total: 16
+    Voted:
+    - 92426748-6a92-3538-9dad-7bb10db7f38a
+    - 6e3f6bdb-2b85-3452-b1aa-2d6650fa922f
+  ServiceSites:
+  - SERVERPACT.COM
+  - PlanetMinecraft.com
+  - MinecraftServers.org
+  - Minecraft-MP.com
+  - MCTools.org
+  - Minelist.net
+  - SERVERPACTTEST
+  - Minecraft-Server.net
+PluginVersions:
+  VotingPlugin: 5.13.6
+PrevDay: 15
+PrevWeek: 16
+Month: APRIL

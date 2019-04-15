@@ -1,0 +1,18 @@
+Settings:
+  LogOffensesInSeparateFile: true
+  RemoveBooksNotMatchingCharset: true
+  ValidCharset: US-ASCII
+  PageCountThreshold: 5
+  AllowStack:
+  - POTION
+  - WATER_BUCKET
+  - LAVA_BUCKET
+  RemovePistonIfHeadIsExploded: true
+  PreventRailDupe: true
+  PreventOverStackedItemInHoppers: true
+  PreventRecipeDupe: true
+  RemoveOverstackedItems: true
+  PreventNestedShulkers: true
+  PreventHoppersToUnloadedChunks: true
+  RestoreInventoryOnGameModeChange: true
+  PreventItemFramePistonDupe: true

@@ -1,0 +1,103 @@
+Locations:
+  upgrades:
+    World: world
+    X: -1075
+    Y: 150
+    Z: 501
+    Particle: HappyVillager
+  panel:
+    World: world
+    X: -1048
+    Y: 151
+    Z: 480
+    Particle: MobSpawner
+  bar:
+    World: world
+    X: -1073
+    Y: 148
+    Z: 557
+    Particle: Rainbow
+  enchanter:
+    World: world
+    X: -1087
+    Y: 148
+    Z: 568
+    Particle: Enchant
+  tinkerer:
+    World: world
+    X: -1100
+    Y: 148
+    Z: 569
+    Particle: MobSpawner
+  shop:
+    World: world
+    X: -1104
+    Y: 148
+    Z: 556
+    Particle: Spiral
+  quests:
+    World: world
+    X: -1092
+    Y: 148
+    Z: 554
+    Particle: Witch
+  pets:
+    World: world
+    X: -1024
+    Y: 154
+    Z: 565
+    Particle: Magic
+  warshop:
+    World: world
+    X: -1029
+    Y: 154
+    Z: 587
+    Particle: Witch
+  crate:
+    World: world
+    X: -1014
+    Y: 156
+    Z: 578
+    Particle: SoulWell
+  food:
+    World: world
+    X: -1102
+    Y: 149
+    Z: 555
+    Particle: Potion
+  magmalord:
+    World: world
+    X: -1080
+    Y: 34
+    Z: 682
+    Particle: FireSpew
+  ancientwitch:
+    World: world
+    X: -892
+    Y: 49
+    Z: 675
+    Particle: FireSpew
+  skeletonking:
+    World: world
+    X: -1216
+    Y: 71
+    Z: 544
+    Particle: FireSpew
+  first:
+    World: world
+    X: -1087
+    Y: 150
+    Z: 510
+    Particle: HappyVillager
+  second:
+    World: world
+    X: -1088
+    Y: 150
+    Z: 514
+    Particle: Spiral
+  third:
+    World: world
+    X: -1088
+    Y: 150
+    Z: 506
+    Particle: Spiral

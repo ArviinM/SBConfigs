@@ -1,0 +1,24 @@
+skeletonkingspawner:
+  MobName: SkeletonKing
+  World: world
+  X: -1216
+  Y: 71
+  Z: 544
+  Radius: 0
+  UseTimer: true
+  MaxMobs: 1
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 1200
+  CooldownTimer: 0
+  Warmup: 1200
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 20
+  LeashRange: 100
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: true
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

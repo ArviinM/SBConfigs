@@ -1,0 +1,999 @@
+Crate:
+  CrateType: Wheel #Type of crate (CSGO/QuadCrate/QuickCrate/Roulette/CrateOnTheGo/FireCracker/Wonder/Wheel/War/Cosmic(This requires a additional info to work.)).
+  CrateName: '&nNecromancer Crate' #Name of the Inventory if a GUI crate.
+  StartingKeys: 0 #Starting amount of keys when the player 1st joins.
+  InGUI: true #If the crate shows in the /cc GUI. (If the crate type is QuickCrate/CrateOnTheGo/FireCracker then the Crate will not work. Quick Crate requires a Physical Crate.)
+  Slot: 17 #Slot the item is in the GUI.
+  OpeningBroadCast: false #Enables/Disables the Broadcasts message when they open a crate.
+  BroadCast: '%Prefix%&6&l%Player% &7is opening a &7&lBasic Chest&7.' #Message that is broadcasted when opening the crate.
+  Item: '351:1' #Item the crate is in the GUI
+  Glowing: true #If the crate in the main /cc GUI is glowing or not.
+  Name: '    &8◆  &4&k;&c&k;&r &4&nNecromancer Crate&r &c&k;&4&k;&r  &8◆' #Name of the item in the GUI.
+  Preview-Name: '  &8◆  &4&k;&c&k;&r &4&nNecromancer Crate&r &c&k;&4&k;&r  &8◆' #Name of the item in the GUI.
+  Lore: #The lore of the item in the GUI.
+    - '&7A newly-made crate found in space' 
+    - '&7    is packed with powerful items.' 
+    - '&r' 
+    - '&4 ◆ &7You have &4&n%Keys%&r &7keys for this crate.'
+    - '&r'
+    - '&4&nLeft-click&r &7to open this crate.'
+    - '&4&nRight-click&r &7to preview the rewards.'
+  PhysicalKey:
+    Name: '&8◆ &4&nNecromancer Crate Key&r &8◆' #Name of the Key.
+    Lore:
+      - '&7Use this key to open a crate.' #Lore of the Key.
+    Item: '131' #The item the key is.
+    Glowing: True #Makes the key look enchanted.
+#         For Cosmic Crates Only
+#############################################
+#  Tiers: #The tiers in the Crate
+#    Basic: #The Config Name for the Crate
+#      Name: '&8Basic Prize' #The in-game name of the Crate
+#      Color: 7 #Use the MetaData for the color of the glass
+#      Chance: 80 #Chance of that item getting picked. It would be 80/100 chance because MaxRange is 100.
+#      MaxRange: 100 #The max range that the chance will go though.
+#    UnCommon:
+#      Name: '&aUnCommon Prize'
+#      Color: 5
+#      Chance: 55
+#      MaxRange: 100
+#    Rare:
+#      Name: '&4Rare Prize'
+#      Color: 14
+#      Chance: 20
+#      MaxRange: 100
+#############################################
+  Prizes: #All the prizes that can be gotten in the Crate.
+    1:
+      DisplayName: '&8◆ &b&nMoney Pouch (T3)&r &8◆'
+      DisplayItem: '54'
+      DisplayAmount: 1
+      Lore:
+        - "&7Money Range: &b50,000 - 200,000 ⛃"
+        - "&4◆ &7Chance: &b20%"
+      MaxRange: 100
+      Chance: 20
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'mp 3 %Player% 1'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Money Pouch (T3)&r&c.'
+      BlackListed-Permissions: []
+    2:
+      DisplayName: '&8◆ &b&nMoney Pouch (T4)&r &8◆'
+      DisplayItem: '54'
+      DisplayAmount: 1
+      Lore:
+        - "&7Money Range: &b200,000 - 500,000 ⛃"
+        - "&4◆ &7Chance: &b15%"
+      MaxRange: 100
+      Chance: 15
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'mp 4 %Player% 1'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Money Pouch (T4)&r&c.'
+      BlackListed-Permissions: []
+    3:
+      DisplayName: '&8◆ &b&nMoney Pouch (T5)&r &8◆'
+      DisplayItem: '54'
+      DisplayAmount: 1
+      Lore:
+        - "&7Money Range: &b500,000 - 1,000,000 ⛃"
+        - "&4◆ &7Chance: &b10%"
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'mp 5 %Player% 1'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Money Pouch (T5)&r&c.'
+      BlackListed-Permissions: []
+    4:
+      DisplayName: '&8◆ &b&n5,000 EXP&r &8◆'
+      DisplayItem: '384'
+      DisplayAmount: 1
+      Lore:
+        - "&4◆ &7Chance: &b20%"
+      MaxRange: 100
+      Chance: 20
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'xp give %Player% 5000'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n5,000 EXP&r&c.'
+      BlackListed-Permissions: []
+    5:
+      DisplayName: '&8◆ &b&n10,000 EXP&r &8◆'
+      DisplayItem: '384'
+      DisplayAmount: 1
+      Lore:
+        - "&4◆ &7Chance: &b10%"
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'xp give %Player% 10000'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n10,000 EXP&r&c.'
+      BlackListed-Permissions: []
+    6:
+      DisplayName: '&8◆ &8&n[&c&nDemon&8&n]&c&n Kit&r &8◆'
+      DisplayItem: '307'
+      DisplayAmount: 1
+      Lore:
+        - "&4◆ &7Chance: &c5%"
+      MaxRange: 100
+      Chance: 5
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'kit demon %Player%'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Demon Kit&r&c.'
+      BlackListed-Permissions: []
+    7:
+      DisplayName: '&8◆ &8&n[&6&k&n;&r&e&nOverlord&6&k&n;&r&8&n]&c&n Kit&r &8◆'
+      DisplayItem: '311'
+      DisplayAmount: 1
+      Lore:
+        - "&4◆ &7Chance: &c2.5%"
+      MaxRange: 1000
+      Chance: 25
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'kit overlord %Player%'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Overlord Kit&r&c.'
+      BlackListed-Permissions: []
+    8:
+      DisplayName: '&8◆ &d&nPeaceful Mob Spawners&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 2
+      Lore:
+        - "&r"
+        - "&7&nThis includes..."
+        - "&d ◆ &72x Chicken Spawners"
+        - "&d ◆ &72x Pig Spawners"
+        - "&d ◆ &72x Sheep Spawners"
+        - "&d ◆ &72x Rabbit Spawners"
+        - "&r"
+        - "&4◆ &7Chance: &d10%"
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% chicken 2'
+        - 'ss give %Player% pig 2'
+        - 'ss give %Player% sheep 2'
+        - 'ss give %Player% rabbit 2'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n2x Peaceful Mob Spawners&r&c.'
+      BlackListed-Permissions: []
+    9:
+      DisplayName: '&8◆ &d&nHostile Mob Spawners&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 2
+      Lore:
+        - "&r"
+        - "&7&nThis includes..."
+        - "&d ◆ &72x Zombie Spawners"
+        - "&d ◆ &72x Skeleton Spawners"
+        - "&d ◆ &72x Spider Spawners"
+        - "&d ◆ &72x Cave Spider Spawners"
+        - "&d ◆ &72x Witch Spawners"
+        - "&r"
+        - "&4◆ &7Chance: &d9%"
+      MaxRange: 100
+      Chance: 9
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% zombie 2'
+        - 'ss give %Player% skeleton 2'
+        - 'ss give %Player% spider 2'
+        - 'ss give %Player% cavespider 2'
+        - 'ss give %Player% witch 2'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n2x Hostile Mob Spawners&r&c.'
+      BlackListed-Permissions: []
+    10:
+      DisplayName: '&8◆ &d&nRare Mob Spawners&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 1
+      Lore:
+        - "&r"
+        - "&7&nThis includes..."
+        - "&d ◆ &71x Enderman Spawner"
+        - "&d ◆ &71x Creeper Spawner"
+        - "&d ◆ &71x Blaze Spawner"
+        - "&d ◆ &71x Iron Golem Spawner"
+        - "&r"
+        - "&4◆ &7Chance: &d8%"
+      MaxRange: 100
+      Chance: 8
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% enderman 1'
+        - 'ss give %Player% creeper 1'
+        - 'ss give %Player% blaze 1'
+        - 'ss give %Player% irongolem 1'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Rare Mob Spawners&r&c.'
+      BlackListed-Permissions: []
+    11:
+      DisplayName: '&8◆ &d&n3x Creeper Spawners&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 3
+      Lore:
+        - "&4◆ &7Chance: &d7.5%"
+      MaxRange: 1000
+      Chance: 75
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% creeper 3'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n3x Creeper Spawners&r&c.'
+      BlackListed-Permissions: []
+    12:
+      DisplayName: '&8◆ &d&n3x Blaze Spawners&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 3
+      Lore:
+        - "&4◆ &7Chance: &d7.5%"
+      MaxRange: 1000
+      Chance: 75
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% blaze 3'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n3x Blaze Spawners&r&c.'
+      BlackListed-Permissions: []
+    13:
+      DisplayName: '&8◆ &d&n2x Iron Golem Spawners&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 2
+      Lore:
+        - "&4◆ &7Chance: &d7.5%"
+      MaxRange: 1000
+      Chance: 75
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% irongolem 2'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n2x Iron Golem Spawners&r&c.'
+      BlackListed-Permissions: []
+    14:
+      DisplayName: '&8◆ &e&n64x Hoppers&r &8◆'
+      DisplayItem: '154'
+      DisplayAmount: 64
+      Lore:
+        - "&4◆ &7Chance: &e7%"
+      MaxRange: 100
+      Chance: 7
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'give %Player% 154 64'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n64x Hoppers&r&c.'
+      BlackListed-Permissions: []
+    15:
+      DisplayName: '&8◆ &e&n6x Crop Hoppers&r &8◆'
+      DisplayItem: '154'
+      DisplayAmount: 6
+      Lore:
+        - "&7One crop hopper will take all dropped"
+        - "&7crops in the chunk it is placed."
+        - "&e◆ &7Chance: &e4%"
+      MaxRange: 100
+      Chance: 4
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'mfhoppers give %Player% cropHopper 6'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n&6x Crop Hoppers&r&c.'
+      BlackListed-Permissions: []
+    16:
+      DisplayName: '&8◆ &e&n6x Mob Hoppers&r &8◆'
+      DisplayItem: '154'
+      DisplayAmount: 6
+      Lore:
+        - "&7One mob hopper will take all mob"
+        - "&7drops in the chunk it is placed."
+        - "&e◆ &7Chance: &e4%"
+      MaxRange: 100
+      Chance: 4
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'mfhoppers give %Player% mobHopper 6'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n&6x Mob Hoppers&r&c.'
+      BlackListed-Permissions: []
+    17:
+      DisplayName: '&8◆ &e&n6x Break Hoppers&r &8◆'
+      DisplayItem: '154'
+      DisplayAmount: 6
+      Lore:
+        - "&7This hopper will automatically break"
+        - "&7the block placed above it."
+        - "&e◆ &7Chance: &e4%"
+      MaxRange: 100
+      Chance: 4
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'mfhoppers give %Player% breakHopper 6'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n&6x Break Hoppers&r&c.'
+      BlackListed-Permissions: []
+    18:
+      DisplayName: '&8◆ &e&n6x Grinding Hoppers&r &8◆'
+      DisplayItem: '154'
+      DisplayAmount: 6
+      Lore:
+        - "&7This hopper will automatically kill"
+        - "&7all mobs above it."
+        - "&e◆ &7Chance: &e4%"
+      MaxRange: 100
+      Chance: 4
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'mfhoppers give %Player% grindHopper 6'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n6x Grind Hoppers&r&c.'
+      BlackListed-Permissions: []
+    19:
+      DisplayName: '&8◆ &5&n20x War Tokens&r &8◆'
+      DisplayItem: '318'
+      DisplayAmount: 20
+      Lore:
+        - "&4◆ &7Chance: &55%"
+      MaxRange: 100
+      Chance: 5
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'vouchers give %Player% wartoken 20'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n20x War Tokens&r&c.'
+      BlackListed-Permissions: []
+    20:
+      DisplayName: '&8◆ &6&nMagma Key All&r &8◆'
+      DisplayItem: '351:14'
+      DisplayAmount: 1
+      Lore:
+        - "&4◆ &7Chance: &63%"
+      MaxRange: 100
+      Chance: 3
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'cc giveall v Magma 1'
+        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Magma Key All&r&c.'
+        - 'broadcast &7 * Everyone has received a key, use it at the crate area.'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Magma Key All&r&c.'
+      BlackListed-Permissions: []
+    21:
+      DisplayName: '&8◆ &e&nVolcanic Key All&r &8◆'
+      DisplayItem: '351:11'
+      DisplayAmount: 1
+      Lore:
+        - "&4◆ &7Chance: &e2%"
+      MaxRange: 100
+      Chance: 2
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'cc giveall v Volcanic 1'
+        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Volcanic Key All&r&c.'
+        - 'broadcast &7 * Everyone has received a key, use it at the crate area.'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Volcanic Key All&r&c.'
+      BlackListed-Permissions: []
+    22:
+      DisplayName: '&8◆ &c&nDevilish Key All&r &8◆'
+      DisplayItem: '351:9'
+      DisplayAmount: 1
+      Lore:
+        - "&4◆ &7Chance: &c0.5%"
+      MaxRange: 1000
+      Chance: 5
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'cc giveall v Devilish 1'
+        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Devilish Key All&r&c.'
+        - 'broadcast &7 * Everyone has received a key, use it at the crate area.'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Devilish Key All&r&c.'
+      BlackListed-Permissions: []
+    23:
+      DisplayName: '&8◆ &4&nNecromancer Key All&r &8◆'
+      DisplayItem: '351:1'
+      DisplayAmount: 1
+      Lore:
+        - "&4◆ &7Chance: &40.1%"
+      MaxRange: 1000
+      Chance: 1
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'cc giveall v Necromancer 1'
+        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Necromancer Key All&r&c.'
+        - 'broadcast &7 * Everyone has received a key, use it at the crate area.'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Necromancer Key All&r&c.'
+      BlackListed-Permissions: []
+    24:
+      DisplayName: '&8◆ &e&n128x Iron Blocks&r &8◆'
+      DisplayItem: '42'
+      DisplayAmount: 64
+      Lore:
+        - "&e◆ &7Chance: &e12.5%"
+      MaxRange: 10000
+      Chance: 125
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'give %Player% 42 128'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n128x Iron Blocks&r&c.'
+      BlackListed-Permissions: []
+    25:
+      DisplayName: '&8◆ &e&n128x Gold Blocks&r &8◆'
+      DisplayItem: '41'
+      DisplayAmount: 64
+      Lore:
+        - "&e◆ &7Chance: &e10%"
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'give %Player% 41 128'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n128x Gold Blocks&r&c.'
+      BlackListed-Permissions: []
+    26:
+      DisplayName: '&8◆ &e&n128x Diamond Blocks&r &8◆'
+      DisplayItem: '57'
+      DisplayAmount: 64
+      Lore:
+        - "&c◆ &7Chance: &e8%"
+      MaxRange: 100
+      Chance: 8
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'give %Player% 57 128'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n128x Diamond Blocks&r&c.'
+      BlackListed-Permissions: []
+    27:
+      DisplayName: '&8◆ &e&n128x Emerald Blocks&r &8◆'
+      DisplayItem: '133'
+      DisplayAmount: 64
+      Lore:
+        - "&4◆ &7Chance: &e7.5%"
+      MaxRange: 1000
+      Chance: 75
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'give %Player% 133 128'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n128x Emerald Blocks&r&c.'
+      BlackListed-Permissions: []
+    28:
+      DisplayName: '&8◆ &a&n2x Exclusive Pet Eggs&r &8◆'
+      DisplayItem: '383:55'
+      DisplayAmount: 2
+      Lore:
+        - "&4◆ &7Chance: &a4%"
+      MaxRange: 100
+      Chance: 4
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'pets give %Player% exclusive 2'
+        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n2x Exclusive Pet Eggs&r&c.'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n2x Exclusive Pet Eggs&r&c.'
+      BlackListed-Permissions: []
+    29:
+      DisplayName: '&8◆ &e&n2x Ultimate Pet Eggs&r &8◆'
+      DisplayItem: '383:66'
+      DisplayAmount: 2
+      Lore:
+        - "&4◆ &7Chance: &e3%"
+      MaxRange: 100
+      Chance: 3
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'pets give %Player% ultimate 2'
+        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n2x Ultimate Pet Eggs&r&c.'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n2x Ultimate Pet Eggs&r&c.'
+      BlackListed-Permissions: []
+    30:
+      DisplayName: '&8◆ &6&nLegendary Pet Egg&r &8◆'
+      DisplayItem: '383:62'
+      DisplayAmount: 1
+      Lore:
+        - "&4◆ &7Chance: &62%"
+      MaxRange: 100
+      Chance: 2
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'pets give %Player% legendary 1'
+        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Legendary Pet Egg&r&c.'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Ultimate Pet Egg&r&c.'
+      BlackListed-Permissions: []
+    31:
+      DisplayName: '&8◆ &b&nMoney Pouch (T4)&r &8◆'
+      DisplayItem: '54'
+      DisplayAmount: 1
+      Lore:
+        - "&7Money Range: &b200,000 - 500,000 ⛃"
+        - "&4◆ &7Chance: &b15%"
+      MaxRange: 100
+      Chance: 15
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'mp 4 %Player% 1'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Money Pouch (T4)&r&c.'
+      BlackListed-Permissions: []
+    32:
+      DisplayName: '&8◆ &f&nEnvoy Summoner&r &8◆'
+      DisplayItem: '76'
+      DisplayAmount: 1
+      Lore:
+        - "&4◆ &7Chance: &f4%"
+      MaxRange: 100
+      Chance: 4
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'envoy flare 1 %Player%'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Envoy Summoner&r&c.'
+      BlackListed-Permissions: []
+    33:
+      DisplayName: '&8◆ &c&n20x Legendary Enchantment Books&r &8◆'
+      DisplayItem: '340'
+      DisplayAmount: 20
+      Lore:
+        - "&4◆ &7Chance: &c7%"
+      MaxRange: 100
+      Chance: 7
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ce lostbook Legendary 20 %Player%'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n20x Legendary Enchantment Books&r&c.'
+      BlackListed-Permissions: []
+    34:
+      DisplayName: '&8◆ &5&n15x Ancient Enchantment Books&r &8◆'
+      DisplayItem: '340'
+      DisplayAmount: 15
+      Lore:
+        - "&4◆ &7Chance: &55%"
+      MaxRange: 100
+      Chance: 5
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ce lostbook Ancient 15 %Player%'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n15x Ancient Enchantment Books&r&c.'
+      BlackListed-Permissions: []
+    35:
+      DisplayName: '&8◆ &e&n6x White Scrolls&r &8◆'
+      DisplayItem: '395'
+      DisplayAmount: 6
+      Lore:
+        - "&4◆ &7Chance: &e5%"
+      MaxRange: 100
+      Chance: 5
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ce scroll white 6 %Player%'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n6x White Scrolls&r&c.'
+      BlackListed-Permissions: []
+    36:
+      DisplayName: '&8◆ &e&n6x Black Scrolls&r &8◆'
+      DisplayItem: '351'
+      DisplayAmount: 6
+      Lore:
+        - "&4◆ &7Chance: &e5%"
+      MaxRange: 100
+      Chance: 5
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ce scroll black 6 %Player%'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n6x Black Scrolls&r&c.'
+      BlackListed-Permissions: []
+    37:
+      DisplayName: '&8◆ &e&n4x Scrambling Runes&r &8◆'
+      DisplayItem: '388'
+      DisplayAmount: 4
+      Lore:
+        - "&4◆ &7Chance: &e5%"
+      MaxRange: 100
+      Chance: 5
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ce scrambler 4 %Player%'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n4x Scrambling Runes&r&c.'
+      BlackListed-Permissions: []
+    38:
+      DisplayName: '&8◆ &6&n2x Protection Crystal&r &8◆'
+      DisplayItem: '406'
+      DisplayAmount: 2
+      Lore:
+        - "&4◆ &7Chance: &65%"
+      MaxRange: 100
+      Chance: 5
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ce crystal 2 %Player%'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n2x Protection Rune&r&c.'
+      BlackListed-Permissions: []
+    39:
+      DisplayName: '&8◆ &b&nRank:&r &8[&aPhantom&8] &8◆'
+      DisplayItem: '399'
+      DisplayAmount: 1
+      Lore:
+        - "&7This will give you a voucher to"
+        - "&7unlock the rank on this server."
+        - "&r"
+        - "&4◆ &7Chance: &b1%"
+      MaxRange: 100
+      Chance: 1
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'voucher give %Player% PhantomRank 1'
+        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Phantom Rank&r&c.'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Phantom Rank&r&c.'
+      BlackListed-Permissions: []
+    40:
+      DisplayName: '&8◆ &b&nRank:&r &8[&dWarlock&8] &8◆'
+      DisplayItem: '399'
+      DisplayAmount: 1
+      Lore:
+        - "&7This will give you a voucher to"
+        - "&7unlock the rank on this server."
+        - "&r"
+        - "&4◆ &7Chance: &b0.75%"
+      MaxRange: 10000
+      Chance: 75
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'voucher give %Player% WarlockRank 1'
+        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Warlock Rank&r&c.'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Warlock Rank&r&c.'
+      BlackListed-Permissions: []
+    41:
+      DisplayName: '&8◆ &b&nRank:&r &8[&6Ghoul&8] &8◆'
+      DisplayItem: '399'
+      DisplayAmount: 1
+      Lore:
+        - "&7This will give you a voucher to"
+        - "&7unlock the rank on this server."
+        - "&r"
+        - "&4◆ &7Chance: &b0.5%"
+      MaxRange: 1000
+      Chance: 5
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'voucher give %Player% GhoulRank 1'
+        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Ghoul Rank&r&c.'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Ghoul Rank&r&c.'
+      BlackListed-Permissions: []
+    42:
+      DisplayName: '&8◆ &b&nRank:&r &8[&cDemon&8] &8◆'
+      DisplayItem: '399'
+      DisplayAmount: 1
+      Lore:
+        - "&7This will give you a voucher to"
+        - "&7unlock the rank on this server."
+        - "&r"
+        - "&4◆ &7Chance: &b0.2%"
+      MaxRange: 1000
+      Chance: 2
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'voucher give %Player% DemonRank 1'
+        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Demon Rank&r&c.'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Demon Rank&r&c.'
+      BlackListed-Permissions: []
+    43:
+      DisplayName: '&8◆ &b&nRank:&r &8[&6&k;&eOverlord&6&k;&8] &8◆'
+      DisplayItem: '399'
+      DisplayAmount: 1
+      Lore:
+        - "&7This will give you a voucher to"
+        - "&7unlock the rank on this server."
+        - "&r"
+        - "&4◆ &7Chance: &b0.1%"
+      MaxRange: 1000
+      Chance: 1
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'voucher give %Player% OverlordRank 1'
+        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Overlord Rank&r&c.'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Overlord Rank&r&c.'
+      BlackListed-Permissions: []
+    44:
+      DisplayName: '&8◆ &c&nGKit:&r &c"&1Fighter&c" &8◆'
+      DisplayItem: '378'
+      DisplayAmount: 1
+      Lore:
+        - "&7This will give you a voucher to"
+        - "&7unlock the gkit on this server."
+        - "&r"
+        - "&4◆ &7Chance: &c0.3%"
+      MaxRange: 1000
+      Chance: 3
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'voucher give %Player% FighterGKit 1'
+        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Fighter GKit&r&c.'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Fighter GKit&r&c.'
+      BlackListed-Permissions: []
+    45:
+      DisplayName: '&8◆ &c&nGKit:&r &c"&2Beastmaster&c" &8◆'
+      DisplayItem: '378'
+      DisplayAmount: 1
+      Lore:
+        - "&7This will give you a voucher to"
+        - "&7unlock the gkit on this server."
+        - "&r"
+        - "&4◆ &7Chance: &c0.3%"
+      MaxRange: 1000
+      Chance: 3
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'voucher give %Player% BeastmasterGKit 1'
+        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Beastmaster GKit&r&c.'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Beastmaster GKit&r&c.'
+      BlackListed-Permissions: []
+    46:
+      DisplayName: '&8◆ &c&nGKit:&r &c"&4Archer&c" &8◆'
+      DisplayItem: '378'
+      DisplayAmount: 1
+      Lore:
+        - "&7This will give you a voucher to"
+        - "&7unlock the gkit on this server."
+        - "&r"
+        - "&4◆ &7Chance: &c0.3%"
+      MaxRange: 1000
+      Chance: 3
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'voucher give %Player% ArcherGKit 1'
+        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Archer GKit&r&c.'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Archer GKit&r&c.'
+      BlackListed-Permissions: []
+    47:
+      DisplayName: '&8◆ &c&nGKit:&r &c"&5Enchanter&c" &8◆'
+      DisplayItem: '378'
+      DisplayAmount: 1
+      Lore:
+        - "&7This will give you a voucher to"
+        - "&7unlock the gkit on this server."
+        - "&r"
+        - "&4◆ &7Chance: &c0.3%"
+      MaxRange: 1000
+      Chance: 3
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'voucher give %Player% EnchanterGKit 1'
+        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Enchanter GKit&r&c.'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Enchanter GKit&r&c.'
+      BlackListed-Permissions: []
+    48:
+      DisplayName: '&8◆ &c&nGKit:&r &c"&fKnight&c" &8◆'
+      DisplayItem: '378'
+      DisplayAmount: 1
+      Lore:
+        - "&7This will give you a voucher to"
+        - "&7unlock the gkit on this server."
+        - "&r"
+        - "&4◆ &7Chance: &c0.2%"
+      MaxRange: 1000
+      Chance: 2
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'voucher give %Player% KnightGKit 1'
+        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Knight GKit&r&c.'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Knight GKit&r&c.'
+      BlackListed-Permissions: []
+    49:
+      DisplayName: '&8◆ &c&nGKit:&r &c"&9Wizard&c" &8◆'
+      DisplayItem: '378'
+      DisplayAmount: 1
+      Lore:
+        - "&7This will give you a voucher to"
+        - "&7unlock the gkit on this server."
+        - "&r"
+        - "&4◆ &7Chance: &c0.2%"
+      MaxRange: 1000
+      Chance: 2
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'voucher give %Player% WizardGKit 1'
+        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Wizard GKit&r&c.'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Wizard GKit&r&c.'
+      BlackListed-Permissions: []
+    50:
+      DisplayName: '&8◆ &c&nGKit:&r &c"&aSpring&c" &8◆'
+      DisplayItem: '378'
+      DisplayAmount: 1
+      Lore:
+        - "&7This will give you a voucher to"
+        - "&7unlock the gkit on this server."
+        - "&r"
+        - "&4◆ &7Chance: &c0.2%"
+      MaxRange: 1000
+      Chance: 2
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'voucher give %Player% SpringGKit 1'
+        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Spring GKit&r&c.'
+      Messages:
+        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Spring GKit&r&c.'
+      BlackListed-Permissions: []

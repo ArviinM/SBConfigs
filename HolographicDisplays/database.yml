@@ -1,0 +1,66 @@
+magmalord:
+  location: world, -1078.500, 43.200, 653.500
+  lines:
+  - '&7&oYou are entering the home of the...'
+  - '&4&lMagma Lord'
+  - '&r'
+  - '&7This boss is extremely dangerous and it &nwill'
+  - '&7kill you if you are not prepared.'
+ancientwitch:
+  location: world, -917.500, 56.200, 675.500
+  lines:
+  - '&7&oYou are approaching the home of the...'
+  - '&5&lAncient Witch'
+  - '&r'
+  - '&7This boss will use her powerful spells'
+  - '&7to kill you when you least expect it.'
+  - '&7Be careful!'
+skeletonking:
+  location: world, -1231.500, 78.200, 528.500
+  lines:
+  - '&7&oYou are entering the home of the...'
+  - '&6&lSkeleton King'
+  - '&r'
+  - '&7The king of all skeletons is very'
+  - '&7powerful and you should be very careful!'
+warzoneenvoy:
+  location: world, -1076.500, 151.000, 577.500
+  lines:
+  - '&4&l&m---&r&8&l&m[--&r &4&l&nWARZONE EVENT&r &8&l&m--]&4&l&m---&r'
+  - '&7Supply crates packed with useful items'
+  - '&7will fall from the sky in &c&n{envoy_cooldown}&r&7!'
+first:
+  location: world, -1086.574, 153.200, 510.503
+  lines:
+  - '&a&n1st Place'
+  - '&f<asb-level_name_1>'
+  - '&aLevel: &7<asb-level_score_1>'
+second:
+  location: world, -1087.473, 153.200, 514.568
+  lines:
+  - '&b&n2nd Place'
+  - '&f<asb-level_name_2>'
+  - '&bLevel: &7<asb-level_score_2>'
+third:
+  location: world, -1087.486, 153.200, 506.517
+  lines:
+  - '&6&n3rd Place'
+  - '&f<asb-level_name_3>'
+  - '&6Level: &7<asb-level_score_3>'
+spawn:
+  location: world, -1051.649, 153.748, 491.764
+  lines:
+  - '&bWelcome {displayname} &bto &6&lWESSEX &c&lSKYBLOCK'
+  - ''
+  - '&bYou will have an &camazing time &bhere with features like'
+  - '&cInventory Pets&b, &cWarzone&b, &cIsland Upgrades&b, &cCustom Enchants'
+  - '&cVaults&b, &cBattlepass&b, &cMinecraft<->Discord Chat&b, and &cmuch more&b!'
+  - ''
+  - '&bType &c/is panel &bto get started'
+tutorial:
+  location: world, -1068.402, 150.914, 521.476
+  lines:
+  - '&6&lTutorial'
+  - '&fLearn the basics of Skyblock'
+  - 'More info at: &b&nhttps://discuss.wessex.site/'
+  - Check out the our &6Skyblock Wiki

@@ -1,0 +1,124 @@
+SkeletonKingSword:
+  Id: 276
+  Data: 0
+  Display: '&3Greatsword of the Skeleton King'
+  Lore:
+  - '&6A powerful sword used by'
+  - '&6the King of Skeletons.'
+  Enchantments:
+  - DAMAGE_ALL:5
+  - KNOCKBACK:2
+  - FIRE_ASPECT:2
+SkeletonKingHelmet:
+  Id: 310
+  Data: 0
+SkeletonKingChestplate:
+  Id: 311
+  Data: 0
+SkeletonKingLeggings:
+  Id: 312
+  Data: 0
+SkeletonKingBoots:
+  Id: 313
+  Data: 0
+SkeletonKnight1Helmet:
+  Id: 306
+  Data: 0
+SkeletonKnight1Chestplate:
+  Id: 311
+  Data: 0
+SkeletonKnight1Leggings:
+  Id: 304
+  Data: 0
+SkeletonKnight1Boots:
+  Id: 317
+  Data: 0
+SkeletonKnight1Sword:
+  Id: 276
+  Data: 0
+SkeletonKnight2Helmet:
+  Id: 310
+  Data: 0
+SkeletonKnight2Chestplate:
+  Id: 303
+  Data: 0
+SkeletonKnight2Leggings:
+  Id: 308
+  Data: 0
+SkeletonKnight2Boots:
+  Id: 309
+  Data: 0
+SkeletonKnight2Sword:
+  Id: 267
+  Data: 0
+WarToken:
+  Id: 318
+  Data: 0
+  Display: '             &8◆ &d&nWar Token&r &8◆'
+  Lore:
+  - '   &7&nRight-click&r&7 to redeem this token.'
+  - '&r'
+  - '&7These tokens can be exchanged for'
+  - '    &e&ntreasure&r &7at the &c&nwar merchant&r&7.'
+GhostHead:
+  Id: 397
+  Data: 3
+  Options:
+    Player: Ghost
+GhostChest:
+  Id: 299
+  Data: 0
+  Options:
+    Color: 224,224,224
+GhostAxe:
+  Id: 258
+  Data: 0
+  Enchantments:
+  - DAMAGE_ALL:1
+DemonHead:
+  Id: 397
+  Data: 3
+  Options:
+    Player: manecraft
+DemonChest:
+  Id: 299
+  Data: 0
+  Options:
+    Color: 102,153,153
+DemonLeggs:
+  Id: 300
+  Data: 0
+  Options:
+    Color: 102,153,153
+DemonSword:
+  Id: 276
+  Data: 0
+  Enchantments:
+  - DAMAGE_ALL:1
+ZombieHead:
+  Id: 397
+  Data: 3
+  Options:
+    Player: Colin
+ZombieChest:
+  Id: 299
+  Data: 0
+  Options:
+    Color: 200,80,60
+ZombieLeggs:
+  Id: 300
+  Data: 0
+  Options:
+    Color: 70,80,100
+ZombieSword:
+  Id: 283
+  Data: 0
+  Enchantments:
+  - DAMAGE_ALL:1
+Mumusword:
+  Id: 283
+  Data: 0
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - FIRE_ASPECT:2

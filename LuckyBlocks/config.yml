@@ -1,0 +1,16 @@
+Prefix: '&eLucky Blocks > '
+NoPermissions: '&cYou are not allowed to do this!'
+onlyIngame: '&cYou can do this only InGame!'
+Update-Notify: true
+World-Spawning:
+  Enabled: false
+  World: world
+  SpawnsPerHour: 30
+GiveLuckyblocksWhenPlayerJoin:
+  Enabled: false
+  Amount: 16
+  Permission: luckyblocks.onjoin
+AdminPermission: luckyblocks.admin
+BreakPermission: luckyblocks.break
+ShopPermission: luckyblocks.shop
+LuckyBlockPrice: 1000

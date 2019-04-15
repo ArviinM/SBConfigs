@@ -1,0 +1,20 @@
+xp:
+  boost: 2.5
+  endtime: 1551283425729
+  condition:
+    SKILLAPI: false
+    JOBS: false
+    HEROES: false
+    MCMMO: false
+    VANILLA: true
+  advanced:
+    SKILLAPI:
+      DEFAULT: false
+      CRAFTING: false
+    MCMMO:
+      DEFAULT: false
+      EXCAVATION: false
+    HEROES:
+      DEFAULT: true
+      KILLING: false
+      FARMING: false

@@ -1,0 +1,67 @@
+#General Messages
+
+general.nametag.prefix = "&8[&9UltimateKits&8]"
+general.type.command = "&7פקודה"
+general.type.chance = "סיכוי"
+general.type.money = "&6כסף"
+general.type.link = "&9לינק"
+general.type.free = "חינם"
+
+#Interface Messages
+
+interface.selector.kit = "&c%kit%"
+interface.selector.title = "&8ערכות שרת"
+interface.selector.details = "&7היי %player%&7!|&7לפניך הערכות שרת שלנו.||&7לחץ על &eהאייקון &7שמוצג על הערכה|77בשביל &eלראות, לקבל או לקנות&7אותו"
+interface.selector.aboutkit = "&7לא מצליח לפתוח ערכה??|&עלה דרגה בשביל לקבל הרשאה!"
+interface.selector.leftpreview = "&6&lלחצן ימני  בישבל לראות את הערכה."
+interface.selector.rightclaim = "&6&lלחצן ימני בשביל לקבל את הערכה."
+interface.selector.rightbuy = "&6&lלחצן ימני בשביל לקנות את הערכה."
+interface.hologram.previewonly = "לחץ בשביל לראות!"
+interface.hologram.preview = "לחץ לחיצה שמאלית בשביל לראות"
+interface.hologram.buylink = "לחץ לחיצה שמאלית בשביל לקנות!"
+interface.hologram.buyeco = "לחץ לחיצה שמאלית בשביל לקנות ב- &a$%price%&f!"
+interface.hologram.crate = "לחץ לחיצה שמאלית עם מפתח בשביל לפתוח"
+interface.hologram.daily = "לחיצה שמאלית בישבל לקבל"
+interface.button.buynow = "&aקנה עכשיו"
+interface.button.back = "&9לזור"
+interface.button.exit = "&cצא"
+interface.button.next = "&7עמוד הבא"
+interface.button.last = "&7עמוד קודם"
+interface.button.clickeco = "&7לחץ לקנות ב- &a%price%&7."
+interface.preview.title = "&9צופה בערכה: &8%kit%"
+interface.yesno.title = "&9קנה ב- &a$%price%&9?"
+interface.yesno.yes = "&a&lכן"
+interface.yesno.no = "&c&lלא"
+interface.key.title =  "&5%kit% &fמפתח של ערכה:"
+interface.key.description1 = "&rלחיצה ימנית על[a ]&c&l%kit%&r ערכה"
+interface.key.description2 = "&rוקבל מה שנמצא בפנים!"
+interface.key.description3 = "&rוקבל כמה דברים שבפנים!"
+interface.key.description4 = "&rנותן ערכה &c&l%amt% &rפעמים."
+
+#הודעות פקודה
+
+command.general.noperms = "&cאין לך הרשאה לעשות את זה!"
+command.kit.nokitsupplied = "&7בבקשה ציין שם של ערכה בשביל לראות."
+command.kit.kitdoesntexist = "&cהערכה הזאת לא נמצאת."
+command.kit.kitalreadyexists = "&cהערכה כבר קיימת."
+command.kit.playernotfound = "&cהשחקן לא מחובר או לא קיים."
+
+#הודעות של אירועים מיוחדים
+
+event.preview.kit = "&9אתה עכשיו צופה בערכה: &7%kit%&9."
+event.crate.notyet = "&cאתה צריך לכות &4%time% &cלפני שאתה יכול להשתמש בזה"
+event.claim.cannotafford = "&9אין לך מספיק כסף בשביל לשלם על ערכת &7%kit%&9."
+event.claim.nottwice = "&9אתה יכול לקבל את הערכה הזאת רק פעם אחת"
+event.claim.purchasesuccess = "&9שילמת על &7%kit%&9 ערכה. "
+event.claim.givesuccess = "&9קיבלת &7%kit%&9 ערכה."
+event.claim.delay = "&9בבקשה חכה %time%"
+event.claim.eco = "&7קיבלת &a%amt%&7."
+event.claim.once = "&7זמן לחכות: &6אתה כבר השתמשת בערכה זו
+event.claim.ready = "&7זמן לחכות: &6מוכן לשימוש!
+event.claim.wait = "&7זמן לחכות: &6%time%"
+event.claim.noaccess = "&7זמן לחכות: &cאין הרשאה!"
+event.claim.full = "&cהמלאי שלך מלא בישבל להשתמש בערכה הזאת"
+event.create.won = "&7קיבלת &6%item%&7."
+event.purchase.cancelled = "&cקנייה בוטלה."
+event.key.given = "&9קיבלת &a%kit% &9ערכת מפתח."
+event.key.success = "&9השתמש בהצלחה במפתח בשביל לקבל את הערכה: &7%kit%&9."

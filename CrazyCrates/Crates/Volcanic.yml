@@ -1,0 +1,758 @@
+Crate:
+  CrateType: Wheel #Type of crate (CSGO/QuadCrate/QuickCrate/Roulette/CrateOnTheGo/FireCracker/Wonder/Wheel/War/Cosmic(This requires a additional info to work.)).
+  CrateName: '&nVolcanic Crate' #Name of the Inventory if a GUI crate.
+  StartingKeys: 0 #Starting amount of keys when the player 1st joins.
+  InGUI: true #If the crate shows in the /cc GUI. (If the crate type is QuickCrate/CrateOnTheGo/FireCracker then the Crate will not work. Quick Crate requires a Physical Crate.)
+  Slot: 13 #Slot the item is in the GUI.
+  OpeningBroadCast: false #Enables/Disables the Broadcasts message when they open a crate.
+  BroadCast: '%Prefix%&6&l%Player% &7is opening a &7&lBasic Chest&7.' #Message that is broadcasted when opening the crate.
+  Item: '351:11' #Item the crate is in the GUI
+  Glowing: true #If the crate in the main /cc GUI is glowing or not.
+  Name: '       &8◆  &e&k;&6&k;&r &e&nVolcanic Crate&r &6&k;&e&k;&r  &8◆' #Name of the item in the GUI.
+  Preview-Name: '     &8◆  &e&k;&6&k;&r &e&nVolcanic Crate&r &6&k;&e&k;&r  &8◆' #Name of the item in the GUI.
+  Lore: #The lore of the item in the GUI.
+    - '&7A newly-made crate found in space' 
+    - '&7     is packed with special items.' 
+    - '&r' 
+    - '&e ◆ &7You have &e&n%Keys%&r &7keys for this crate.'
+    - '&r'
+    - '&e&nLeft-click&r &7to open this crate.'
+    - '&e&nRight-click&r &7to preview the rewards.'
+  PhysicalKey:
+    Name: '&8◆ &e&nVolcanic Crate Key&r &8◆' #Name of the Key.
+    Lore:
+      - '&7Use this key to open a crate.' #Lore of the Key.
+    Item: '131' #The item the key is.
+    Glowing: True #Makes the key look enchanted.
+#         For Cosmic Crates Only
+#############################################
+#  Tiers: #The tiers in the Crate
+#    Basic: #The Config Name for the Crate
+#      Name: '&8Basic Prize' #The in-game name of the Crate
+#      Color: 7 #Use the MetaData for the color of the glass
+#      Chance: 80 #Chance of that item getting picked. It would be 80/100 chance because MaxRange is 100.
+#      MaxRange: 100 #The max range that the chance will go though.
+#    UnCommon:
+#      Name: '&aUnCommon Prize'
+#      Color: 5
+#      Chance: 55
+#      MaxRange: 100
+#    Rare:
+#      Name: '&4Rare Prize'
+#      Color: 14
+#      Chance: 20
+#      MaxRange: 100
+#############################################
+  Prizes: #All the prizes that can be gotten in the Crate.
+    1:
+      DisplayName: '&8◆ &a&n10,000 ⛃&r &8◆'
+      DisplayItem: '388'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &a20%"
+      MaxRange: 100
+      Chance: 20
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'eco give %Player% 10000'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n10,000 ⛃&r&c.'
+      BlackListed-Permissions: []
+    2:
+      DisplayName: '&8◆ &a&n25,000&r &8◆'
+      DisplayItem: '388'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &a16%"
+      MaxRange: 100
+      Chance: 16
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'eco give %Player% 25000'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n25,000 ⛃&r&c.'
+      BlackListed-Permissions: []
+    3:
+      DisplayName: '&8◆ &a&n50,000&r &8◆'
+      DisplayItem: '388'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &a11%"
+      MaxRange: 100
+      Chance: 11
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'eco give %Player% 50000'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n50,000 ⛃&r&c.'
+      BlackListed-Permissions: []
+    4:
+      DisplayName: '&8◆ &b&n2,000 EXP&r &8◆'
+      DisplayItem: '384'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &b15%"
+      MaxRange: 100
+      Chance: 15
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'xp give %Player% 2000'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n2,000 EXP&r&c.'
+      BlackListed-Permissions: []
+    5:
+      DisplayName: '&8◆ &b&n3,000 EXP&r &8◆'
+      DisplayItem: '384'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &b10%"
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'xp give %Player% 3000'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n3,000 EXP&r&c.'
+      BlackListed-Permissions: []
+    6:
+      DisplayName: '&8◆ &8&n[&d&nWarlock&8&n]&c&n Kit&r &8◆'
+      DisplayItem: '315'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &c10%"
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'kit warlock %Player%'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n1x Warlock Kit&r&c.'
+      BlackListed-Permissions: []
+    7:
+      DisplayName: '&8◆ &8&n[&6&nGhoul&8&n]&c&n Kit&r &8◆'
+      DisplayItem: '303'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &c7.5%"
+      MaxRange: 1000
+      Chance: 75
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'kit ghoul %Player%'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n1x Ghoul Kit&r&c.'
+      BlackListed-Permissions: []
+    8:
+      DisplayName: '&8◆ &8&n[&c&nDemon&8&n]&c&n Kit&r &8◆'
+      DisplayItem: '307'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &c5%"
+      MaxRange: 100
+      Chance: 5
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'kit demon %Player%'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n1x Demon Kit&r&c.'
+      BlackListed-Permissions: []
+    9:
+      DisplayName: '&8◆ &8&n[&6&k&n;&r&e&nOverlord&6&k&n;&r&8&n]&c&n Kit&r &8◆'
+      DisplayItem: '311'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &c2.5%"
+      MaxRange: 1000
+      Chance: 25
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'kit overlord %Player%'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n1x Overlord Kit&r&c.'
+      BlackListed-Permissions: []
+    10:
+      DisplayName: '&8◆ &d&nPeaceful Mob Spawners&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 1
+      Lore:
+        - "&r"
+        - "&7&nThis includes..."
+        - "&3 ◆ &71x Chicken Spawner"
+        - "&3 ◆ &71x Pig Spawner"
+        - "&3 ◆ &71x Sheep Spawner"
+        - "&3 ◆ &71x Rabbit Spawner"
+        - "&r"
+        - "&e◆ &7Chance: &d8.5%"
+      MaxRange: 1000
+      Chance: 85
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% chicken 1'
+        - 'ss give %Player% pig 1'
+        - 'ss give %Player% sheep 1'
+        - 'ss give %Player% rabbit 1'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n1x Peaceful Mob Spawners&r&c.'
+      BlackListed-Permissions: []
+    11:
+      DisplayName: '&8◆ &d&nCow Spawner&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &d8%"
+      MaxRange: 100
+      Chance: 8
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% cow 1'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n1x Cow Spawner&r&c.'
+      BlackListed-Permissions: []
+    12:
+      DisplayName: '&8◆ &d&nZombie Spawner&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &d8%"
+      MaxRange: 100
+      Chance: 8
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% zombie 1'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n1x Zombie Spawner&r&c.'
+      BlackListed-Permissions: []
+    13:
+      DisplayName: '&8◆ &d&nSkeleton Spawner&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &d8%"
+      MaxRange: 100
+      Chance: 8
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% skeleton 1'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n1x Skeleton Spawner&r&c.'
+      BlackListed-Permissions: []
+    14:
+      DisplayName: '&8◆ &d&nSpider Spawner&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &d8%"
+      MaxRange: 100
+      Chance: 8
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% spider 1'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n1x Spider Spawner&r&c.'
+      BlackListed-Permissions: []
+    15:
+      DisplayName: '&8◆ &d&nCave Spider Spawner&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &d8%"
+      MaxRange: 100
+      Chance: 8
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% cavespider 1'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n1x Cave Spider Spawner&r&c.'
+      BlackListed-Permissions: []
+    16:
+      DisplayName: '&8◆ &d&nWitch Spawner&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &d8%"
+      MaxRange: 100
+      Chance: 8
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% witch 1'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n1x Witch Spawner&r&c.'
+      BlackListed-Permissions: []
+    17:
+      DisplayName: '&8◆ &e&n8x Hoppers&r &8◆'
+      DisplayItem: '154'
+      DisplayAmount: 8
+      Lore:
+        - "&e◆ &7Chance: &e10%"
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'give %Player% 154 8'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n8x Hoppers&r&c.'
+      BlackListed-Permissions: []
+    18:
+      DisplayName: '&8◆ &e&n16x Hoppers&r &8◆'
+      DisplayItem: '154'
+      DisplayAmount: 16
+      Lore:
+        - "&e◆ &7Chance: &e5%"
+      MaxRange: 100
+      Chance: 5
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'give %Player% 154 16'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n16x Hoppers&r&c.'
+      BlackListed-Permissions: []
+    19:
+      DisplayName: '&8◆ &e&n3x Crop Hoppers&r &8◆'
+      DisplayItem: '154'
+      DisplayAmount: 3
+      Lore:
+        - "&7One crop hopper will take all dropped"
+        - "&7crops in the chunk it is placed."
+        - "&e◆ &7Chance: &e4%"
+      MaxRange: 100
+      Chance: 4
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'mfhoppers give %Player% cropHopper 3'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n3x Crop Hoppers&r&c.'
+      BlackListed-Permissions: []
+    20:
+      DisplayName: '&8◆ &5&n10x War Tokens&r &8◆'
+      DisplayItem: '318'
+      DisplayAmount: 10
+      Lore:
+        - "&e◆ &7Chance: &55%"
+      MaxRange: 100
+      Chance: 5
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'vouchers give %Player% wartoken 10'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n10x War Tokens&r&c.'
+      BlackListed-Permissions: []
+    21:
+      DisplayName: '&8◆ &c&n1x Devilish Key&r &8◆'
+      DisplayItem: '351:9'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &e4.5%"
+      MaxRange: 1000
+      Chance: 45
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'cc give v Devilish 1 %Player%'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n1x Devilish Key&r&c.'
+      BlackListed-Permissions: []
+    22:
+      DisplayName: '&8◆ &e&n2x Volcanic Keys&r &8◆'
+      DisplayItem: '351:11'
+      DisplayAmount: 2
+      Lore:
+        - "&e◆ &7Chance: &e5%"
+      MaxRange: 100
+      Chance: 5
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'cc give v Volcanic 2 %Player%'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n2x Volcanic Keys&r&c.'
+      BlackListed-Permissions: []
+    23:
+      DisplayName: '&8◆ &e&nVolcanic Key All&r &8◆'
+      DisplayItem: '351:11'
+      DisplayAmount: 1
+      Lore:
+        - "&7All online players will receive this key."
+        - "&6◆ &7Chance: &e0.25%"
+      MaxRange: 10000
+      Chance: 25
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'cc giveall v Volcanic 1'
+        - 'broadcast &7%Player% &chas opened a &e&nVolcanic Crate&r &cand won &e&n1x Volcanic Key All&r&c.'
+        - 'broadcast &7All online players have received &n1x Volcanic Key&r&7.'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &6&n1x Volcanic Key All&r&c.'
+      BlackListed-Permissions: []
+    24:
+      DisplayName: '&8◆ &e&n32x Iron Blocks&r &8◆'
+      DisplayItem: '42'
+      DisplayAmount: 32
+      Lore:
+        - "&e◆ &7Chance: &e6.5%"
+      MaxRange: 1000
+      Chance: 65
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'give %Player% 42 32'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n32x Iron Blocks&r&c.'
+      BlackListed-Permissions: []
+    25:
+      DisplayName: '&8◆ &e&n32x Gold Blocks&r &8◆'
+      DisplayItem: '41'
+      DisplayAmount: 32
+      Lore:
+        - "&e◆ &7Chance: &e4.5%"
+      MaxRange: 1000
+      Chance: 45
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'give %Player% 41 32'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n32x Gold Blocks&r&c.'
+      BlackListed-Permissions: []
+    26:
+      DisplayName: '&8◆ &e&n32x Diamond Blocks&r &8◆'
+      DisplayItem: '57'
+      DisplayAmount: 32
+      Lore:
+        - "&e◆ &7Chance: &e3%"
+      MaxRange: 100
+      Chance: 3
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'give %Player% 57 32'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n32x Diamond Blocks&r&c.'
+      BlackListed-Permissions: []
+    27:
+      DisplayName: '&8◆ &e&n32x Emerald Blocks&r &8◆'
+      DisplayItem: '133'
+      DisplayAmount: 32
+      Lore:
+        - "&e◆ &7Chance: &e1%"
+      MaxRange: 100
+      Chance: 1
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'give %Player% 133 32'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n32x Emerald Blocks&r&c.'
+      BlackListed-Permissions: []
+    28:
+      DisplayName: '&8◆ &a&nExclusive Pet Egg&r &8◆'
+      DisplayItem: '383:55'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &a2%"
+      MaxRange: 100
+      Chance: 2
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'pets give %Player% exclusive 1'
+        - 'broadcast &7%Player% &chas opened a &e&nVolcanic Crate&r &cand won &e&n1x Exclusive Pet Egg&r&c.'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n1x Exclusive Pet Egg&r&c.'
+      BlackListed-Permissions: []
+    29:
+      DisplayName: '&8◆ &e&nUltimate Pet Egg&r &8◆'
+      DisplayItem: '383:66'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &e1%"
+      MaxRange: 100
+      Chance: 1
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'pets give %Player% ultimate 1'
+        - 'broadcast &7%Player% &chas opened a &e&nVolcanic Crate&r &cand won &e&n1x Ultimate Pet Egg&r&c.'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n1x Ultimate Pet Egg&r&c.'
+      BlackListed-Permissions: []
+    30:
+      DisplayName: '&8◆ &b&n12x Common Enchantment Books&r &8◆'
+      DisplayItem: '340'
+      DisplayAmount: 12
+      Lore:
+        - "&e◆ &7Chance: &b10%"
+      MaxRange: 100
+      Chance: 10
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ce lostbook Common 12 %Player%'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &6&n12x Common Enchantment Books&r&c.'
+      BlackListed-Permissions: []
+    31:
+      DisplayName: '&8◆ &e&n5x Rare Enchantment Books&r &8◆'
+      DisplayItem: '340'
+      DisplayAmount: 5
+      Lore:
+        - "&e◆ &7Chance: &e8%"
+      MaxRange: 100
+      Chance: 8
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ce lostbook Rare 5 %Player%'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n5x Rare Enchantment Books&r&c.'
+      BlackListed-Permissions: []
+    32:
+      DisplayName: '&8◆ &c&n3x Legendary Enchantment Books&r &8◆'
+      DisplayItem: '340'
+      DisplayAmount: 3
+      Lore:
+        - "&e◆ &7Chance: &c6%"
+      MaxRange: 100
+      Chance: 6
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ce lostbook Legendary 3 %Player%'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n3x Legendary Enchantment Books&r&c.'
+      BlackListed-Permissions: []
+    33:
+      DisplayName: '&8◆ &e&n2x White Scrolls&r &8◆'
+      DisplayItem: '395'
+      DisplayAmount: 2
+      Lore:
+        - "&e◆ &7Chance: &e5%"
+      MaxRange: 100
+      Chance: 5
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ce scroll white 2 %Player%'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n2x White Scrolls&r&c.'
+      BlackListed-Permissions: []
+    34:
+      DisplayName: '&8◆ &e&n2x Black Scrolls&r &8◆'
+      DisplayItem: '351'
+      DisplayAmount: 2
+      Lore:
+        - "&e◆ &7Chance: &e5%"
+      MaxRange: 100
+      Chance: 5
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ce scroll black 2 %Player%'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n2x Black Scrolls&r&c.'
+      BlackListed-Permissions: []
+    35:
+      DisplayName: '&8◆ &e&nScrambling Rune&r &8◆'
+      DisplayItem: '388'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &e5%"
+      MaxRange: 100
+      Chance: 5
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ce scrambler 1 %Player%'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n1x Scrambling Rune&r&c.'
+      BlackListed-Permissions: []
+    36:
+      DisplayName: '&8◆ &2&nBeastmaster Kit&r &8◆'
+      DisplayItem: '352'
+      DisplayAmount: 1
+      Lore:
+        - "&7This is only the kit and &nNOT"
+        - "&7permanent access to the GKit."
+        - "&r"
+        - "&e◆ &7Chance: &e3.5%"
+      MaxRange: 1000
+      Chance: 35
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'gkitz beastmaster %Player%'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n1x Beastmaster Kit&r&c.'
+      BlackListed-Permissions: []
+    37:
+      DisplayName: '&8◆ &1&nFighter Kit&r &8◆'
+      DisplayItem: '276'
+      DisplayAmount: 1
+      Lore:
+        - "&7This is only the kit and &nNOT"
+        - "&7permanent access to the GKit."
+        - "&r"
+        - "&e◆ &7Chance: &e3.5%"
+      MaxRange: 1000
+      Chance: 35
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'gkitz fighter %Player%'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n1x Fighter Kit&r&c.'
+      BlackListed-Permissions: []
+    38:
+      DisplayName: '&8◆ &5&nEnchanter Kit&r &8◆'
+      DisplayItem: '340'
+      DisplayAmount: 1
+      Lore:
+        - "&7This is only the kit and &nNOT"
+        - "&7permanent access to the GKit."
+        - "&r"
+        - "&e◆ &7Chance: &e3.5%"
+      MaxRange: 1000
+      Chance: 35
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'gkitz enchanter %Player%'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n1x Enchanter Kit&r&c.'
+      BlackListed-Permissions: []
+    39:
+      DisplayName: '&8◆ &9&nWizard Kit&r &8◆'
+      DisplayItem: '374'
+      DisplayAmount: 1
+      Lore:
+        - "&7This is only the kit and &nNOT"
+        - "&7permanent access to the GKit."
+        - "&r"
+        - "&e◆ &7Chance: &e3.5%"
+      MaxRange: 1000
+      Chance: 35
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'gkitz wizard %Player%'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n1x Wizard Kit&r&c.'
+      BlackListed-Permissions: []
+    40:
+      DisplayName: '&8◆ &f&nKnight Kit&r &8◆'
+      DisplayItem: '306'
+      DisplayAmount: 1
+      Lore:
+        - "&7This is only the kit and &nNOT"
+        - "&7permanent access to the GKit."
+        - "&r"
+        - "&e◆ &7Chance: &e3.5%"
+      MaxRange: 1000
+      Chance: 35
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'gkitz knight %Player%'
+      Messages:
+        - '&c(!) You have opened a &e&nVolcanic Crate&r &cand won &e&n1x Knight Kit&r&c.'
+      BlackListed-Permissions: []

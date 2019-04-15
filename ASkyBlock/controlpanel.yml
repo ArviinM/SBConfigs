@@ -1,0 +1,49 @@
+# Control panel file
+# For colors in panel name use &. Note client must restart if changes made as it caches inventory.
+# [island] refers to the island command, e.g., /island
+# material format is MATERIAL:DURABILITY where DURABILITY is optional
+# description can include color codes using & and new lines using |
+
+default:
+  panelname: '&nControl Panel'
+  buttons:
+    0:
+      material: STAINED_GLASS_PANE:7
+      description: '&r'
+      nextsection: ''
+    1:
+      material: STAINED_GLASS_PANE:7
+      description: '&r'
+      nextsection: ''
+    2:
+      material: STAINED_GLASS_PANE:7
+      description: '&r'
+      nextsection: ''
+    3:
+      material: STAINED_GLASS_PANE:7
+      description: '&r'
+      nextsection: ''
+    4:
+      material: STAINED_GLASS_PANE:7
+      description: '&r'
+      nextsection: ''
+    5:
+      material: STAINED_GLASS_PANE:7
+      description: '&r'
+      nextsection: ''
+    6:
+      material: STAINED_GLASS_PANE:7
+      description: '&r'
+      nextsection: ''
+    7:
+      material: STAINED_GLASS_PANE:7
+      description: '&r'
+      nextsection: ''
+    8:
+      material: STAINED_GLASS_PANE:7
+      description: '&r'
+      nextsection: ''
+    9:
+      material: STAINED_GLASS_PANE:7
+      description: '&r'
+      nextsection: ''

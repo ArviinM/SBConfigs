@@ -1,0 +1,5 @@
+&3@===========[] &6&lWESSEX &c&lSKYBLOCK &3[]============@
+         &bWelcome to &6&lWessex &cSkyblock&b,  &e&l{USERNAME}&b!
+          &bType &6/help &bto know all your commands
+              &bCheck out our website &6&nwessex.site
+&3@============================================@

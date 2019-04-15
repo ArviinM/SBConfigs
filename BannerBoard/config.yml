@@ -1,0 +1,200 @@
+# This is the BannerBoard configuration
+# Make sure to always make a backup of this file before making any changes!
+# Made by BigTeddy98
+# 
+# Every BannerBoard has some internal settings stored in this file.
+# Please do not make any changes to whatever is in the internal section.
+
+lastUsedId: 22
+idrange:
+  startid: 25000
+  amount: 5000
+skinserver: http://www.skinrender.com:2798/
+skinrender_key: KH5OF149104U72494AIFTROK7
+bannerboards:
+  '0':
+    internal:
+      frames:
+      - world_-1105.0_151.0_559.0_0.0_0.0
+      - world_-1104.0_151.0_559.0_0.0_0.0
+      - world_-1103.0_151.0_559.0_0.0_0.0
+      facing: NORTH
+      width: 3
+      height: 1
+      rotation: 0
+    configurable:
+      renderers:
+      - IMAGE -src background.png -witdth 384 -height 128
+      - TEXT -text SHOP -size 95 -font Prager Headlines -color 255,255,255 -strokeColor
+        0,0,0 -strokeThickness 1 -xOffset 135 -yOffset 85
+      - TEXT -text RIGHT-CLICK THE NPC -size 30 -font Prager Headlines -color 255,255,255
+        -strokeColor 0,0,0 -strokeThickness 1 -xOffset 100 -yOffset 106
+  '1':
+    internal:
+      frames:
+      - world_-1093.0_151.0_557.0_0.0_0.0
+      - world_-1092.0_151.0_557.0_0.0_0.0
+      - world_-1091.0_151.0_557.0_0.0_0.0
+      facing: NORTH
+      width: 3
+      height: 1
+      rotation: 0
+    configurable:
+      renderers:
+      - IMAGE -src background.png -witdth 384 -height 128
+      - TEXT -text QUESTS -size 95 -font Prager Headlines -color 255,255,255 -strokeColor
+        0,0,0 -strokeThickness 1 -xOffset 98 -yOffset 85
+      - TEXT -text RIGHT-CLICK THE NPC -size 30 -font Prager Headlines -color 255,255,255
+        -strokeColor 0,0,0 -strokeThickness 1 -xOffset 100 -yOffset 106
+  '2':
+    internal:
+      frames:
+      - world_-1099.0_151.0_566.0_0.0_0.0
+      - world_-1100.0_151.0_566.0_0.0_0.0
+      - world_-1101.0_151.0_566.0_0.0_0.0
+      facing: SOUTH
+      width: 3
+      height: 1
+      rotation: 0
+    configurable:
+      renderers:
+      - IMAGE -src background.png -witdth 384 -height 128
+      - TEXT -text TINKERER -size 95 -font Prager Headlines -color 255,255,255 -strokeColor
+        0,0,0 -strokeThickness 1 -xOffset 55 -yOffset 85
+      - TEXT -text RIGHT-CLICK THE NPC -size 30 -font Prager Headlines -color 255,255,255
+        -strokeColor 0,0,0 -strokeThickness 1 -xOffset 100 -yOffset 106
+  '3':
+    internal:
+      frames:
+      - world_-1086.0_151.0_565.0_0.0_0.0
+      - world_-1087.0_151.0_565.0_0.0_0.0
+      - world_-1088.0_151.0_565.0_0.0_0.0
+      facing: SOUTH
+      width: 3
+      height: 1
+      rotation: 0
+    configurable:
+      renderers:
+      - IMAGE -src background.png -witdth 384 -height 128
+      - TEXT -text ENCHANTER -size 95 -font Prager Headlines -color 255,255,255 -strokeColor
+        0,0,0 -strokeThickness 1 -xOffset 35 -yOffset 85
+      - TEXT -text RIGHT-CLICK THE NPC -size 30 -font Prager Headlines -color 255,255,255
+        -strokeColor 0,0,0 -strokeThickness 1 -xOffset 100 -yOffset 106
+  '4':
+    internal:
+      frames:
+      - world_-1076.0_151.0_556.0_0.0_0.0
+      - world_-1076.0_151.0_557.0_0.0_0.0
+      - world_-1076.0_151.0_558.0_0.0_0.0
+      facing: EAST
+      width: 3
+      height: 1
+      rotation: 0
+    configurable:
+      renderers:
+      - IMAGE -src background.png -witdth 384 -height 128
+      - TEXT -text BAR -size 95 -font Prager Headlines -color 255,255,255 -strokeColor
+        0,0,0 -strokeThickness 1 -xOffset 145 -yOffset 85
+      - TEXT -text RIGHT-CLICK THE NPC -size 30 -font Prager Headlines -color 255,255,255
+        -strokeColor 0,0,0 -strokeThickness 1 -xOffset 100 -yOffset 106
+  '5':
+    internal:
+      frames:
+      - world_-1025.0_157.0_568.0_0.0_0.0
+      - world_-1024.0_157.0_568.0_0.0_0.0
+      - world_-1023.0_157.0_568.0_0.0_0.0
+      facing: NORTH
+      width: 3
+      height: 1
+      rotation: 0
+    configurable:
+      renderers:
+      - IMAGE -src background.png -witdth 384 -height 128
+      - TEXT -text PET SHOP -size 95 -font Prager Headlines -color 255,255,255 -strokeColor
+        0,0,0 -strokeThickness 1 -xOffset 65 -yOffset 85
+      - TEXT -text RIGHT-CLICK THE NPC -size 30 -font Prager Headlines -color 255,255,255
+        -strokeColor 0,0,0 -strokeThickness 1 -xOffset 100 -yOffset 106
+  '6':
+    internal:
+      frames:
+      - world_-1072.0_153.0_502.0_0.0_0.0
+      - world_-1072.0_153.0_501.0_0.0_0.0
+      - world_-1072.0_153.0_500.0_0.0_0.0
+      facing: WEST
+      width: 3
+      height: 1
+      rotation: 0
+    configurable:
+      renderers:
+      - IMAGE -src background.png -witdth 384 -height 128
+      - TEXT -text UPGRADES -size 95 -font Prager Headlines -color 255,255,255 -strokeColor
+        0,0,0 -strokeThickness 1 -xOffset 50 -yOffset 85
+      - TEXT -text RIGHT-CLICK THE NPC -size 30 -font Prager Headlines -color 255,255,255
+        -strokeColor 0,0,0 -strokeThickness 1 -xOffset 100 -yOffset 106
+  '7':
+    internal:
+      frames:
+      - world_-1049.0_154.0_483.0_0.0_0.0
+      - world_-1048.0_154.0_483.0_0.0_0.0
+      - world_-1047.0_154.0_483.0_0.0_0.0
+      facing: NORTH
+      width: 3
+      height: 1
+      rotation: 0
+    configurable:
+      renderers:
+      - IMAGE -src background.png -witdth 384 -height 128
+      - TEXT -text PANEL -size 95 -font Prager Headlines -color 255,255,255 -strokeColor
+        0,0,0 -strokeThickness 1 -xOffset 110 -yOffset 85
+      - TEXT -text RIGHT-CLICK THE NPC -size 30 -font Prager Headlines -color 255,255,255
+        -strokeColor 0,0,0 -strokeThickness 1 -xOffset 100 -yOffset 106
+  '8':
+    internal:
+      frames:
+      - world_-1028.0_157.0_584.0_0.0_0.0
+      - world_-1029.0_157.0_584.0_0.0_0.0
+      - world_-1030.0_157.0_584.0_0.0_0.0
+      facing: SOUTH
+      width: 3
+      height: 1
+      rotation: 0
+    configurable:
+      renderers:
+      - IMAGE -src background.png -witdth 384 -height 128
+      - TEXT -text WAR SHOP -size 95 -font Prager Headlines -color 255,255,255 -strokeColor
+        0,0,0 -strokeThickness 1 -xOffset 55 -yOffset 85
+      - TEXT -text RIGHT-CLICK THE NPC -size 30 -font Prager Headlines -color 255,255,255
+        -strokeColor 0,0,0 -strokeThickness 1 -xOffset 100 -yOffset 106
+  '9':
+    internal:
+      frames:
+      - world_-1021.0_158.0_577.0_0.0_0.0
+      - world_-1021.0_158.0_578.0_0.0_0.0
+      - world_-1021.0_158.0_579.0_0.0_0.0
+      facing: EAST
+      width: 3
+      height: 1
+      rotation: 0
+    configurable:
+      renderers:
+      - IMAGE -src background.png -witdth 384 -height 128
+      - TEXT -text CRATES -size 95 -font Prager Headlines -color 255,255,255 -strokeColor
+        0,0,0 -strokeThickness 1 -xOffset 95 -yOffset 85
+      - TEXT -text RIGHT-CLICK THE BLOCK -size 30 -font Prager Headlines -color 255,255,255
+        -strokeColor 0,0,0 -strokeThickness 1 -xOffset 87 -yOffset 106
+  '22':
+    internal:
+      frames:
+      - world_-1081.0_153.0_511.0_0.0_0.0
+      - world_-1081.0_153.0_510.0_0.0_0.0
+      - world_-1081.0_153.0_509.0_0.0_0.0
+      facing: WEST
+      width: 3
+      height: 1
+      rotation: 0
+    configurable:
+      renderers:
+      - IMAGE -src leaderboards.png -witdth 384 -height 128
+      - TEXT -text TOP ISLANDS -size 90 -font Prager Headlines -color 255,255,255
+        -strokeColor 0,0,0 -strokeThickness 1 -xOffset 25 -yOffset 90
+color_palette: color_palette_v1_12_R1.bc

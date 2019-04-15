@@ -1,0 +1,148 @@
+#Length (in seconds) of drunk effect for losing
+drunkEffect: 10
+
+#List of gambler names
+gamblerNames:
+
+#Bar inventory size (multiple of 9)
+barSize: 9
+
+# Water, Sprite, Fanta, Cola, Beer, Wine, Whiskey, Rum, Vodka
+
+barInventory:
+  0:
+    name: "              &8◆ &b&nWater&r &8◆"
+    price: 500
+    reward: 1000
+    winOdds: 55
+    consoleCommands:
+    - "give %player% 384 4"
+    lore:
+    - "&7When you drink this, you have a"
+    - "    &7&nchance&r &7to get the reward."
+    - "&r"
+    - "&7&nDrink Information..."
+    - "&b * &7Winning Chance: &b%winOdds%%"
+    - "&b * &7Reward: &b1,000 ⛃"
+    - "&b * &7Cost: &b500 ⛃"
+  1:
+    name: "             &8◆ &a&nSprite&r &8◆"
+    price: 1000
+    reward: 2000
+    winOdds: 53
+    consoleCommands:
+    - "give %player% 384 4"
+    lore:
+    - "&7When you drink this, you have a"
+    - "    &7&nchance&r &7to get the reward."
+    - "&r"
+    - "&7&nDrink Information..."
+    - "&a * &7Winning Chance: &a%winOdds%%"
+    - "&a * &7Reward: &a2,000 ⛃"
+    - "&a * &7Cost: &a1,000 ⛃"
+  2:
+    name: "             &8◆ &e&nFanta&r &8◆"
+    price: 5000
+    reward: 10000
+    winOdds: 48
+    consoleCommands:
+    - "give %player% 384 4"
+    lore:
+    - "&7When you drink this, you have a"
+    - "    &7&nchance&r &7to get the reward."
+    - "&r"
+    - "&7&nDrink Information..."
+    - "&e * &7Winning Chance: &e%winOdds%%"
+    - "&e * &7Reward: &e10,000 ⛃"
+    - "&e * &7Cost: &e5,000 ⛃"
+  3:
+    name: "              &8◆ &d&nCola&r &8◆"
+    price: 10000
+    reward: 20000
+    winOdds: 46
+    consoleCommands:
+    - "give %player% 384 4"
+    lore:
+    - "&7When you drink this, you have a"
+    - "    &7&nchance&r &7to get the reward."
+    - "&r"
+    - "&7&nDrink Information..."
+    - "&d * &7Winning Chance: &d%winOdds%%"
+    - "&d * &7Reward: &d20,000 ⛃"
+    - "&d * &7Cost: &d10,000 ⛃"
+  4:
+    name: "              &8◆ &c&nBeer&r &8◆"
+    price: 25000
+    reward: 50000
+    winOdds: 44
+    consoleCommands:
+    - "give %player% 384 8"
+    lore:
+    - "&7When you drink this, you have a"
+    - "    &7&nchance&r &7to get the reward."
+    - "&r"
+    - "&7&nDrink Information..."
+    - "&c * &7Winning Chance: &c%winOdds%%"
+    - "&c * &7Reward: &c50,000 ⛃"
+    - "&c * &7Cost: &c25,000 ⛃"
+  5:
+    name: "              &8◆ &3&nWine&r &8◆"
+    price: 50000
+    reward: 100000
+    winOdds: 41
+    consoleCommands:
+    - "give %player% 384 8"
+    lore:
+    - "&7When you drink this, you have a"
+    - "    &7&nchance&r &7to get the reward."
+    - "&r"
+    - "&7&nDrink Information..."
+    - "&3 * &7Winning Chance: &3%winOdds%%"
+    - "&3 * &7Reward: &3100,000 ⛃"
+    - "&3 * &7Cost: &350,000 ⛃"
+  6:
+    name: "            &8◆ &5&nWhiskey&r &8◆"
+    price: 100000
+    reward: 250000
+    winOdds: 37
+    consoleCommands:
+    - "give %player% 384 8"
+    lore:
+    - "&7When you drink this, you have a"
+    - "    &7&nchance&r &7to get the reward."
+    - "&r"
+    - "&7&nDrink Information..."
+    - "&5 * &7Winning Chance: &5%winOdds%%"
+    - "&5 * &7Reward: &5250,000 ⛃"
+    - "&5 * &7Cost: &5100,000 ⛃"
+  7:
+    name: "               &8◆ &2&nRum&r &8◆"
+    price: 250000
+    reward: 500000
+    winOdds: 35
+    consoleCommands:
+    - "give %player% 384 8"
+    lore:
+    - "&7When you drink this, you have a"
+    - "    &7&nchance&r &7to get the reward."
+    - "&r"
+    - "&7&nDrink Information..."
+    - "&2 * &7Winning Chance: &2%winOdds%%"
+    - "&2 * &7Reward: &2500,000 ⛃"
+    - "&2 * &7Cost: &2250,000 ⛃"
+  8:
+    name: "             &8◆ &9&nVodka&r &8◆"
+    price: 500000
+    reward: 1000000
+    winOdds: 34
+    consoleCommands:
+    - "give %player% 384 16"
+    lore:
+    - "&7When you drink this, you have a"
+    - "    &7&nchance&r &7to get the reward."
+    - "&r"
+    - "&7&nDrink Information..."
+    - "&9 * &7Winning Chance: &9%winOdds%%"
+    - "&9 * &7Reward: &9500,000 ⛃"
+    - "&9 * &7Cost: &91,000,000 ⛃"
+    

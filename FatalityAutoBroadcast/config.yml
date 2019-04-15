@@ -1,0 +1,51 @@
+#Whether it should be a random message from the list or just go in order
+random-mode: false
+
+#Header, so it is before the message, if you dont want it just write 'none'
+message-header: "&r"
+
+#footer, so it is before the message, if you dont want it just write 'none'
+message-footer: "&r"
+
+#This is sent before all messages, again if you dont want it put 'none'
+message-prefix: 'none'
+
+#This is the amount of secs between each msg
+delay: 600
+
+
+#List of all the messages, if you wanna create a new message, increment the number, they must be in the right order
+messages:
+ '0':
+  message:
+   - "&r      &4&l&m---&r&8&l&m[--&r   &8◆ &4&k;&c&k;&r   &6&lWessex &c&lSkyblock&r   &c&k;&4&k;&r &8◆   &8&l&m--]&r&4&l&m---"
+   - "&7Check out our Wiki page for &c&lSkyblock Season 2! &b&nhttps://discuss.wessex.site/d/49-skyblock-season-2-wiki"
+ '1':
+  message:
+   - "&r      &4&l&m---&r&8&l&m[--&r   &8◆ &4&k;&c&k;&r   &6&lWessex &c&lSkyblock&r   &c&k;&4&k;&r &8◆   &8&l&m--]&r&4&l&m---"
+   - "&7Did you know that you can fly at the cost of your exp with &c/xpfly&7?"
+ '2':
+  message:
+   - "&r      &4&l&m---&r&8&l&m[--&r   &8◆ &4&k;&c&k;&r   &6&lWessex &c&lSkyblock&r   &c&k;&4&k;&r &8◆   &8&l&m--]&r&4&l&m---"
+   - "&7Donators can retrieve spawners with a silk touch pickaxe!"
+ '3':
+  message:
+   - "&r      &4&l&m---&r&8&l&m[--&r   &8◆ &4&k;&c&k;&r   &6&lWessex &c&lSkyblock&r   &c&k;&4&k;&r &8◆   &8&l&m--]&r&4&l&m---"
+   - "&7Players with the Ghoul rank can pick trails with &c/trails&7!"
+ '4':
+  message:
+   - "&r      &4&l&m---&r&8&l&m[--&r   &8◆ &4&k;&c&k;&r   &6&lWessex &c&lSkyblock&r   &c&k;&4&k;&r &8◆   &8&l&m--]&r&4&l&m---"
+   - "&7Kill monsters in the warzone to find war tokens and buy special items."
+ '5':
+  message:
+   - "&r      &4&l&m---&r&8&l&m[--&r   &8◆ &4&k;&c&k;&r   &6&lWessex &c&lSkyblock&r   &c&k;&4&k;&r &8◆   &8&l&m--]&r&4&l&m---"
+   - "&7Purchase and complete clue scrolls with &c/cluescrolls&7 for rewards!"
+ '6':
+  message:
+   - "&r      &4&l&m---&r&8&l&m[--&r   &8◆ &4&k;&c&k;&r   &6&lWessex &c&lSkyblock&r   &c&k;&4&k;&r &8◆   &8&l&m--]&r&4&l&m---"
+   - "&7Join our discord server to talk to the community - &c/discord"
+ '7':
+  message:
+   - "&r      &4&l&m---&r&8&l&m[--&r   &8◆ &4&k;&c&k;&r   &6&lWessex &c&lSkyblock&r   &c&k;&4&k;&r &8◆   &8&l&m--]&r&4&l&m---"
+   - "&7Consider donating with &c/buy &7to keep this community alive!"
+   

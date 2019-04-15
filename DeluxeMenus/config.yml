@@ -1,0 +1,3388 @@
+# DeluxeMenus 1.10.5 main configuration file
+# 
+# check_updates: <true/false>
+#   Should DeluxeMenus check if there are any updates available on Spigot and inform ops there is an update available.
+# 
+# ==============================================================
+# 
+# PER ITEM PERMISSION AND PRIORITY INFO:
+# 
+# Per item permissions and priorities are optional.
+# High priority = 1, Lowest priority = 2147483647.
+# This allows you to show different items for a specific menu slot depending on the highest priority
+# item permission a player has. This makes your menus very dynamic :)
+# 
+# You CAN NOT specify a permission without a priority!
+# You CAN specify a priority without a permission.
+# You should always create a low priority item without a permission which will act as the no permission
+# item if a player does not have permission for any of the items that require permission, otherwise
+# no item will be set in the slot if a player does not have permission for any of the permission items.
+# 
+# ==============================================================
+# 
+# GUI menu configuration:
+# 
+# You can create as many GUI menus you like.
+# Every menu name must be unique. There can not be duplicate menu names!
+# Players must have permission for a GUI menu to open one!
+# Ops should automatically have permission for any GUI menu.
+# 
+# Permission to open a GUI menu is: deluxemenus.guimenu.<menuName>
+# 
+# You specify the command which opens the GUI menu. Make sure this command
+# does not conflict with any existing commands on your server!
+# A GUI menu without an open command specified will not be loaded!
+# 
+# GUI menus configuration layout:
+# 
+# gui_menus:
+#   <menuName>:
+#     menu_title: '<title of menu goes here>'
+#     command: <command to open this menu goes here>
+#     inventory_type: '<add this option if you want to create a menu of a different InventoryType aside from chest>'
+# 	 open_requirement:
+# 	   requirements:
+# 	     <unique name for this requirement>:
+# 		   type: <type for this requirement>
+# 		   <unique options per requirement type would go here>
+# 		   deny_commands:
+# 		   - '[message] you do not meet requirements to open this menu'
+#     size: <size of this menu, increments of 9, max size is 54>
+#     update_interval: <time in seconds this gui should update for a player if an item is set to uodate placeholders>
+#     items:
+#       <item identifier>:
+#         material: <name or id>
+#         material: head-<name of player>
+#         material: hdb-<HeadDatabase id> (requires plugin HeadDatabase)
+#         data: <integer, used for data values for wool etc>
+#         amount: <amount of this item to show>
+#         slot: <slot number to put this item, slots start at 0 and end at 53 for a size 54 inventory>
+#         priority: <this is used if you have multiple items set for the same slot>
+#         view_requirement: <see view requirement info below. The lowest priority item a player meets all view requirements for will be shown>
+#         update: <true/false if this item should update placeholders on the interval set for the gui menu this item is in>
+#         hide_attributes: <true/false if this item should display item attributes>
+#         hide_enchantments: <true/false if this item should display item enchantment / level> (useful for 'enchantment glow' items)
+#         hide_effects: <true/false if this item should display item effect attributes>
+#         hide_unbreakable: <true/false if this item should display item unbreakable attributes>
+#         banner_meta: (this is used if you want to display a custom banner with specific patterns)
+#         - <dyecolor>;<PatternType> (more information on where to find DyeColor and PatternType names below)
+#         - 'RED;BASE'
+#         - 'WHITE;CREEPER'
+#         display_name: <display name to show for this item>
+#         lore:
+#         - 'placeholders can be used in the name and lore'
+#         - '%<any placeholder from Papi>% shows the viewer values'
+#         enchantments: valid enchantment names can be found here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html
+#         - '<ENCHANTMENT>;<LEVEL>'
+#         - 'SILK_TOUCH;1'
+#         left_click_commands:
+#         - '[close]'
+#         left_click_requirement: <see how to use this option below>
+#         right_click_commands:
+#         - '[player] spawn'
+#         right_click_requirement: <see how to use this option below>
+# 
+# 
+# You can specify if a GUI menu should be loaded from another file:
+# 
+# gui_menus:
+#   <menuName>:
+#     file: 'menuName.yml'
+# 
+# This allows you to keep your config clean and not have tons of GUI menus cluttering it.
+# The file format the GUI menu is loaded from must end in .yml
+# GUI menus loaded from other configuration files must follow a specific format as well...
+# To get started loading GUI menus from different files, simply create a GUI menu in this config and specify the file it will load from.
+# After that is done, use /dm reload and DeluxeMenus will create a folder and file specific to the GUI menu you specified.
+# If the file specified is created by DeluxeMenus (because it did not exist), a default GUI menu layout will be saved to that file.
+# From here you can edit it to your liking and use /dm reload to update your GUI menu! 
+# 
+# This loading from external config files is only available for gui menus and will not work for click menus yet....
+# 
+# banner_meta must be listed with a specific format:
+# banner_meta:
+# - <DyeColor>;<PatternType>
+# 
+# Valid DyeColor names can be found here: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/DyeColor.html
+# Valid PatternTypes can be found here: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/block/banner/PatternType.html
+# ==============================================================
+# 
+# Requirement information
+# 
+# Requirements can be set as the following:
+# 
+# open_requirement: This requirement is checked when a menu is opened
+# view_requirement: This requirement determines if an item should be set in a menu slot
+# left_click_requirement: This requirement is checked when an item is left clicked
+# right_click_requirement: This requirement is checked when an item is right clicked
+# 
+# Requirement types:
+#   javascript - Evaluates a javascript expression that must return true or false
+#     configuration options:
+#       expression
+# 
+#   has item - Checks if a player has a specific item
+#     configuration options:
+#       material
+#       amount
+#       data
+#       name
+#       lore
+# 
+#   has money - Checks if a player has enough money (Vault required)
+#     configuration options:
+#       amount
+# 
+#   has permission - Checks if a player has a specific permission
+#     configuration options:
+#       permission
+# 
+#   string contains - Checks if a string contains another string
+#     configuration options:
+#       input
+#       output
+# 
+#   string equals - Checks if a string equals another string
+#     configuration options:
+#       input
+#       output
+# 
+#   stringequalsignorecase - Checks if a string equals another string ignoring case
+#     configuration options:
+#       input
+#       output
+# 
+#   > - Checks if a number is greater than another number
+#     configuration options:
+#       input
+#       output
+# 
+#   >= - Checks if a number is greater than or equal to another number
+#     configuration options:
+#       input
+#       output
+# 
+#   == - Checks if a number is equal to another number
+#     configuration options:
+#       input
+#       output
+# 
+#   <= - Checks if a number is less than or equal to another number
+#     configuration options:
+#       input
+#       output
+# 
+#   < - Checks if a number is less than another number
+#     configuration options:
+#       input
+#       output
+# 
+# 
+# 
+# So why would we want to use requirements?
+# By default, DeluxeMenus does not require a player meet any conditions to open your menu.
+# If you want to require a menu need a certain permission node for it to be accessed, or a certain amount of money
+# for a menu to be opened, You do that with an 'open_requirement'.
+# Below is an example of how you would deny opening a menu if the viewer does not have permission:
+# 
+# menu_title: 'Menu that requires permission to open'
+# open_command: testmenu
+# size: 9
+# open_requirement:
+#   requirements:
+#     this_requirement_name:
+#       type: has permission
+#       permission: 'testmenu.open'
+#       deny_commands:
+#       - '[message] you do not have permission to open testmenu'
+# 
+# 
+# Below is a full example of use cases for requirements:
+# 
+# 				menu_title: 'Menu that requires permission to open'
+# 					open_command: testmenu
+# 					size: 9
+# 					open_requirement:
+# 					  requirements:
+# 					    this_requirement_name:
+# 					      type: has permission
+# 					      permission: 'testmenu.open'
+# 					      deny_commands:
+# 					      - '[message] you do not have permission to open testmenu'
+# 					items:
+# 					  mymenuitem:
+# 					    priority: 2
+# 					    material: DIRT
+# 					    slot: 0
+# 					    name 'You dont have 100 diamonds to view this item'
+# 					  mymenuitem:
+# 					    priority: 1
+# 					    material: DIAMOND
+# 					    slot: 0
+# 					    name 'You have lots of diamonds so you can see this item'
+# 					    view_requirement:
+# 					      requirements:
+# 					        diamond_requirement:
+# 					          type: has item
+# 					          material: diamond
+# 					          amount: 100
+# 					    left_click_requirement:
+# 					      requirements:
+# 					        money_requirement:
+# 					          type: '>='
+# 					          input: '%vault_eco_balance_fixed%'
+# 					          output: 1000
+# 					          deny_commands:
+# 					          - '[message] you only have %vault_eco_balance_fixed%'
+# 					    left_click_commands:
+# 					    - '[message] you have over 1000 dollars!'
+# 					    right_click_requirement:
+# 					      requirements:
+# 					        staff_requirement:
+# 					          type: string equals
+# 					          input: '%vault_rank%'
+# 					          output: staff
+# 					          deny_commands:
+# 					          - '[message] you are not staff'
+# 					    right_click_commands:
+# 					    - '[message] you are staff'
+# 
+# deny_commands: are optional and will be executed if the requirement is not met.
+# ==============================================================
+# 
+# 
+# You do not need to specify item options that you don't use!
+# The only required entries for a gui menu item to be valid are:
+# 
+# A valid material
+# A valid slot
+# 
+# Every item in the items list must have a unique <item identifier>
+# 
+# If you choose to update placeholders for a specific item, you must specify update_interval: <time>
+# in the GUI menu options for the specific GUI menu.
+# Only GUI menus with at least one item that has update: true will update those specific items placeholders.
+# 
+# Every click_command must start with a specific identifier to know what to do for the execution.
+# Valid click_command identifiers:
+# 
+# [console] - Execute a command from the console
+# Usage: - '[console] <command with no slash>'
+# 
+# [player] - Execute a command for the menu viewer
+# Usage: - '[player] <command with no slash>'
+# 
+# [commandevent] - Fire a PlayerCommandPreprocessEvent for commands that do not use the bukkit command system
+# Usage: - '[commandevent] <command with no slash>'
+# 
+# [message] - Send a message to the menu viewer
+# Usage: - [message] <message to send to the player
+# 
+# [openguimenu] - Open a GUI menu (can only be used in GUI menu click_commands)
+# Usage: - '[openguimenu] <guiMenuName>'
+# 
+# [connect] - Connect to the specified bungee server
+# Usage: - '[connect] <serverName>'
+# 
+# [close] - Close the viewers open menu
+# Usage: - '[close]
+# 
+# [refresh] - Refresh items in the current menu view
+# Usage: - '[refresh]
+# 
+# [broadcastsound] - Broadcast a sound to the server
+# Usage: - '[broadcastsound]
+# 
+# [sound] - Play a sound for a the specific player
+# Usage: - '[sound]
+# 
+# [json] - Send a json message to the menu viewer
+# Usage: - '[json] {"text":"message"}'
+# 
+# 
+# 
+# You can delay any of the click command being performed by ending the command with
+# <delay=(time in TICKS)>
+# example:
+#     - '[close]'
+#     - '[message] it has been 5 seconds since the menu closed!<delay=100>'
+#     - '[message] it has been 10 seconds since the menu closed!<delay=200>'
+# 
+# A delay should NOT be added to the [close] or [openguimenu] actions
+# as it could potentially cause unknown issues or glitches with menus.
+debug: false
+check_updates: true
+gui_menus:
+  ispanel:
+    menu_title: '&nIsland Panel'
+    open_command:
+    - is cp
+    - is controlpanel
+    - is panel
+    - cp
+    - panel
+    - controlpanel
+    - island cp
+    - island panel
+    - island controlpanel
+    size: 27
+    items:
+      island:
+        material: head;iAlex
+        slot: 10
+        hide_attributes: true
+        display_name: '&8◆   &a&k;&2&k;&r  &a&nYour Island&r  &2&k;&a&k;&r   &8◆'
+        lore:
+        - '&7Having an island is an essential part in'
+        - '&7this gamemode. You should create your own'
+        - '&7island or share one with your friend.'
+        - '&r'
+        - '&8◆ &a&nLeft-click&r &7to teleport to your island.'
+        - '&8◆ &a&nRight-click&r &7to create a new island.'
+        - ''
+        left_click_commands:
+        - '[sound] BLOCK_PORTAL_TRAVEL'
+        - '[player] is'
+        right_click_commands:
+        - '[sound] ENTITY_ITEM_PICKUP'
+        - '[player] is reset'
+      sethome:
+        material: BED
+        data: 11
+        slot: 11
+        hide_attributes: true
+        display_name: '&8◆   &d&k;&5&k;&r  &d&nIsland Home&r  &5&k;&d&k;&r   &8◆'
+        lore:
+        - '&7Set a new location to be teleported to'
+        - '&7whenever you wish to travel to your island.'
+        - '&r'
+        - '&8◆ &d&nLeft-click&r &7to set your home at your position.'
+        - ''
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆ &a&l&nSUCCESS&r &8◆\n&7Your
+          new home has been set!'
+        - '[sound] ENTITY_ITEM_PICKUP'
+        - '[player] is sethome'
+      leaderboard:
+        material: SIGN
+        slot: 12
+        hide_attributes: true
+        display_name: '&8◆   &b&k;&3&k;&r  &b&nLeaderboard&r  &3&k;&b&k;&r   &8◆'
+        lore:
+        - '&7View the top 10 islands on the server'
+        - '&7based on their current level.'
+        - '&r'
+        - '&8◆ &b&nLeft-click&r &7to view.'
+        - '&8◆ &b&nRight-click&r &7to calculate your level.'
+        - ''
+        left_click_commands:
+        - '[sound] ENTITY_ITEM_PICKUP'
+        - '[player] is top'
+        right_click_commands:
+        - '[sound] ENTITY_ITEM_PICKUP'
+        - '[player] is level'
+      warps:
+        material: head;Irony
+        slot: 13
+        hide_attributes: true
+        display_name: '&8◆   &6&k;&e&k;&r  &e&nWarps&r  &6&k;&e&k;&r   &8◆'
+        lore:
+        - '&7Teleport to other islands on the server.'
+        - '&7The island owner must have a [WELCOME] sign'
+        - '&7on their island for their island to appear.'
+        - '&r'
+        - '&8◆ &e&nLeft-click&r &7to view open islands.'
+        - ''
+        left_click_commands:
+        - '[sound] ENTITY_ITEM_PICKUP'
+        - '[player] is warps'
+      team:
+        material: head;JWAK
+        slot: 14
+        hide_attributes: true
+        display_name: '&8◆   &c&k;&4&k;&r  &c&nTeam Members&r  &4&k;&c&k;&r   &8◆'
+        lore:
+        - '&7You can create a team and play on'
+        - '&7the same skyblock island.'
+        - '&r'
+        - '&8◆ &c&nLeft-click&r &7to view your team.'
+        - ''
+        left_click_commands:
+        - '[sound] ENTITY_ITEM_PICKUP'
+        - '[player] is team'
+      biomes:
+        material: SAPLING
+        data: 4
+        slot: 15
+        hide_attributes: true
+        display_name: '&8◆   &a&k;&2&k;&r  &a&nIsland Biome&r  &2&k;&a&k;&r   &8◆'
+        lore:
+        - '&7Change the biome of your island to'
+        - '&7change a number of characteristics.'
+        - '&r'
+        - '&8◆ &a&nLeft-click&r &7to change the biome.'
+        - ''
+        left_click_commands:
+        - '[sound] ENTITY_ITEM_PICKUP'
+        - '[player] is biomes'
+      settings:
+        material: REDSTONE_COMPARATOR
+        slot: 16
+        hide_attributes: true
+        display_name: '&8◆   &b&k;&3&k;&r  &b&nIsland Settings&r  &3&k;&b&k;&r   &8◆'
+        lore:
+        - '&7Change the settings for your island so'
+        - '&7that visitors can/cannot do certain things.'
+        - '&r'
+        - '&8◆ &b&nLeft-click&r &7to change the settings.'
+        - ''
+        left_click_commands:
+        - '[sound] ENTITY_ITEM_PICKUP'
+        - '[player] is settings'
+      spacer0:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 0
+        hide_attributes: true
+        display_name: '&r'
+      spacer1:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 1
+        hide_attributes: true
+        display_name: '&r'
+      spacer2:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 2
+        hide_attributes: true
+        display_name: '&r'
+      spacer3:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 3
+        hide_attributes: true
+        display_name: '&r'
+      spacer4:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 4
+        hide_attributes: true
+        display_name: '&r'
+      spacer5:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 5
+        hide_attributes: true
+        display_name: '&r'
+      spacer6:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 6
+        hide_attributes: true
+        display_name: '&r'
+      spacer7:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 7
+        hide_attributes: true
+        display_name: '&r'
+      spacer8:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 8
+        hide_attributes: true
+        display_name: '&r'
+      spacer9:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 9
+        hide_attributes: true
+        display_name: '&r'
+      spacer10:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 17
+        hide_attributes: true
+        display_name: '&r'
+      spacer11:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 18
+        hide_attributes: true
+        display_name: '&r'
+      spacer12:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 19
+        hide_attributes: true
+        display_name: '&r'
+      spacer13:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 20
+        hide_attributes: true
+        display_name: '&r'
+      spacer14:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 21
+        hide_attributes: true
+        display_name: '&r'
+      spacer15:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 22
+        hide_attributes: true
+        display_name: '&r'
+      spacer16:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 23
+        hide_attributes: true
+        display_name: '&r'
+      spacer17:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 24
+        hide_attributes: true
+        display_name: '&r'
+      spacer18:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 25
+        hide_attributes: true
+        display_name: '&r'
+      spacer19:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 26
+        hide_attributes: true
+        display_name: '&r'
+  upgrades:
+    menu_title: '&nUpgrades'
+    open_command:
+    - is upgrade
+    - is upgrades
+    - upgrade
+    - upgrades
+    size: 27
+    items:
+      generator:
+        material: head;StackedGold
+        slot: 10
+        hide_attributes: true
+        display_name: '&8◆   &e&k;&6&k;&r  &e&nGenerator Upgrades&r  &6&k;&e&k;&r   &8◆'
+        lore:
+        - '&7Upgrade your cobblestone and ore generator'
+        - '&7on your island to have access to rarer ores.'
+        - '&r'
+        - '&8◆ &e&nLeft-click&r &7to view all generator upgrades.'
+        - '&r'
+        - '     &7&o &nTip:&r &7&oUpgrade your generators to '
+        - '             &7&othe highest possible level.'
+        left_click_commands:
+        - '[openguimenu] generatorupgrades'
+        - '[sound] ENTITY_ITEM_PICKUP'
+      issize:
+        material: head;Noobie
+        slot: 12
+        hide_attributes: true
+        display_name: '&8◆   &a&k;&2&k;&r  &a&nIsland Size Upgrades&r  &2&k;&a&k;&r   &8◆'
+        lore:
+        - '&7Upgrade your island size so that you can'
+        - '&7build further away from your island centre.'
+        - '&r'
+        - '&8◆ &a&nLeft-click&r &7to view all island size upgrades.'
+        - '&r'
+        left_click_commands:
+        - '[openguimenu] issizeupgrades'
+        - '[sound] ENTITY_ITEM_PICKUP'
+      members:
+        material: head;ByAehn
+        slot: 14
+        hide_attributes: true
+        display_name: '&8◆   &b&k;&3&k;&r  &b&nTeam Size Upgrades&r  &3&k;&b&k;&r   &8◆'
+        lore:
+        - '&7Increase the maximum number of players that'
+        - '&7are allowed to join your island team.'
+        - '&r'
+        - '&8◆ &b&nLeft-click&r &7to view all team size upgrades.'
+        - '&r'
+        left_click_commands:
+        - '[openguimenu] teamsizeupgrades'
+        - '[sound] ENTITY_ITEM_PICKUP'
+      homes:
+        material: head;Seska_Rotan
+        slot: 16
+        hide_attributes: true
+        display_name: '&8◆   &d&k;&5&k;&r  &d&nHome Upgrades&r  &5&k;&d&k;&r   &8◆'
+        lore:
+        - '&7Upgrade the number of homes you can'
+        - '&7set and teleport to on your island.'
+        - '&r'
+        - '&8◆ &d&nLeft-click&r &7to view all home upgrades.'
+        - '&r'
+        left_click_commands:
+        - '[openguimenu] homeupgrades'
+        - '[sound] ENTITY_ITEM_PICKUP'
+      spacer0:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 0
+        hide_attributes: true
+        display_name: '&r'
+      spacer1:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 1
+        hide_attributes: true
+        display_name: '&r'
+      spacer2:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 2
+        hide_attributes: true
+        display_name: '&r'
+      spacer3:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 3
+        hide_attributes: true
+        display_name: '&r'
+      spacer4:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 4
+        hide_attributes: true
+        display_name: '&r'
+      spacer5:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 5
+        hide_attributes: true
+        display_name: '&r'
+      spacer6:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 6
+        hide_attributes: true
+        display_name: '&r'
+      spacer7:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 7
+        hide_attributes: true
+        display_name: '&r'
+      spacer8:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 8
+        hide_attributes: true
+        display_name: '&r'
+      spacer9:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 9
+        hide_attributes: true
+        display_name: '&r'
+      spacer9-1:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 11
+        hide_attributes: true
+        display_name: '&r'
+      spacer9-2:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 13
+        hide_attributes: true
+        display_name: '&r'
+      spacer9-3:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 15
+        hide_attributes: true
+        display_name: '&r'
+      spacer10:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 17
+        hide_attributes: true
+        display_name: '&r'
+      spacer11:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 18
+        hide_attributes: true
+        display_name: '&r'
+      spacer12:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 19
+        hide_attributes: true
+        display_name: '&r'
+      spacer13:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 20
+        hide_attributes: true
+        display_name: '&r'
+      spacer14:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 21
+        hide_attributes: true
+        display_name: '&r'
+      spacer15:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 22
+        hide_attributes: true
+        display_name: '&r'
+      spacer16:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 23
+        hide_attributes: true
+        display_name: '&r'
+      spacer17:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 24
+        hide_attributes: true
+        display_name: '&r'
+      spacer18:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 25
+        hide_attributes: true
+        display_name: '&r'
+      spacer19:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 26
+        hide_attributes: true
+        display_name: '&r'
+  generatorupgrades:
+    menu_title: '&nGenerator Upgrades'
+    open_command:
+    - is gupgrade
+    - is gupgrades
+    - gupgrade
+    - gupgrades
+    - genupgrade
+    - genupgrades
+    - generatorupgrade
+    - generatorupgrades
+    size: 27
+    items:
+      tier1:
+        material: head;Stone
+        slot: 10
+        hide_attributes: true
+        display_name: '&8◆   &e&nGenerator:&r &eTier I&r   &8◆'
+        lore:
+        - '&7Upgrade your generator to find rarer'
+        - '&7ores and blocks which you can sell.'
+        - '&r'
+        - '&eUnlocked Ores...'
+        - '&8◆ &7Stone &8(&a87.5%&8)'
+        - '&8◆ &8Coal &8(&e12.5%&8)'
+        - '&8&o&m◆ Iron&r'
+        - '&8&o&m◆ Gold&r'
+        - '&8&o&m◆ Diamond&r'
+        - '&8&o&m◆ Emerald&r'
+        - '&r'
+        - '&e&lDEFAULT'
+        left_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+      tier2-1:
+        material: head;Acetaminophen
+        data: 0
+        slot: 11
+        hide_attributes: true
+        priority: 1
+        amount: 2
+        display_name: '&8◆   &e&nGenerator:&r &eTier II&r   &8◆'
+        lore:
+        - '&7Upgrade your generator to find rarer'
+        - '&7ores and blocks which you can sell.'
+        - '&r'
+        - '&eUnlocked Ores...'
+        - '&8◆ &7Stone &8(&a&m87.5%&r  &a➜  &a70.0%&8)'
+        - '&8◆ &8Coal &8(&e&m12.5%&r  &e➜  &e17.5%&8)'
+        - '&8◆ &fIron &8(&e12.5%&8)'
+        - '&8&o&m◆ Gold&r'
+        - '&8&o&m◆ Diamond&r'
+        - '&8&o&m◆ Emerald&r'
+        - '&r'
+        - '&a&l✓ &a&k;&2&k;&r &a&lUPGRADED'
+        view_requirement:
+          requirements:
+            permission:
+              type: has permission
+              permission: oregenerators.tier2
+        left_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+        right_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+      tier2-2:
+        material: IRON_FENCE
+        data: 0
+        slot: 11
+        hide_attributes: true
+        priority: 2
+        amount: 2
+        display_name: '&8◆   &e&nGenerator:&r &eTier II&r   &8◆'
+        lore:
+        - '&7Upgrade your generator to find rarer'
+        - '&7ores and blocks which you can sell.'
+        - '&r'
+        - '&eUnlocks...'
+        - '&8◆ &7Stone &8(&a&m87.5%&r  &a➜  &a70.0%&8)'
+        - '&8◆ &8Coal &8(&e&m12.5%&r  &e➜  &e17.5%&8)'
+        - '&8◆ &fIron &8(&e12.5%&8)'
+        - '&8&o&m◆ Gold&r'
+        - '&8&o&m◆ Diamond&r'
+        - '&8&o&m◆ Emerald&r'
+        - '&r'
+        - '&c&l✘ &c&k;&4&k;&r &c&lLOCKED'
+        - '&8◆ &e&nLeft-click&r &7to upgrade for &e25,000 ⛃&7.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nUPGRADED&r  &8◆\n&7New
+          Generator Tier: &fII'
+        - '[console] eco take %player_name% 25000'
+        - '[console] pex user %player_name% add oregenerators.tier2'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 25000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      tier3-1:
+        material: head;TheMrMakonet
+        data: 0
+        slot: 12
+        hide_attributes: true
+        priority: 1
+        amount: 3
+        display_name: '&8◆   &e&nGenerator:&r &eTier III&r   &8◆'
+        lore:
+        - '&7Upgrade your generator to find rarer'
+        - '&7ores and blocks which you can sell.'
+        - '&r'
+        - '&eUnlocked Ores...'
+        - '&8◆ &7Stone &8(&a&m70.0%&r  &a➜  &a60.0%&8)'
+        - '&8◆ &8Coal &8(&e17.5%&8)'
+        - '&8◆ &fIron &8(&e12.5%&8)'
+        - '&8◆ &eGold &8(&e10.0%&8)!'
+        - '&8&o&m◆ Diamond&r'
+        - '&8&o&m◆ Emerald&r'
+        - '&r'
+        - '&a&l✓ &a&k;&2&k;&r &a&lUPGRADED'
+        view_requirement:
+          requirements:
+            permission:
+              type: has permission
+              permission: oregenerators.tier3
+        left_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+        right_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+      tier3-2:
+        material: IRON_FENCE
+        data: 0
+        slot: 12
+        hide_attributes: true
+        priority: 2
+        amount: 3
+        display_name: '&8◆   &e&nGenerator:&r &eTier III&r   &8◆'
+        lore:
+        - '&7Upgrade your generator to find rarer'
+        - '&7ores and blocks which you can sell.'
+        - '&r'
+        - '&eUnlocks...'
+        - '&8◆ &7Stone &8(&a&m70.0%&r  &a➜  &a60.0%&8)'
+        - '&8◆ &8Coal &8(&e17.5%&8)'
+        - '&8◆ &fIron &8(&e12.5%&8)'
+        - '&8◆ &eGold &8(&e10.0%&8)'
+        - '&8&o&m◆ Diamond&r'
+        - '&8&o&m◆ Emerald&r'
+        - '&r'
+        - '&c&l✘ &c&k;&4&k;&r &c&lLOCKED'
+        - '&8◆ &e&nLeft-click&r &7to upgrade for &e100,000 ⛃&7.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nUPGRADED&r  &8◆\n&7New
+          Generator Tier: &fIII'
+        - '[console] eco take %player_name% 100000'
+        - '[console] pex user %player_name% add oregenerators.tier3'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 100000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+            permission:
+              type: has permission
+              permission: oregenerators.tier2
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fPrevious
+                generator not unlocked.'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      tier4-1:
+        material: head;pqla
+        data: 0
+        slot: 13
+        hide_attributes: true
+        priority: 1
+        amount: 4
+        display_name: '&8◆   &e&nGenerator:&r &eTier IV&r   &8◆'
+        lore:
+        - '&7Upgrade your generator to find rarer'
+        - '&7ores and blocks which you can sell.'
+        - '&r'
+        - '&eUnlocked Ores...'
+        - '&8◆ &7Stone &8(&a&m60.0%&r  &a➜  &a50.0%&8)'
+        - '&8◆ &8Coal &8(&e&m17.5%&r  &2➜  &219.5%&8)'
+        - '&8◆ &fIron &8(&e&m12.5%&r  &e➜  &e13.5%&8)'
+        - '&8◆ &eGold &8(&e&m10.0%&r  &e➜  &e11.0%&8)!'
+        - '&8◆ &bDiamond &8(&c6.0%&8)'
+        - '&8&o&m◆ Emerald&r'
+        - '&r'
+        - '&a&l✓ &a&k;&2&k;&r &a&lUPGRADED'
+        view_requirement:
+          requirements:
+            permission:
+              type: has permission
+              permission: oregenerators.tier4
+        left_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+        right_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+      tier4-2:
+        material: IRON_FENCE
+        data: 0
+        slot: 13
+        hide_attributes: true
+        priority: 2
+        amount: 4
+        display_name: '&8◆   &e&nGenerator:&r &eTier IV&r   &8◆'
+        lore:
+        - '&7Upgrade your generator to find rarer'
+        - '&7ores and blocks which you can sell.'
+        - '&r'
+        - '&eUnlocks...'
+        - '&8◆ &7Stone &8(&a&m60.0%&r  &a➜  &a50.0%&8)'
+        - '&8◆ &8Coal &8(&e&m17.5%&r  &2➜  &219.5%&8)'
+        - '&8◆ &fIron &8(&e&m12.5%&r  &e➜  &e13.5%&8)'
+        - '&8◆ &eGold &8(&e&m10.0%&r  &e➜  &e11.0%&8)'
+        - '&8◆ &bDiamond &8(&c6.0%&8)'
+        - '&8&o&m◆ Emerald'
+        - '&r'
+        - '&c&l✘ &c&k;&4&k;&r &c&lLOCKED'
+        - '&8◆ &e&nLeft-click&r &7to upgrade for &e500,000 ⛃&7.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nUPGRADED&r  &8◆\n&7New
+          Generator Tier: &fIV'
+        - '[console] eco take %player_name% 500000'
+        - '[console] pex user %player_name% add oregenerators.tier4'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 500000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+            permission:
+              type: has permission
+              permission: oregenerators.tier3
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fPrevious
+                generator not unlocked.'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      tier5-1:
+        material: head;Tereneckla
+        data: 0
+        slot: 14
+        hide_attributes: true
+        priority: 1
+        amount: 5
+        display_name: '&8◆   &e&nGenerator:&r &eTier V&r   &8◆'
+        lore:
+        - '&7Upgrade your generator to find rarer'
+        - '&7ores and blocks which you can sell.'
+        - '&r'
+        - '&eUnlocked Ores...'
+        - '&8◆ &7Stone &8(&a&m50.0%&r  &a➜  &a40.0%&8)'
+        - '&8◆ &8Coal &8(&2&m19.5%&r  &2➜  &221.5%&8)'
+        - '&8◆ &fIron &8(&e&m13.5%&r  &e➜  &e15.5%&8)'
+        - '&8◆ &eGold &8(&e&m11.0%&r  &e➜  &e12.5%&8)!'
+        - '&8◆ &bDiamond &8(&c&m6.0%&r  &c➜  &c6.5%&8)'
+        - '&8◆ &aEmerald &8(&c4.0%&8)'
+        - '&r'
+        - '&a&l✓ &a&k;&2&k;&r &a&lUPGRADED'
+        view_requirement:
+          requirements:
+            permission:
+              type: has permission
+              permission: oregenerators.tier5
+        left_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+        right_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+      tier5-2:
+        material: IRON_FENCE
+        data: 0
+        slot: 14
+        hide_attributes: true
+        priority: 2
+        amount: 5
+        display_name: '&8◆   &e&nGenerator:&r &eTier V&r   &8◆'
+        lore:
+        - '&7Upgrade your generator to find rarer'
+        - '&7ores and blocks which you can sell.'
+        - '&r'
+        - '&eUnlocks...'
+        - '&8◆ &7Stone &8(&a&m50.0%&r  &a➜  &a40.0%&8)'
+        - '&8◆ &8Coal &8(&2&m19.5%&r  &2➜  &221.5%&8)'
+        - '&8◆ &fIron &8(&e&m13.5%&r  &e➜  &e15.5%&8)'
+        - '&8◆ &eGold &8(&e&m11.0%&r  &e➜  &e12.5%&8)!'
+        - '&8◆ &bDiamond &8(&c&m6.0%&r  &c➜  &c6.5%&8)'
+        - '&8◆ &aEmerald &8(&c4.0%&8)'
+        - '&r'
+        - '&c&l✘ &c&k;&4&k;&r &c&lLOCKED'
+        - '&8◆ &e&nLeft-click&r &7to upgrade for &e1,000,000 ⛃&7.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nUPGRADED&r  &8◆\n&7New
+          Generator Tier: &fV'
+        - '[console] eco take %player_name% 1000000'
+        - '[console] pex user %player_name% add oregenerators.tier5'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 1000000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+            permission:
+              type: has permission
+              permission: oregenerators.tier4
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fPrevious
+                generator not unlocked.'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      spacer0:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 0
+        hide_attributes: true
+        display_name: '&r'
+      spacer1:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 1
+        hide_attributes: true
+        display_name: '&r'
+      spacer2:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 2
+        hide_attributes: true
+        display_name: '&r'
+      spacer3:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 3
+        hide_attributes: true
+        display_name: '&r'
+      spacer4:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 4
+        hide_attributes: true
+        display_name: '&r'
+      spacer5:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 5
+        hide_attributes: true
+        display_name: '&r'
+      spacer6:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 6
+        hide_attributes: true
+        display_name: '&r'
+      spacer7:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 7
+        hide_attributes: true
+        display_name: '&r'
+      spacer8:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 8
+        hide_attributes: true
+        display_name: '&r'
+      spacer9:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 9
+        hide_attributes: true
+        display_name: '&r'
+      spacer9-1:
+        material: head;MHF_Question
+        data: 0
+        slot: 15
+        amount: 6
+        hide_attributes: true
+        display_name: '&7?&8?&7?'
+        lore:
+        - '&7&oComing Soon!'
+      spacer9-2:
+        material: head;MHF_Question
+        data: 0
+        slot: 16
+        amount: 7
+        hide_attributes: true
+        display_name: '&7?&8?&7?'
+        lore:
+        - '&7&oComing Soon!'
+      spacer10:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 17
+        hide_attributes: true
+        display_name: '&r'
+      spacer11:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 18
+        hide_attributes: true
+        display_name: '&r'
+      spacer12:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 19
+        hide_attributes: true
+        display_name: '&r'
+      spacer13:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 20
+        hide_attributes: true
+        display_name: '&r'
+      spacer14:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 21
+        hide_attributes: true
+        display_name: '&r'
+      spacer15:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 22
+        hide_attributes: true
+        display_name: '&r'
+      spacer16:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 23
+        hide_attributes: true
+        display_name: '&r'
+      spacer17:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 24
+        hide_attributes: true
+        display_name: '&r'
+      spacer18:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 25
+        hide_attributes: true
+        display_name: '&r'
+      spacer19:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 26
+        hide_attributes: true
+        display_name: '&r'
+  issizeupgrades:
+    menu_title: '&nIsland Size Upgrades'
+    open_command:
+    - is supgrade
+    - is supgrades
+    - supgrade
+    - supgrades
+    - sizeupgrade
+    - sizeupgrades
+    size: 27
+    items:
+      size1:
+        material: head;cake
+        slot: 11
+        hide_attributes: true
+        display_name: '&8◆   &a&nIsland Size:&r &7#1&r   &8◆'
+        lore:
+        - '&7Upgrade your island size so that you'
+        - '&7have the ability to build further away.'
+        - '&r'
+        - '&aInformation...'
+        - '&8◆ &aSize: &c35 x 35 x 35'
+        - '&8◆ &aCost: &70 ⛃'
+        - '&r'
+        - '&e&lDEFAULT'
+        left_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+      size2-1:
+        material: head;cake
+        data: 0
+        slot: 12
+        hide_attributes: true
+        priority: 1
+        amount: 2
+        display_name: '&8◆   &a&nIsland Size:&r &7#2&r   &8◆'
+        lore:
+        - '&7Upgrade your island size so that you'
+        - '&7have the ability to build further away.'
+        - '&r'
+        - '&aInformation...'
+        - '&8◆ &aSize: &e75 x 75 x 75'
+        - '&8◆ &aCost: &710,000 ⛃'
+        - '&r'
+        - '&a&l✓ &a&k;&2&k;&r &a&lUPGRADED'
+        view_requirement:
+          requirements:
+            permission:
+              type: has permission
+              permission: islandsize.tier2
+        left_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+        right_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+      size2-2:
+        material: IRON_FENCE
+        data: 0
+        slot: 12
+        hide_attributes: true
+        priority: 2
+        amount: 2
+        display_name: '&8◆   &a&nIsland Size:&r &7#2&r   &8◆'
+        lore:
+        - '&7Upgrade your island size so that you'
+        - '&7have the ability to build further away.'
+        - '&r'
+        - '&aInformation...'
+        - '&8◆ &aSize: &e75 x 75 x 75'
+        - '&8◆ &aCost: &710,000 ⛃'
+        - '&r'
+        - '&c&l✘ &c&k;&4&k;&r &c&lLOCKED'
+        - '&8◆ &a&nLeft-click&r &7to upgrade for &a10,000 ⛃&7.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nUPGRADED&r  &8◆\n&7New
+          Island Size: &f75'
+        - '[console] eco take %player_name% 10000'
+        - '[console] pex user %player_name% add islandsize.tier2'
+        - '[console] pex user %player_name% add askyblock.island.range.75'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 10000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      size3-1:
+        material: head;cake
+        data: 0
+        slot: 13
+        hide_attributes: true
+        priority: 1
+        amount: 3
+        display_name: '&8◆   &a&nIsland Size:&r &7#3&r   &8◆'
+        lore:
+        - '&7Upgrade your island size so that you'
+        - '&7have the ability to build further away.'
+        - '&r'
+        - '&aInformation...'
+        - '&8◆ &aSize: &2125 x 125 x 125'
+        - '&8◆ &aCost: &725,000 ⛃'
+        - '&r'
+        - '&a&l✓ &a&k;&2&k;&r &a&lUPGRADED'
+        view_requirement:
+          requirements:
+            permission:
+              type: has permission
+              permission: islandsize.tier3
+        left_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+        right_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+      size3-2:
+        material: IRON_FENCE
+        data: 0
+        slot: 13
+        hide_attributes: true
+        priority: 2
+        amount: 3
+        display_name: '&8◆   &a&nIsland Size:&r &7#3&r   &8◆'
+        lore:
+        - '&7Upgrade your island size so that you'
+        - '&7have the ability to build further away.'
+        - '&r'
+        - '&aInformation...'
+        - '&8◆ &aSize: &2125 x 125 x 125'
+        - '&8◆ &aCost: &725,000 ⛃'
+        - '&r'
+        - '&c&l✘ &c&k;&4&k;&r &c&lLOCKED'
+        - '&8◆ &a&nLeft-click&r &7to upgrade for &a25,000 ⛃&7.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nUPGRADED&r  &8◆\n&7New
+          Island Size: &f125'
+        - '[console] eco take %player_name% 25000'
+        - '[console] pex user %player_name% add islandsize.tier3'
+        - '[console] pex user %player_name% add askyblock.island.range.125'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 25000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+            permission:
+              type: has permission
+              permission: oregenerators.tier2
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fPrevious
+                size not unlocked.'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      size4-1:
+        material: head;cake
+        data: 0
+        slot: 14
+        hide_attributes: true
+        priority: 1
+        amount: 4
+        display_name: '&8◆   &a&nIsland Size:&r &7#4&r   &8◆'
+        lore:
+        - '&7Upgrade your island size so that you'
+        - '&7have the ability to build further away.'
+        - '&r'
+        - '&aInformation...'
+        - '&8◆ &aSize: &a165 x 165 x 165'
+        - '&8◆ &aCost: &750,000 ⛃'
+        - '&r'
+        - '&a&l✓ &a&k;&2&k;&r &a&lUPGRADED'
+        view_requirement:
+          requirements:
+            permission:
+              type: has permission
+              permission: islandsize.tier4
+        left_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+        right_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+      size4-2:
+        material: IRON_FENCE
+        data: 0
+        slot: 14
+        hide_attributes: true
+        priority: 2
+        amount: 4
+        display_name: '&8◆   &a&nIsland Size:&r &7#4&r   &8◆'
+        lore:
+        - '&7Upgrade your island size so that you'
+        - '&7have the ability to build further away.'
+        - '&r'
+        - '&aInformation...'
+        - '&8◆ &aSize: &a165 x 165 x 165'
+        - '&8◆ &aCost: &750,000 ⛃'
+        - '&r'
+        - '&c&l✘ &c&k;&4&k;&r &c&lLOCKED'
+        - '&8◆ &a&nLeft-click&r &7to upgrade for &a50,000 ⛃&7.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nUPGRADED&r  &8◆\n&7New
+          Island Size: &f165'
+        - '[console] eco take %player_name% 50000'
+        - '[console] pex user %player_name% add islandsize.tier4'
+        - '[console] pex user %player_name% add askyblock.island.range.165'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 50000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+            permission:
+              type: has permission
+              permission: oregenerators.tier3
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fPrevious
+                size not unlocked.'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      size5-1:
+        material: head;cake
+        data: 0
+        slot: 15
+        hide_attributes: true
+        priority: 1
+        amount: 5
+        display_name: '&8◆   &a&nIsland Size:&r &7#5&r   &8◆'
+        lore:
+        - '&7Upgrade your island size so that you'
+        - '&7have the ability to build further away.'
+        - '&r'
+        - '&aInformation...'
+        - '&8◆ &aSize: &a200 x 200 x 200'
+        - '&8◆ &aCost: &775,000 ⛃'
+        - '&r'
+        - '&a&l✓ &a&k;&2&k;&r &a&lUPGRADED'
+        view_requirement:
+          requirements:
+            permission:
+              type: has permission
+              permission: islandsize.tier5
+        left_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+        right_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+      size5-2:
+        material: IRON_FENCE
+        data: 0
+        slot: 15
+        hide_attributes: true
+        priority: 2
+        amount: 5
+        display_name: '&8◆   &a&nIsland Size:&r &7#5&r   &8◆'
+        lore:
+        - '&7Upgrade your island size so that you'
+        - '&7have the ability to build further away.'
+        - '&r'
+        - '&aInformation...'
+        - '&8◆ &aSize: &a200 x 200 x 200'
+        - '&8◆ &aCost: &775,000 ⛃'
+        - '&r'
+        - '&c&l✘ &c&k;&4&k;&r &c&lLOCKED'
+        - '&8◆ &a&nLeft-click&r &7to upgrade for &a75,000 ⛃&7.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nUPGRADED&r  &8◆\n&7New
+          Island Size: &f165'
+        - '[console] eco take %player_name% 75000'
+        - '[console] pex user %player_name% add islandsize.tier5'
+        - '[console] pex user %player_name% add askyblock.island.range.200'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 75000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+            permission:
+              type: has permission
+              permission: oregenerators.tier4
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fPrevious
+                size not unlocked.'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      spacer0:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 0
+        hide_attributes: true
+        display_name: '&r'
+      spacer1:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 1
+        hide_attributes: true
+        display_name: '&r'
+      spacer2:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 2
+        hide_attributes: true
+        display_name: '&r'
+      spacer3:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 3
+        hide_attributes: true
+        display_name: '&r'
+      spacer4:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 4
+        hide_attributes: true
+        display_name: '&r'
+      spacer5:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 5
+        hide_attributes: true
+        display_name: '&r'
+      spacer6:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 6
+        hide_attributes: true
+        display_name: '&r'
+      spacer7:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 7
+        hide_attributes: true
+        display_name: '&r'
+      spacer8:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 8
+        hide_attributes: true
+        display_name: '&r'
+      spacer9:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 9
+        hide_attributes: true
+        display_name: '&r'
+      spacer9-1:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 10
+        hide_attributes: true
+        display_name: '&r'
+      spacer9-2:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 16
+        hide_attributes: true
+        display_name: '&r'
+      spacer10:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 17
+        hide_attributes: true
+        display_name: '&r'
+      spacer11:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 18
+        hide_attributes: true
+        display_name: '&r'
+      spacer12:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 19
+        hide_attributes: true
+        display_name: '&r'
+      spacer13:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 20
+        hide_attributes: true
+        display_name: '&r'
+      spacer14:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 21
+        hide_attributes: true
+        display_name: '&r'
+      spacer15:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 22
+        hide_attributes: true
+        display_name: '&r'
+      spacer16:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 23
+        hide_attributes: true
+        display_name: '&r'
+      spacer17:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 24
+        hide_attributes: true
+        display_name: '&r'
+      spacer18:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 25
+        hide_attributes: true
+        display_name: '&r'
+      spacer19:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 26
+        hide_attributes: true
+        display_name: '&r'
+  teamsizeupgrades:
+    menu_title: '&nTeam Size Upgrades'
+    open_command:
+    - is tupgrade
+    - is tupgrades
+    - tupgrade
+    - tupgrades
+    - teamupgrade
+    - teamupgrades
+    size: 27
+    items:
+      size1:
+        material: head;CapFan
+        slot: 11
+        hide_attributes: true
+        display_name: '&8◆   &d&nTeam Size:&r &7#1&r   &8◆'
+        lore:
+        - '&7Upgrade your team size to allow'
+        - '&7more players to join your team.'
+        - '&r'
+        - '&dInformation...'
+        - '&8◆ &dSize: &c4'
+        - '&8◆ &dCost: &70 ⛃'
+        - '&r'
+        - '&e&lDEFAULT'
+        left_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+      size2-1:
+        material: head;MLGlee827
+        data: 0
+        slot: 12
+        hide_attributes: true
+        priority: 1
+        amount: 2
+        display_name: '&8◆   &d&nTeam Size:&r &7#2&r   &8◆'
+        lore:
+        - '&7Upgrade your team size to allow'
+        - '&7more players to join your team.'
+        - '&r'
+        - '&dInformation...'
+        - '&8◆ &dSize: &c&m4&r &e➜ &e6'
+        - '&8◆ &dCost: &710,000 ⛃'
+        - '&r'
+        - '&a&l✓ &a&k;&2&k;&r &a&lUPGRADED'
+        view_requirement:
+          requirements:
+            permission:
+              type: has permission
+              permission: teamsize.tier2
+        left_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+        right_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+      size2-2:
+        material: IRON_FENCE
+        data: 0
+        slot: 12
+        hide_attributes: true
+        priority: 2
+        amount: 2
+        display_name: '&8◆   &d&nTeam Size:&r &7#2&r   &8◆'
+        lore:
+        - '&7Upgrade your team size to allow'
+        - '&7more players to join your team.'
+        - '&r'
+        - '&dInformation...'
+        - '&8◆ &dSize: &c&m4&r &e➜ &e6'
+        - '&8◆ &dCost: &710,000 ⛃'
+        - '&r'
+        - '&c&l✘ &c&k;&4&k;&r &c&lLOCKED'
+        - '&8◆ &d&nLeft-click&r &7to upgrade for &a10,000 ⛃&7.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nUPGRADED&r  &8◆\n&7New
+          Team Size: &f6'
+        - '[console] eco take %player_name% 10000'
+        - '[console] pex user %player_name% add teamsize.tier2'
+        - '[console] pex user %player_name% add askyblock.team.maxsize.6'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 10000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      size3-1:
+        material: head;ByAehn
+        data: 0
+        slot: 13
+        hide_attributes: true
+        priority: 1
+        amount: 3
+        display_name: '&8◆   &d&nTeam Size:&r &7#3&r   &8◆'
+        lore:
+        - '&7Upgrade your team size to allow'
+        - '&7more players to join your team.'
+        - '&r'
+        - '&dInformation...'
+        - '&8◆ &dSize: &e&m6&r &2➜ &28'
+        - '&8◆ &dCost: &725,000 ⛃'
+        - '&r'
+        - '&a&l✓ &a&k;&2&k;&r &a&lUPGRADED'
+        view_requirement:
+          requirements:
+            permission:
+              type: has permission
+              permission: teamsize.tier3
+        left_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+        right_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+      size3-2:
+        material: IRON_FENCE
+        data: 0
+        slot: 13
+        hide_attributes: true
+        priority: 2
+        amount: 3
+        display_name: '&8◆   &d&nTeam Size:&r &7#3&r   &8◆'
+        lore:
+        - '&7Upgrade your team size to allow'
+        - '&7more players to join your team.'
+        - '&r'
+        - '&dInformation...'
+        - '&8◆ &dSize: &e&m6&r &2➜ &28'
+        - '&8◆ &dCost: &725,000 ⛃'
+        - '&r'
+        - '&c&l✘ &c&k;&4&k;&r &c&lLOCKED'
+        - '&8◆ &d&nLeft-click&r &7to upgrade for &a25,000 ⛃&7.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nUPGRADED&r  &8◆\n&7New
+          Team Size: &f8'
+        - '[console] eco take %player_name% 25000'
+        - '[console] pex user %player_name% add teamsize.tier3'
+        - '[console] pex user %player_name% add askyblock.team.maxsize.8'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 25000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+            permission:
+              type: has permission
+              permission: teamsize.tier2
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fPrevious
+                size not unlocked.'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      size4-1:
+        material: head;oldpauly
+        data: 0
+        slot: 14
+        hide_attributes: true
+        priority: 1
+        amount: 4
+        display_name: '&8◆   &d&nTeam Size:&r &7#4&r   &8◆'
+        lore:
+        - '&7Upgrade your team size to allow'
+        - '&7more players to join your team.'
+        - '&r'
+        - '&dInformation...'
+        - '&8◆ &dSize: &2&m8&r &a➜ &a10'
+        - '&8◆ &dCost: &750,000 ⛃'
+        - '&r'
+        - '&a&l✓ &a&k;&2&k;&r &a&lUPGRADED'
+        view_requirement:
+          requirements:
+            permission:
+              type: has permission
+              permission: teamsize.tier4
+        left_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+        right_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+      size4-2:
+        material: IRON_FENCE
+        data: 0
+        slot: 14
+        hide_attributes: true
+        priority: 2
+        amount: 4
+        display_name: '&8◆   &d&nTeam Size:&r &7#4&r   &8◆'
+        lore:
+        - '&7Upgrade your team size to allow'
+        - '&7more players to join your team.'
+        - '&r'
+        - '&dInformation...'
+        - '&8◆ &dSize: &2&m8&r &a➜ &a10'
+        - '&8◆ &dCost: &750,000 ⛃'
+        - '&r'
+        - '&c&l✘ &c&k;&4&k;&r &c&lLOCKED'
+        - '&8◆ &d&nLeft-click&r &7to upgrade for &a50,000 ⛃&7.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nUPGRADED&r  &8◆\n&7New
+          Team Size: &f10'
+        - '[console] eco take %player_name% 50000'
+        - '[console] pex user %player_name% add teamsize.tier4'
+        - '[console] pex user %player_name% add askyblock.team.maxsize.10'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 50000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+            permission:
+              type: has permission
+              permission: teamsize.tier3
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fPrevious
+                size not unlocked.'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      size5-1:
+        material: head;JWAK
+        data: 0
+        slot: 15
+        hide_attributes: true
+        priority: 1
+        amount: 5
+        display_name: '&8◆   &d&nTeam Size:&r &7#5&r   &8◆'
+        lore:
+        - '&7Upgrade your team size to allow'
+        - '&7more players to join your team.'
+        - '&r'
+        - '&dInformation...'
+        - '&8◆ &dSize: &a&m10&r &a➜ &a12'
+        - '&8◆ &dCost: &775,000 ⛃'
+        - '&r'
+        - '&a&l✓ &a&k;&2&k;&r &a&lUPGRADED'
+        view_requirement:
+          requirements:
+            permission:
+              type: has permission
+              permission: teamsize.tier5
+        left_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+        right_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+      size5-2:
+        material: IRON_FENCE
+        data: 0
+        slot: 15
+        hide_attributes: true
+        priority: 2
+        amount: 5
+        display_name: '&8◆   &d&nTeam Size:&r &7#5&r   &8◆'
+        lore:
+        - '&7Upgrade your team size to allow'
+        - '&7more players to join your team.'
+        - '&r'
+        - '&dInformation...'
+        - '&8◆ &dSize: &a&m10&r &a➜ &a12'
+        - '&8◆ &dCost: &775,000 ⛃'
+        - '&r'
+        - '&c&l✘ &c&k;&4&k;&r &c&lLOCKED'
+        - '&8◆ &d&nLeft-click&r &7to upgrade for &a75,000 ⛃&7.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nUPGRADED&r  &8◆\n&7New
+          Team Size: &f12'
+        - '[console] eco take %player_name% 75000'
+        - '[console] pex user %player_name% add teamsize.tier5'
+        - '[console] pex user %player_name% add askyblock.team.maxsize.12'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 75000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+            permission:
+              type: has permission
+              permission: teamsize.tier4
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fPrevious
+                size not unlocked.'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      spacer0:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 0
+        hide_attributes: true
+        display_name: '&r'
+      spacer1:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 1
+        hide_attributes: true
+        display_name: '&r'
+      spacer2:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 2
+        hide_attributes: true
+        display_name: '&r'
+      spacer3:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 3
+        hide_attributes: true
+        display_name: '&r'
+      spacer4:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 4
+        hide_attributes: true
+        display_name: '&r'
+      spacer5:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 5
+        hide_attributes: true
+        display_name: '&r'
+      spacer6:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 6
+        hide_attributes: true
+        display_name: '&r'
+      spacer7:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 7
+        hide_attributes: true
+        display_name: '&r'
+      spacer8:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 8
+        hide_attributes: true
+        display_name: '&r'
+      spacer9:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 9
+        hide_attributes: true
+        display_name: '&r'
+      spacer9-1:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 10
+        hide_attributes: true
+        display_name: '&r'
+      spacer9-2:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 16
+        hide_attributes: true
+        display_name: '&r'
+      spacer10:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 17
+        hide_attributes: true
+        display_name: '&r'
+      spacer11:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 18
+        hide_attributes: true
+        display_name: '&r'
+      spacer12:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 19
+        hide_attributes: true
+        display_name: '&r'
+      spacer13:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 20
+        hide_attributes: true
+        display_name: '&r'
+      spacer14:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 21
+        hide_attributes: true
+        display_name: '&r'
+      spacer15:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 22
+        hide_attributes: true
+        display_name: '&r'
+      spacer16:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 23
+        hide_attributes: true
+        display_name: '&r'
+      spacer17:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 24
+        hide_attributes: true
+        display_name: '&r'
+      spacer18:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 25
+        hide_attributes: true
+        display_name: '&r'
+      spacer19:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 26
+        hide_attributes: true
+        display_name: '&r'
+  homeupgrades:
+    menu_title: '&nHome Upgrades'
+    open_command:
+    - is hupgrade
+    - is hupgrades
+    - hupgrade
+    - hupgrades
+    - homeupgrade
+    - homeupgrades
+    size: 27
+    items:
+      size1:
+        material: head;BlockminersTV
+        slot: 11
+        hide_attributes: true
+        display_name: '&8◆   &c&nHome Size:&r &7#1&r   &8◆'
+        lore:
+        - '&7Upgrade the number of homes that you'
+        - '&7are allowed to set on your island.'
+        - '&r'
+        - '&cInformation...'
+        - '&8◆ &cSize: &c4'
+        - '&8◆ &cCost: &70 ⛃'
+        - '&r'
+        - '&e&lDEFAULT'
+        left_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+      size2-1:
+        material: head;BlockminersTV
+        data: 0
+        slot: 12
+        hide_attributes: true
+        priority: 1
+        amount: 2
+        display_name: '&8◆   &c&nHome Size:&r &7#2&r   &8◆'
+        lore:
+        - '&7Upgrade the number of homes that you'
+        - '&7are allowed to set on your island.'
+        - '&r'
+        - '&cInformation...'
+        - '&8◆ &cSize: &c&m4&r &e➜ &e6'
+        - '&8◆ &cCost: &710,000 ⛃'
+        - '&r'
+        - '&a&l✓ &a&k;&2&k;&r &a&lUPGRADED'
+        view_requirement:
+          requirements:
+            permission:
+              type: has permission
+              permission: homesize.tier2
+        left_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+        right_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+      size2-2:
+        material: IRON_FENCE
+        data: 0
+        slot: 12
+        hide_attributes: true
+        priority: 2
+        amount: 2
+        display_name: '&8◆   &c&nHome Size:&r &7#2&r   &8◆'
+        lore:
+        - '&7Upgrade the number of homes that you'
+        - '&7are allowed to set on your island.'
+        - '&r'
+        - '&dInformation...'
+        - '&8◆ &dSize: &c&m4&r &e➜ &e6'
+        - '&8◆ &dCost: &710,000 ⛃'
+        - '&r'
+        - '&c&l✘ &c&k;&4&k;&r &c&lLOCKED'
+        - '&8◆ &c&nLeft-click&r &7to upgrade for &a10,000 ⛃&7.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nUPGRADED&r  &8◆\n&7New
+          Home Size: &f6'
+        - '[console] eco take %player_name% 10000'
+        - '[console] pex user %player_name% add homesize.tier2'
+        - '[console] pex user %player_name% add askyblock.island.maxhomes.6'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 10000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      size3-1:
+        material: head;BlockminersTV
+        data: 0
+        slot: 13
+        hide_attributes: true
+        priority: 1
+        amount: 3
+        display_name: '&8◆   &c&nHome Size:&r &7#3&r   &8◆'
+        lore:
+        - '&7Upgrade the number of homes that you'
+        - '&7are allowed to set on your island.'
+        - '&r'
+        - '&cInformation...'
+        - '&8◆ &cSize: &e&m6&r &2➜ &28'
+        - '&8◆ &cCost: &725,000 ⛃'
+        - '&r'
+        - '&a&l✓ &a&k;&2&k;&r &a&lUPGRADED'
+        view_requirement:
+          requirements:
+            permission:
+              type: has permission
+              permission: homesize.tier3
+        left_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+        right_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+      size3-2:
+        material: IRON_FENCE
+        data: 0
+        slot: 13
+        hide_attributes: true
+        priority: 2
+        amount: 3
+        display_name: '&8◆   &c&nHome Size:&r &7#3&r   &8◆'
+        lore:
+        - '&7Upgrade the number of homes that you'
+        - '&7are allowed to set on your island.'
+        - '&r'
+        - '&dInformation...'
+        - '&8◆ &dSize: &e&m6&r &2➜ &28'
+        - '&8◆ &dCost: &725,000 ⛃'
+        - '&r'
+        - '&c&l✘ &c&k;&4&k;&r &c&lLOCKED'
+        - '&8◆ &c&nLeft-click&r &7to upgrade for &a25,000 ⛃&7.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nUPGRADED&r  &8◆\n&7New
+          Home Size: &f8'
+        - '[console] eco take %player_name% 25000'
+        - '[console] pex user %player_name% add homesize.tier3'
+        - '[console] pex user %player_name% add askyblock.island.maxhomes.8'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 25000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+            permission:
+              type: has permission
+              permission: homesize.tier2
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fPrevious
+                size not unlocked.'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      size4-1:
+        material: head;BlockminersTV
+        data: 0
+        slot: 14
+        hide_attributes: true
+        priority: 1
+        amount: 4
+        display_name: '&8◆   &c&nHome Size:&r &7#4&r   &8◆'
+        lore:
+        - '&7Upgrade the number of homes that you'
+        - '&7are allowed to set on your island.'
+        - '&r'
+        - '&cInformation...'
+        - '&8◆ &cSize: &2&m8&r &a➜ &a10'
+        - '&8◆ &cCost: &750,000 ⛃'
+        - '&r'
+        - '&a&l✓ &a&k;&2&k;&r &a&lUPGRADED'
+        view_requirement:
+          requirements:
+            permission:
+              type: has permission
+              permission: homesize.tier4
+        left_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+        right_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+      size4-2:
+        material: IRON_FENCE
+        data: 0
+        slot: 14
+        hide_attributes: true
+        priority: 2
+        amount: 4
+        display_name: '&8◆   &c&nHome Size:&r &7#4&r   &8◆'
+        lore:
+        - '&7Upgrade the number of homes that you'
+        - '&7are allowed to set on your island.'
+        - '&r'
+        - '&dInformation...'
+        - '&8◆ &dSize: &2&m8&r &a➜ &a10'
+        - '&8◆ &dCost: &750,000 ⛃'
+        - '&r'
+        - '&c&l✘ &c&k;&4&k;&r &c&lLOCKED'
+        - '&8◆ &c&nLeft-click&r &7to upgrade for &a50,000 ⛃&7.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nUPGRADED&r  &8◆\n&7New
+          Home Size: &f10'
+        - '[console] eco take %player_name% 50000'
+        - '[console] pex user %player_name% add homesize.tier4'
+        - '[console] pex user %player_name% add askyblock.island.maxhomes.10'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 50000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+            permission:
+              type: has permission
+              permission: homesize.tier3
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fPrevious
+                size not unlocked.'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      size5-1:
+        material: head;BlockminersTV
+        data: 0
+        slot: 15
+        hide_attributes: true
+        priority: 1
+        amount: 5
+        display_name: '&8◆   &c&nHome Size:&r &7#5&r   &8◆'
+        lore:
+        - '&7Upgrade the number of homes that you'
+        - '&7are allowed to set on your island.'
+        - '&r'
+        - '&cInformation...'
+        - '&8◆ &cSize: &a&m10&r &a➜ &a12'
+        - '&8◆ &cCost: &775,000 ⛃'
+        - '&r'
+        - '&a&l✓ &a&k;&2&k;&r &a&lUPGRADED'
+        view_requirement:
+          requirements:
+            permission:
+              type: has permission
+              permission: homesize.tier5
+        left_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+        right_click_commands:
+        - '[sound] ENTITY_EGG_THROW'
+      size5-2:
+        material: IRON_FENCE
+        data: 0
+        slot: 15
+        hide_attributes: true
+        priority: 2
+        amount: 5
+        display_name: '&8◆   &c&nHome Size:&r &7#5&r   &8◆'
+        lore:
+        - '&7Upgrade the number of homes that you'
+        - '&7are allowed to set on your island.'
+        - '&r'
+        - '&dInformation...'
+        - '&8◆ &dSize: &a&m10&r &a➜ &a12'
+        - '&8◆ &dCost: &775,000 ⛃'
+        - '&r'
+        - '&c&l✘ &c&k;&4&k;&r &c&lLOCKED'
+        - '&8◆ &c&nLeft-click&r &7to upgrade for &a75,000 ⛃&7.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nUPGRADED&r  &8◆\n&7New
+          Home Size: &f12'
+        - '[console] eco take %player_name% 75000'
+        - '[console] pex user %player_name% add homesize.tier5'
+        - '[console] pex user %player_name% add askyblock.island.maxhomes.12'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 75000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+            permission:
+              type: has permission
+              permission: homesize.tier4
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fPrevious
+                size not unlocked.'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      spacer0:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 0
+        hide_attributes: true
+        display_name: '&r'
+      spacer1:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 1
+        hide_attributes: true
+        display_name: '&r'
+      spacer2:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 2
+        hide_attributes: true
+        display_name: '&r'
+      spacer3:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 3
+        hide_attributes: true
+        display_name: '&r'
+      spacer4:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 4
+        hide_attributes: true
+        display_name: '&r'
+      spacer5:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 5
+        hide_attributes: true
+        display_name: '&r'
+      spacer6:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 6
+        hide_attributes: true
+        display_name: '&r'
+      spacer7:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 7
+        hide_attributes: true
+        display_name: '&r'
+      spacer8:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 8
+        hide_attributes: true
+        display_name: '&r'
+      spacer9:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 9
+        hide_attributes: true
+        display_name: '&r'
+      spacer9-1:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 10
+        hide_attributes: true
+        display_name: '&r'
+      spacer9-2:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 16
+        hide_attributes: true
+        display_name: '&r'
+      spacer10:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 17
+        hide_attributes: true
+        display_name: '&r'
+      spacer11:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 18
+        hide_attributes: true
+        display_name: '&r'
+      spacer12:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 19
+        hide_attributes: true
+        display_name: '&r'
+      spacer13:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 20
+        hide_attributes: true
+        display_name: '&r'
+      spacer14:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 21
+        hide_attributes: true
+        display_name: '&r'
+      spacer15:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 22
+        hide_attributes: true
+        display_name: '&r'
+      spacer16:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 23
+        hide_attributes: true
+        display_name: '&r'
+      spacer17:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 24
+        hide_attributes: true
+        display_name: '&r'
+      spacer18:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 25
+        hide_attributes: true
+        display_name: '&r'
+      spacer19:
+        material: STAINED_GLASS_PANE
+        data: 7
+        slot: 26
+        hide_attributes: true
+        display_name: '&r'
+  isbiome:
+    menu_title: '&nSelect a new biome...'
+    open_command:
+    - is biomes
+    - island biomes
+    size: 9
+    items:
+      coldbeach:
+        material: head;MushTurf
+        slot: 0
+        hide_attributes: true
+        display_name: '&8◆   &b&nCold &e&nBeach&r   &8◆'
+        lore:
+        - '&7&oA very cold beach - brrrr.'
+        - '&r'
+        - '&8◆ &e&nLeft-click&r &7to purchase for &e5,000 ⛃&7.'
+        - '&r'
+        - '      &7&o&nNote:&r &7&oOnly purchase if you'
+        - '         &7&oare the island leader.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nSUCCESS&r  &8◆\n&7New
+          Biome: &fCold Beach'
+        - '[console] eco take %player_name% 5000'
+        - '[console] asadmin setbiome %player_name% COLD_BEACH'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        - '[message] &e(!) You need to relog to see changes.'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 5000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      plains:
+        material: head;Noobie
+        slot: 1
+        hide_attributes: true
+        display_name: '&8◆   &a&nPlains&r   &8◆'
+        lore:
+        - '&7&oA large grassy area without trees.'
+        - '&r'
+        - '&8◆ &a&nLeft-click&r &7to purchase for &e5,000 ⛃&7.'
+        - '&r'
+        - '      &7&o&nNote:&r &7&oOnly purchase if you'
+        - '         &7&oare the island leader.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nSUCCESS&r  &8◆\n&7New
+          Biome: &fPlains'
+        - '[console] eco take %player_name% 5000'
+        - '[console] asadmin setbiome %player_name% PLAINS'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        - '[message] &e(!) You need to relog to see changes.'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 5000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      desert:
+        material: head;rugofluk
+        slot: 2
+        hide_attributes: true
+        display_name: '&8◆   &e&nDesert&r   &8◆'
+        lore:
+        - '&7&oA hot and dry atmosphere.'
+        - '&r'
+        - '&8◆ &e&nLeft-click&r &7to purchase for &e5,000 ⛃&7.'
+        - '&r'
+        - '      &7&o&nNote:&r &7&oOnly purchase if you'
+        - '         &7&oare the island leader.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nSUCCESS&r  &8◆\n&7New
+          Biome: &fDesert'
+        - '[console] eco take %player_name% 5000'
+        - '[console] asadmin setbiome %player_name% DESERT'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        - '[message] &e(!) You need to relog to see changes.'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 5000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      swamp:
+        material: head;GracefulNarwhal
+        slot: 3
+        hide_attributes: true
+        display_name: '&8◆   &d&nSwampland&r   &8◆'
+        lore:
+        - '&7&oA very unpredictable biome.'
+        - '&r'
+        - '&8◆ &d&nLeft-click&r &7to purchase for &e5,000 ⛃&7.'
+        - '&r'
+        - '      &7&o&nNote:&r &7&oOnly purchase if you'
+        - '         &7&oare the island leader.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nSUCCESS&r  &8◆\n&7New
+          Biome: &fSwampland'
+        - '[console] eco take %player_name% 5000'
+        - '[console] asadmin setbiome %player_name% SWAMPLAND'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        - '[message] &e(!) You need to relog to see changes.'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 5000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      hell:
+        material: head;Akkalor
+        slot: 4
+        hide_attributes: true
+        display_name: '&8◆   &c&nHell&r   &8◆'
+        lore:
+        - '&7&oA very warm and dark place to be in.'
+        - '&r'
+        - '&8◆ &c&nLeft-click&r &7to purchase for &e5,000 ⛃&7.'
+        - '&r'
+        - '      &7&o&nNote:&r &7&oOnly purchase if you'
+        - '         &7&oare the island leader.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nSUCCESS&r  &8◆\n&7New
+          Biome: &fHell'
+        - '[console] eco take %player_name% 5000'
+        - '[console] asadmin setbiome %player_name% HELL'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        - '[message] &e(!) You need to relog to see changes.'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 5000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      jungle:
+        material: head;PrettyCoolGuyMan
+        slot: 5
+        hide_attributes: true
+        display_name: '&8◆   &2&nJungle&r   &8◆'
+        lore:
+        - '&7&oLots and lots of nature and wildlife.'
+        - '&r'
+        - '&8◆ &2&nLeft-click&r &7to purchase for &e5,000 ⛃&7.'
+        - '&r'
+        - '      &7&o&nNote:&r &7&oOnly purchase if you'
+        - '         &7&oare the island leader.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nSUCCESS&r  &8◆\n&7New
+          Biome: &fJungle'
+        - '[console] eco take %player_name% 5000'
+        - '[console] asadmin setbiome %player_name% JUNGLE'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        - '[message] &e(!) You need to relog to see changes.'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 5000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      roofedforest:
+        material: head;MushroomCassette
+        slot: 6
+        hide_attributes: true
+        display_name: '&8◆   &b&nRoofed Forest&r   &8◆'
+        lore:
+        - '&7&oA densely-packed forest with mushrooms.'
+        - '&r'
+        - '&8◆ &b&nLeft-click&r &7to purchase for &e5,000 ⛃&7.'
+        - '&r'
+        - '      &7&o&nNote:&r &7&oOnly purchase if you'
+        - '         &7&oare the island leader.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nSUCCESS&r  &8◆\n&7New
+          Biome: &fRoofed Forest'
+        - '[console] eco take %player_name% 5000'
+        - '[console] asadmin setbiome %player_name% ROOFED_FOREST'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        - '[message] &e(!) You need to relog to see changes.'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 5000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      flowerforest:
+        material: head;TheRoro17
+        slot: 7
+        hide_attributes: true
+        display_name: '&8◆   &a&nFlower Forest&r   &8◆'
+        lore:
+        - '&7&oA beautiful forest packed with flowers!'
+        - '&r'
+        - '&8◆ &a&nLeft-click&r &7to purchase for &e5,000 ⛃&7.'
+        - '&r'
+        - '      &7&o&nNote:&r &7&oOnly purchase if you'
+        - '         &7&oare the island leader.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nSUCCESS&r  &8◆\n&7New
+          Biome: &fFlower Forest'
+        - '[console] eco take %player_name% 5000'
+        - '[console] asadmin setbiome %player_name% MUTATED_FOREST'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        - '[message] &e(!) You need to relog to see changes.'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 5000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+      mesa:
+        material: head;Red_Sand
+        slot: 8
+        hide_attributes: true
+        display_name: '&8◆   &6&nMesa&r   &8◆'
+        lore:
+        - '&7&oA biome full of clay and large hills...'
+        - '&r'
+        - '&8◆ &6&nLeft-click&r &7to purchase for &e5,000 ⛃&7.'
+        - '&r'
+        - '      &7&o&nNote:&r &7&oOnly purchase if you'
+        - '         &7&oare the island leader.'
+        left_click_commands:
+        - '[console] titlemanager msg %player_name% &8◆  &a&l&nSUCCESS&r  &8◆\n&7New
+          Biome: &fMesa'
+        - '[console] eco take %player_name% 5000'
+        - '[console] asadmin setbiome %player_name% MESA'
+        - '[console] particle happyVillager %player_x% %player_y% %player_z% 0.5 0.5
+          0.5 1 20 1 %player_name%'
+        - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP'
+        - '[close]'
+        - '[message] &e(!) You need to relog to see changes.'
+        left_click_requirement:
+          requirements:
+            money_requirement:
+              type: '>'
+              input: '%vault_eco_balance_fixed%'
+              output: 5000
+              deny_commands:
+              - '[console] titlemanager msg %player_name% &8◆  &c&l&nERROR&r  &8◆\n&fNot
+                enough funds!'
+              - '[sound] BLOCK_ANVIL_DESTROY'
+              - '[close]'
+  rankkits:
+    menu_title: '&nRank Kits'
+    open_command:
+    - kit
+    - kits
+    size: 9
+    update_interval: 1
+    items:
+      spiritnopermission:
+        material: IRON_FENCE
+        slot: 0
+        priority: 1
+        update: true
+        hide_attributes: true
+        view_requirement:
+          requirements:
+            nopermission:
+              type: string equals ignorecase
+              input: '%essentials_has_kit_spirit%'
+              output: 'no'
+        display_name: '         &7◆   &8&n[&7&nSpirit&8&n]&7&n Kit&r   &7◆'
+        lore:
+        - '&7Receive special items from this kit'
+        - '&7which will help you on your island.'
+        - '&r'
+        - '&7&nRequirements...'
+        - '&8(&c&l✘&8) &8[&7Spirit&8] &7Rank'
+        - '&8(&c&l✘&8) &7Cooldown Expired'
+        - '&r'
+        - '&8◆ &7&nRight-click&r &7to preview this kit.'
+        - ''
+        left_click_commands:
+        - '[sound] BLOCK_ANVIL_LAND'
+        - '[message] &c(!) You do not have permission to redeem the &7&nSpirit Kit&r&c.'
+        - '[message] &7Purchase a higher rank on &nstore.wessex.site&r&7 to gain access
+          to this kit.'
+        right_click_commands:
+        - '[player] previewkit spirit'
+      spiritavailable:
+        material: head;Gobix
+        slot: 0
+        priority: 2
+        update: true
+        hide_attributes: true
+        view_requirement:
+          requirements:
+            available:
+              type: string equals ignorecase
+              input: '%essentials_kit_is_available_spirit%'
+              output: 'yes'
+        display_name: '         &7◆   &8&n[&7&nSpirit&8&n]&7&n Kit&r   &7◆'
+        lore:
+        - '&7Receive special items from this kit'
+        - '&7which will help you on your island.'
+        - '&r'
+        - '&7&nRequirements...'
+        - '&8(&a&l✓&8) &8[&7Spirit&8] &7Rank'
+        - '&8(&a&l✓&8) &7Cooldown Expired'
+        - '&r'
+        - '&8◆ &7&nLeft-click&r &7to redeem this kit.'
+        - '&8◆ &7&nRight-click&r &7to preview this kit.'
+        - ''
+        left_click_commands:
+        - '[player] kit spirit'
+        - '[sound] ENTITY_ENTITY_HORSE_ARMOR'
+        right_click_commands:
+        - '[player] previewkit spirit'
+      spiritcooldown:
+        material: head;Gobix
+        slot: 0
+        priority: 3
+        update: true
+        display_name: '         &7◆   &8&n[&7&nSpirit&8&n]&7&n Kit&r   &7◆'
+        lore:
+        - '&7Receive special items from this kit'
+        - '&7which will help you on your island.'
+        - '&r'
+        - '&7&nRequirements...'
+        - '&8(&a&l✓&8) &8[&7Spirit&8] &7Rank'
+        - '&8(&c&l✘&8) &7Cooldown Expired &8(&7%essentials_kit_time_until_available_spirit%&8)'
+        - '&r'
+        - '&8◆ &7&nRight-click&r &7to preview this kit.'
+        - ''
+        left_click_commands:
+        - '[sound] BLOCK_ANVIL_LAND'
+        - '[message] &c(!) This &7&nSpirit Kit&r &cis on cooldown for another &7&n%essentials_kit_time_until_available_spirit%&r&c.'
+        right_click_commands:
+        - '[player] previewkit spirit'
+      phantomnopermission:
+        material: IRON_FENCE
+        slot: 1
+        priority: 1
+        update: true
+        hide_attributes: true
+        view_requirement:
+          requirements:
+            nopermission:
+              type: string equals ignorecase
+              input: '%essentials_has_kit_phantom%'
+              output: 'no'
+        display_name: '        &7◆   &8&n[&a&nPhantom&8&n]&a&n Kit&r   &7◆'
+        lore:
+        - '&7Receive special items from this kit'
+        - '&7which will help you on your island.'
+        - '&r'
+        - '&a&nRequirements...'
+        - '&8(&c&l✘&8) &8[&aPhantom&8] &7Rank'
+        - '&8(&c&l✘&8) &7Cooldown Expired'
+        - '&r'
+        - '&8◆ &a&nRight-click&r &7to preview this kit.'
+        - ''
+        left_click_commands:
+        - '[sound] BLOCK_ANVIL_LAND'
+        - '[message] &c(!) You do not have permission to redeem the &7&nPhantom Kit&r&c.'
+        - '[message] &7Purchase a higher rank on &nstore.wessex.site&r&7 to gain access
+          to this kit.'
+        right_click_commands:
+        - '[player] previewkit phantom'
+      phantomavailable:
+        material: head;julagamer2007
+        slot: 1
+        priority: 2
+        update: true
+        hide_attributes: true
+        view_requirement:
+          requirements:
+            available:
+              type: string equals ignorecase
+              input: '%essentials_kit_is_available_phantom%'
+              output: 'yes'
+        display_name: '        &7◆   &8&n[&a&nPhantom&8&n]&a&n Kit&r   &7◆'
+        lore:
+        - '&7Receive special items from this kit'
+        - '&7which will help you on your island.'
+        - '&r'
+        - '&a&nRequirements...'
+        - '&8(&a&l✓&8) &8[&aPhantom&8] &7Rank'
+        - '&8(&a&l✓&8) &7Cooldown Expired'
+        - '&r'
+        - '&8◆ &a&nLeft-click&r &7to redeem this kit.'
+        - '&8◆ &a&nRight-click&r &7to preview this kit.'
+        - ''
+        left_click_commands:
+        - '[player] kit phantom'
+        - '[sound] ENTITY_HORSE_ARMOR'
+        right_click_commands:
+        - '[player] previewkit phantom'
+      phantomcooldown:
+        material: head;julagamer2007
+        slot: 1
+        priority: 3
+        update: true
+        display_name: '        &7◆   &8&n[&a&nPhantom&8&n]&a&n Kit&r   &7◆'
+        lore:
+        - '&7Receive special items from this kit'
+        - '&7which will help you on your island.'
+        - '&r'
+        - '&a&nRequirements...'
+        - '&8(&a&l✓&8) &8[&aPhantom&8] &7Rank'
+        - '&8(&c&l✘&8) &7Cooldown Expired &8(&7%essentials_kit_time_until_available_phantom%&8)'
+        - '&r'
+        - '&8◆ &a&nRight-click&r &7to preview this kit.'
+        - ''
+        left_click_commands:
+        - '[sound] BLOCK_ANVIL_LAND'
+        - '[message] &c(!) This &7&nPhantom Kit&r &cis on cooldown for another &7&n%essentials_kit_time_until_available_phantom%&r&c.'
+        right_click_commands:
+        - '[player] previewkit phantom'
+      warlocknopermission:
+        material: IRON_FENCE
+        slot: 2
+        priority: 1
+        update: true
+        hide_attributes: true
+        view_requirement:
+          requirements:
+            nopermission:
+              type: string equals ignorecase
+              input: '%essentials_has_kit_warlock%'
+              output: 'no'
+        display_name: '        &7◆   &8&n[&d&nWarlock&8&n]&d&n Kit&r   &7◆'
+        lore:
+        - '&7Receive special items from this kit'
+        - '&7which will help you on your island.'
+        - '&r'
+        - '&d&nRequirements...'
+        - '&8(&c&l✘&8) &8[&dWarlock&8] &7Rank'
+        - '&8(&c&l✘&8) &7Cooldown Expired'
+        - '&r'
+        - '&8◆ &d&nRight-click&r &7to preview this kit.'
+        - ''
+        left_click_commands:
+        - '[sound] BLOCK_ANVIL_LAND'
+        - '[message] &c(!) You do not have permission to redeem the &7&nWarlock Kit&r&c.'
+        - '[message] &7Purchase a higher rank on &nstore.wessex.site&r&7 to gain access
+          to this kit.'
+        right_click_commands:
+        - '[player] previewkit warlock'
+      warlockavailable:
+        material: head;byMassi88LM
+        slot: 2
+        priority: 2
+        update: true
+        hide_attributes: true
+        view_requirement:
+          requirements:
+            available:
+              type: string equals ignorecase
+              input: '%essentials_kit_is_available_warlock%'
+              output: 'yes'
+        display_name: '        &7◆   &8&n[&d&nWarlock&8&n]&d&n Kit&r   &7◆'
+        lore:
+        - '&7Receive special items from this kit'
+        - '&7which will help you on your island.'
+        - '&r'
+        - '&d&nRequirements...'
+        - '&8(&a&l✓&8) &8[&dWarlock&8] &7Rank'
+        - '&8(&a&l✓&8) &7Cooldown Expired'
+        - '&r'
+        - '&8◆ &d&nLeft-click&r &7to redeem this kit.'
+        - '&8◆ &d&nRight-click&r &7to preview this kit.'
+        - ''
+        left_click_commands:
+        - '[player] kit warlock'
+        - '[sound] ENTITY_HORSE_ARMOR'
+        right_click_commands:
+        - '[player] previewkit warlock'
+      warlockcooldown:
+        material: head;byMassi88LM
+        slot: 2
+        priority: 3
+        update: true
+        display_name: '        &7◆   &8&n[&d&nWarlock&8&n]&d&n Kit&r   &7◆'
+        lore:
+        - '&7Receive special items from this kit'
+        - '&7which will help you on your island.'
+        - '&r'
+        - '&d&nRequirements...'
+        - '&8(&a&l✓&8) &8[&6Asteroid&8] &7Rank'
+        - '&8(&c&l✘&8) &7Cooldown Expired &8(&7%essentials_kit_time_until_available_warlock%&8)'
+        - '&r'
+        - '&8◆ &d&nRight-click&r &7to preview this kit.'
+        - ''
+        left_click_commands:
+        - '[sound] BLOCK_ANVIL_LAND'
+        - '[message] &c(!) This &7&nWarlock Kit&r &cis on cooldown for another &7&n%essentials_kit_time_until_available_warlock%&r&c.'
+        right_click_commands:
+        - '[player] previewkit warlock'
+      ghoulnopermission:
+        material: IRON_FENCE
+        slot: 3
+        priority: 1
+        update: true
+        hide_attributes: true
+        view_requirement:
+          requirements:
+            nopermission:
+              type: string equals ignorecase
+              input: '%essentials_has_kit_ghoul%'
+              output: 'no'
+        display_name: '         &7◆   &8&n[&6&nGhoul&8&n]&6&n Kit&r   &7◆'
+        lore:
+        - '&7Receive special items from this kit'
+        - '&7which will help you on your island.'
+        - '&r'
+        - '&6&nRequirements...'
+        - '&8(&c&l✘&8) &8[&6Ghoul&8] &7Rank'
+        - '&8(&c&l✘&8) &7Cooldown Expired'
+        - '&r'
+        - '&8◆ &6&nRight-click&r &7to preview this kit.'
+        - ''
+        left_click_commands:
+        - '[sound] BLOCK_ANVIL_LAND'
+        - '[message] &c(!) You do not have permission to redeem the &7&nGhoul Kit&r&c.'
+        - '[message] &7Purchase a higher rank on &nstore.wessex.site&r&7 to gain access
+          to this kit.'
+        right_click_commands:
+        - '[player] previewkit ghoul'
+      ghoulavailable:
+        material: head;r04dk1ll
+        slot: 3
+        priority: 2
+        update: true
+        hide_attributes: true
+        view_requirement:
+          requirements:
+            available:
+              type: string equals ignorecase
+              input: '%essentials_kit_is_available_ghoul%'
+              output: 'yes'
+        display_name: '         &7◆   &8&n[&6&nGhoul&8&n]&6&n Kit&r   &7◆'
+        lore:
+        - '&7Receive special items from this kit'
+        - '&7which will help you on your island.'
+        - '&r'
+        - '&6&nRequirements...'
+        - '&8(&a&l✓&8) &8[&6Ghoul&8] &7Rank'
+        - '&8(&a&l✓&8) &7Cooldown Expired'
+        - '&r'
+        - '&8◆ &6&nLeft-click&r &7to redeem this kit.'
+        - '&8◆ &6&nRight-click&r &7to preview this kit.'
+        - ''
+        left_click_commands:
+        - '[player] kit ghoul'
+        - '[sound] ENTITY_HORSE_ARMOR'
+        right_click_commands:
+        - '[player] previewkit ghoul'
+      ghoulcooldown:
+        material: head;r04dk1ll
+        slot: 3
+        priority: 3
+        update: true
+        display_name: '         &7◆   &8&n[&6&nGhoul&8&n]&6&n Kit&r   &7◆'
+        lore:
+        - '&7Receive special items from this kit'
+        - '&7which will help you on your island.'
+        - '&r'
+        - '&c&nRequirements...'
+        - '&8(&a&l✓&8) &8[&6Ghoul&8] &7Rank'
+        - '&8(&c&l✘&8) &7Cooldown Expired &8(&7%essentials_kit_time_until_available_ghoul%&8)'
+        - '&r'
+        - '&8◆ &c&nRight-click&r &7to preview this kit.'
+        - ''
+        left_click_commands:
+        - '[sound] BLOCK_ANVIL_LAND'
+        - '[message] &c(!) This &7&nGhoul Kit&r &cis on cooldown for another &7&n%essentials_kit_time_until_available_ghoul%&r&c.'
+        right_click_commands:
+        - '[player] previewkit ghoul'
+      demonnopermission:
+        material: IRON_FENCE
+        slot: 4
+        priority: 1
+        update: true
+        hide_attributes: true
+        view_requirement:
+          requirements:
+            nopermission:
+              type: string equals ignorecase
+              input: '%essentials_has_kit_demon%'
+              output: 'no'
+        display_name: '         &7◆   &8&n[&c&nDemon&8&n]&c&n Kit&r   &7◆'
+        lore:
+        - '&7Receive special items from this kit'
+        - '&7which will help you on your island.'
+        - '&r'
+        - '&c&nRequirements...'
+        - '&8(&c&l✘&8) &8[&cDemon&8] &7Rank'
+        - '&8(&c&l✘&8) &7Cooldown Expired'
+        - '&r'
+        - '&8◆ &c&nRight-click&r &7to preview this kit.'
+        - ''
+        left_click_commands:
+        - '[sound] BLOCK_ANVIL_LAND'
+        - '[message] &c(!) You do not have permission to redeem the &7&nDemon Kit&r&c.'
+        - '[message] &7Purchase a higher rank on &nstore.wessex.site&r&7 to gain access
+          to this kit.'
+        right_click_commands:
+        - '[player] previewkit demon'
+      demonavailable:
+        material: head;Fire
+        slot: 4
+        priority: 2
+        update: true
+        hide_attributes: true
+        view_requirement:
+          requirements:
+            available:
+              type: string equals ignorecase
+              input: '%essentials_kit_is_available_demon%'
+              output: 'yes'
+        display_name: '         &7◆   &8&n[&c&nDemon&8&n]&c&n Kit&r   &7◆'
+        lore:
+        - '&7Receive special items from this kit'
+        - '&7which will help you on your island.'
+        - '&r'
+        - '&c&nRequirements...'
+        - '&8(&a&l✓&8) &8[&cDemon&8] &7Rank'
+        - '&8(&a&l✓&8) &7Cooldown Expired'
+        - '&r'
+        - '&8◆ &c&nLeft-click&r &7to redeem this kit.'
+        - '&8◆ &c&nRight-click&r &7to preview this kit.'
+        - ''
+        left_click_commands:
+        - '[player] kit demon'
+        - '[sound] ENTITY_HORSE_ARMOR'
+        right_click_commands:
+        - '[player] previewkit demon'
+      demoncooldown:
+        material: head;Fire
+        slot: 4
+        priority: 3
+        update: true
+        display_name: '         &7◆   &8&n[&c&nDemon&8&n]&c&n Kit&r   &7◆'
+        lore:
+        - '&7Receive special items from this kit'
+        - '&7which will help you on your island.'
+        - '&r'
+        - '&c&nRequirements...'
+        - '&8(&a&l✓&8) &8[&cDemon&8] &7Rank'
+        - '&8(&c&l✘&8) &7Cooldown Expired &8(&7%essentials_kit_time_until_available_demon%&8)'
+        - '&r'
+        - '&8◆ &c&nRight-click&r &7to preview this kit.'
+        - ''
+        left_click_commands:
+        - '[sound] BLOCK_ANVIL_LAND'
+        - '[message] &c(!) This &7&nDemon Kit&r &cis on cooldown for another &7&n%essentials_kit_time_until_available_demon%&r&c.'
+        right_click_commands:
+        - '[player] previewkit demon'
+      overlordnopermission:
+        material: IRON_FENCE
+        slot: 5
+        priority: 1
+        update: true
+        hide_attributes: true
+        view_requirement:
+          requirements:
+            nopermission:
+              type: string equals ignorecase
+              input: '%essentials_has_kit_overlord%'
+              output: 'no'
+        display_name: '      &7◆   &8&n[&6&k&n;&e&nOverlord&6&k&n;&8&n]&e&n Kit&r   &7◆'
+        lore:
+        - '&7Receive special items from this kit'
+        - '&7which will help you on your island.'
+        - '&r'
+        - '&e&nRequirements...'
+        - '&8(&c&l✘&8) &8[&6&k;&eOverlord&6&k;&8] &7Rank'
+        - '&8(&c&l✘&8) &7Cooldown Expired'
+        - '&r'
+        - '&8◆ &e&nRight-click&r &7to preview this kit.'
+        - ''
+        left_click_commands:
+        - '[sound] BLOCK_ANVIL_LAND'
+        - '[message] &c(!) You do not have permission to redeem the &7&nOverlord Kit&r&c.'
+        - '[message] &7Purchase a higher rank on &nstore.wessex.site&r&7 to gain access
+          to this kit.'
+        right_click_commands:
+        - '[player] previewkit overlord'
+      overlordavailable:
+        material: head;GVPETP
+        slot: 5
+        priority: 2
+        update: true
+        hide_attributes: true
+        view_requirement:
+          requirements:
+            available:
+              type: string equals ignorecase
+              input: '%essentials_kit_is_available_overlord%'
+              output: 'yes'
+        display_name: '      &7◆   &8&n[&6&k&n;&e&nOverlord&6&k&n;&8&n]&e&n Kit&r   &7◆'
+        lore:
+        - '&7Receive special items from this kit'
+        - '&7which will help you on your island.'
+        - '&r'
+        - '&e&nRequirements...'
+        - '&8(&a&l✓&8) &8[&6&k;&eOverlord&6&k;&8] &7Rank'
+        - '&8(&a&l✓&8) &7Cooldown Expired'
+        - '&r'
+        - '&8◆ &e&nLeft-click&r &7to redeem this kit.'
+        - '&8◆ &e&nRight-click&r &7to preview this kit.'
+        - ''
+        left_click_commands:
+        - '[player] kit overlord'
+        - '[sound] ENTITY_HORSE_ARMOR'
+        right_click_commands:
+        - '[player] previewkit overlord'
+      overlordcooldown:
+        material: head;GVPETP
+        slot: 5
+        priority: 3
+        update: true
+        display_name: '      &7◆   &8&n[&6&k&n;&e&nOverlord&6&k&n;&8&n]&e&n Kit&r   &7◆'
+        lore:
+        - '&7Receive special items from this kit'
+        - '&7which will help you on your island.'
+        - '&r'
+        - '&e&nRequirements...'
+        - '&8(&a&l✓&8) &8[&6&k;&eOverlord&6&k;&8] &7Rank'
+        - '&8(&c&l✘&8) &7Cooldown Expired &8(&7%essentials_kit_time_until_available_overlord%&8)'
+        - '&r'
+        - '&8◆ &e&nRight-click&r &7to preview this kit.'
+        - ''
+        left_click_commands:
+        - '[sound] BLOCK_ANVIL_LAND'
+        - '[message] &c(!) This &7&nOverlord Kit&r &cis on cooldown for another &7&n%essentials_kit_time_until_available_overlord%&r&c.'
+        right_click_commands:
+        - '[player] previewkit overlord'
+      spacer1:
+        material: STAINED_GLASS_PANE
+        data: 15
+        amount: 1
+        slot: 6
+        display_name: '&8&l? &7&l? &8&l?'
+      spacer2:
+        material: STAINED_GLASS_PANE
+        data: 15
+        amount: 1
+        slot: 7
+        display_name: '&8&l? &7&l? &8&l?'
+      spacer3:
+        material: STAINED_GLASS_PANE
+        data: 15
+        amount: 1
+        slot: 8
+        display_name: '&8&l? &7&l? &8&l?'

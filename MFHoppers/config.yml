@@ -1,0 +1,146 @@
+saveEvery: 60
+Hoppers:
+  grindHopper:
+    type: Grind
+    limitPerChunk: -1
+    name: '&8[&aMobGrind&8] &7Hopper'
+    lore:
+    - '&7This hopper teleports specified monster type'
+    - '&7To it''s location & freezes them'
+    - '&a&l* &7Current mob: %type%'
+    should_drop_from_explosions: true
+    mob: PIG
+    mob-blacklist:
+    - ENDER_DRAGON
+    damage: 0.2
+    time: 10
+    inventoryTitle: '&bGrind Hopper &a(1)'
+    linkedMoveEvery: 4
+    linkedMoveAmount: 10
+    linkedLimit: 1
+    sellEvery: 10
+    sellAmount: 10
+  mobHopper:
+    type: Mob
+    limitPerChunk: -1
+    name: '&8[&aMob&8] &7Hopper'
+    inventoryTitle: '&bMob Hopper &a(1)'
+    lore:
+    - '&7This hopper picks up mob drops!'
+    should_drop_from_explosions: true
+    drops:
+    - ROTTEN_FLESH
+    - BONE
+    - ARROW
+    - SULPHUR
+    - STRING
+    - SPIDER_EYE
+    - BLAZE_ROD
+    - ENDER_PEARL
+    - SLIME_BALL
+    - MAGMA_CREAM
+    - GHAST_TEAR
+    - PRISMARINE_SHARD
+    - PRISMARINE_CRYSTALS
+    - LEATHER
+    - FEATHER
+    - RABBIT_FOOT
+    - GOLD_NUGGET
+    - POISONOUS_POTATO
+    - EGG
+    - SKULL_ITEM
+  cropHopper:
+    type: Crop
+    limitPerChunk: -1
+    name: '&8[&aCrop&8] &7Hopper'
+    should_drop_from_explosions: true
+    pickupNamedItems: false
+    lore:
+    - '&7This hopper picks up crops!'
+    crops:
+    - CACTUS
+    - PUMPKIN
+    - MELON_BLOCK
+    - POTATO_ITEM
+    - BEETROOT
+    - SUGAR_CANE
+    - NETHER_STALK
+  breakHopper:
+    should_drop_from_explosions: true
+    type: Break
+    limitPerChunk: -1
+    name: '&8[&aBreak&8]&7 Hopper'
+    lore:
+    - '&7Auto breaks blocks above it.'
+    breakEvery: 10
+    drops:
+    - DIAMOND_ORE:10
+    - GOLD_INGOT:10
+    - IRON_INGOT:10
+  breakWithUpgrades:
+    should_drop_from_explosions: true
+    type: Break
+    limitPerChunk: -1
+    particle: CLOUD
+    name: '&8[&aBreak&8]&7 Hopper (&a1&7)'
+    lore:
+    - Auto breaks blocks above it
+    breakEvery: 10
+    drops:
+    - DIAMOND_ORE:1-4
+    - GOLD_INGOT:1-4
+    - IRON_INGOT:1-4
+    upgrades:
+      '2':
+        breakEvery: 8
+        limitPerChunk: -1
+        priceType: XP
+        price: 1000
+        particle: SPLASH
+        name: '&8[&aBreak&8]&7 Hopper (&a2&7)'
+        lore:
+        - '&7Auto breaks blocks above it'
+        drops:
+        - DIAMOND_ORE:2-5
+        - GOLD_INGOT:2-5
+        - IRON_INGOT:2-5
+GrindConvert:
+  convert-inventory:
+    title: '&aChange your grinder mob!'
+    item-placeholder:
+      name: '&b%type%'
+      lore:
+      - '&7Change your grinder type to %type%'
+      - '&b&l* &7Price: $%price%'
+  default-price: 1000
+  prices:
+  - COW:1500
+  mob-blacklist:
+  - GIANT
+  - WITHER
+  shouldLevelResetAfterConvert: true
+  allowConvertUpgradedHoppers: true
+UpgradeInventory:
+  title: '&3&lUPGRADE HOPPER'
+  infoItem:
+    name: '&b&lINFO'
+    material: PAPER
+    lore:
+    - '&b&l* &7Level: &b%lvl%'
+    - '&b&l* &7Type: &b%type%'
+    - '&b&l* &7Name: &b%name%'
+  filler_color: CYAN
+  upgradeItem:
+    material: DIAMOND_BLOCK
+    name: '&b&lUPGRADE'
+    lore:
+    - '&7Click to upgrade your hopper from level &b%lvl% &7to &b%nextlvl%'
+HopperConvert:
+  title: '&3&lConvert Hopper'
+  itemPricePlaceholder: '&b&l* &7Price: &b%price% ⛃'
+  hoppers:
+  - cropHopper:1000
+LinkedContainer: '&7Linked &b%name%'
+allowMultipleHoppersToLinkOneContainer: false
+sellOptions:
+  system: BuiltIn

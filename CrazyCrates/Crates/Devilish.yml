@@ -1,0 +1,822 @@
+Crate:
+  CrateType: Wheel #Type of crate (CSGO/QuadCrate/QuickCrate/Roulette/CrateOnTheGo/FireCracker/Wonder/Wheel/War/Cosmic(This requires a additional info to work.)).
+  CrateName: '&nDevilish Crate' #Name of the Inventory if a GUI crate.
+  StartingKeys: 0 #Starting amount of keys when the player 1st joins.
+  InGUI: true #If the crate shows in the /cc GUI. (If the crate type is QuickCrate/CrateOnTheGo/FireCracker then the Crate will not work. Quick Crate requires a Physical Crate.)
+  Slot: 15 #Slot the item is in the GUI.
+  OpeningBroadCast: false #Enables/Disables the Broadcasts message when they open a crate.
+  BroadCast: '%Prefix%&6&l%Player% &7is opening a &7&lBasic Chest&7.' #Message that is broadcasted when opening the crate.
+  Item: '351:9' #Item the crate is in the GUI
+  Glowing: true #If the crate in the main /cc GUI is glowing or not.
+  Name: '      &8◆  &c&k;&4&k;&r &c&nDevilish Crate&r &4&k;&c&k;&r  &8◆' #Name of the item in the GUI.
+  Preview-Name: '     &8◆  &c&k;&4&k;&r &c&nDevilish Crate&r &4&k;&c&k;&r  &8◆' #Name of the item in the GUI.
+  Lore: #The lore of the item in the GUI.
+    - '&7A newly-made crate found in space' 
+    - '&7   is packed with exclusive items.' 
+    - '&r' 
+    - '&c ◆ &7You have &c&n%Keys%&r &7keys for this crate.'
+    - '&r'
+    - '&c&nLeft-click&r &7to open this crate.'
+    - '&c&nRight-click&r &7to preview the rewards.'
+  PhysicalKey:
+    Name: '&8◆ &c&nDevilish Crate Key&r &8◆' #Name of the Key.
+    Lore:
+      - '&7Use this key to open a crate.' #Lore of the Key.
+    Item: '131' #The item the key is.
+    Glowing: True #Makes the key look enchanted.
+#         For Cosmic Crates Only
+#############################################
+#  Tiers: #The tiers in the Crate
+#    Basic: #The Config Name for the Crate
+#      Name: '&8Basic Prize' #The in-game name of the Crate
+#      Color: 7 #Use the MetaData for the color of the glass
+#      Chance: 80 #Chance of that item getting picked. It would be 80/100 chance because MaxRange is 100.
+#      MaxRange: 100 #The max range that the chance will go though.
+#    UnCommon:
+#      Name: '&aUnCommon Prize'
+#      Color: 5
+#      Chance: 55
+#      MaxRange: 100
+#    Rare:
+#      Name: '&4Rare Prize'
+#      Color: 14
+#      Chance: 20
+#      MaxRange: 100
+#############################################
+  Prizes: #All the prizes that can be gotten in the Crate.
+    1:
+      DisplayName: '&8◆ &a&n50,000 ⛃&r &8◆'
+      DisplayItem: '388'
+      DisplayAmount: 1
+      Lore:
+        - "&c◆ &7Chance: &a20%"
+      MaxRange: 100
+      Chance: 20
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'eco give %Player% 50000'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n50,000 ⛃&r&c.'
+      BlackListed-Permissions: []
+    2:
+      DisplayName: '&8◆ &a&n100,000 ⛃&r &8◆'
+      DisplayItem: '388'
+      DisplayAmount: 1
+      Lore:
+        - "&c◆ &7Chance: &a15%"
+      MaxRange: 100
+      Chance: 15
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'eco give %Player% 100000'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n100,000 ⛃&r&c.'
+      BlackListed-Permissions: []
+    3:
+      DisplayName: '&8◆ &b&n4,000 EXP&r &8◆'
+      DisplayItem: '384'
+      DisplayAmount: 1
+      Lore:
+        - "&c◆ &7Chance: &b15%"
+      MaxRange: 100
+      Chance: 15
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'xp give %Player% 4000'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n4,000 EXP&r&c.'
+      BlackListed-Permissions: []
+    4:
+      DisplayName: '&8◆ &8&n[&6&nGhoul&8&n]&c&n Kit&r &8◆'
+      DisplayItem: '303'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &c7.5%"
+      MaxRange: 1000
+      Chance: 75
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'kit ghoul %Player%'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n1x Ghoul Kit&r&c.'
+      BlackListed-Permissions: []
+    5:
+      DisplayName: '&8◆ &8&n[&c&nDemon&8&n]&c&n Kit&r &8◆'
+      DisplayItem: '307'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &c5%"
+      MaxRange: 100
+      Chance: 5
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'kit demon %Player%'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n1x Demon Kit&r&c.'
+      BlackListed-Permissions: []
+    6:
+      DisplayName: '&8◆ &8&n[&6&k&n;&r&e&nOverlord&6&k&n;&r&8&n]&c&n Kit&r &8◆'
+      DisplayItem: '311'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &c2.5%"
+      MaxRange: 1000
+      Chance: 25
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'kit overlord %Player%'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n1x Overlord Kit&r&c.'
+      BlackListed-Permissions: []
+    7:
+      DisplayName: '&8◆ &d&nPeaceful Mob Spawners&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 1
+      Lore:
+        - "&r"
+        - "&7&nThis includes..."
+        - "&e ◆ &71x Chicken Spawner"
+        - "&e ◆ &71x Pig Spawner"
+        - "&e ◆ &71x Sheep Spawner"
+        - "&e ◆ &71x Rabbit Spawner"
+        - "&r"
+        - "&c◆ &7Chance: &d9.5%"
+      MaxRange: 1000
+      Chance: 95
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% chicken 1'
+        - 'ss give %Player% pig 1'
+        - 'ss give %Player% sheep 1'
+        - 'ss give %Player% rabbit 1'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n1x Peaceful Mob Spawners&r&c.'
+      BlackListed-Permissions: []
+    8:
+      DisplayName: '&8◆ &d&nHostile Mob Spawners&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 1
+      Lore:
+        - "&r"
+        - "&7&nThis includes..."
+        - "&e ◆ &71x Zombie Spawner"
+        - "&e ◆ &71x Skeleton Spawner"
+        - "&e ◆ &71x Spider Spawner"
+        - "&e ◆ &71x Cave Spider Spawner"
+        - "&e ◆ &71x Witch Spawner"
+        - "&r"
+        - "&c◆ &7Chance: &d8%"
+      MaxRange: 100
+      Chance: 8
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% zombie 1'
+        - 'ss give %Player% skeleton 1'
+        - 'ss give %Player% spider 1'
+        - 'ss give %Player% cavespider 1'
+        - 'ss give %Player% witch 1'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n1x Hostile Mob Spawners&r&c.'
+      BlackListed-Permissions: []
+    9:
+      DisplayName: '&8◆ &d&nEnderman Spawner&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 1
+      Lore:
+        - "&c◆ &7Chance: &d7.5%"
+      MaxRange: 1000
+      Chance: 75
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% enderman 1'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n1x Enderman Spawner&r&c.'
+      BlackListed-Permissions: []
+    10:
+      DisplayName: '&8◆ &d&nCreeper Spawner&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 1
+      Lore:
+        - "&c◆ &7Chance: &d7.5%"
+      MaxRange: 1000
+      Chance: 75
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% creeper 1'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n1x Creeper Spawner&r&c.'
+      BlackListed-Permissions: []
+    11:
+      DisplayName: '&8◆ &d&nBlaze Spawner&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 1
+      Lore:
+        - "&c◆ &7Chance: &d7.5%"
+      MaxRange: 1000
+      Chance: 75
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% blaze 1'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n1x Blaze Spawner&r&c.'
+      BlackListed-Permissions: []
+    12:
+      DisplayName: '&8◆ &d&nIron Golem Spawner&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 1
+      Lore:
+        - "&c◆ &7Chance: &d7.5%"
+      MaxRange: 1000
+      Chance: 75
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% irongolem 1'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n1x Iron Golem Spawner&r&c.'
+      BlackListed-Permissions: []
+    13:
+      DisplayName: '&8◆ &e&n32x Hoppers&r &8◆'
+      DisplayItem: '154'
+      DisplayAmount: 32
+      Lore:
+        - "&c◆ &7Chance: &e5%"
+      MaxRange: 100
+      Chance: 5
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'give %Player% 154 32'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n32x Hoppers&r&c.'
+      BlackListed-Permissions: []
+    14:
+      DisplayName: '&8◆ &e&n3x Crop Hoppers&r &8◆'
+      DisplayItem: '154'
+      DisplayAmount: 3
+      Lore:
+        - "&7One crop hopper will take all dropped"
+        - "&7crops in the chunk it is placed."
+        - "&e◆ &7Chance: &e4%"
+      MaxRange: 100
+      Chance: 4
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'mfhoppers give %Player% cropHopper 3'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n&3x Crop Hoppers&r&c.'
+      BlackListed-Permissions: []
+    15:
+      DisplayName: '&8◆ &e&n3x Mob Hoppers&r &8◆'
+      DisplayItem: '154'
+      DisplayAmount: 3
+      Lore:
+        - "&7One mob hopper will take all mob"
+        - "&7drops in the chunk it is placed."
+        - "&e◆ &7Chance: &e4%"
+      MaxRange: 100
+      Chance: 4
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'mfhoppers give %Player% mobHopper 3'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n&3x Mob Hoppers&r&c.'
+      BlackListed-Permissions: []
+    16:
+      DisplayName: '&8◆ &5&n15x War Tokens&r &8◆'
+      DisplayItem: '318'
+      DisplayAmount: 15
+      Lore:
+        - "&c◆ &7Chance: &55%"
+      MaxRange: 100
+      Chance: 5
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'vouchers give %Player% wartoken 15'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n15x War Tokens&r&c.'
+      BlackListed-Permissions: []
+    17:
+      DisplayName: '&8◆ &4&n1x Necromancer Key&r &8◆'
+      DisplayItem: '351:1'
+      DisplayAmount: 1
+      Lore:
+        - "&e◆ &7Chance: &44.5%"
+      MaxRange: 1000
+      Chance: 45
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'cc give v Necromancer 1 %Player%'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n1x Necromancer Key&r&c.'
+      BlackListed-Permissions: []
+    18:
+      DisplayName: '&8◆ &c&n2x Devilish Keys&r &8◆'
+      DisplayItem: '351:9'
+      DisplayAmount: 2
+      Lore:
+        - "&e◆ &7Chance: &c5%"
+      MaxRange: 100
+      Chance: 5
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'cc give v Devilish 2 %Player%'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n2x Devilish Keys&r&c.'
+      BlackListed-Permissions: []
+    19:
+      DisplayName: '&8◆ &c&nDevilish Key All&r &8◆'
+      DisplayItem: '351:9'
+      DisplayAmount: 1
+      Lore:
+        - "&7All online players will receive this key."
+        - "&6◆ &7Chance: &c0.1%"
+      MaxRange: 10000
+      Chance: 10
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'cc giveall v Devilish 1'
+        - 'broadcast &7%Player% &chas opened a &c&nDevilish Crate&r &cand won &c&n1x Devilish Key All&r&c.'
+        - 'broadcast &7All online players have received &n1x Devilish Key&r&7.'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n1x Devilish Key All&r&c.'
+      BlackListed-Permissions: []
+    20:
+      DisplayName: '&8◆ &e&n64x Iron Blocks&r &8◆'
+      DisplayItem: '42'
+      DisplayAmount: 64
+      Lore:
+        - "&e◆ &7Chance: &e6.5%"
+      MaxRange: 1000
+      Chance: 65
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'give %Player% 42 64'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n64x Iron Blocks&r&c.'
+      BlackListed-Permissions: []
+    21:
+      DisplayName: '&8◆ &e&n64x Gold Blocks&r &8◆'
+      DisplayItem: '41'
+      DisplayAmount: 64
+      Lore:
+        - "&e◆ &7Chance: &e4.5%"
+      MaxRange: 1000
+      Chance: 45
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'give %Player% 41 64'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n64x Gold Blocks&r&c.'
+      BlackListed-Permissions: []
+    22:
+      DisplayName: '&8◆ &e&n64x Diamond Blocks&r &8◆'
+      DisplayItem: '57'
+      DisplayAmount: 64
+      Lore:
+        - "&c◆ &7Chance: &e6%"
+      MaxRange: 100
+      Chance: 6
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'give %Player% 57 64'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n64x Diamond Blocks&r&c.'
+      BlackListed-Permissions: []
+    23:
+      DisplayName: '&8◆ &e&n64x Emerald Blocks&r &8◆'
+      DisplayItem: '133'
+      DisplayAmount: 64
+      Lore:
+        - "&c◆ &7Chance: &e4%"
+      MaxRange: 100
+      Chance: 4
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'give %Player% 133 64'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n64x Emerald Blocks&r&c.'
+      BlackListed-Permissions: []
+    24:
+      DisplayName: '&8◆ &a&nExclusive Pet Egg&r &8◆'
+      DisplayItem: '383:55'
+      DisplayAmount: 1
+      Lore:
+        - "&c◆ &7Chance: &a3%"
+      MaxRange: 100
+      Chance: 3
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'pets give %Player% exclusive 1'
+        - 'broadcast &7%Player% &chas opened a &c&nDevilish Crate&r &cand won &c&n1x Exclusive Pet Egg&r&c.'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n1x Exclusive Pet Egg&r&c.'
+      BlackListed-Permissions: []
+    25:
+      DisplayName: '&8◆ &e&nUltimate Pet Egg&r &8◆'
+      DisplayItem: '383:66'
+      DisplayAmount: 1
+      Lore:
+        - "&c◆ &7Chance: &e2%"
+      MaxRange: 100
+      Chance: 2
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'pets give %Player% ultimate 1'
+        - 'broadcast &7%Player% &chas opened a &c&nDevilish Crate&r &cand won &c&n1x Ultimate Pet Egg&r&c.'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n1x Ultimate Pet Egg&r&c.'
+      BlackListed-Permissions: []
+    26:
+      DisplayName: '&8◆ &6&nLegendary Pet Egg&r &8◆'
+      DisplayItem: '383:62'
+      DisplayAmount: 1
+      Lore:
+        - "&c◆ &7Chance: &61%"
+      MaxRange: 100
+      Chance: 2
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'pets give %Player% legendary 1'
+        - 'broadcast &7%Player% &chas opened a &c&nDevilish Crate&r &cand won &c&n1x Legendary Pet Egg&r&c.'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n1x Ultimate Pet Egg&r&c.'
+      BlackListed-Permissions: []
+    27:
+      DisplayName: '&8◆ &e&n10x Rare Enchantment Books&r &8◆'
+      DisplayItem: '340'
+      DisplayAmount: 10
+      Lore:
+        - "&c◆ &7Chance: &e9%"
+      MaxRange: 100
+      Chance: 9
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ce lostbook Rare 10 %Player%'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n10x Rare Enchantment Books&r&c.'
+      BlackListed-Permissions: []
+    28:
+      DisplayName: '&8◆ &c&n6x Legendary Enchantment Books&r &8◆'
+      DisplayItem: '340'
+      DisplayAmount: 6
+      Lore:
+        - "&c◆ &7Chance: &c7%"
+      MaxRange: 100
+      Chance: 7
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ce lostbook Legendary 6 %Player%'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n6x Legendary Enchantment Books&r&c.'
+      BlackListed-Permissions: []
+    29:
+      DisplayName: '&8◆ &5&n3x Ancient Enchantment Books&r &8◆'
+      DisplayItem: '340'
+      DisplayAmount: 3
+      Lore:
+        - "&c◆ &7Chance: &55%"
+      MaxRange: 100
+      Chance: 5
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ce lostbook Ancient 3 %Player%'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n3x Ancient Enchantment Books&r&c.'
+      BlackListed-Permissions: []
+    30:
+      DisplayName: '&8◆ &e&n3x White Scrolls&r &8◆'
+      DisplayItem: '395'
+      DisplayAmount: 3
+      Lore:
+        - "&c◆ &7Chance: &e5%"
+      MaxRange: 100
+      Chance: 5
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ce scroll white 3 %Player%'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n3x White Scrolls&r&c.'
+      BlackListed-Permissions: []
+    31:
+      DisplayName: '&8◆ &e&n3x Black Scrolls&r &8◆'
+      DisplayItem: '351'
+      DisplayAmount: 3
+      Lore:
+        - "&c◆ &7Chance: &e5%"
+      MaxRange: 100
+      Chance: 5
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ce scroll black 3 %Player%'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n3x Black Scrolls&r&c.'
+      BlackListed-Permissions: []
+    32:
+      DisplayName: '&8◆ &e&n2x Scrambling Runes&r &8◆'
+      DisplayItem: '388'
+      DisplayAmount: 2
+      Lore:
+        - "&c◆ &7Chance: &e5%"
+      MaxRange: 100
+      Chance: 5
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ce scrambler 2 %Player%'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n2x Scrambling Runes&r&c.'
+      BlackListed-Permissions: []
+    33:
+      DisplayName: '&8◆ &6&n1x Protection Crystal&r &8◆'
+      DisplayItem: '406'
+      DisplayAmount: 1
+      Lore:
+        - "&c◆ &7Chance: &65%"
+      MaxRange: 100
+      Chance: 5
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ce crystal 1 %Player%'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n1x Protection Rune&r&c.'
+      BlackListed-Permissions: []
+    34:
+      DisplayName: '&8◆ &b&nMoney Pouch (T3)&r &8◆'
+      DisplayItem: '54'
+      DisplayAmount: 1
+      Lore:
+        - "&7Money Range: &b50,000 - 200,000 ⛃"
+        - "&c◆ &7Chance: &b9%"
+      MaxRange: 100
+      Chance: 9
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'mp 3 %Player% 1'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n1x Money Pouch (T3)&r&c.'
+      BlackListed-Permissions: []
+    35:
+      DisplayName: '&8◆ &b&nMoney Pouch (T4)&r &8◆'
+      DisplayItem: '54'
+      DisplayAmount: 1
+      Lore:
+        - "&7Money Range: &b200,000 - 500,000 ⛃"
+        - "&c◆ &7Chance: &b3%"
+      MaxRange: 100
+      Chance: 3
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'mp 4 %Player% 1'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n1x Money Pouch (T4)&r&c.'
+      BlackListed-Permissions: []
+    36:
+      DisplayName: '&8◆ &b&nRank:&r &8[&aPhantom&8] &8◆'
+      DisplayItem: '399'
+      DisplayAmount: 1
+      Lore:
+        - "&7This will give you a voucher to"
+        - "&7unlock the rank on this server."
+        - "&r"
+        - "&c◆ &7Chance: &b0.75%"
+      MaxRange: 10000
+      Chance: 75
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'voucher give %Player% PhantomRank 1'
+        - 'broadcast &7%Player% &chas opened a &c&nDevilish Crate&r &cand won &c&n1x Phantom Rank&r&c.'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n1x Phantom Rank&r&c.'
+      BlackListed-Permissions: []
+    37:
+      DisplayName: '&8◆ &b&nRank:&r &8[&dWarlock&8] &8◆'
+      DisplayItem: '399'
+      DisplayAmount: 1
+      Lore:
+        - "&7This will give you a voucher to"
+        - "&7unlock the rank on this server."
+        - "&r"
+        - "&c◆ &7Chance: &b0.45%"
+      MaxRange: 10000
+      Chance: 45
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'voucher give %Player% WarlockRank 1'
+        - 'broadcast &7%Player% &chas opened a &c&nDevilish Crate&r &cand won &c&n1x Warlock Rank&r&c.'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n1x Warlock Rank&r&c.'
+      BlackListed-Permissions: []
+    38:
+      DisplayName: '&8◆ &b&nRank:&r &8[&6Ghoul&8] &8◆'
+      DisplayItem: '399'
+      DisplayAmount: 1
+      Lore:
+        - "&7This will give you a voucher to"
+        - "&7unlock the rank on this server."
+        - "&r"
+        - "&c◆ &7Chance: &b0.15%"
+      MaxRange: 10000
+      Chance: 15
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'voucher give %Player% GhoulRank 1'
+        - 'broadcast &7%Player% &chas opened a &c&nDevilish Crate&r &cand won &c&n1x Ghoul Rank&r&c.'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n1x Ghoul Rank&r&c.'
+      BlackListed-Permissions: []
+    39:
+      DisplayName: '&8◆ &c&nGKit:&r &c"&1Fighter&c" &8◆'
+      DisplayItem: '378'
+      DisplayAmount: 1
+      Lore:
+        - "&7This will give you a voucher to"
+        - "&7unlock the gkit on this server."
+        - "&r"
+        - "&c◆ &7Chance: &c0.3%"
+      MaxRange: 1000
+      Chance: 3
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'voucher give %Player% FighterGKit 1'
+        - 'broadcast &7%Player% &chas opened a &c&nDevilish Crate&r &cand won &c&n1x Fighter GKit&r&c.'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n1x Fighter GKit&r&c.'
+      BlackListed-Permissions: []
+    40:
+      DisplayName: '&8◆ &c&nGKit:&r &c"&2Beastmaster&c" &8◆'
+      DisplayItem: '378'
+      DisplayAmount: 1
+      Lore:
+        - "&7This will give you a voucher to"
+        - "&7unlock the gkit on this server."
+        - "&r"
+        - "&c◆ &7Chance: &c0.3%"
+      MaxRange: 1000
+      Chance: 3
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'voucher give %Player% BeastmasterGKit 1'
+        - 'broadcast &7%Player% &chas opened a &c&nDevilish Crate&r &cand won &c&n1x Beastmaster GKit&r&c.'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n1x Beastmaster GKit&r&c.'
+      BlackListed-Permissions: []
+    41:
+      DisplayName: '&8◆ &c&nGKit:&r &c"&4Archer&c" &8◆'
+      DisplayItem: '378'
+      DisplayAmount: 1
+      Lore:
+        - "&7This will give you a voucher to"
+        - "&7unlock the gkit on this server."
+        - "&r"
+        - "&c◆ &7Chance: &c0.3%"
+      MaxRange: 1000
+      Chance: 3
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'voucher give %Player% ArcherGKit 1'
+        - 'broadcast &7%Player% &chas opened a &c&nDevilish Crate&r &cand won &c&n1x Archer GKit&r&c.'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n1x Archer GKit&r&c.'
+      BlackListed-Permissions: []
+    42:
+      DisplayName: '&8◆ &c&nGKit:&r &c"&5Enchanter&c" &8◆'
+      DisplayItem: '378'
+      DisplayAmount: 1
+      Lore:
+        - "&7This will give you a voucher to"
+        - "&7unlock the gkit on this server."
+        - "&r"
+        - "&c◆ &7Chance: &c0.3%"
+      MaxRange: 1000
+      Chance: 3
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'voucher give %Player% EnchanterGKit 1'
+        - 'broadcast &7%Player% &chas opened a &c&nDevilish Crate&r &cand won &c&n1x Enchanter GKit&r&c.'
+      Messages:
+        - '&c(!) You have opened a &c&nDevilish Crate&r &cand won &c&n1x Enchanter GKit&r&c.'
+      BlackListed-Permissions: []

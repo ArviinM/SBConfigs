@@ -1,0 +1,165 @@
+Settings:
+  Spawn-Chance: 50
+  Use-Chance: true
+  Placed-Block: '33'
+  Bulk-Prizes:
+    Toggle: true
+    Random: true
+    Max-Bulk: 4
+  Hologram-Toggle: true
+  Hologram-Hight: 1.5
+  Hologram:
+    - '&8◆ &7&nOld Crate&r &8◆'
+  Firework-Toggle: true
+  Firework-Colors:
+    - 'White'
+    - 'Gray'
+  Signal-Flare:
+    Toggle: true
+    Time: '20s'
+    Colors:
+    - 'White'
+    - 'Gray'
+###################################
+#             Items: Options
+# Item:<ID:MD> - You can choose the item with its id and meta data.
+# Amount:<Number> - Choose how many of the item you get.
+# Name:<Name> - The display name that goes on the item.
+# Lore:<Line 1>,<Line 2>,<Line 3>,<Line 4> - The lore that will go under the enchantments. Split lines with a ','
+# Glowing:<True/False> - Will make the item have a glowing effect without having an enchantment on the item. (Only supports 1.8 - 1.11)
+# Unbreaking:<True/False> - Will add the Unbreaking NBT tag to the item to allow custom textured items to be gained through the envoys.
+# <Enchantment>:<Level> - Choose the enchantment you want to add to the item. You can use the in-game names of the enchantment if you want. Replace the spaces in the name with "_".
+###################################
+Prizes:
+  '1':
+    Chance: 15
+    Items:
+      - 'Item:384, Amount:16'
+  '2':
+    Chance: 15
+    Items:
+      - 'Item:265, Amount:16'
+  '3':
+    Chance: 13
+    Items:
+      - 'Item:266, Amount:12'
+  '4':
+    Chance: 21
+    Items:
+      - 'Item:264, Amount:10'
+  '5':
+    Chance: 25
+    Items:
+      - 'Item:388, Amount:8'
+  '6':
+    Chance: 20
+    Items:
+      - 'Item:322, Amount:4'
+  '7':
+    Chance: 10
+    Items:
+      - 'Item:154, Amount:1'
+  '8':
+    Chance: 15
+    Items:
+      - 'Item:368, Amount:4'
+  '9':
+    Chance: 5
+    Items:
+      - 'Item:399, Amount:1'
+  '10':
+    Chance: 10
+    Items:
+      - 'Item:369, Amount:8'
+  '11':
+    Chance: 10
+    Items:
+      - 'Item:377, Amount:5'
+  '12':
+    Chance: 10
+    Items:
+      - 'Item:396, Amount:7'
+  '13':
+    Chance: 10
+    Items:
+      - 'Item:30, Amount:2'
+  '14':
+    Chance: 10
+    Items:
+      - 'Item:262, Amount:9'
+  '15':
+    Chance: 10
+    Items:
+      - 'Item:364, Amount:3'
+  '16':
+    Chance: 10
+    Items:
+      - 'Item:393, Amount:5'
+  '17':
+    Chance: 5
+    Items:
+      - 'Item:400, Amount:4'
+  '18':
+    Chance: 2
+    Items:
+      - 'Item:267, Amount:1, Sharpness:2'
+  '19':
+    Chance: 2
+    Items:
+      - 'Item:306, Amount:1, Protection:1'
+  '20':
+    Chance: 2
+    Items:
+      - 'Item:307, Amount:1, Protection:2'
+  '21':
+    Chance: 2
+    Items:
+      - 'Item:308, Amount:1, Protection:1'
+  '22':
+    Chance: 2
+    Items:
+      - 'Item:309, Amount:1, Protection:2'
+  '23':
+    Chance: 1
+    Items:
+      - 'Item:310, Amount:1, Protection:1'
+  '24':
+    Chance: 1
+    Items:
+      - 'Item:311, Amount:1, Protection:1'
+  '25':
+    Chance: 1
+    Items:
+      - 'Item:312, Amount:1, Protection:1'
+  '26':
+    Chance: 1
+    Items:
+      - 'Item:313, Amount:1, Protection:1'
+  '27':
+    Chance: 1
+    Commands:
+      - 'ss give %Player% chicken 1'
+  '28':
+    Chance: 1
+    Commands:
+      - 'ss give %Player% pig 1'
+  '29':
+    Chance: 1
+    Commands:
+      - 'ss give %Player% rabbit 1'
+  '30':
+    Chance: 1
+    Commands:
+      - 'ss give %Player% sheep 1'
+  '31':
+    Chance: 2
+    Commands:
+      - 'ce lostbook Common 2 %Player%'
+  '32':
+    Chance: 5
+    Items:
+      - 'Item:101, Amount:3'
+  '33':
+    Chance: 2
+    Commands:
+      - 'voucher give %Player% WarToken 1'

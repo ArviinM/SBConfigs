@@ -1,0 +1,216 @@
+
+#Boss Name -> reward id -> reward
+rewards:
+  AncientWitch:
+    "1":
+      place: 1
+      chance: 0.25 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &4&n2x Necromancer Crate Key(s)&r&7."
+      commands:
+        - "cc give virtual Necromancer 2 %player%"
+    "2":
+      place: 2-3
+      chance: 0.35 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &c&n2x Devilish Crate Key(s)&r&7."
+      commands:
+        - "cc give virtual Devilish 2 %player%"
+    "3":
+      place: 1
+      chance: 0.1 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &c&n1x Ancient Pet Egg(s)&r&7."
+      commands:
+        - "pets give %player% ancient 1"
+    "4":
+      place: 1-2
+      chance: 0.15 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &6&n1x Legendary Pet Egg(s)&r&7."
+      commands:
+        - "pets give %player% legendary 1"
+    "5":
+      place: 2-4
+      chance: 0.15 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &e&n1x Ultimate Pet Egg(s)&r&7."
+      commands:
+        - "pets give %player% ultimate 1"
+    "6":
+      place: 4-8
+      chance: 0.15 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &3&n1x Pulsar Crate Key(s)&r&7."
+      commands:
+        - "cc give virtual Pulsar 1 %player%"
+    "7":
+      place: 1
+      chance: 0.05 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &5&n1x Diablo Hood(s)&r&7."
+      commands:
+        - "ca give %player% 2 diamond_helmet 1"
+    "8":
+      place: 1
+      chance: 0.05 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &5&n1x Diablo Shroud(s)&r&7."
+      commands:
+        - "ca give %player% 2 diamond_chestplate 1"
+    "9":
+      place: 1
+      chance: 0.05 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &5&n1x Diablo Roleset(s)&r&7."
+      commands:
+        - "ca give %player% 2 diamond_leggings 1"
+    "10":
+      place: 1
+      chance: 0.05 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &5&n1x Diablo Sandals&r&7."
+      commands:
+        - "ca give %player% 2 diamond_boots 1"
+  MagmaLord:
+    "1":
+      place: 1
+      chance: 0.25 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &4&n2x Necromancer Crate Key(s)&r&7."
+      commands:
+        - "cc give virtual Necromancer 2 %player%"
+    "2":
+      place: 2-3
+      chance: 0.35 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &c&n2x Devilish Crate Key(s)&r&7."
+      commands:
+        - "cc give virtual Devilish 2 %player%"
+    "3":
+      place: 1
+      chance: 0.1 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &c&n1x Ancient Pet Egg(s)&r&7."
+      commands:
+        - "pets give %player% ancient 1"
+    "4":
+      place: 1-2
+      chance: 0.15 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &6&n1x Legendary Pet Egg(s)&r&7."
+      commands:
+        - "pets give %player% legendary 1"
+    "5":
+      place: 2-4
+      chance: 0.15 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &e&n1x Ultimate Pet Egg(s)&r&7."
+      commands:
+        - "pets give %player% ultimate 1"
+    "6":
+      place: 4-8
+      chance: 0.15 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &6&n1x Volcanic Crate Key(s)&r&7."
+      commands:
+        - "cc give virtual Volcanic 1 %player%"
+    "7":
+      place: 1
+      chance: 0.05 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &a&n1x Road Runner Hood(s)&r&7."
+      commands:
+        - "ca give %player% 3 diamond_helmet 1"
+    "8":
+      place: 1
+      chance: 0.05 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &a&n1x Road Runner Shroud(s)&r&7."
+      commands:
+        - "ca give %player% 3 diamond_chestplate 1"
+    "9":
+      place: 1
+      chance: 0.05 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &a&n1x Road Runner Robetset(s)&r&7."
+      commands:
+        - "ca give %player% 3 diamond_leggings 1"
+    "10":
+      place: 1
+      chance: 0.05 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &a&n1x Road Runner Sandals&r&7."
+      commands:
+        - "ca give %player% 3 diamond_boots 1"
+  SkeletonKing:
+    "1":
+      place: 1
+      chance: 0.25 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &4&n2x Necromancer Crate Key(s)&r&7."
+      commands:
+        - "cc give virtual Necromancer 2 %player%"
+    "2":
+      place: 2-3
+      chance: 0.35 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &c&n2x Devilish Crate Key(s)&r&7."
+      commands:
+        - "cc give virtual Devilish 2 %player%"
+    "3":
+      place: 1
+      chance: 0.1 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &c&n1x Ancient Pet Egg(s)&r&7."
+      commands:
+        - "pets give %player% ancient 1"
+    "4":
+      place: 1-2
+      chance: 0.15 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &6&n1x Legendary Pet Egg(s)&r&7."
+      commands:
+        - "pets give %player% legendary 1"
+    "5":
+      place: 2-4
+      chance: 0.15 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &e&n1x Ultimate Pet Egg(s)&r&7."
+      commands:
+        - "pets give %player% ultimate 1"
+    "6":
+      place: 4-8
+      chance: 0.15 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &6&n1x Volcanic Crate Key(s)&r&7."
+      commands:
+        - "cc give virtual Volcanic 1 %player%"
+    "7":
+      place: 1
+      chance: 0.05 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &c&n1x Phantom Hood(s)&r&7."
+      commands:
+        - "ca give %player% 1 diamond_helmet 1"
+    "8":
+      place: 1
+      chance: 0.05 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &c&n1x Phantom Shroud(s)&r&7."
+      commands:
+        - "ca give %player% 1 diamond_chestplate 1"
+    "9":
+      place: 1
+      chance: 0.05 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &c&n1x Phantom Robetset(s)&r&7."
+      commands:
+        - "ca give %player% 1 diamond_leggings 1"
+    "10":
+      place: 1
+      chance: 0.05 #1 = 100%
+      messages:
+        - "&4Warzone Events &8> &7You have received: &c&n1x Phantom Sandals&r&7."
+      commands:
+        - "ca give %player% 1 diamond_boots 1"

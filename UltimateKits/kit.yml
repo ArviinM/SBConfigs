@@ -1,0 +1,226 @@
+Kits:
+  tools:
+    delay: 10
+    price: 0.0
+    hidden: false
+    animation: NONE
+    items:
+    - '{id:"minecraft:stone_axe",Count:1b,Damage:0s}'
+    - '{id:"minecraft:stone_pickaxe",Count:1b,Damage:0s}'
+    - '{id:"minecraft:stone_shovel",Count:1b,Damage:0s}'
+    - '{id:"minecraft:stone_hoe",Count:1b,Damage:0s}'
+  Once:
+    delay: 1410065407
+    price: 0.0
+    hidden: false
+    animation: NONE
+    items:
+    - '{id:"minecraft:iron_helmet",Count:1b,tag:{ench:[{lvl:1s,id:0s}]},Damage:0s}'
+    - '{id:"minecraft:iron_chestplate",Count:1b,tag:{ench:[{lvl:1s,id:0s}]},Damage:0s}'
+    - '{id:"minecraft:iron_leggings",Count:1b,tag:{ench:[{lvl:1s,id:0s}]},Damage:0s}'
+    - '{id:"minecraft:iron_boots",Count:1b,tag:{ench:[{lvl:1s,id:0s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_sword",Count:1b,tag:{ench:[{lvl:1s,id:16s}]},Damage:0s}'
+    - '{id:"minecraft:bow",Count:1b,tag:{ench:[{lvl:1s,id:48s}]},Damage:0s}'
+    - '{id:"minecraft:golden_apple",Count:8b,Damage:0s}'
+    - '{id:"minecraft:ender_pearl",Count:4b,Damage:0s}'
+    - '{id:"minecraft:iron_pickaxe",Count:1b,tag:{ench:[{lvl:1s,id:32s}]},Damage:0s}'
+    - '{id:"minecraft:iron_axe",Count:1b,tag:{ench:[{lvl:1s,id:32s}]},Damage:0s}'
+    - '{id:"minecraft:iron_shovel",Count:1b,tag:{ench:[{lvl:1s,id:32s}]},Damage:0s}'
+    - '{id:"minecraft:wheat_seeds",Count:16b,Damage:0s}'
+    - '{id:"minecraft:pumpkin_seeds",Count:8b,Damage:0s}'
+    - '{id:"minecraft:melon_seeds",Count:8b,Damage:0s}'
+    - '{id:"minecraft:reeds",Count:16b,Damage:0s}'
+    - '{id:"minecraft:cactus",Count:16b,Damage:0s}'
+    - '{id:"minecraft:experience_bottle",Count:18b,Damage:0s}'
+    - '{id:"minecraft:arrow",Count:32b,Damage:0s}'
+    - '{id:"minecraft:cooked_beef",Count:16b,Damage:0s}'
+  Spirit:
+    delay: 86400
+    price: 0.0
+    hidden: false
+    animation: NONE
+    items:
+    - '{id:"minecraft:iron_helmet",Count:1b,Damage:0s}'
+    - '{id:"minecraft:iron_chestplate",Count:1b,Damage:0s}'
+    - '{id:"minecraft:iron_leggings",Count:1b,Damage:0s}'
+    - '{id:"minecraft:iron_boots",Count:1b,Damage:0s}'
+    - '{id:"minecraft:diamond_sword",Count:1b,Damage:0s}'
+    - '{id:"minecraft:bow",Count:1b,Damage:0s}'
+    - '{id:"minecraft:golden_apple",Count:4b,Damage:0s}'
+    - '{id:"minecraft:ender_pearl",Count:2b,Damage:0s}'
+    - '{id:"minecraft:iron_pickaxe",Count:1b,Damage:0s}'
+    - '{id:"minecraft:iron_axe",Count:1b,Damage:0s}'
+    - '{id:"minecraft:iron_shovel",Count:1b,Damage:0s}'
+    - '{id:"minecraft:arrow",Count:16b,Damage:0s}'
+    - '{id:"minecraft:cooked_beef",Count:8b,Damage:0s}'
+    - '{id:"minecraft:iron_ingot",Count:8b,Damage:0s}'
+    - '{id:"minecraft:gold_ingot",Count:6b,Damage:0s}'
+    - '{id:"minecraft:diamond",Count:4b,Damage:0s}'
+    - '{id:"minecraft:emerald",Count:2b,Damage:0s}'
+  Weekly:
+    delay: 604800
+    price: 0.0
+    hidden: false
+    animation: NONE
+    items:
+    - '{id:"minecraft:golden_apple",Count:1b,Damage:1s}'
+    - '{id:"minecraft:iron_block",Count:4b,Damage:0s}'
+    - '{id:"minecraft:gold_block",Count:3b,Damage:0s}'
+    - '{id:"minecraft:diamond_block",Count:2b,Damage:0s}'
+    - '{id:"minecraft:emerald_block",Count:1b,Damage:0s}'
+  Phantom:
+    delay: 86400
+    price: 0.0
+    hidden: false
+    animation: NONE
+    items:
+    - '{id:"minecraft:iron_helmet",Count:1b,tag:{ench:[{lvl:2s,id:0s},{lvl:1s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:iron_chestplate",Count:1b,tag:{ench:[{lvl:3s,id:0s},{lvl:2s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:iron_leggings",Count:1b,tag:{ench:[{lvl:2s,id:0s},{lvl:1s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:iron_boots",Count:1b,tag:{ench:[{lvl:2s,id:0s},{lvl:1s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_sword",Count:1b,tag:{ench:[{lvl:2s,id:16s},{lvl:1s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:bow",Count:1b,tag:{ench:[{lvl:1s,id:34s},{lvl:2s,id:48s}]},Damage:0s}'
+    - '{id:"minecraft:golden_apple",Count:10b,Damage:0s}'
+    - '{id:"minecraft:ender_pearl",Count:5b,Damage:0s}'
+    - '{id:"minecraft:iron_pickaxe",Count:1b,tag:{ench:[{lvl:2s,id:32s},{lvl:1s,id:35s}]},Damage:0s}'
+    - '{id:"minecraft:iron_shovel",Count:1b,tag:{ench:[{lvl:2s,id:32s},{lvl:1s,id:35s}]},Damage:0s}'
+    - '{id:"minecraft:iron_axe",Count:1b,tag:{ench:[{lvl:2s,id:32s},{lvl:1s,id:35s}]},Damage:0s}'
+    - '{id:"minecraft:iron_block",Count:4b,Damage:0s}'
+    - '{id:"minecraft:gold_block",Count:2b,Damage:0s}'
+    - '{id:"minecraft:diamond_block",Count:1b,Damage:0s}'
+    - '{id:"minecraft:emerald_block",Count:1b,Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:strong_swiftness"},Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:strong_strength"},Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:long_fire_resistance"},Damage:0s}'
+    - '{id:"minecraft:arrow",Count:32b,Damage:0s}'
+    - '{id:"minecraft:cooked_beef",Count:24b,Damage:0s}'
+  Warlock:
+    delay: 86400
+    price: 0.0
+    hidden: false
+    animation: NONE
+    items:
+    - '{id:"minecraft:iron_helmet",Count:1b,tag:{ench:[{lvl:3s,id:0s},{lvl:2s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:iron_chestplate",Count:1b,tag:{ench:[{lvl:4s,id:0s},{lvl:3s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:iron_leggings",Count:1b,tag:{ench:[{lvl:3s,id:0s},{lvl:2s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:iron_boots",Count:1b,tag:{ench:[{lvl:3s,id:0s},{lvl:2s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_sword",Count:1b,tag:{ench:[{lvl:2s,id:16s},{lvl:1s,id:20s},{lvl:2s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:bow",Count:1b,tag:{ench:[{lvl:2s,id:34s},{lvl:3s,id:48s}]},Damage:0s}'
+    - '{id:"minecraft:golden_apple",Count:16b,Damage:0s}'
+    - '{id:"minecraft:ender_pearl",Count:8b,Damage:0s}'
+    - '{id:"minecraft:iron_pickaxe",Count:1b,tag:{ench:[{lvl:3s,id:32s},{lvl:1s,id:34s},{lvl:1s,id:35s}]},Damage:0s}'
+    - '{id:"minecraft:iron_axe",Count:1b,tag:{ench:[{lvl:3s,id:32s},{lvl:1s,id:34s},{lvl:1s,id:35s}]},Damage:0s}'
+    - '{id:"minecraft:iron_shovel",Count:1b,tag:{ench:[{lvl:3s,id:32s},{lvl:1s,id:34s},{lvl:1s,id:35s}]},Damage:0s}'
+    - '{id:"minecraft:iron_block",Count:6b,Damage:0s}'
+    - '{id:"minecraft:gold_block",Count:4b,Damage:0s}'
+    - '{id:"minecraft:diamond_block",Count:2b,Damage:0s}'
+    - '{id:"minecraft:emerald_block",Count:1b,Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:long_swiftness"},Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:long_strength"},Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:long_fire_resistance"},Damage:0s}'
+    - '{id:"minecraft:arrow",Count:32b,Damage:0s}'
+    - '{id:"minecraft:cooked_beef",Count:24b,Damage:0s}'
+  Ghoul:
+    delay: 86400
+    price: 0.0
+    hidden: false
+    animation: NONE
+    items:
+    - '{id:"minecraft:diamond_helmet",Count:1b,tag:{ench:[{lvl:2s,id:0s},{lvl:1s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_chestplate",Count:1b,tag:{ench:[{lvl:2s,id:0s},{lvl:1s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_leggings",Count:1b,tag:{ench:[{lvl:2s,id:0s},{lvl:1s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_boots",Count:1b,tag:{ench:[{lvl:2s,id:0s},{lvl:2s,id:2s},{lvl:1s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_sword",Count:1b,tag:{ench:[{lvl:3s,id:16s},{lvl:1s,id:20s},{lvl:1s,id:21s},{lvl:2s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:bow",Count:1b,tag:{ench:[{lvl:2s,id:34s},{lvl:3s,id:48s},{lvl:1s,id:50s}]},Damage:0s}'
+    - '{id:"minecraft:golden_apple",Count:24b,Damage:0s}'
+    - '{id:"minecraft:ender_pearl",Count:12b,Damage:0s}'
+    - '{id:"minecraft:diamond_pickaxe",Count:1b,tag:{ench:[{lvl:3s,id:32s},{lvl:2s,id:34s},{lvl:1s,id:35s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_shovel",Count:1b,tag:{ench:[{lvl:3s,id:32s},{lvl:2s,id:34s},{lvl:1s,id:35s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_axe",Count:1b,tag:{ench:[{lvl:3s,id:32s},{lvl:2s,id:34s},{lvl:1s,id:35s}]},Damage:0s}'
+    - '{id:"minecraft:iron_block",Count:10b,Damage:0s}'
+    - '{id:"minecraft:gold_block",Count:8b,Damage:0s}'
+    - '{id:"minecraft:diamond_block",Count:6b,Damage:0s}'
+    - '{id:"minecraft:emerald_block",Count:4b,Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:water"},Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:water"},Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:water"},Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:water"},Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:water"},Damage:0s}'
+    - '{id:"minecraft:arrow",Count:32b,Damage:0s}'
+    - '{id:"minecraft:cooked_beef",Count:24b,Damage:0s}'
+  Demon:
+    delay: 86400
+    price: 0.0
+    hidden: false
+    animation: NONE
+    items:
+    - '{id:"minecraft:diamond_helmet",Count:1b,tag:{ench:[{lvl:3s,id:0s},{lvl:2s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_chestplate",Count:1b,tag:{ench:[{lvl:3s,id:0s},{lvl:2s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_leggings",Count:1b,tag:{ench:[{lvl:3s,id:0s},{lvl:2s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_boots",Count:1b,tag:{ench:[{lvl:3s,id:0s},{lvl:3s,id:2s},{lvl:2s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_sword",Count:1b,tag:{ench:[{lvl:4s,id:16s},{lvl:1s,id:20s},{lvl:2s,id:21s},{lvl:3s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:bow",Count:1b,tag:{ench:[{lvl:2s,id:34s},{lvl:4s,id:48s},{lvl:1s,id:50s},{lvl:1s,id:51s}]},Damage:0s}'
+    - '{id:"minecraft:golden_apple",Count:28b,Damage:0s}'
+    - '{id:"minecraft:ender_pearl",Count:14b,Damage:0s}'
+    - '{id:"minecraft:diamond_pickaxe",Count:1b,tag:{ench:[{lvl:4s,id:32s},{lvl:2s,id:34s},{lvl:2s,id:35s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_axe",Count:1b,tag:{ench:[{lvl:4s,id:32s},{lvl:2s,id:34s},{lvl:2s,id:35s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_shovel",Count:1b,tag:{ench:[{lvl:4s,id:32s},{lvl:2s,id:34s},{lvl:2s,id:35s}]},Damage:0s}'
+    - '{id:"minecraft:iron_block",Count:14b,Damage:0s}'
+    - '{id:"minecraft:gold_block",Count:12b,Damage:0s}'
+    - '{id:"minecraft:diamond_block",Count:10b,Damage:0s}'
+    - '{id:"minecraft:emerald_block",Count:8b,Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:strong_swiftness"},Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:strong_swiftness"},Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:long_fire_resistance"},Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:long_fire_resistance"},Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:strong_strength"},Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:strong_strength"},Damage:0s}'
+    - '{id:"minecraft:arrow",Count:32b,Damage:0s}'
+    - '{id:"minecraft:cooked_beef",Count:24b,Damage:0s}'
+  Overlord:
+    delay: 86400
+    price: 0.0
+    hidden: false
+    animation: NONE
+    items:
+    - '{id:"minecraft:diamond_helmet",Count:1b,tag:{ench:[{lvl:4s,id:0s},{lvl:4s,id:4s},{lvl:3s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_chestplate",Count:1b,tag:{ench:[{lvl:4s,id:0s},{lvl:4s,id:4s},{lvl:3s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_leggings",Count:1b,tag:{ench:[{lvl:4s,id:0s},{lvl:4s,id:4s},{lvl:3s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_boots",Count:1b,tag:{ench:[{lvl:4s,id:0s},{lvl:4s,id:2s},{lvl:4s,id:4s},{lvl:3s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_sword",Count:1b,tag:{ench:[{lvl:5s,id:16s},{lvl:2s,id:20s},{lvl:3s,id:21s},{lvl:3s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_sword",Count:1b,tag:{ench:[{lvl:5s,id:16s},{lvl:2s,id:20s}]},Damage:0s}'
+    - '{id:"minecraft:bow",Count:1b,tag:{ench:[{lvl:3s,id:34s},{lvl:5s,id:48s},{lvl:1s,id:50s},{lvl:1s,id:51s}]},Damage:0s}'
+    - '{id:"minecraft:golden_apple",Count:32b,Damage:0s}'
+    - '{id:"minecraft:ender_pearl",Count:16b,Damage:0s}'
+    - '{id:"minecraft:diamond_pickaxe",Count:1b,tag:{ench:[{lvl:5s,id:32s},{lvl:3s,id:34s},{lvl:3s,id:35s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_axe",Count:1b,tag:{ench:[{lvl:5s,id:32s},{lvl:3s,id:34s},{lvl:3s,id:35s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_shovel",Count:1b,tag:{ench:[{lvl:5s,id:32s},{lvl:3s,id:34s},{lvl:3s,id:35s}]},Damage:0s}'
+    - '{id:"minecraft:iron_block",Count:16b,Damage:0s}'
+    - '{id:"minecraft:gold_block",Count:14b,Damage:0s}'
+    - '{id:"minecraft:diamond_block",Count:12b,Damage:0s}'
+    - '{id:"minecraft:emerald_block",Count:10b,Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:strong_swiftness"},Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:strong_swiftness"},Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:long_fire_resistance"},Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:long_fire_resistance"},Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:strong_strength"},Damage:0s}'
+    - '{id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:strong_strength"},Damage:0s}'
+    - '{id:"minecraft:arrow",Count:32b,Damage:0s}'
+    - '{id:"minecraft:cooked_beef",Count:24b,Damage:0s}'
+  better_tools:
+    delay: 300
+    price: 0.0
+    hidden: false
+    animation: NONE
+    items:
+    - '{id:"minecraft:diamond_axe",Count:1b,tag:{ench:[{lvl:2s,id:32s},{lvl:2s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_pickaxe",Count:1b,tag:{ench:[{lvl:5s,id:32s},{lvl:2s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_hoe",Count:1b,tag:{ench:[{lvl:3s,id:34s}]},Damage:0s}'
+    - '{id:"minecraft:diamond_shovel",Count:1b,tag:{ench:[{lvl:1s,id:32s}]},Damage:0s}'
+  brianna:
+    delay: 0
+    price: 0.0
+    hidden: false
+    animation: NONE
+    items:
+    - '{id:"minecraft:skull",Count:1b,tag:{SkullOwner:{Id:"2626974f-5838-44c6-994d-f6c723d40b79",Properties:{textures:[{Signature:"ANQSjXtN67jnYaV9fd2VzQZCus0shD2Ohj5YN+pb52C8yJE9tG9iPLA7nuwGBGbVJ61rhNSJRwed0+2dbj3RKBXKwurzNrGBt4LVmkjaQ1VY/9boEl/KZ0mrbsTOBh/p6nrRdmznMNCCYKCm6SKd24JlAfOoX2FaFD1aiTo9EkcWiBO3E8xoyQ4z5ql40ObjPlGh1hW2Wo2LSIEijA7gW3UaabZGt69WIvxfhP0bKjYhu8espvkHFRStitGUSifzx3bZo6vNr/WPYKQYD65s/o0ljH+qobpB1duXEjMHDDEm8cSZaO7J8zaLRmhzr4JX4R/TQkygJ93u8etsagQK5ul/hQFRUz4ohnOxs+jLftfKTILkEHmM66pqk3rqRhMXutBXIPWSdJX2O26yk5h+22BCwqSPCm8BpOmq5Oo3hJCxUqNDOYyKpbA32TFTBOQbJUisjJSp1GkUscQPgc5qprf5KgbRly8eZc7e0irfeYFFPas2nLwPsnvl+1/xJ+vljPHnjkwKrCbXLM3kyhRHoXNjeEIP4nz8PuaIMAlRGDE6mLlvAvFLZahpEfi2IIWbQsDyrQxdr3ZdEw6WZAQ/4IxZ654RxGAej9FxC8PdW6DjfuC8pyvWrMD/9Yj60va3j62X4AZTTEH4KqAJwCCVFPdrYcZJx7898rohnHrW1ZM=",Value:"eyJ0aW1lc3RhbXAiOjE1NTQxMzQ0MzgzNjgsInByb2ZpbGVJZCI6IjI2MjY5NzRmNTgzODQ0YzY5OTRkZjZjNzIzZDQwYjc5IiwicHJvZmlsZU5hbWUiOiJTb25nb2RhIiwic2lnbmF0dXJlUmVxdWlyZWQiOnRydWUsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8zNTI4ZGZiNGYwZWUxNGQ4ZDhhM2RhMTM4YTYzYjZlOGI1MWJmZTIwNTYxZjhjZTliYjFhOTBhNjhjMTI5NWE1IiwibWV0YWRhdGEiOnsibW9kZWwiOiJzbGltIn19fX0="}]},Name:"Songoda"}},Damage:3s}'

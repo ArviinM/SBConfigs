@@ -1,0 +1,35 @@
+#Name of the Bar Inventory
+barName: "&nBar"
+
+#You don't have permission for this
+noPermission: "&c(!) You do not have permission to do this."
+
+#You opened the bar
+barOpened: "&e(!) You have opened the bar."
+
+#You've bought a drink
+boughtDrink: "&a(!) You have successfully purchased a drink. Good luck!"
+
+#You don't have enough money
+insufficientFunds: "&c(!) You do not have enough money to purchase this."
+
+#You've been charged money for the drink
+chargedMoney: "&c&l- $%price% &7(Drink Purchase)"
+
+#You won you drink!
+youWon: "&a&l+ $%money% &7(Bar Win)"
+
+#You lost your drink!
+youLost: "&c(!) You lost and you feel slightly sick."
+
+#You removed a bar opening NPC
+removedGambler: "&e(!) You have removed the gambler."
+
+#Gave a player a drink via command
+gaveDrink: "&e(!) Successfully gave a &7&n%drink%&r&e to &7&n%player%&r&e."
+
+#You got a drink via admin/console command
+receivedDrink: "&e(!) You have received a drink."
+
+#That player cannot be found
+playerOffline: "&c(!) That player cannot be found."

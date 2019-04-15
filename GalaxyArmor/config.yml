@@ -1,0 +1,59 @@
+#     
+#         GalaxyArmor Version 1.0-beta developed by JustNoHacks
+#    If you need support, contact me here: https://discord.gg/jeg2sKa
+#
+#Configuration for the galaxy items.
+#It would be best if you didn't change any of the armor settings after
+#players already receiving the galaxy pieces.
+Armor:
+  #Settings for the galaxy helmet.
+  Helmet:
+    Item: LEATHER_HELMET
+    Data: 0
+    Name: "&6&lGalaxy Helmet"
+    Lore:
+      - "&6Legendary helmet capable"
+      - "&6of changing into any color."
+  #Settings for the galaxy chestplate.
+  Chestplate:
+    Item: LEATHER_CHESTPLATE
+    Data: 0
+    Name: "&6&lGalaxy Chestplate"
+    Lore:
+      - "&6Legendary chestplate capable"
+      - "&6of changing into any color."
+  #Settings for the galaxy leggings.
+  Leggings:
+    Item: LEATHER_LEGGINGS
+    Data: 0
+    Name: "&6&lGalaxy Leggings"
+    Lore:
+      - "&6Legendary leggings capable"
+      - "&6of changing into any color."
+  #Settings for the galaxy boots.
+  Boots:
+    Item: LEATHER_BOOTS
+    Data: 0
+    Name: "&6&lGalaxy Boots"
+    Lore:
+      - "&6Legendary boots capable"
+      - "&6of changing into any color."
+#This is where you can change the messages.
+Messages:
+  #Message the player will receive when they do not have permission to execute a command.
+  noPermission: "&c(!) You do not have permission to execute this command."
+  #Message the player will get when they execute the /galaxyarmor command.
+  commandFormat: |-
+    &r
+    &6&lGalaxy Armor
+    &7* &f/galaxyarmor give <player> <item name> <amount>
+    &7* &f/galaxyarmor reload
+    &7Item args: helmet, chestplate, leggings, boots, set.
+  #Message the player will receive when they try and give an offline player a pet.
+  offlinePlayer: "&c(!) That player is currently offline."
+  #Message the player will receive when they receive an item. You can use the %item% variable in this message only.
+  itemReceive: "&e(!) You have received a &7&nGalaxy %item%&r&e."
+  #Message the player gets when they give someone a galaxy armor piece.
+  itemSent: "&a(!) The player has received their item(s)."
+  #Message the player will get when they successfully reloaded the config.
+  reloadConfig: "&a(!) You have successfully reloaded the configuration file."

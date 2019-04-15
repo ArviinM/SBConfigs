@@ -1,0 +1,274 @@
+SkeletonKing:
+  Type: WITHER_SKELETON
+  Display: '&6&lSkeleton King'
+  Health: 900
+  Damage: 5
+  KillMessages:
+  - '&8(&c&lBOSS&8) &7<target.name> &Chas been destroyed by the &6&LSkeleton King'
+  - '&8(&c&lBOSS&8) &7<target.name> &Chad their soul eaten by the &6&LSkeleton King'
+  Skills:
+  - sendtitle{title="&4&L&NWARNING";subtitle="&CA powerful boss has been spawned nearby!";d=50} @PlayersInRadius{r=35} ~onSpawn 1
+  - sendtitle{title="&6&L&NCongratulations";subtitle="&EYou have killed the boss!";d=50} @PlayersInRadius{r=35} ~onDeath 1
+  - sound{s=mob.blaze.hit;p=0.1} @Self ~onDamaged
+  - effect:particles{particle=reddust;color=#000000;amount=200;hS=1;vS=1;speed=5} @self ~onDamaged
+  - effect:particles{particle=reddust;color=#ff0c00;amount=200;hS=1;vS=1;speed=5} @target ~onAttack
+  - effect:particlesphere{particle=reddust;color=#ff0c00;amount=200;radius=4} @self ~onTimer:100
+  - effect:particlesphere{particle=reddust;color=#000000;amount=200;radius=4} @self ~onTimer:100
+  - effect:lightning @self ~onDeath
+  - sound{s=mob.zombie.hurt;p=0.3} @Self ~onSpawn
+  - sound{s=mob.blaze.death;p=0.3} @Self ~onDeath
+  - effect:lightning @PlayersInRadius{r=30} ~onPlayerDeath
+  - message{cooldown=20;m="<mob.name><&co> &EDIEEEE! I told you it was a bad idea to fight me!"} @PlayersInRadius{r=40} ~onKillPlayer
+  - message{cooldown=20;m="<mob.name><&co> &ENone may challenge the Skeleton King!"} @PlayersInRadius{r=40} ~onCombat >0 0.2
+  - skill{s=SkeletonKingEffects} @Self <90% 0.75
+  - skill{s=SkeletonKingPull} @Self <80% 0.9
+  - skill{s=SkeletonKingSummonMinions} @Self <75% 0.7
+  - skill{s=SkeletonKingSkullBarrage} @Self <50% 0.5
+  Equipment:
+  - SkeletonKingHelmet:4
+  - SkeletonKingChestplate:3
+  - SkeletonKingLeggings:2
+  - SkeletonKingBoots:1
+  - SkeletonKingSword:0
+  Drops:
+  - WarToken 6-7
+  - exp 1000
+SkeletonKnight1:
+  Type: SKELETON
+  Health: 20
+  Damage: 2
+  KillMessages:
+  - '&8(&c&lBOSS&8) &7<target.name> &Chas been destroyed by the &6&LSkeleton King'
+  - '&8(&c&lBOSS&8) &7<target.name> &Chad their soul eaten by the &6&LSkeleton King'
+  Skills:
+  - mount{type=SkeletonHorse} ~onSpawn
+  Equipment:
+  - SkeletonKnight1Helmet:4
+  - SkeletonKnight1Chestplate:3
+  - SkeletonKnight1Leggings:2
+  - SkeletonKnight1Boots:1
+  - SkeletonKnight1Sword:0
+SkeletonKnight2:
+  Type: SKELETON
+  Health: 20
+  Damage: 2
+  KillMessages:
+  - '&8(&c&lBOSS&8) &7<target.name> &Chas been destroyed by the &6&LSkeleton King'
+  - '&8(&c&lBOSS&8) &7<target.name> &Chad their soul eaten by the &6&LSkeleton King'
+  Equipment:
+  - SkeletonKnight2Helmet:4
+  - SkeletonKnight2Chestplate:3
+  - SkeletonKnight2Leggings:2
+  - SkeletonKnight2Boots:1
+  - SkeletonKnight2Sword:0
+SkeletonHorse:
+  Type: HORSE
+  Health: 35
+  Damage: 2
+  Options:
+    HorseType: SKELETON_HORSE
+AncientWitch:
+  Type: WITCH
+  Display: '&5&lAncient Witch'
+  Health: 1000
+  Damage: 4
+  KillMessages:
+  - '&8(&c&lBOSS&8) &7<target.name> &Chas messed around with dark magic.'
+  - '&8(&c&lBOSS&8) &7<target.name> &Chad their soul poisoned by the &5&LAncient Witch'
+  Skills:
+  - sendtitle{title="&4&L&NWARNING";subtitle="&CA powerful boss has been spawned nearby!";d=50} @PlayersInRadius{r=35} ~onSpawn 1
+  - sendtitle{title="&6&L&NCongratulations";subtitle="&EYou have killed the boss!";d=50} @PlayersInRadius{r=35} ~onDeath 1
+  - sound{s=mob.villager.hit;p=0.1} @Self ~onDamaged
+  - effect:particles{particle=reddust;color=#A218D2;amount=200;hS=1;vS=1;speed=5} @self ~onDamaged
+  - effect:particles{particle=reddust;color=#ff0c00;amount=200;hS=1;vS=1;speed=5} @target ~onAttack
+  - effect:particlesphere{particle=reddust;color=#A218D2;amount=200;radius=4} @self ~onTimer:100
+  - effect:particlesphere{particle=reddust;color=#ff0c00;amount=200;radius=4} @self ~onTimer:100
+  - effect:lightning @self ~onDeath
+  - sound{s=mob.villager.haggle;p=0.3} @Self ~onSpawn
+  - sound{s=mob.villager.death;p=0.3} @Self ~onDeath
+  - effect:lightning @PlayersInRadius{r=30} ~onPlayerDeath
+  - message{cooldown=20;m="<mob.name><&co> &DIt is a bad idea to fight me, you will regret it!"} @PlayersInRadius{r=40} ~onKillPlayer
+  - message{cooldown=20;m="<mob.name><&co> &DYou will never win, I am too good!"} @PlayersInRadius{r=40} ~onCombat >0 0.2
+  - skill{s=WitchTrap} @Self <90% 0.9
+  - skill{s=WitchSkullBlast} @Self <50% 0.7
+  - skill{s=WitchArrowVolley} @Self <90% 0.7
+  - skill{s=WitchPull} @Self <90% 0.5
+  - skill{s=WitchSummonMinion} @Self <35% 0.7
+  - summon{mob=BAT;amount=10;noise=5} @Self ~onTimer:200
+  Drops:
+  - WarToken 4-7
+  - exp 800
+WitchBossMinion:
+  Type: BABY_PIG_ZOMBIE
+  Health: 16
+  Damage: 2
+  KillMessages:
+  - '&8(&c&lBOSS&8) &7<target.name> &Chas messed around with dark magic.'
+  - '&8(&c&lBOSS&8) &7<target.name> &Chad their soul poisoned by the &5&LAncient Witch'
+MagmaLord:
+  Type: MAGMA_CUBE
+  Display: '&4&lMagma Lord'
+  Health: 800
+  Damage: 10
+  KillMessages:
+  - '&8(&c&lBOSS&8) &7<target.name> &Cgot destroyed by the &4&lMagma Lord'
+  - '&8(&c&lBOSS&8) &7<target.name> &Cdid not stand a chance against the &4&lMagma Lord'
+  Skills:
+  - sendtitle{title="&4&L&NWARNING";subtitle="&CA powerful boss has been spawned nearby!";d=50} @PlayersInRadius{r=35} ~onSpawn 1
+  - sendtitle{title="&6&L&NCongratulations";subtitle="&EYou have killed the boss!";d=50} @PlayersInRadius{r=35} ~onDeath 1
+  - sound{s=mob.blaze.hit;p=0.1} @Self ~onDamaged
+  - effect:particles{particle=reddust;color=#000000;amount=200;hS=1;vS=1;speed=5} @self ~onDamaged
+  - effect:particles{particle=reddust;color=#ff0000;amount=200;hS=1;vS=1;speed=5} @target ~onAttack
+  - effect:smokeswirl{duration=200;interval=10} @self ~onTimer:300
+  - effect:lightning @self ~onDeath
+  - sound{s=mob.zombie.death;p=0.3} @Self ~onSpawn
+  - sound{s=mob.blaze.death;p=0.3} @Self ~onDeath
+  - effect:lightning @PlayersInRadius{r=30} ~onPlayerDeath
+  - potion{type=SLOW;duration=200;level=1} @PlayersInRadius{r=15} ~OnDamaged
+  - message{m="<mob.name><&co>&C You will all die! Hahahhahahahahahaha."} @PlayersInRadius{r=40} ~onPlayerKill >0 1
+  - skill{s=MagmaKnockback} @Self <90% 0.7
+  - skill{s=MagmaDebuffs} @Self <75% 0.5
+  - skill{s=MagmaTrap} @Self <80% 0.5
+  - skill{s=MagmaPull} @Self <50% 0.5
+  - summon{mob=BLAZE;amount=4;noise=5} @Self ~onTimer:300
+  - damage{amount=2;ignoreArmor=true} @PlayersInRadius{r=15} ~onTimer:300
+  Drops:
+  - WarToken 5-7
+  - EMERALD_BLOCK 5-32 1
+  - exp 600
+  Options:
+    PreventSlimeSplit: true
+    Size: 11
+SkeletonMumu:
+  Type: Skeleton
+  Display: '&cMumu'
+  Health: 35
+  Damage: 12
+  DamageModifiers:
+  - LAVA 0
+  Faction: Enemy
+  Options:
+    #AlwaysShowName: true
+    Collidable: true
+    KnockbackResistance: 1
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    MaxCombatDistance: 50
+    Silent: true
+    MovementSpeed: 0.32
+    Despawn: true
+  Drops:
+  - exp 5 1
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 lookatplayers
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - sound{s=entity.vex.death;p=1} @self ~onDeath
+  Equipment:
+  - Mumusword:0
+Mumuattack:
+  Cooldown: 8
+  Conditions:
+  - incombat true
+  - score{objective=sprintattack;v=0} true
+  - targetwithin{d=20}
+  Skills:
+  - modifymobscore{objective=sprintattack;action=set;value=1}
+  - potion{type=SPEED;duration=100;level=1} @self
+  - effect:particles{p=angryVillager;amount=1;hS=0;vS=0;speed=-0.5;y=1} @self
+  - effect:particles{p=smoke;amount=8;hS=0.5;vS=0.5;speed=0;y=1;repeatInterval=15;repeat=2} @self
+  - sound{s=entity.vex.charge;p=0.7;v=2.0} @self
+  - delay 2
+  - sound{s=entity.vex.charge;p=0.9;v=2.0} @target
+  - delay 2
+  - sound{s=entity.vex.charge;p=1.1;v=2.0} @target
+  - delay 2
+  - sound{s=entity.vex.hurt;p=1.3;v=2.0} @target
+  - delay 2
+  - sound{s=entity.vex.ambient;p=1.5;v=2.0} @target
+  - delay 2
+  - sound{s=entity.vex.charge;p=1.7;v=2.0} @target
+  - delay 5
+  - sound{s=entity.vex.death;p=0.1;v=2.0} @target
+  - delay 2
+  - sound{s=entity.vex.charge;p=0.3;v=2.0} @target
+  - delay 83
+  - modifymobscore{objective=sprintattack;action=set;value=0}
+Mumuattackhit:
+  Cooldown: 1
+  Conditions:
+  - score{objective=sprintattack;v=1} true
+  - targetwithin{d=3}
+  Skills:
+  - damage{a=10} @target
+  - potion{type=WITHER;duration=100;level=0} @target
+  - modifymobscore{objective=sprintattack;action=set;value=0}
+  - effect:particles{p=sweepAttack;amount=1;hS=0.5;vS=0.2;speed=0;y=1.2;repeatInterval=2;repeat=4} @self
+  - sound{s=entity.player.attack.weak;p=0.6;v=2;repeatInterval=2;repeat=4} @self
+  - effect:particles{p=crit;amount=30;hS=1;vS=1.2;speed=0.01;y=1;repeatInterval=2;repeat=4} @target
+  - sound{s=entity.player.attack.crit;p=1;v=1;repeatInterval=2;repeat=4} @target
+WarzoneGhost:
+  Type: SKELETON
+  Display: '&fWarzone Ghost'
+  Health: 35
+  Damage: 10
+  Skills:
+  - potion{type=INVISIBILITY;duration=999999;level=0} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=0} @Self ~onSpawn
+  Equipment:
+  - GhostHead:4
+  - GhostChest:3
+  - GhostAxe:0
+  Drops:
+  - WarToken 1-2 0.1
+  - exp 15
+  - DIAMOND 1-3 0.5
+  Options:
+    MovementSpeed: 0.35
+    AlwaysShowName: false
+WarzoneDemon:
+  Type: SKELETON
+  Display: '&cWarzone Demon'
+  Health: 35
+  Damage: 12
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=0} @Self ~onSpawn
+  - potion{type=REGENERATION;duration=999999;level=0} @Self ~onSpawn
+  - ignite{ticks=9999999} @Self ~onSpawn
+  Equipment:
+  - DemonHead:4
+  - DemonChest:3
+  - DemonLeggs:2
+  - DemonSword:0
+  Drops:
+  - WarToken 1-2 0.2
+  - exp 30
+  - EMERALD 1-3 0.5
+  Options:
+    MovementSpeed: 0.32
+    AlwaysShowName: false
+WarzoneZombie:
+  Type: ZOMBIE
+  Display: '&eWarzone Zombie'
+  Health: 45
+  Damage: 12
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=0} @Self ~onSpawn
+  - potion{type=WEAKNESS;duration=200;level=0} @Target ~onDamaged
+  - potion{type=SLOW;duration=200;level=0} @Target ~onDamaged
+  Equipment:
+  - ZombieHead:4
+  - ZombieChest:3
+  - ZombieLeggs:2
+  - ZombieSword:0
+  Drops:
+  - WarToken 1-2 0.1
+  - exp 30
+  - DIAMOND 1-3 0.5
+  Options:
+    MovementSpeed: 0.32
+    AlwaysShowName: false

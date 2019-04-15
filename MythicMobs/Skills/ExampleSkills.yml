@@ -1,0 +1,110 @@
+SkeletonKingEffects:
+  Cooldown: 20
+  Skills:
+  - sound{s=mob.endermen.scream;p=0.1} @PlayersInRadius{r=15}
+  - potion{type=BLINDNESS;lvl=3;duration=60} @PlayersInRadius{r=15}
+  - potion{type=SLOW;lvl=3;duration=10} @PlayersInRadius{r=15}
+  - potion{type=POISON;lvl=2;duration=80} @PlayersInRadius{r=15}
+  - damage{amount=2;ignorearmor=true} @PlayersInRadius{r=5}
+  - effect:particles{particle=angryVillager;amount=100;hS=1;vS=1;speed=5} @self
+  - sound{s=mob.creeper.death;v=3;p=0.2} @Self
+  - message{cooldown=20;m="<mob.name><&co> &EHow does it feel like being blind? Hahahahahaha!"} @PlayersInRadius{r=40}
+SkeletonKingPull:
+  Cooldown: 10
+  Skills:
+  - sound{s=mob.endermen.scream;p=0.1} @PlayersInRadius{r=15}
+  - pull{v=20;to=true} @PlayersInRadius{r=15}
+  - effect:particles{particle=reddust;color=#A218D2;amount=200;hS=1;vS=1;speed=5} @PlayersInRadius{r=15}
+  - message{cooldown=20;m="<mob.name><&co> &ECome to me!!!"} @PlayersInRadius{r=15}
+SkeletonKingSummonMinions:
+  Cooldown: 35
+  Skills:
+  - sound{s=mob.endermen.scream;p=0.1} @PlayersInRadius{r=20}
+  - message{cooldown=20;m="<mob.name><&co> &ETime for my minions to come!"} @PlayersInRadius{r=20}
+  - summon{type=SkeletonKnight1;amount=3;radius=7} @PIR{r=20}
+  - summon{type=SkeletonKnight2;amount=3;radius=7} @PIR{r=20}
+SkeletonKingSkullBarrage:
+  Cooldown: 60
+  Skills:
+  - sound{s=mob.endermen.scream;p=0.1} @PlayersInRadius{r=20}
+  - message{cooldown=20;m="<mob.name><&co> &EAbout time to shoot wither skulls at you!"} @PlayersInRadius{r=20}
+  - shootskull{y=1;v=4;ps=true} @target
+WitchTrap:
+  Cooldown: 15
+  Skills:
+  - sound{s=mob.endermen.scream;p=0.1} @PlayersInRadius{r=15}
+  - message{cooldown=30;m="<mob.name><&co>&D You are now mine!"} @PlayersInRadius{r=30}
+  - prison{material=OBSIDIAN;duration=140;breakable=false} @PlayersInRadius{r=30}
+  - potion{type=POISON;duration=140;level=3} @PlayersInRadius{r=30}
+  - potion{type=SLOW;duration=100;level=5} @PlayersInRadius{r=30}
+  - potion{type=BLINDNESS;duration=60;level=5} @PlayersInRadius{r=30}
+  - damage{amount=4;ignoreArmor=true} @PlayersInRadius{r=30}
+WitchSkullBlast:
+  Cooldown: 10
+  Skills:
+  - sound{s=mob.endermen.scream;p=0.1} @PlayersInRadius{r=15}
+  - message{cooldown=30;m="<mob.name><&co>&D Bang!"} @PlayersInRadius{r=40}
+  - shootfireball{y=0;v=4;i=false} @target
+  - delay 10
+  - shootfireball{y=0;v=4;i=false} @target
+WitchArrowVolley:
+  Cooldown: 15
+  Skills:
+  - sound{s=mob.endermen.scream;p=0.1} @PlayersInRadius{r=15}
+  - message{cooldown=30;m="<mob.name><&co>&D Time to cast a spell!"} @PlayersInRadius{r=40}
+  - arrowvolley{a=5;s=25;v=10;f=50;rd=200} @PIR{r=15}
+  - delay 20
+  - arrowvolley{a=5;s=25;v=10;f=50;rd=200} @PIR{r=15}
+  - delay 20
+  - arrowvolley{a=5;s=25;v=10;f=50;rd=200} @PIR{r=15}
+WitchPull:
+  Cooldown: 15
+  Skills:
+  - sound{s=mob.endermen.scream;p=0.1} @PlayersInRadius{r=15}
+  - message{cooldown=30;m="<mob.name><&co>&D Come back to me! Hahahaha"} @PlayersInRadius{r=40}
+  - forcepull{spread=5} @PlayersInRadius{r=25}
+WitchSummonMinion:
+  Cooldown: 20
+  Skills:
+  - sound{s=mob.endermen.scream;p=0.1} @PlayersInRadius{r=15}
+  - message{m="<mob.name><&co>&D Time for my friends to come!"} @PlayersInRadius{r=40}
+  - delay 20
+  - summon{mob=WitchBossMinion;amount=4;noise=5} @Self
+  - rally{types=WitchBossMinion;radius=30;ot=false} @target
+MagmaKnockback:
+  Cooldown: 10
+  Skills:
+  - message{cooldown=30;m="<mob.name><&co>&C Get out of my way!"} @PlayersInRadius{r=40}
+  - effect:explosion @Self
+  - damage{amount=2;ignoreArmor=true} @PlayersInRadius{r=10}
+  - throw{velocity=21;velocityY=9} @PlayersInRadius{r=10}
+MagmaDebuffs:
+  Cooldown: 25
+  Skills:
+  - message{cooldown=30;m="<mob.name><&co>&C Now die! Die from the inside!"} @PlayersInRadius{r=40}
+  - potion{type=BLINDNESS;duration=80;level=4} @PlayersInRadius{r=15}
+  - potion{type=SLOW;duration=150;level=4} @PlayersInRadius{r=15}
+  - potion{type=POISON;duration=100;level=5} @PlayersInRadius{r=15}
+  - potion{type=WITHER;duration=100;level=5} @PlayersInRadius{r=15}
+MagmaTrap:
+  Cooldown: 15
+  Skills:
+  - message{cooldown=30;m="<mob.name><&co>&C How does it feel being trapped?"} @PlayersInRadius{r=40}
+  - damage{amount=2;ignoreArmor=true} @PlayersInRadius{r=15}
+  - prison{material=SOUL_SAND;duration=160;breakable=false} @PlayersInRadius{r=30}
+  - potion{type=SLOW;duration=200;level=5} @PlayersInRadius{r=30}
+  - potion{type=CONFUSION;duration=400;level=4} @PlayersInRadius{r=30}
+  - potion{type=WEAKNESS;duration=200;level=4} @PlayersInRadius{r=30}
+  - delay 20
+  - damage{amount=1;ignoreArmor=true} @PlayersInRadius{r=15}
+  - delay 10
+  - damage{amount=1;ignoreArmor=true} @PlayersInRadius{r=15}
+  - delay 10
+  - damage{amount=1;ignoreArmor=true} @PlayersInRadius{r=15}
+MagmaPull:
+  Cooldown: 10
+  Skills:
+  - sound{s=mob.endermen.scream;p=0.1} @PlayersInRadius{r=15}
+  - pull{v=20;to=true} @PlayersInRadius{r=15}
+  - effect:particles{particle=reddust;color=#A218D2;amount=200;hS=1;vS=1;speed=5} @PlayersInRadius{r=15}
+  - message{cooldown=20;m="<mob.name><&co> &CCome to me!!!"} @PlayersInRadius{r=15}

@@ -1,0 +1,2063 @@
+# +----------------------------------------------------+
+# <           ClueScrolls Configuration File           >
+# <    To reload your changes, /cluescrolls reload     >
+# <                                                    >
+# <     https://www.spigotmc.org/resources/30276/      >
+# <  http://dev.electro2560.com/plugins/ClueScrolls/   >
+# +----------------------------------------------------+
+tiers:
+  common:
+    items: 2-7
+    clueCount: 5-7
+    expires: -1
+    scroll:
+      title: '&8◆ &a&l&nCommon Clue Scroll&r &8◆'
+      lore-prefix:
+      - '&7Complete the tasks below to earn &ntreasure&r&7.'
+      - '&r'
+      - '&a&l➤ CLUES:'
+      lore-suffix:
+      - ''
+      cross-out-completed: true
+      one-clue-show: true
+      material: PAPER
+      hide-first-clue:
+        enabled: true
+        lore:
+        - '&7&l◆ &7???'
+        - '&7Right-click to reveal your first clue.'
+      receiveMessage: '&a&l+ %amount% Common Clue Scroll(s)'
+      bind: false
+    crystal:
+      title: '&8◆ &a&l&nCommon Scroll Skip&r &8◆'
+      lore:
+      - '&a◆ &7Drag ''n'' drop onto a &a&ncommon clue scroll&r'
+      - '&7  to instantly complete the current clue.'
+      material: EMERALD
+      receiveMessage: '&a&l+ %amount% Common Crystal(s)'
+    clues:
+      clue0:
+        lore: '&a◆ &fKill %amount% chickens: %completed%'
+        clueType: kill
+        amount: 25
+        objective: Kill %amount% chickens
+        clueName: Chicken Killer
+        data:
+          entitytype: chicken
+      clue1:
+        lore: '&a◆ &fKill %amount% pigs: %completed%'
+        clueType: kill
+        amount: 25
+        objective: Kill %amount% pigs
+        clueName: Pig Killer
+        data:
+          entitytype: pig
+      clue2:
+        lore: '&a◆ &fKill %amount% sheep: %completed%'
+        clueType: kill
+        amount: 25
+        objective: Kill %amount% sheep
+        clueName: Sheep Killer
+        data:
+          entitytype: sheep
+      clue3:
+        lore: '&a◆ &fKill %amount% cows: %completed%'
+        clueType: kill
+        amount: 25
+        objective: Kill %amount% cows
+        clueName: Cow Killer
+        data:
+          entitytype: cow
+      clue4:
+        lore: '&a◆ &fCraft %amount% coal blocks: %completed%'
+        clueType: craft
+        amount: 16
+        objective: Craft %amount% coal blocks
+        clueName: Coal Block Crafter
+        data:
+          material: coal_block
+          itemdata: '*'
+      clue5:
+        lore: '&a◆ &fCraft %amount% iron blocks: %completed%'
+        clueType: craft
+        amount: 9
+        objective: Craft %amount% iron blocks
+        clueName: Iron Block Crafter
+        data:
+          material: iron_block
+          itemdata: '*'
+      clue6:
+        lore: '&a◆ &fCraft %amount% chests: %completed%'
+        clueType: craft
+        amount: 16
+        objective: Craft %amount% chests
+        clueName: Chest Crafter
+        data:
+          material: chest
+          itemdata: '*'
+      clue7:
+        lore: '&a◆ &fBake %amount% cakes: %completed%'
+        clueType: craft
+        amount: 10
+        objective: Bake %amount% cakes
+        clueName: Cake Baker
+        data:
+          material: cake
+          itemdata: '*'
+      clue8:
+        lore: '&a◆ &fCraft %amount% anvils: %completed%'
+        clueType: craft
+        amount: 3
+        objective: Craft %amount% anvils
+        clueName: Anvil Crafter
+        data:
+          material: anvil
+          itemdata: '*'
+      clue9:
+        lore: '&a◆ &fCraft %amount% minecarts: %completed%'
+        clueType: craft
+        amount: 10
+        objective: Craft %amount% minecarts
+        clueName: Minecart Crafter
+        data:
+          material: minecart
+          itemdata: '*'
+      clue10:
+        lore: '&a◆ &fCraft %amount% jack o''lanterns: %completed%'
+        clueType: craft
+        amount: 15
+        objective: Craft %amount% jack o''lanterns
+        clueName: Lantern Crafter
+        data:
+          material: jack_o_lantern
+          itemdata: '*'
+      clue11:
+        lore: '&a◆ &fMine %amount% stone: %completed%'
+        clueType: break
+        amount: 100
+        objective: Mine %amount% stone
+        clueName: Stone Miner
+        data:
+          material: stone
+          blockdata: '*'
+      clue12:
+        lore: '&a◆ &fMine %amount% dirt: %completed%'
+        clueType: break
+        amount: 100
+        objective: Mine %amount% dirt
+        clueName: Dirt Miner
+        data:
+          material: dirt
+          blockdata: '*'
+      clue13:
+        lore: '&a◆ &fMine %amount% coal ore: %completed%'
+        clueType: break
+        amount: 32
+        objective: Mine %amount% coal ore
+        clueName: Coal Miner
+        data:
+          material: coal_ore
+          blockdata: '*'
+      clue14:
+        lore: '&a◆ &fMine %amount% iron ore: %completed%'
+        clueType: break
+        amount: 32
+        objective: Mine %amount% iron ore
+        clueName: Iron Miner
+        data:
+          material: iron_ore
+          blockdata: '*'
+      clue15:
+        lore: '&a◆ &fMine %amount% logs: %completed%'
+        clueType: break
+        amount: 16
+        objective: Mine %amount% logs
+        clueName: Log Miner
+        data:
+          material: log
+          blockdata: '*'
+      clue16:
+        lore: '&a◆ &fTravel %amount% meters: %completed%'
+        clueType: walk
+        amount: 100
+        objective: Travel %amount% meters
+        clueName: Traveller
+      clue17:
+        lore: '&a◆ &fSwim %amount% meters: %completed%'
+        clueType: swim
+        amount: 100
+        objective: Swim %amount% meters
+        clueName: Swimmer
+      clue18:
+        lore: '&a◆ &fShear %amount% sheep: %completed%'
+        clueType: shear
+        amount: 10
+        objective: Shear %amount% sheep
+        clueName: Sheep Shearer
+        data:
+          entitytype: sheep
+      clue19:
+        lore: '&a◆ &fCraft %amount% droppers: %completed%'
+        clueType: craft
+        amount: 16
+        objective: Craft %amount% droppers
+        clueName: Dropper Crafter
+        data:
+          material: dropper
+          itemdata: '*'
+      clue20:
+        lore: '&a◆ &fCraft %amount% dispensers: %completed%'
+        clueType: craft
+        amount: 16
+        objective: Craft %amount% dispensers
+        clueName: Dispenser Crafter
+        data:
+          material: dispenser
+          itemdata: '*'
+      clue21:
+        lore: '&a◆ &fCraft %amount% TNT: %completed%'
+        clueType: craft
+        amount: 16
+        objective: Craft %amount% TNT
+        clueName: TNT Crafter
+        data:
+          material: tnt
+          itemdata: '*'
+  special:
+    items: 2-7
+    clueCount: 6-9
+    expires: -1
+    scroll:
+      title: '&8◆ &d&l&nSpecial Clue Scroll&r &8◆'
+      lore-prefix:
+      - '&7Complete the tasks below to earn &ntreasure&r&7.'
+      - '&r'
+      - '&d&l➤ CLUES:'
+      lore-suffix:
+      - ''
+      cross-out-completed: true
+      one-clue-show: true
+      material: PAPER
+      hide-first-clue:
+        enabled: true
+        lore:
+        - '&7&l◆ &7???'
+        - '&7Right-click to reveal your first clue.'
+      receiveMessage: '&d&l+ %amount% Rare Clue Scroll(s)'
+      bind: false
+    crystal:
+      title: '&8◆ &d&l&nSpecial Scroll Skip&r &8◆'
+      lore:
+      - '&d◆ &7Drag ''n'' drop onto a &d&nspecial clue scroll&r'
+      - '&7  to instantly complete the current clue.'
+      material: EMERALD
+      receiveMessage: '&d&l+ %amount% Special Crystal(s)'
+    clues:
+      clue0:
+        lore: '&a◆ &fKill %amount% chickens: %completed%'
+        clueType: kill
+        amount: 25
+        objective: Kill %amount% chickens
+        clueName: Chicken Killer
+        data:
+          entitytype: chicken
+      clue1:
+        lore: '&a◆ &fKill %amount% pigs: %completed%'
+        clueType: kill
+        amount: 25
+        objective: Kill %amount% pigs
+        clueName: Pig Killer
+        data:
+          entitytype: pig
+      clue2:
+        lore: '&a◆ &fKill %amount% sheep: %completed%'
+        clueType: kill
+        amount: 25
+        objective: Kill %amount% sheep
+        clueName: Sheep Killer
+        data:
+          entitytype: sheep
+      clue3:
+        lore: '&a◆ &fKill %amount% cows: %completed%'
+        clueType: kill
+        amount: 25
+        objective: Kill %amount% cows
+        clueName: Cow Killer
+        data:
+          entitytype: cow
+      clue4:
+        lore: '&d&l◆ &fKill %amount% zombies: %completed%'
+        clueType: kill
+        amount: 25
+        objective: Kill %amount% zombies
+        clueName: Zombie Killer
+        data:
+          entitytype: zombie
+      clue5:
+        lore: '&d&l◆ &fKill %amount% skeletons: %completed%'
+        clueType: kill
+        amount: 50
+        objective: Kill %amount% skeletons
+        clueName: Skeleton Killer
+        data:
+          entitytype: skeleton
+      clue6:
+        lore: '&d&l◆ &fKill %amount% spiders: %completed%'
+        clueType: kill
+        amount: 50
+        objective: Kill %amount% spiders
+        clueName: Spider Killer
+        data:
+          entitytype: spider
+      clue7:
+        lore: '&d&l◆ &fKill %amount% blazes: %completed%'
+        clueType: kill
+        amount: 50
+        objective: Kill %amount% blazes
+        clueName: Blaze Killer
+        data:
+          entitytype: blaze
+      clue8:
+        lore: '&a◆ &fCraft %amount% coal blocks: %completed%'
+        clueType: craft
+        amount: 32
+        objective: Craft %amount% coal blocks
+        clueName: Coal Block Crafter
+        data:
+          material: coal_block
+          itemdata: '*'
+      clue9:
+        lore: '&a◆ &fCraft %amount% iron blocks: %completed%'
+        clueType: craft
+        amount: 16
+        objective: Craft %amount% iron blocks
+        clueName: Iron Block Crafter
+        data:
+          material: iron_block
+          itemdata: '*'
+      clue10:
+        lore: '&a◆ &fCraft %amount% gold blocks: %completed%'
+        clueType: craft
+        amount: 16
+        objective: Craft %amount% gold blocks
+        clueName: Gold Block Crafter
+        data:
+          material: gold_block
+          itemdata: '*'
+      clue11:
+        lore: '&a◆ &fCraft %amount% redstone blocks: %completed%'
+        clueType: craft
+        amount: 16
+        objective: Craft %amount% redstone blocks
+        clueName: Redstone Block Crafter
+        data:
+          material: redstone_block
+          itemdata: '*'
+      clue12:
+        lore: '&d&l◆ &fCraft %amount% lapis blocks: %completed%'
+        clueType: craft
+        amount: 16
+        objective: Craft %amount% lapis blocks
+        clueName: Lapis Block Crafter
+        data:
+          material: lapis_block
+          itemdata: '*'
+      clue13:
+        lore: '&d&l◆ &fCraft %amount% quartz blocks: %completed%'
+        clueType: craft
+        amount: 16
+        objective: Craft %amount% quartz blocks
+        clueName: Quartz Block Crafter
+        data:
+          material: quartz_block
+          itemdata: '*'
+      clue14:
+        lore: '&a◆ &fCraft %amount% chests: %completed%'
+        clueType: craft
+        amount: 16
+        objective: Craft %amount% chests
+        clueName: Chest Crafter
+        data:
+          material: chest
+          itemdata: '*'
+      clue15:
+        lore: '&a◆ &fBake %amount% cakes: %completed%'
+        clueType: craft
+        amount: 10
+        objective: Bake %amount% cakes
+        clueName: Cake Baker
+        data:
+          material: cake
+          itemdata: '*'
+      clue16:
+        lore: '&a◆ &fCraft %amount% anvils: %completed%'
+        clueType: craft
+        amount: 3
+        objective: Craft %amount% anvils
+        clueName: Anvil Crafter
+        data:
+          material: anvil
+          itemdata: '*'
+      clue17:
+        lore: '&a◆ &fCraft %amount% minecarts: %completed%'
+        clueType: craft
+        amount: 10
+        objective: Craft %amount% minecarts
+        clueName: Minecart Crafter
+        data:
+          material: minecart
+          itemdata: '*'
+      clue18:
+        lore: '&a◆ &fCraft %amount% jack o''lanterns: %completed%'
+        clueType: craft
+        amount: 15
+        objective: Craft %amount% jack o''lanterns
+        clueName: Lantern Crafter
+        data:
+          material: jack_o_lantern
+          itemdata: '*'
+      clue19:
+        lore: '&a◆ &fMine %amount% stone: %completed%'
+        clueType: break
+        amount: 100
+        objective: Mine %amount% stone
+        clueName: Stone Miner
+        data:
+          material: stone
+          blockdata: '*'
+      clue20:
+        lore: '&a◆ &fMine %amount% dirt: %completed%'
+        clueType: break
+        amount: 100
+        objective: Mine %amount% dirt
+        clueName: Dirt Miner
+        data:
+          material: dirt
+          blockdata: '*'
+      clue21:
+        lore: '&a◆ &fMine %amount% coal ore: %completed%'
+        clueType: break
+        amount: 32
+        objective: Mine %amount% coal ore
+        clueName: Coal Miner
+        data:
+          material: coal_ore
+          blockdata: '*'
+      clue22:
+        lore: '&a◆ &fMine %amount% iron ore: %completed%'
+        clueType: break
+        amount: 32
+        objective: Mine %amount% iron ore
+        clueName: Iron Miner
+        data:
+          material: iron_ore
+          blockdata: '*'
+      clue23:
+        lore: '&d&l◆ &fMine %amount% gold ore: %completed%'
+        clueType: break
+        amount: 32
+        objective: Mine %amount% gold ore
+        clueName: Gold Miner
+        data:
+          material: gold_ore
+          blockdata: '*'
+      clue24:
+        lore: '&d&l◆ &fMine %amount% redstone ore: %completed%'
+        clueType: break
+        amount: 32
+        objective: Mine %amount% redstone ore
+        clueName: Redstone Miner
+        data:
+          material: redstone_ore
+          blockdata: '*'
+      clue25:
+        lore: '&d&l◆ &fMine %amount% lapis ore: %completed%'
+        clueType: break
+        amount: 32
+        objective: Mine %amount% lapis ore
+        clueName: Lapis Miner
+        data:
+          material: lapis_ore
+          blockdata: '*'
+      clue26:
+        lore: '&d&l◆ &fMine %amount% quartz ore: %completed%'
+        clueType: break
+        amount: 32
+        objective: Mine %amount% quartz ore
+        clueName: Quartz Miner
+        data:
+          material: quartz_ore
+          blockdata: '*'
+      clue27:
+        lore: '&a◆ &fMine %amount% logs: %completed%'
+        clueType: break
+        amount: 16
+        objective: Mine %amount% logs
+        clueName: Log Miner
+        data:
+          material: log
+          blockdata: '*'
+      clue28:
+        lore: '&a◆ &fTravel %amount% meters: %completed%'
+        clueType: walk
+        amount: 100
+        objective: Travel %amount% meters
+        clueName: Traveller
+      clue29:
+        lore: '&a◆ &fSwim %amount% meters: %completed%'
+        clueType: swim
+        amount: 100
+        objective: Swim %amount% meters
+        clueName: Swimmer
+      clue30:
+        lore: '&a◆ &fShear %amount% sheep: %completed%'
+        clueType: shear
+        amount: 10
+        objective: Shear %amount% sheep
+        clueName: Sheep Shearer
+        data:
+          entitytype: sheep
+      clue31:
+        lore: '&d&l◆ &fFish %amount% items: %completed%'
+        clueType: fish
+        amount: 20
+        objective: Fish %amount% items
+        clueName: Fisherman
+        data:
+          material: '*'
+          itemdata: '*'
+      clue32:
+        lore: '&d&l◆ &fFish %amount% raw salmons: %completed%'
+        clueType: fish
+        amount: 20
+        objective: Fish %amount% raw salmons
+        clueName: Salmon Fisher
+        data:
+          material: raw_fish
+          itemdata: '1'
+      clue33:
+        lore: '&d&l◆ &fFish %amount% pufferfish: %completed%'
+        clueType: fish
+        amount: 20
+        objective: Fish %amount% pufferfish
+        clueName: PUFFERFISH!!
+        data:
+          material: raw_fish
+          itemdata: '3'
+      clue34:
+        lore: '&d&l◆ &fEnchant %amount% iron swords: %completed%'
+        clueType: enchant
+        amount: 20
+        objective: Enchant %amount% iron swords
+        clueName: Iron Sword Enchanter
+        data:
+          material: iron_sword
+          itemdata: '*'
+      clue35:
+        lore: '&d&l◆ &fEnchant %amount% diamond swords: %completed%'
+        clueType: enchant
+        amount: 15
+        objective: Enchant %amount% diamond swords
+        clueName: Diamond Sword Enchanter
+        data:
+          material: diamond_sword
+          itemdata: '*'
+      clue36:
+        lore: '&d&l◆ &fTame %amount% wolves: %completed%'
+        clueType: tame
+        amount: 5
+        objective: Tame %amount% wolf
+        clueName: Wolf Tamer
+        data:
+          entitytype: wolf
+      clue37:
+        lore: '&d&l◆ &fCraft %amount% rails: %completed%'
+        clueType: craft
+        amount: 64
+        objective: Craft %amount% rails
+        clueName: The Railway
+        data:
+          material: rails
+          itemdata: '*'
+      clue38:
+        lore: '&a◆ &fCraft %amount% droppers: %completed%'
+        clueType: craft
+        amount: 16
+        objective: Craft %amount% droppers
+        clueName: Dropper Crafter
+        data:
+          material: dropper
+          itemdata: '*'
+      clue39:
+        lore: '&a◆ &fCraft %amount% dispensers: %completed%'
+        clueType: craft
+        amount: 16
+        objective: Craft %amount% dispensers
+        clueName: Dispenser Crafter
+        data:
+          material: dispenser
+          itemdata: '*'
+      clue40:
+        lore: '&a◆ &fCraft %amount% TNT: %completed%'
+        clueType: craft
+        amount: 16
+        objective: Craft %amount% TNT
+        clueName: TNT Crafter
+        data:
+          material: tnt
+          itemdata: '*'
+  legendary:
+    items: 9-15
+    clueCount: 8-12
+    expires: -1
+    scroll:
+      title: '&8◆ &6&l&nLegendary Clue Scroll&r &8◆'
+      lore-prefix:
+      - '&7Complete the tasks below to earn &ntreasure&r&7.'
+      - '&r'
+      - '&6&l➤ CLUES:'
+      lore-suffix:
+      - ''
+      cross-out-completed: true
+      one-clue-show: true
+      material: PAPER
+      hide-first-clue:
+        enabled: true
+        lore:
+        - '&7&l◆ &7???'
+        - '&7Right-click to reveal your first clue.'
+      receiveMessage: '&6&l+ %amount% Legendary Clue Scroll(s)'
+      bind: false
+    crystal:
+      title: '&8◆ &6&l&nLegendary Scroll Skip&r &8◆'
+      lore:
+      - '&6◆ &7Drag ''n'' drop onto a &6&nlegendary clue scroll&r'
+      - '&7  to instantly complete the current clue.'
+      material: EMERALD
+      receiveMessage: '&6&l+ %amount% Legendary Crystal(s)'
+    clues:
+      clue0:
+        lore: '&a◆ &fKill %amount% chickens: %completed%'
+        clueType: kill
+        amount: 50-100
+        objective: Kill %amount% chickens
+        clueName: Chicken Killer
+        data:
+          entitytype: chicken
+      clue1:
+        lore: '&a◆ &fKill %amount% pigs: %completed%'
+        clueType: kill
+        amount: 50-100
+        objective: Kill %amount% pigs
+        clueName: Pig Killer
+        data:
+          entitytype: pig
+      clue2:
+        lore: '&a◆ &fKill %amount% sheep: %completed%'
+        clueType: kill
+        amount: 50-100
+        objective: Kill %amount% sheep
+        clueName: Sheep Killer
+        data:
+          entitytype: sheep
+      clue3:
+        lore: '&a◆ &fKill %amount% cows: %completed%'
+        clueType: kill
+        amount: 50-100
+        objective: Kill %amount% cows
+        clueName: Cow Killer
+        data:
+          entitytype: cow
+      clue4:
+        lore: '&d&l◆ &fKill %amount% zombies: %completed%'
+        clueType: kill
+        amount: 50-100
+        objective: Kill %amount% zombies
+        clueName: Zombie Killer
+        data:
+          entitytype: zombie
+      clue5:
+        lore: '&d&l◆ &fKill %amount% skeletons: %completed%'
+        clueType: kill
+        amount: 50-100
+        objective: Kill %amount% skeletons
+        clueName: Skeleton Killer
+        data:
+          entitytype: skeleton
+      clue6:
+        lore: '&d&l◆ &fKill %amount% spiders: %completed%'
+        clueType: kill
+        amount: 50-100
+        objective: Kill %amount% spiders
+        clueName: Spider Killer
+        data:
+          entitytype: spider
+      clue7:
+        lore: '&d&l◆ &fKill %amount% blazes: %completed%'
+        clueType: kill
+        amount: 50-150
+        objective: Kill %amount% blazes
+        clueName: Blaze Killer
+        data:
+          entitytype: blaze
+      clue8:
+        lore: '&6&l◆ &fKill %amount% endermen: %completed%'
+        clueType: kill
+        amount: 50-150
+        objective: Kill %amount% endermen
+        clueName: Endermen Killer
+        data:
+          entitytype: enderman
+      clue9:
+        lore: '&6&l◆ &fKill %amount% creepers: %completed%'
+        clueType: kill
+        amount: 50-150
+        objective: Kill %amount% creepers
+        clueName: Creeper Killer
+        data:
+          entitytype: creeper
+      clue10:
+        lore: '&6&l◆ &fKill %amount% iron golems: %completed%'
+        clueType: kill
+        amount: 50-150
+        objective: Kill %amount% iron golems
+        clueName: Golem Killer
+        data:
+          entitytype: iron_golem
+      clue11:
+        lore: '&6&l◆ &fKill %amount% slime: %completed%'
+        clueType: kill
+        amount: 50-150
+        objective: Kill %amount% slime
+        clueName: Slime Killer
+        data:
+          entitytype: slime
+      clue12:
+        lore: '&6&l◆ &fKill %amount% zombie pigmen: %completed%'
+        clueType: kill
+        amount: 50-150
+        objective: Kill %amount% zombie pigmen
+        clueName: Zombie Pigman Killer
+        data:
+          entitytype: pig_zombie
+      clue13:
+        lore: '&6&l◆ &fKill %amount% ghast: %completed%'
+        clueType: kill
+        amount: 10-50
+        objective: Kill %amount% ghast
+        clueName: Ghast Killer
+        data:
+          entitytype: ghast
+      clue14:
+        lore: '&6&l◆ &fKill %amount% silverfish: %completed%'
+        clueType: kill
+        amount: 10-50
+        objective: Kill %amount% silverfish
+        clueName: Silverfish Killer
+        data:
+          entitytype: silverfish
+      clue15:
+        lore: '&a◆ &fCraft %amount% coal blocks: %completed%'
+        clueType: craft
+        amount: 32-128
+        objective: Craft %amount% coal blocks
+        clueName: Coal Block Crafter
+        data:
+          material: coal_block
+          itemdata: '*'
+      clue16:
+        lore: '&a◆ &fCraft %amount% iron blocks: %completed%'
+        clueType: craft
+        amount: 32-128
+        objective: Craft %amount% iron blocks
+        clueName: Iron Block Crafter
+        data:
+          material: iron_block
+          itemdata: '*'
+      clue17:
+        lore: '&a◆ &fCraft %amount% gold blocks: %completed%'
+        clueType: craft
+        amount: 32-128
+        objective: Craft %amount% gold blocks
+        clueName: Gold Block Crafter
+        data:
+          material: gold_block
+          itemdata: '*'
+      clue18:
+        lore: '&a◆ &fCraft %amount% redstone blocks: %completed%'
+        clueType: craft
+        amount: 32-128
+        objective: Craft %amount% redstone blocks
+        clueName: Redstone Block Crafter
+        data:
+          material: redstone_block
+          itemdata: '*'
+      clue19:
+        lore: '&d&l◆ &fCraft %amount% lapis blocks: %completed%'
+        clueType: craft
+        amount: 32-128
+        objective: Craft %amount% lapis blocks
+        clueName: Lapis Block Crafter
+        data:
+          material: lapis_block
+          itemdata: '*'
+      clue20:
+        lore: '&d&l◆ &fCraft %amount% quartz blocks: %completed%'
+        clueType: craft
+        amount: 32-128
+        objective: Craft %amount% quartz blocks
+        clueName: Quartz Block Crafter
+        data:
+          material: quartz_block
+          itemdata: '*'
+      clue21:
+        lore: '&6&l◆ &fCraft %amount% diamond blocks: %completed%'
+        clueType: craft
+        amount: 32-128
+        objective: Craft %amount% diamond blocks
+        clueName: Diamond Block Crafter
+        data:
+          material: diamond_block
+          itemdata: '*'
+      clue22:
+        lore: '&6&l◆ &fCraft %amount% emerald blocks: %completed%'
+        clueType: craft
+        amount: 32-128
+        objective: Craft %amount% emerald blocks
+        clueName: Emerald Block Crafter
+        data:
+          material: emerald_block
+          itemdata: '*'
+      clue23:
+        lore: '&a◆ &fCraft %amount% chests: %completed%'
+        clueType: craft
+        amount: 16-64
+        objective: Craft %amount% chests
+        clueName: Chest Crafter
+        data:
+          material: chest
+          itemdata: '*'
+      clue24:
+        lore: '&a◆ &fBake %amount% cakes: %completed%'
+        clueType: craft
+        amount: 16-64
+        objective: Bake %amount% cakes
+        clueName: Cake Baker
+        data:
+          material: cake
+          itemdata: '*'
+      clue25:
+        lore: '&a◆ &fCraft %amount% anvils: %completed%'
+        clueType: craft
+        amount: 5-20
+        objective: Craft %amount% anvils
+        clueName: Anvil Crafter
+        data:
+          material: anvil
+          itemdata: '*'
+      clue26:
+        lore: '&a◆ &fCraft %amount% minecarts: %completed%'
+        clueType: craft
+        amount: 5-35
+        objective: Craft %amount% minecarts
+        clueName: Minecart Crafter
+        data:
+          material: minecart
+          itemdata: '*'
+      clue27:
+        lore: '&a◆ &fCraft %amount% jack o''lanterns: %completed%'
+        clueType: craft
+        amount: 16-32
+        objective: Craft %amount% jack o''lanterns
+        clueName: Lantern Crafter
+        data:
+          material: jack_o_lantern
+          itemdata: '*'
+      clue28:
+        lore: '&a◆ &fMine %amount% stone: %completed%'
+        clueType: break
+        amount: 500-2000
+        objective: Mine %amount% stone
+        clueName: Stone Miner
+        data:
+          material: stone
+          blockdata: '*'
+      clue29:
+        lore: '&a◆ &fMine %amount% dirt: %completed%'
+        clueType: break
+        amount: 500-2000
+        objective: Mine %amount% dirt
+        clueName: Dirt Miner
+        data:
+          material: dirt
+          blockdata: '*'
+      clue30:
+        lore: '&6&l◆ &fMine %amount% grass blocks: %completed%'
+        clueType: break
+        amount: 500-2000
+        objective: Mine %amount% grass blocks
+        clueName: Grass Block Miner
+        data:
+          material: grass
+          blockdata: '*'
+      clue31:
+        lore: '&6&l◆ &fMine %amount% netherrack: %completed%'
+        clueType: break
+        amount: 500-2000
+        objective: Mine %amount% netherrack
+        clueName: Netherrack Miner
+        data:
+          material: netherrack
+          blockdata: '*'
+      clue32:
+        lore: '&6&l◆ &fMine %amount% mossy cobblestone: %completed%'
+        clueType: break
+        amount: 50-150
+        objective: Mine %amount% mossy cobblestone
+        clueName: Mossy Cobblestone Miner
+        data:
+          material: mossy_cobblestone
+          blockdata: '*'
+      clue33:
+        lore: '&6&l◆ &fMine %amount% sand: %completed%'
+        clueType: break
+        amount: 500-2000
+        objective: Mine %amount% sand
+        clueName: Sand Miner
+        data:
+          material: sand
+          blockdata: '*'
+      clue34:
+        lore: '&a◆ &fMine %amount% coal ore: %completed%'
+        clueType: break
+        amount: 64-128
+        objective: Mine %amount% coal ore
+        clueName: Coal Miner
+        data:
+          material: coal_ore
+          blockdata: '*'
+      clue35:
+        lore: '&a◆ &fMine %amount% iron ore: %completed%'
+        clueType: break
+        amount: 64-128
+        objective: Mine %amount% iron ore
+        clueName: Iron Miner
+        data:
+          material: iron_ore
+          blockdata: '*'
+      clue36:
+        lore: '&d&l◆ &fMine %amount% gold ore: %completed%'
+        clueType: break
+        amount: 64-128
+        objective: Mine %amount% gold ore
+        clueName: Gold Miner
+        data:
+          material: gold_ore
+          blockdata: '*'
+      clue37:
+        lore: '&d&l◆ &fMine %amount% redstone ore: %completed%'
+        clueType: break
+        amount: 64-128
+        objective: Mine %amount% redstone ore
+        clueName: Redstone Miner
+        data:
+          material: redstone_ore
+          blockdata: '*'
+      clue38:
+        lore: '&d&l◆ &fMine %amount% lapis ore: %completed%'
+        clueType: break
+        amount: 64-128
+        objective: Mine %amount% lapis ore
+        clueName: Lapis Miner
+        data:
+          material: lapis_ore
+          blockdata: '*'
+      clue39:
+        lore: '&d&l◆ &fMine %amount% quartz ore: %completed%'
+        clueType: break
+        amount: 64-128
+        objective: Mine %amount% quartz ore
+        clueName: Quartz Miner
+        data:
+          material: quartz_ore
+          blockdata: '*'
+      clue40:
+        lore: '&6&l◆ &fMine %amount% diamond ore: %completed%'
+        clueType: break
+        amount: 64-128
+        objective: Mine %amount% diamond ore
+        clueName: Diamond Miner
+        data:
+          material: diamond_ore
+          blockdata: '*'
+      clue41:
+        lore: '&6&l◆ &fMine %amount% emerald ore: %completed%'
+        clueType: break
+        amount: 64-128
+        objective: Mine %amount% emerald ore
+        clueName: Emerald Miner
+        data:
+          material: emerald_ore
+          blockdata: '*'
+      clue42:
+        lore: '&a◆ &fMine %amount% logs: %completed%'
+        clueType: break
+        amount: 32-128
+        objective: Mine %amount% logs
+        clueName: Log Miner
+        data:
+          material: log
+          blockdata: '*'
+      clue43:
+        lore: '&a◆ &fTravel %amount% meters: %completed%'
+        clueType: walk
+        amount: 500-5000
+        objective: Travel %amount% meters
+        clueName: Traveller
+      clue44:
+        lore: '&a◆ &fSwim %amount% meters: %completed%'
+        clueType: swim
+        amount: 100-500
+        objective: Swim %amount% meters
+        clueName: Swimmer
+      clue45:
+        lore: '&a◆ &fShear %amount% sheep: %completed%'
+        clueType: shear
+        amount: 10-50
+        objective: Shear %amount% sheep
+        clueName: Sheep Shearer
+        data:
+          entitytype: sheep
+      clue46:
+        lore: '&d&l◆ &fFish %amount% items: %completed%'
+        clueType: fish
+        amount: 20-50
+        objective: Fish %amount% items
+        clueName: Fisherman
+        data:
+          material: '*'
+          itemdata: '*'
+      clue47:
+        lore: '&d&l◆ &fFish %amount% raw salmons: %completed%'
+        clueType: fish
+        amount: 20-50
+        objective: Fish %amount% raw salmons
+        clueName: Salmon Fisher
+        data:
+          material: raw_fish
+          itemdata: '1'
+      clue48:
+        lore: '&d&l◆ &fFish %amount% pufferfish: %completed%'
+        clueType: fish
+        amount: 20-50
+        objective: Fish %amount% pufferfish
+        clueName: PUFFERFISH!!
+        data:
+          material: raw_fish
+          itemdata: '3'
+      clue49:
+        lore: '&d&l◆ &fEnchant %amount% iron swords: %completed%'
+        clueType: enchant
+        amount: 20-50
+        objective: Enchant %amount% iron swords
+        clueName: Iron Sword Enchanter
+        data:
+          material: iron_sword
+          itemdata: '*'
+      clue50:
+        lore: '&d&l◆ &fEnchant %amount% diamond swords: %completed%'
+        clueType: enchant
+        amount: 15-45
+        objective: Enchant %amount% diamond swords
+        clueName: Diamond Sword Enchanter
+        data:
+          material: diamond_sword
+          itemdata: '*'
+      clue51:
+        lore: '&d&l◆ &fEnchant %amount% diamond axes: %completed%'
+        clueType: enchant
+        amount: 15-45
+        objective: Enchant %amount% diamond axes
+        clueName: Diamond Axe Enchanter
+        data:
+          material: diamond_axe
+          itemdata: '*'
+      clue52:
+        lore: '&d&l◆ &fTame %amount% wolves: %completed%'
+        clueType: tame
+        amount: 5-20
+        objective: Tame %amount% wolf
+        clueName: Wolf Tamer
+        data:
+          entitytype: wolf
+      clue53:
+        lore: '&6&l◆ &fFish %amount% clownfish: %completed%'
+        clueType: fish
+        amount: 1-10
+        objective: Fish %amount% clownfish
+        clueName: Finding Nemo
+        data:
+          material: raw_fish
+          itemdata: '2'
+      clue54:
+        lore: '&6&l◆ &fFish %amount% name tags: %completed%'
+        clueType: fish
+        amount: 1-10
+        objective: Fish %amount% name tags
+        clueName: Expert Fisherman
+        data:
+          material: name_tag
+          itemdata: '*'
+      clue55:
+        lore: '&6&l◆ &fFish %amount% saddles: %completed%'
+        clueType: fish
+        amount: 1-10
+        objective: Fish %amount% saddles
+        clueName: Master Fisherman
+        data:
+          material: saddle
+          itemdata: '*'
+      clue56:
+        lore: '&6&l◆ &fFish %amount% bones: %completed%'
+        clueType: fish
+        amount: 1-10
+        objective: Fish %amount% bones
+        clueName: Extreme Fisherman
+        data:
+          material: bone
+          itemdata: '*'
+      clue57:
+        lore: '&6&l◆ &fRide a pig for %amount% meters: %completed%'
+        clueType: ride
+        amount: 10-100
+        objective: Ride a pig for %amount% meters
+        clueName: Piggy Rider
+        data:
+          vehicletype: pig
+      clue58:
+        lore: '&6&l◆ &fRide a horse for %amount% meters: %completed%'
+        clueType: ride
+        amount: 100-1000
+        objective: Ride a horse for %amount% meters
+        clueName: Horse Rider
+        data:
+          vehicletype: horse
+      clue61:
+        lore: '&6&l◆ &fCraft %amount% beacon: %completed%'
+        clueType: craft
+        amount: 1-5
+        objective: Craft %amount% beacons
+        clueName: Beacon Crafter
+        data:
+          material: beacon
+          itemdata: '*'
+      clue62:
+        lore: '&d&l◆ &fCraft %amount% rails: %completed%'
+        clueType: craft
+        amount: 64-256
+        objective: Craft %amount% rails
+        clueName: The Railway
+        data:
+          material: rails
+          itemdata: '*'
+      clue63:
+        lore: '&a◆ &fCraft %amount% droppers: %completed%'
+        clueType: craft
+        amount: 32-128
+        objective: Craft %amount% droppers
+        clueName: Dropper Crafter
+        data:
+          material: dropper
+          itemdata: '*'
+      clue64:
+        lore: '&a◆ &fCraft %amount% dispensers: %completed%'
+        clueType: craft
+        amount: 32-128
+        objective: Craft %amount% dispensers
+        clueName: Dispenser Crafter
+        data:
+          material: dispenser
+          itemdata: '*'
+      clue65:
+        lore: '&a◆ &fCraft %amount% TNT: %completed%'
+        clueType: craft
+        amount: 64-256
+        objective: Craft %amount% TNT
+        clueName: TNT Crafter
+        data:
+          material: tnt
+          itemdata: '*'
+  heroic:
+    items: 9-15
+    clueCount: 10-15
+    expires: -1
+    scroll:
+      title: '&8◆ &c&l&nHeroic Clue Scroll&r &8◆'
+      lore-prefix:
+      - '&7Complete the tasks below to earn &ntreasure&r&7.'
+      - '&r'
+      - '&c&l➤ CLUES:'
+      lore-suffix:
+      - ''
+      cross-out-completed: true
+      one-clue-show: true
+      material: PAPER
+      hide-first-clue:
+        enabled: true
+        lore:
+        - '&7&l◆ &7???'
+        - '&7Right-click to reveal your first clue.'
+      receiveMessage: '&c&l+ %amount% Heroic Clue Scroll(s)'
+      bind: false
+    crystal:
+      title: '&8◆ &c&l&nHeroic Scroll Skip&r &8◆'
+      lore:
+      - '&c◆ &7Drag ''n'' drop onto a &c&nheroic clue scroll&r'
+      - '&7  to instantly complete the current clue.'
+      material: EMERALD
+      receiveMessage: '&d&l+ %amount% Heroic Crystal(s)'
+    clues:
+      clue0:
+        lore: '&a◆ &fKill %amount% chickens: %completed%'
+        clueType: kill
+        amount: 50-100
+        objective: Kill %amount% chickens
+        clueName: Chicken Killer
+        data:
+          entitytype: chicken
+      clue1:
+        lore: '&a◆ &fKill %amount% pigs: %completed%'
+        clueType: kill
+        amount: 50-100
+        objective: Kill %amount% pigs
+        clueName: Pig Killer
+        data:
+          entitytype: pig
+      clue2:
+        lore: '&a◆ &fKill %amount% sheep: %completed%'
+        clueType: kill
+        amount: 50-100
+        objective: Kill %amount% sheep
+        clueName: Sheep Killer
+        data:
+          entitytype: sheep
+      clue3:
+        lore: '&a◆ &fKill %amount% cows: %completed%'
+        clueType: kill
+        amount: 50-100
+        objective: Kill %amount% cows
+        clueName: Cow Killer
+        data:
+          entitytype: cow
+      clue4:
+        lore: '&d&l◆ &fKill %amount% zombies: %completed%'
+        clueType: kill
+        amount: 50-100
+        objective: Kill %amount% zombies
+        clueName: Zombie Killer
+        data:
+          entitytype: zombie
+      clue5:
+        lore: '&d&l◆ &fKill %amount% skeletons: %completed%'
+        clueType: kill
+        amount: 50-100
+        objective: Kill %amount% skeletons
+        clueName: Skeleton Killer
+        data:
+          entitytype: skeleton
+      clue6:
+        lore: '&d&l◆ &fKill %amount% spiders: %completed%'
+        clueType: kill
+        amount: 50-100
+        objective: Kill %amount% spiders
+        clueName: Spider Killer
+        data:
+          entitytype: spider
+      clue7:
+        lore: '&d&l◆ &fKill %amount% blazes: %completed%'
+        clueType: kill
+        amount: 50-150
+        objective: Kill %amount% blazes
+        clueName: Blaze Killer
+        data:
+          entitytype: blaze
+      clue8:
+        lore: '&6&l◆ &fKill %amount% endermen: %completed%'
+        clueType: kill
+        amount: 50-150
+        objective: Kill %amount% endermen
+        clueName: Endermen Killer
+        data:
+          entitytype: enderman
+      clue9:
+        lore: '&6&l◆ &fKill %amount% creepers: %completed%'
+        clueType: kill
+        amount: 50-150
+        objective: Kill %amount% creepers
+        clueName: Creeper Killer
+        data:
+          entitytype: creeper
+      clue10:
+        lore: '&6&l◆ &fKill %amount% iron golems: %completed%'
+        clueType: kill
+        amount: 50-150
+        objective: Kill %amount% iron golems
+        clueName: Golem Killer
+        data:
+          entitytype: iron_golem
+      clue11:
+        lore: '&6&l◆ &fKill %amount% slime: %completed%'
+        clueType: kill
+        amount: 50-150
+        objective: Kill %amount% slime
+        clueName: Slime Killer
+        data:
+          entitytype: slime
+      clue12:
+        lore: '&6&l◆ &fKill %amount% zombie pigmen: %completed%'
+        clueType: kill
+        amount: 50-150
+        objective: Kill %amount% zombie pigmen
+        clueName: Zombie Pigman Killer
+        data:
+          entitytype: pig_zombie
+      clue13:
+        lore: '&6&l◆ &fKill %amount% ghast: %completed%'
+        clueType: kill
+        amount: 10-50
+        objective: Kill %amount% ghast
+        clueName: Ghast Killer
+        data:
+          entitytype: ghast
+      clue14:
+        lore: '&6&l◆ &fKill %amount% silverfish: %completed%'
+        clueType: kill
+        amount: 10-50
+        objective: Kill %amount% silverfish
+        clueName: Silverfish Killer
+        data:
+          entitytype: silverfish
+      clue15:
+        lore: '&a◆ &fCraft %amount% coal blocks: %completed%'
+        clueType: craft
+        amount: 32-128
+        objective: Craft %amount% coal blocks
+        clueName: Coal Block Crafter
+        data:
+          material: coal_block
+          itemdata: '*'
+      clue16:
+        lore: '&a◆ &fCraft %amount% iron blocks: %completed%'
+        clueType: craft
+        amount: 32-128
+        objective: Craft %amount% iron blocks
+        clueName: Iron Block Crafter
+        data:
+          material: iron_block
+          itemdata: '*'
+      clue17:
+        lore: '&a◆ &fCraft %amount% gold blocks: %completed%'
+        clueType: craft
+        amount: 32-128
+        objective: Craft %amount% gold blocks
+        clueName: Gold Block Crafter
+        data:
+          material: gold_block
+          itemdata: '*'
+      clue18:
+        lore: '&a◆ &fCraft %amount% redstone blocks: %completed%'
+        clueType: craft
+        amount: 32-128
+        objective: Craft %amount% redstone blocks
+        clueName: Redstone Block Crafter
+        data:
+          material: redstone_block
+          itemdata: '*'
+      clue19:
+        lore: '&d&l◆ &fCraft %amount% lapis blocks: %completed%'
+        clueType: craft
+        amount: 32-128
+        objective: Craft %amount% lapis blocks
+        clueName: Lapis Block Crafter
+        data:
+          material: lapis_block
+          itemdata: '*'
+      clue20:
+        lore: '&d&l◆ &fCraft %amount% quartz blocks: %completed%'
+        clueType: craft
+        amount: 32-128
+        objective: Craft %amount% quartz blocks
+        clueName: Quartz Block Crafter
+        data:
+          material: quartz_block
+          itemdata: '*'
+      clue21:
+        lore: '&6&l◆ &fCraft %amount% diamond blocks: %completed%'
+        clueType: craft
+        amount: 32-128
+        objective: Craft %amount% diamond blocks
+        clueName: Diamond Block Crafter
+        data:
+          material: diamond_block
+          itemdata: '*'
+      clue22:
+        lore: '&6&l◆ &fCraft %amount% emerald blocks: %completed%'
+        clueType: craft
+        amount: 32-128
+        objective: Craft %amount% emerald blocks
+        clueName: Emerald Block Crafter
+        data:
+          material: emerald_block
+          itemdata: '*'
+      clue23:
+        lore: '&a◆ &fCraft %amount% chests: %completed%'
+        clueType: craft
+        amount: 16-64
+        objective: Craft %amount% chests
+        clueName: Chest Crafter
+        data:
+          material: chest
+          itemdata: '*'
+      clue24:
+        lore: '&a◆ &fBake %amount% cakes: %completed%'
+        clueType: craft
+        amount: 16-64
+        objective: Bake %amount% cakes
+        clueName: Cake Baker
+        data:
+          material: cake
+          itemdata: '*'
+      clue25:
+        lore: '&a◆ &fCraft %amount% anvils: %completed%'
+        clueType: craft
+        amount: 5-20
+        objective: Craft %amount% anvils
+        clueName: Anvil Crafter
+        data:
+          material: anvil
+          itemdata: '*'
+      clue26:
+        lore: '&a◆ &fCraft %amount% minecarts: %completed%'
+        clueType: craft
+        amount: 5-35
+        objective: Craft %amount% minecarts
+        clueName: Minecart Crafter
+        data:
+          material: minecart
+          itemdata: '*'
+      clue27:
+        lore: '&a◆ &fCraft %amount% jack o''lanterns: %completed%'
+        clueType: craft
+        amount: 16-32
+        objective: Craft %amount% jack o''lanterns
+        clueName: Lantern Crafter
+        data:
+          material: jack_o_lantern
+          itemdata: '*'
+      clue28:
+        lore: '&a◆ &fMine %amount% stone: %completed%'
+        clueType: break
+        amount: 500-2000
+        objective: Mine %amount% stone
+        clueName: Stone Miner
+        data:
+          material: stone
+          blockdata: '*'
+      clue29:
+        lore: '&a◆ &fMine %amount% dirt: %completed%'
+        clueType: break
+        amount: 500-2000
+        objective: Mine %amount% dirt
+        clueName: Dirt Miner
+        data:
+          material: dirt
+          blockdata: '*'
+      clue30:
+        lore: '&6&l◆ &fMine %amount% grass blocks: %completed%'
+        clueType: break
+        amount: 500-2000
+        objective: Mine %amount% grass blocks
+        clueName: Grass Block Miner
+        data:
+          material: grass
+          blockdata: '*'
+      clue31:
+        lore: '&6&l◆ &fMine %amount% netherrack: %completed%'
+        clueType: break
+        amount: 500-2000
+        objective: Mine %amount% netherrack
+        clueName: Netherrack Miner
+        data:
+          material: netherrack
+          blockdata: '*'
+      clue32:
+        lore: '&6&l◆ &fMine %amount% mossy cobblestone: %completed%'
+        clueType: break
+        amount: 50-150
+        objective: Mine %amount% mossy cobblestone
+        clueName: Mossy Cobblestone Miner
+        data:
+          material: mossy_cobblestone
+          blockdata: '*'
+      clue33:
+        lore: '&6&l◆ &fMine %amount% sand: %completed%'
+        clueType: break
+        amount: 500-2000
+        objective: Mine %amount% sand
+        clueName: Sand Miner
+        data:
+          material: sand
+          blockdata: '*'
+      clue34:
+        lore: '&a◆ &fMine %amount% coal ore: %completed%'
+        clueType: break
+        amount: 64-128
+        objective: Mine %amount% coal ore
+        clueName: Coal Miner
+        data:
+          material: coal_ore
+          blockdata: '*'
+      clue35:
+        lore: '&a◆ &fMine %amount% iron ore: %completed%'
+        clueType: break
+        amount: 64-128
+        objective: Mine %amount% iron ore
+        clueName: Iron Miner
+        data:
+          material: iron_ore
+          blockdata: '*'
+      clue36:
+        lore: '&d&l◆ &fMine %amount% gold ore: %completed%'
+        clueType: break
+        amount: 64-128
+        objective: Mine %amount% gold ore
+        clueName: Gold Miner
+        data:
+          material: gold_ore
+          blockdata: '*'
+      clue37:
+        lore: '&d&l◆ &fMine %amount% redstone ore: %completed%'
+        clueType: break
+        amount: 64-128
+        objective: Mine %amount% redstone ore
+        clueName: Redstone Miner
+        data:
+          material: redstone_ore
+          blockdata: '*'
+      clue38:
+        lore: '&d&l◆ &fMine %amount% lapis ore: %completed%'
+        clueType: break
+        amount: 64-128
+        objective: Mine %amount% lapis ore
+        clueName: Lapis Miner
+        data:
+          material: lapis_ore
+          blockdata: '*'
+      clue39:
+        lore: '&d&l◆ &fMine %amount% quartz ore: %completed%'
+        clueType: break
+        amount: 64-128
+        objective: Mine %amount% quartz ore
+        clueName: Quartz Miner
+        data:
+          material: quartz_ore
+          blockdata: '*'
+      clue40:
+        lore: '&6&l◆ &fMine %amount% diamond ore: %completed%'
+        clueType: break
+        amount: 64-128
+        objective: Mine %amount% diamond ore
+        clueName: Diamond Miner
+        data:
+          material: diamond_ore
+          blockdata: '*'
+      clue41:
+        lore: '&6&l◆ &fMine %amount% emerald ore: %completed%'
+        clueType: break
+        amount: 64-128
+        objective: Mine %amount% emerald ore
+        clueName: Emerald Miner
+        data:
+          material: emerald_ore
+          blockdata: '*'
+      clue42:
+        lore: '&a◆ &fMine %amount% logs: %completed%'
+        clueType: break
+        amount: 32-128
+        objective: Mine %amount% logs
+        clueName: Log Miner
+        data:
+          material: log
+          blockdata: '*'
+      clue43:
+        lore: '&a◆ &fTravel %amount% meters: %completed%'
+        clueType: walk
+        amount: 500-5000
+        objective: Travel %amount% meters
+        clueName: Traveller
+      clue44:
+        lore: '&a◆ &fSwim %amount% meters: %completed%'
+        clueType: swim
+        amount: 100-500
+        objective: Swim %amount% meters
+        clueName: Swimmer
+      clue45:
+        lore: '&a◆ &fShear %amount% sheep: %completed%'
+        clueType: shear
+        amount: 10-50
+        objective: Shear %amount% sheep
+        clueName: Sheep Shearer
+        data:
+          entitytype: sheep
+      clue46:
+        lore: '&d&l◆ &fFish %amount% items: %completed%'
+        clueType: fish
+        amount: 20-50
+        objective: Fish %amount% items
+        clueName: Fisherman
+        data:
+          material: '*'
+          itemdata: '*'
+      clue47:
+        lore: '&d&l◆ &fFish %amount% raw salmons: %completed%'
+        clueType: fish
+        amount: 20-50
+        objective: Fish %amount% raw salmons
+        clueName: Salmon Fisher
+        data:
+          material: raw_fish
+          itemdata: '1'
+      clue48:
+        lore: '&d&l◆ &fFish %amount% pufferfish: %completed%'
+        clueType: fish
+        amount: 20-50
+        objective: Fish %amount% pufferfish
+        clueName: PUFFERFISH!!
+        data:
+          material: raw_fish
+          itemdata: '3'
+      clue49:
+        lore: '&d&l◆ &fEnchant %amount% iron swords: %completed%'
+        clueType: enchant
+        amount: 20-50
+        objective: Enchant %amount% iron swords
+        clueName: Iron Sword Enchanter
+        data:
+          material: iron_sword
+          itemdata: '*'
+      clue50:
+        lore: '&d&l◆ &fEnchant %amount% diamond swords: %completed%'
+        clueType: enchant
+        amount: 15-45
+        objective: Enchant %amount% diamond swords
+        clueName: Diamond Sword Enchanter
+        data:
+          material: diamond_sword
+          itemdata: '*'
+      clue51:
+        lore: '&d&l◆ &fEnchant %amount% diamond axes: %completed%'
+        clueType: enchant
+        amount: 15-45
+        objective: Enchant %amount% diamond axes
+        clueName: Diamond Axe Enchanter
+        data:
+          material: diamond_axe
+          itemdata: '*'
+      clue52:
+        lore: '&d&l◆ &fTame %amount% wolves: %completed%'
+        clueType: tame
+        amount: 5-20
+        objective: Tame %amount% wolf
+        clueName: Wolf Tamer
+        data:
+          entitytype: wolf
+      clue53:
+        lore: '&6&l◆ &fFish %amount% clownfish: %completed%'
+        clueType: fish
+        amount: 1-10
+        objective: Fish %amount% clownfish
+        clueName: Finding Nemo
+        data:
+          material: raw_fish
+          itemdata: '2'
+      clue54:
+        lore: '&6&l◆ &fFish %amount% name tags: %completed%'
+        clueType: fish
+        amount: 1-10
+        objective: Fish %amount% name tags
+        clueName: Expert Fisherman
+        data:
+          material: name_tag
+          itemdata: '*'
+      clue55:
+        lore: '&6&l◆ &fFish %amount% saddles: %completed%'
+        clueType: fish
+        amount: 1-10
+        objective: Fish %amount% saddles
+        clueName: Master Fisherman
+        data:
+          material: saddle
+          itemdata: '*'
+      clue56:
+        lore: '&6&l◆ &fFish %amount% bones: %completed%'
+        clueType: fish
+        amount: 1-10
+        objective: Fish %amount% bones
+        clueName: Extreme Fisherman
+        data:
+          material: bone
+          itemdata: '*'
+      clue57:
+        lore: '&6&l◆ &fRide a pig for %amount% meters: %completed%'
+        clueType: ride
+        amount: 10-100
+        objective: Ride a pig for %amount% meters
+        clueName: Piggy Rider
+        data:
+          vehicletype: pig
+      clue58:
+        lore: '&6&l◆ &fRide a horse for %amount% meters: %completed%'
+        clueType: ride
+        amount: 100-1000
+        objective: Ride a horse for %amount% meters
+        clueName: Horse Rider
+        data:
+          vehicletype: horse
+      clue61:
+        lore: '&c&l◆ &fNorth, East, South, West. Which way do I go◆'
+        clueType: craft
+        amount: 1
+        objective: Solve the riddle
+        clueName: Riddles! (1)
+        data:
+          material: compass
+          itemdata: '*'
+      clue62:
+        lore: '&c&l◆ &fThis will be my lighthouse when I am lost.'
+        clueType: craft
+        amount: 1
+        objective: Solve the riddle
+        clueName: Riddles! (2)
+        data:
+          material: beacon
+          itemdata: '*'
+      clue63:
+        lore: '&c&l◆ &fYou break me but you do not get me.'
+        clueType: break
+        amount: 1
+        objective: Solve the riddle
+        clueName: Riddles! (3)
+        data:
+          material: glass
+          blockdata: '*'
+      clue64:
+        lore: '&c&l◆ &fThe warmer I am, the fresher I am.'
+        clueType: craft
+        amount: 1
+        objective: Solve the riddle
+        clueName: Riddles! (4)
+        data:
+          material: bread
+          itemdata: '*'
+      clue65:
+        lore: '&c&l◆ &fI hold things but I don''t have any hands.'
+        clueType: craft
+        amount: 1
+        objective: Solve the riddle
+        clueName: Riddles! (5)
+        data:
+          material: chest
+          itemdata: '*'
+      clue66:
+        lore: '&c&l◆ &fI have towns with no houses and lakes with no water.'
+        clueType: craft
+        amount: 1
+        objective: Solve the riddle
+        clueName: Riddles! (6)
+        data:
+          material: MAP
+          itemdata: '*'
+      clue67:
+        lore: '&c&l◆ &fI hold something but when you break me the thing I am holding
+          is gone.'
+        clueType: craft
+        amount: 1
+        objective: Solve the riddle
+        clueName: Riddles! (7)
+        data:
+          material: cauldron_item
+          itemdata: '*'
+      clue69:
+        lore: '&c&l◆ &fPlace the portable item carrier!'
+        clueType: place
+        amount: 1
+        objective: Solve the riddle
+        clueName: Riddles! (9)
+        data:
+          material: ender_chest
+          blockdata: '*'
+      clue70:
+        lore: '&c&l◆ &fI have feathers and can fly, I am not a chicken.'
+        clueType: craft
+        amount: 1
+        objective: Solve the riddle
+        clueName: Riddles! (11)
+        data:
+          material: arrow
+          itemdata: '*'
+      clue71:
+        lore: '&c&l◆ &fYou can understand what I say, I am not a player or mob.'
+        clueType: craft
+        amount: 1
+        objective: Solve the riddle
+        clueName: Riddles! (12)
+        data:
+          material: sign
+          itemdata: '*'
+      clue72:
+        lore: '&6&l◆ &fCraft %amount% beacon: %completed%'
+        clueType: craft
+        amount: 1-5
+        objective: Craft %amount% beacons
+        clueName: Beacon Crafter
+        data:
+          material: beacon
+          itemdata: '*'
+      clue73:
+        lore: '&d&l◆ &fCraft %amount% rails: %completed%'
+        clueType: craft
+        amount: 64-256
+        objective: Craft %amount% rails
+        clueName: The Railway
+        data:
+          material: rails
+          itemdata: '*'
+      clue74:
+        lore: '&c&l◆ &fPlace something that is hard and dark.'
+        clueType: place
+        amount: 1
+        objective: Solve the riddle
+        clueName: Riddles! (13)
+        data:
+          material: obsidian
+          blockdata: '*'
+      clue75:
+        lore: '&a◆ &fCraft %amount% droppers: %completed%'
+        clueType: craft
+        amount: 64-256
+        objective: Craft %amount% droppers
+        clueName: Dropper Crafter
+        data:
+          material: dropper
+          itemdata: '*'
+      clue76:
+        lore: '&a◆ &fCraft %amount% dispensers: %completed%'
+        clueType: craft
+        amount: 64-256
+        objective: Craft %amount% dispensers
+        clueName: Dispenser Crafter
+        data:
+          material: dispenser
+          itemdata: '*'
+      clue77:
+        lore: '&a◆ &fCraft %amount% TNT: %completed%'
+        clueType: craft
+        amount: 128-512
+        objective: Craft %amount% TNT
+        clueName: TNT Crafter
+        data:
+          material: tnt
+          itemdata: '*'
+mystery:
+  scrolls:
+    mystery:
+      material: PAPER
+      title: '&8◆ &b&l&nMystery Clue Scroll&r &8◆'
+      lore:
+      - '&7Click to receive a random clue scroll.'
+      receiveMessage: '&b&l+ %amount% Mystery Scroll(s)'
+      bind: false
+      tiers:
+        common: 65.0
+        special: 20.0
+        legendary: 10.0
+        heroic: 5.0
+  crystals:
+    mystery:
+      material: EMERALD
+      title: '&8◆ &c&l&nMystery Crystal&r &8◆'
+      lore:
+      - '&7Click to receive a random crystal.'
+      receiveMessage: '&b&l+ %amount% Mystery Crystal(s)'
+      bind: false
+      tiers:
+        common: 65.0
+        special: 20.0
+        legendary: 10.0
+        heroic: 5.0
+checkForUpdates: false
+auto-complete-scrolls: true
+glow-scrolls: true
+glow-crystals: true
+scrolls-unique-ids: true
+block-place-blacklist:
+- SEEDS
+block-break-blacklist:
+- SEEDS
+title:
+  fadeIn: 20
+  fadeOut: 20
+  stay: 80
+inventory:
+  purchase:
+    title: '&8◆ &nClue Scrolls&r &8◆'
+    size: 9
+    items:
+      '1':
+        name: '%mystery_scroll_mystery_title%'
+        lore:
+        - '&7Click to purchase a &b&nmystery&r &7clue scroll.'
+        - ''
+        - '&b&l◆ &nCOST:&r&r&a %cost% &a&lEXP'
+        material: PAPER
+        material_data: 0
+        amount: 1
+        purchaseAction:
+          type: scroll
+          currency: EXP
+          amount: 1
+          cost: 10000
+          cooldown:
+            identifier: mystery_purchase
+            time: 1800
+            message: '&c(!) You must wait another &n%cooldown%&r&c before purchasing
+              this scroll.'
+          name: mystery
+          type-2: mystery
+      '2':
+        name: '%heroic_title%'
+        lore:
+        - '&7Click to purchase a &c&nheroic&r &7clue scroll.'
+        - ''
+        - '&c&l◆ &nCOST:&r&a %cost% &a&lEXP'
+        material: PAPER
+        material_data: 0
+        amount: 1
+        purchaseAction:
+          type: scroll
+          currency: EXP
+          amount: 1
+          cost: 50000
+          cooldown:
+            identifier: heroic_purchase
+            time: 86400
+            message: '&c(!) You must wait another &n%cooldown%&r&c before purchasing
+              this scroll.'
+          name: heroic
+          type-2: tier
+  reward:
+    title: '&8◆ &nRewards&r &8◆'
+    size: 27
+    randomly-place-items: false
+    gui-enabled: true
+commandReward:
+  material: BOOK
+  title: '&e&lScroll Reward Command'
+  lore:
+  - '&7Click to execute the following reward...'
+  - '&e%reward_name% &7(/%command%)'
+  bind: false
+instant-command-reward-execution: false
+garbageNBT: 5-25
+runnableClueRefreshRate:
+  distance: 5
+  permission: -1
+remove-scrolls-on-death: false
+remove-crystals-on-death: false
+version: 3.2.4
+clueTypes:
+  blockbreak:
+    enabled: true
+    countUltimateTimber: true
+  blockplace:
+    enabled: true
+  breed:
+    enabled: true
+  bucketempty:
+    enabled: true
+  bucketfill:
+    enabled: true
+  chat:
+    enabled: true
+  command:
+    enabled: true
+  craft:
+    enabled: true
+  death:
+    enabled: true
+  eat:
+    enabled: true
+  enchant:
+    enabled: true
+  expgain:
+    enabled: true
+  fish:
+    enabled: true
+  glide:
+    enabled: true
+  harvest:
+    enabled: true
+  horsejump:
+    enabled: true
+  interactentity:
+    enabled: true
+  kill:
+    enabled: true
+  permission:
+    enabled: true
+  ride:
+    enabled: true
+  shear:
+    enabled: true
+  swim:
+    enabled: true
+  tame:
+    enabled: true
+  walk:
+    enabled: true
+  askyblock:
+    enabled: true
+  auctionhouse:
+    enabled: true
+  auctions:
+    enabled: true
+  autorank:
+    enabled: true
+  autosell:
+    enabled: true
+  boss:
+    enabled: true
+  chatreaction:
+    enabled: true
+  cratereloaded:
+    enabled: true
+  crazycrates:
+    enabled: true
+  deluxechat:
+    enabled: true
+  epicbosses:
+    enabled: true
+  morefish:
+    enabled: true
+  mythicmobs:
+    enabled: true
+  towny:
+    enabled: true
+  ultimatetimber:
+    enabled: true
+  uskyblock:
+    enabled: true
+  votifier:
+    enabled: true
+  worldguard:
+    enabled: true

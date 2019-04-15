@@ -1,0 +1,544 @@
+Crate:
+  CrateType: Wheel #Type of crate (CSGO/QuadCrate/QuickCrate/Roulette/CrateOnTheGo/FireCracker/Wonder/Wheel/War/Cosmic(This requires a additional info to work.)).
+  CrateName: '&nMagma Crate' #Name of the Inventory if a GUI crate.
+  StartingKeys: 0 #Starting amount of keys when the player 1st joins.
+  InGUI: true #If the crate shows in the /cc GUI. (If the crate type is QuickCrate/CrateOnTheGo/FireCracker then the Crate will not work. Quick Crate requires a Physical Crate.)
+  Slot: 11 #Slot the item is in the GUI.
+  OpeningBroadCast: false #Enables/Disables the Broadcasts message when they open a crate.
+  BroadCast: '%Prefix%&6&l%Player% &7is opening a &7&lBasic Chest&7.' #Message that is broadcasted when opening the crate.
+  Item: '351:14' #Item the crate is in the GUI
+  Glowing: true #If the crate in the main /cc GUI is glowing or not.
+  Name: '       &8◆  &6&k;&e&k;&r &6&nMagma Crate&r &e&k;&6&k;&r  &8◆' #Name of the item in the GUI.
+  Preview-Name: '       &8◆  &6&k;&e&k;&r &6&nMagma Crate&r &e&k;&6&k;&r  &8◆' #Name of the item in the GUI.
+  Lore: #The lore of the item in the GUI.
+    - '&7A newly-made crate found in space' 
+    - '&7     is packed with basic items.' 
+    - '&r' 
+    - '&6 ◆ &7You have &6&n%Keys%&r &7keys for this crate.'
+    - '&r'
+    - '&6&nLeft-click&r &7to open this crate.'
+    - '&6&nRight-click&r &7to preview the rewards.'
+  PhysicalKey:
+    Name: '&8◆ &6&nMagma Crate Key&r &8◆' #Name of the Key.
+    Lore:
+      - '&7Use this key to open a crate.' #Lore of the Key.
+    Item: '131' #The item the key is.
+    Glowing: True #Makes the key look enchanted.
+#         For Cosmic Crates Only
+#############################################
+#  Tiers: #The tiers in the Crate
+#    Basic: #The Config Name for the Crate
+#      Name: '&8Basic Prize' #The in-game name of the Crate
+#      Color: 7 #Use the MetaData for the color of the glass
+#      Chance: 80 #Chance of that item getting picked. It would be 80/100 chance because MaxRange is 100.
+#      MaxRange: 100 #The max range that the chance will go though.
+#    UnCommon:
+#      Name: '&aUnCommon Prize'
+#      Color: 5
+#      Chance: 55
+#      MaxRange: 100
+#    Rare:
+#      Name: '&4Rare Prize'
+#      Color: 14
+#      Chance: 20
+#      MaxRange: 100
+#############################################
+  Prizes: #All the prizes that can be gotten in the Crate.
+    1:
+      DisplayName: '&8◆ &a&n5,000 ⛃&r &8◆'
+      DisplayItem: '388'
+      DisplayAmount: 1
+      Lore:
+        - "&6◆ &7Chance: &a20%"
+      MaxRange: 100
+      Chance: 20
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'eco give %Player% 5000'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n5,000 ⛃&r&c.'
+      BlackListed-Permissions: []
+    2:
+      DisplayName: '&8◆ &a&n10,000 ⛃&r &8◆'
+      DisplayItem: '388'
+      DisplayAmount: 1
+      Lore:
+        - "&6◆ &7Chance: &a16%"
+      MaxRange: 100
+      Chance: 16
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'eco give %Player% 10000'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n10,000 ⛃&r&c.'
+      BlackListed-Permissions: []
+    3:
+      DisplayName: '&8◆ &a&n25,000 ⛃&r &8◆'
+      DisplayItem: '388'
+      DisplayAmount: 1
+      Lore:
+        - "&6◆ &7Chance: &a11%"
+      MaxRange: 100
+      Chance: 11
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'eco give %Player% 25000'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n25,000 ⛃&r&c.'
+      BlackListed-Permissions: []
+    4:
+      DisplayName: '&8◆ &b&n500 EXP&r &8◆'
+      DisplayItem: '384'
+      DisplayAmount: 1
+      Lore:
+        - "&6◆ &7Chance: &b20%"
+      MaxRange: 100
+      Chance: 20
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'xp give %Player% 500'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n500 EXP&r&c.'
+      BlackListed-Permissions: []
+    5:
+      DisplayName: '&8◆ &b&n1,000 EXP&r &8◆'
+      DisplayItem: '384'
+      DisplayAmount: 1
+      Lore:
+        - "&6◆ &7Chance: &b15%"
+      MaxRange: 100
+      Chance: 15
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'xp give %Player% 1000'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n1,000 EXP&r&c.'
+      BlackListed-Permissions: []
+    6:
+      DisplayName: '&8◆ &b&n2,000 EXP&r &8◆'
+      DisplayItem: '384'
+      DisplayAmount: 1
+      Lore:
+        - "&6◆ &7Chance: &b10%"
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'xp give %Player% 2000'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n2,000 EXP&r&c.'
+      BlackListed-Permissions: []
+    7:
+      DisplayName: '&8◆ &8&n[&a&nPhantom&8&n]&c&n Kit&r &8◆'
+      DisplayItem: '299'
+      DisplayAmount: 1
+      Lore:
+        - "&6◆ &7Chance: &c15%"
+      MaxRange: 100
+      Chance: 15
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'kit phantom %Player%'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n1x Phantom Kit&r&c.'
+      BlackListed-Permissions: []
+    8:
+      DisplayName: '&8◆ &8&n[&d&nWarlock&8&n]&c&n Kit&r &8◆'
+      DisplayItem: '315'
+      DisplayAmount: 1
+      Lore:
+        - "&6◆ &7Chance: &c10%"
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'kit warlock %Player%'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n1x Warlock Kit&r&c.'
+      BlackListed-Permissions: []
+    9:
+      DisplayName: '&8◆ &8&n[&6&nGhoul&8&n]&c&n Kit&r &8◆'
+      DisplayItem: '303'
+      DisplayAmount: 1
+      Lore:
+        - "&6◆ &7Chance: &c7.5%"
+      MaxRange: 1000
+      Chance: 75
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'kit ghoul %Player%'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n1x Ghoul Kit&r&c.'
+      BlackListed-Permissions: []
+    10:
+      DisplayName: '&8◆ &8&n[&c&nDemon&8&n]&c&n Kit&r &8◆'
+      DisplayItem: '307'
+      DisplayAmount: 1
+      Lore:
+        - "&6◆ &7Chance: &c5%"
+      MaxRange: 100
+      Chance: 5
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'kit demon %Player%'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n1x Demon Kit&r&c.'
+      BlackListed-Permissions: []
+    11:
+      DisplayName: '&8◆ &8&n[&6&k&n;&r&e&nOverlord&6&k&n;&r&8&n]&c&n Kit&r &8◆'
+      DisplayItem: '311'
+      DisplayAmount: 1
+      Lore:
+        - "&6◆ &7Chance: &c2.5%"
+      MaxRange: 1000
+      Chance: 25
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'kit overlord %Player%'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n1x Overlord Kit&r&c.'
+      BlackListed-Permissions: []
+    12:
+      DisplayName: '&8◆ &d&nChicken Spawner&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 1
+      Lore:
+        - "&6◆ &7Chance: &d7.5%"
+      MaxRange: 1000
+      Chance: 75
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% chicken 1'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n1x Chicken Spawner&r&c.'
+      BlackListed-Permissions: []
+    13:
+      DisplayName: '&8◆ &d&nPig Spawner&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 1
+      Lore:
+        - "&6◆ &7Chance: &d7.5%"
+      MaxRange: 1000
+      Chance: 75
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% pig 1'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n1x Pig Spawner&r&c.'
+      BlackListed-Permissions: []
+    14:
+      DisplayName: '&8◆ &d&nSheep Spawner&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 1
+      Lore:
+        - "&6◆ &7Chance: &d7.5%"
+      MaxRange: 1000
+      Chance: 75
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% sheep 1'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n1x Sheep Spawner&r&c.'
+      BlackListed-Permissions: []
+    15:
+      DisplayName: '&8◆ &d&nRabbit Spawner&r &8◆'
+      DisplayItem: '52'
+      DisplayAmount: 1
+      Lore:
+        - "&6◆ &7Chance: &d7.5%"
+      MaxRange: 1000
+      Chance: 75
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ss give %Player% rabbit 1'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n1x Rabbit Spawner&r&c.'
+      BlackListed-Permissions: []
+    16:
+      DisplayName: '&8◆ &e&n4x Hoppers&r &8◆'
+      DisplayItem: '154'
+      DisplayAmount: 4
+      Lore:
+        - "&6◆ &7Chance: &e10%"
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'give %Player% 154 4'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n4x Hoppers&r&c.'
+      BlackListed-Permissions: []
+    17:
+      DisplayName: '&8◆ &5&n1x War Token&r &8◆'
+      DisplayItem: '318'
+      DisplayAmount: 1
+      Lore:
+        - "&6◆ &7Chance: &510%"
+      MaxRange: 100
+      Chance: 10
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'vouchers give %Player% wartoken 1'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n1x War Token&r&c.'
+      BlackListed-Permissions: []
+    18:
+      DisplayName: '&8◆ &5&n3x War Tokens&r &8◆'
+      DisplayItem: '318'
+      DisplayAmount: 3
+      Lore:
+        - "&6◆ &7Chance: &57.5%"
+      MaxRange: 1000
+      Chance: 75
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'vouchers give %Player% wartoken 3'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n3x War Tokens&r&c.'
+      BlackListed-Permissions: []
+    19:
+      DisplayName: '&8◆ &5&n5x War Tokens&r &8◆'
+      DisplayItem: '318'
+      DisplayAmount: 5
+      Lore:
+        - "&6◆ &7Chance: &55%"
+      MaxRange: 100
+      Chance: 5
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'vouchers give %Player% wartoken 5'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n5x War Tokens&r&c.'
+      BlackListed-Permissions: []
+    20:
+      DisplayName: '&8◆ &e&n1x Volcanic Key&r &8◆'
+      DisplayItem: '351:11'
+      DisplayAmount: 1
+      Lore:
+        - "&6◆ &7Chance: &e5%"
+      MaxRange: 100
+      Chance: 5
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'cc give v volcanic 1 %Player%'
+        - 'broadcast &7%Player% &chas opened a &6&nMagma Crate&r &cand won &6&n1x Volcanic Key&r&c.'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n1x Volcanic Key&r&c.'
+      BlackListed-Permissions: []
+    21:
+      DisplayName: '&8◆ &6&n2x Magma Keys&r &8◆'
+      DisplayItem: '351:14'
+      DisplayAmount: 2
+      Lore:
+        - "&6◆ &7Chance: &64.5%"
+      MaxRange: 1000
+      Chance: 45
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'cc give v Magma 2 %Player%'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n2x Magma Keys&r&c.'
+      BlackListed-Permissions: []
+    22:
+      DisplayName: '&8◆ &6&nMagma Key All&r &8◆'
+      DisplayItem: '351:14'
+      DisplayAmount: 1
+      Lore:
+        - "&7All online players will receive this key."
+        - "&6◆ &7Chance: &60.25%"
+      MaxRange: 10000
+      Chance: 25
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'cc giveall v Magma 1'
+        - 'broadcast &7%Player% &chas opened a &6&nMagma Crate&r &cand won &6&n1x Magma Key All&r&c.'
+        - 'broadcast &7All online players have received &n1x Magma Key&r&7.'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n1x Magma Key All&r&c.'
+      BlackListed-Permissions: []
+    23:
+      DisplayName: '&8◆ &e&n16x Iron Blocks&r &8◆'
+      DisplayItem: '42'
+      DisplayAmount: 16
+      Lore:
+        - "&6◆ &7Chance: &e6.5%"
+      MaxRange: 1000
+      Chance: 65
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'give %Player% 42 16'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n16x Iron Blocks&r&c.'
+      BlackListed-Permissions: []
+    24:
+      DisplayName: '&8◆ &e&n16x Gold Blocks&r &8◆'
+      DisplayItem: '41'
+      DisplayAmount: 16
+      Lore:
+        - "&6◆ &7Chance: &e4.5%"
+      MaxRange: 1000
+      Chance: 45
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'give %Player% 41 16'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n16x Gold Blocks&r&c.'
+      BlackListed-Permissions: []
+    25:
+      DisplayName: '&8◆ &e&n16x Diamond Blocks&r &8◆'
+      DisplayItem: '57'
+      DisplayAmount: 16
+      Lore:
+        - "&6◆ &7Chance: &e3%"
+      MaxRange: 100
+      Chance: 3
+      Firework: false
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'give %Player% 57 16'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n16x Diamond Blocks&r&c.'
+      BlackListed-Permissions: []
+    26:
+      DisplayName: '&8◆ &e&n16x Emerald Blocks&r &8◆'
+      DisplayItem: '133'
+      DisplayAmount: 16
+      Lore:
+        - "&6◆ &7Chance: &e1%"
+      MaxRange: 100
+      Chance: 1
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'give %Player% 133 16'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n16x Emerald Blocks&r&c.'
+      BlackListed-Permissions: []
+    27:
+      DisplayName: '&8◆ &a&nExclusive Pet Egg&r &8◆'
+      DisplayItem: '383:55'
+      DisplayAmount: 1
+      Lore:
+        - "&6◆ &7Chance: &a1%"
+      MaxRange: 100
+      Chance: 1
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'pets give %Player% exclusive 1'
+        - 'broadcast &7%Player% &chas opened a &6&nMagma Crate&r &cand won &6&n1x Exclusive Pet Egg&r&c.'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n1x Exclusive Pet Egg&r&c.'
+      BlackListed-Permissions: []
+    28:
+      DisplayName: '&8◆ &b&n4x Common Enchantment Books&r &8◆'
+      DisplayItem: '340'
+      DisplayAmount: 4
+      Lore:
+        - "&6◆ &7Chance: &b10%"
+      MaxRange: 100
+      Chance: 10
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ce lostbook Common 4 %Player%'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n4x Common Enchantment Books&r&c.'
+      BlackListed-Permissions: []
+    29:
+      DisplayName: '&8◆ &e&n2x Rare Enchantment Books&r &8◆'
+      DisplayItem: '340'
+      DisplayAmount: 2
+      Lore:
+        - "&6◆ &7Chance: &e8%"
+      MaxRange: 100
+      Chance: 8
+      Firework: true
+      Glowing: true
+      Player: ''
+      Unbreakable: false
+      Commands:
+        - 'ce lostbook Rare 2 %Player%'
+      Messages:
+        - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n2x Rare Enchantment Books&r&c.'
+      BlackListed-Permissions: []

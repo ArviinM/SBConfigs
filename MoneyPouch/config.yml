@@ -1,0 +1,135 @@
+#MoneyPouch configuration 2.1
+help:
+ - '&8&m-----------------'
+ - '&b&lMoneyPouch v%version%'
+ - ''
+ - '&f&o/mp <tier> <player> [amount] : receive a money pouch of <tier>'
+ - '&f&o/mp list : list all moneypouches'
+ - '&f&o/mp shop : open moneypouch shop (if enabled)'
+ - '&f&o/mp reload : reload the config'
+ - ''
+ - '%author%'
+ - '&8&m-----------------'
+pouches:
+  tier:
+    1:
+      name: '&b&lMONEYPOUCH &8| T1'
+      item: 'CHEST'
+      pricerange:
+        from: '1000'
+        to: '10000'
+      lore:
+        - '&f* &bDescription'
+        - '&fThis mysterious pouch was dug'
+        - '&fout of the grass by some very brave'
+        - '&fplayers. It holds great power & loot.'
+        - ''
+        - '&f* &bRange: &f1,000 - 10,000 ⛃'
+        - '&f* &bRight click &fto open this pouch'
+    2:
+      name: '&b&lMONEYPOUCH &8| T2'
+      item: 'CHEST'
+      pricerange:
+        from: '10000'
+        to: '50000'
+      lore:
+        - '&f* &bDescription'
+        - '&fThis mysterious pouch was dug'
+        - '&fout of the grass by some very brave'
+        - '&fplayers. It holds great power & loot.'
+        - ''
+        - '&f* &bRange: &f10,000 - 50,000 ⛃'
+        - '&f* &bRight click &fto open this pouch'
+    3:
+      name: '&b&lMONEYPOUCH &8| T3'
+      item: 'CHEST'
+      pricerange:
+        from: '50000'
+        to: '200000'
+      lore:
+        - '&f* &bDescription'
+        - '&fThis mysterious pouch was dug'
+        - '&fout of the grass by some very brave'
+        - '&fplayers. It holds great power & loot.'
+        - ''
+        - '&f* &bRange: &f50,000 - 200,000 ⛃'
+        - '&f* &bRight click &fto open this pouch'
+    4:
+      name: '&b&lMONEYPOUCH &8| T4'
+      item: 'CHEST'
+      pricerange:
+        from: '200000'
+        to: '500000'
+      lore:
+        - '&f* &bDescription'
+        - '&fThis mysterious pouch was dug'
+        - '&fout of the grass by some very brave'
+        - '&fplayers. It holds great power & loot.'
+        - ''
+        - '&f* &bRange: &f200,000 - 500,000 ⛃'
+        - '&f* &bRight click &fto open this pouch'
+    5:
+      name: '&b&lMONEYPOUCH &8| T5'
+      item: 'CHEST'
+      pricerange:
+        from: '500000'
+        to: '1000000'
+      lore:
+        - '&f* &bDescription'
+        - '&fThis mysterious pouch was dug'
+        - '&fout of the grass by some very brave'
+        - '&fplayers. It holds great power & loot.'
+        - ''
+        - '&f* &bRange: &f500,000 - 1,000,000 ⛃'
+        - '&f* &bRight click &fto open this pouch'
+    6:
+      name: '&b&lMONEYPOUCH &8| T6'
+      item: 'CHEST'
+      pricerange:
+        from: '1000000'
+        to: '2000000'
+      lore:
+        - '&f* &bDescription'
+        - '&fThis mysterious pouch was dug'
+        - '&fout of the grass by some very brave'
+        - '&fplayers. It holds great power & loot.'
+        - ''
+        - '&f* &bRange: &f1,000,000 - 2,000,000 ⛃'
+        - '&f* &bRight click &fto open this pouch'
+    7:
+      name: '&b&lMONEYPOUCH &8| T7'
+      item: 'CHEST'
+      pricerange:
+        from: '2000000'
+        to: '5000000'
+      lore:
+        - '&f* &bDescription'
+        - '&fThis mysterious pouch was dug'
+        - '&fout of the grass by some very brave'
+        - '&fplayers. It holds great power & loot.'
+        - ''
+        - '&f* &bRange: &f2,000,000 - 5,000,000 ⛃'
+        - '&f* &bRight click &fto open this pouch'
+  sound:
+    enabled: true
+    opensound: 'CHEST_OPEN'
+    revealsound: 'ANVIL_LAND'
+    endsound: 'EXPLODE'
+  title:
+    speedintick: 10
+    format: false
+shop:
+  enabled: false
+  buyable:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+  prices:
+    1: 6000
+    2: 30000
+    3: 110000
+    4: 380000
+    5: 1200000
+  inventoryname: '&9Pouch Dealer'

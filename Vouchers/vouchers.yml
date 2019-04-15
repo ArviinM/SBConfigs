@@ -1,0 +1,145 @@
+Vouchers:
+  WarToken:
+    Item: 'flint 1 name:_____________&8◆_&d&nWar_Token&r_&8◆ lore:___&7&nRight-click&r&7_to_redeem_this_token./n&r/n&7These_tokens_can_be_exchanged_for/n____&e&ntreasure&r_&7at_the_&c&nwar_merchant&r&7.'
+    Message: '&d(!) You have redeemed a &nWar Token&r&d.'
+    Commands:
+      Give:
+        Command: 'tm add %username% 1'
+  PhantomRank:
+    Item: 'nether_star 1 name:_______&8◆_&b&nRank&r_&8[&aPhantom&8]_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_rank.'
+    Message: '&d(!) You have redeemed the &7&nPhantom Rank&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% group add Phantom'
+  WarlockRank:
+    Item: 'nether_star 1 name:_____&8◆_&b&nRank&r_&8[&dWarlock&8]_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_rank.'
+    Message: '&d(!) You have redeemed the &7&nWarlock Rank&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% group add Warlock'
+  GhoulRank:
+    Item: 'nether_star 1 name:_______&8◆_&b&nRank&r_&8[&6Ghoul&8]_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_rank.'
+    Message: '&d(!) You have redeemed the &7&nGhoul Rank&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% group add Ghoul'
+  DemonRank:
+    Item: 'nether_star 1 name:_______&8◆_&b&nRank&r_&8[&cDemon&8]_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_rank.'
+    Message: '&d(!) You have redeemed the &7&nDemon Rank&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% group add Demon'
+  OverlordRank:
+    Item: 'nether_star 1 name:____&8◆_&b&nRank&r_&8[&6&k;&eOverlord&6&k;&8]_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_rank.'
+    Message: '&d(!) You have redeemed the &7&nOverlord Rank&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% group add Overlord'
+  FighterGKit:
+    Item: 'magma_cream 1 name:______&8◆_&c&nGKit&r_&1Fighter_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_kit.'
+    Message: '&d(!) You have redeemed the &7&nFighter GKit&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% add crazyenchantments.gkitz.fighter'
+  BeastmasterGKit:
+    Item: 'magma_cream 1 name:____&8◆_&c&nGKit&r_&2Beastmaster_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_kit.'
+    Message: '&d(!) You have redeemed the &7&nBeastmaster GKit&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% add crazyenchantments.gkitz.beastmaster'
+  GrinderGKit:
+    Item: 'magma_cream 1 name:_____&8◆_&c&nGKit&r_&3Grinder_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_kit.'
+    Message: '&d(!) You have redeemed the &7&nGrinder GKit&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% add crazyenchantments.gkitz.grinder'
+  ArcherGKit:
+    Item: 'magma_cream 1 name:_____&8◆_&c&nGKit&r_&4Archer_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_kit.'
+    Message: '&d(!) You have redeemed the &7&nArcher GKit&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% add crazyenchantments.gkitz.archer'
+  EnchanterGKit:
+    Item: 'magma_cream 1 name:____&8◆_&c&nGKit&r_&5Enchanter_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_kit.'
+    Message: '&d(!) You have redeemed the &7&nEnchanter GKit&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% add crazyenchantments.gkitz.enchanter'
+  BerserkerGKit:
+    Item: 'magma_cream 1 name:____&8◆_&c&nGKit&r_&6Berserker_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_kit.'
+    Message: '&d(!) You have redeemed the &7&nBerserker GKit&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% add crazyenchantments.gkitz.berserker'
+  HulkGKit:
+    Item: 'magma_cream 1 name:_______&8◆_&c&nGKit&r_&aHulk_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_kit.'
+    Message: '&d(!) You have redeemed the &7&nHulk GKit&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% add crazyenchantments.gkitz.hulk'
+  RelicGKit:
+    Item: 'magma_cream 1 name:______&8◆_&c&nGKit&r_&bRelic_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_kit.'
+    Message: '&d(!) You have redeemed the &7&nRelic GKit&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% add crazyenchantments.gkitz.relic'
+  BanditGKit:
+    Item: 'magma_cream 1 name:____&8◆_&c&nGKit&r_&eBandit_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_kit.'
+    Message: '&d(!) You have redeemed the &7&nBandit GKit&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% add crazyenchantments.gkitz.bandit'
+  SantaGKit:
+    Item: 'magma_cream 1 name:_______&8◆_&c&nGKit&r_&cSanta_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_kit.'
+    Message: '&d(!) You have redeemed the &7&nSanta GKit&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% add crazyenchantments.gkitz.santa'
+  RaiderGKit:
+    Item: 'magma_cream 1 name:______&8◆_&c&nGKit&r_&dRaider_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_kit.'
+    Message: '&d(!) You have redeemed the &7&nRaider GKit&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% add crazyenchantments.gkitz.raider'
+  NewYearGKit:
+    Item: 'magma_cream 1 name:____&8◆_&c&nGKit&r_&3New Year_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_kit.'
+    Message: '&d(!) You have redeemed the &7&nNew Year GKit&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% add crazyenchantments.gkitz.newyear'
+  WizardGKit:
+    Item: 'magma_cream 1 name:______&8◆_&c&nGKit&r_&9Wizard_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_kit.'
+    Message: '&d(!) You have redeemed the &7&nWizard GKit&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% add crazyenchantments.gkitz.wizard'
+  KnightGKit:
+    Item: 'magma_cream 1 name:______&8◆_&c&nGKit&r_&fKnight_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_kit.'
+    Message: '&d(!) You have redeemed the &7&nKnight GKit&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% add crazyenchantments.gkitz.knight'
+  BlacksmithGKit:
+    Item: 'magma_cream 1 name:____&8◆_&c&nGKit&r_&eBlacksmith_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_kit.'
+    Message: '&d(!) You have redeemed the &7&nBlacksmith GKit&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% add crazyenchantments.gkitz.blacksmith'
+  ValentinesGKit:
+    Item: 'magma_cream 1 name:____&8◆_&c&nGKit&r_&cValentines_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_kit.'
+    Message: '&d(!) You have redeemed the &7&nValentines GKit&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% add crazyenchantments.gkitz.valentine'
+  EasterGKit:
+    Item: 'magma_cream 1 name:______&8◆_&c&nGKit&r_&eEaster_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_kit.'
+    Message: '&d(!) You have redeemed the &7&nEaster GKit&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% add crazyenchantments.gkitz.easter'
+  SpringGKit:
+    Item: 'magma_cream 1 name:______&8◆_&c&nGKit&r_&aSpring_&8◆ lore:&7&nRight-click&r&7_to_redeem_this_kit.'
+    Message: '&d(!) You have redeemed the &7&nSpring GKit&r&d.'
+    Commands:
+      Give:
+        Command: 'pex user %username% add crazyenchantments.gkitz.spring'

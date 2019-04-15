@@ -1,0 +1,223 @@
+#-----------------------------------------------------------------------------------------
+#
+# Helpful Information:
+#
+# - Item names: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+#
+#
+# - Enchantment names: http://pastebin.com/0WktGa59
+#
+# - (Example of adding an enchantment)
+# - displayed: 276 1 sharpness:3 smite:2 unbreaking:3
+#
+#
+# - PotionEffect names: http://pastebin.com/eghUaTuJ
+#
+# - (Example of adding a custom potion effect to your displayed potion item)
+# - displayed: 373:8258 1 strength:2:200 speed:3:600
+# [In this case, the item displayed will have Strength II (0:10) and Speed III (0:30).]
+#
+#
+# [IMPORTANT]
+# In Minecraft 1.9, potions & mob spawn eggs no longer use durability to specify the type.
+#
+# NOTE: In Minecraft 1.13, Spawn Eggs were given their own material name!
+#
+#  (1.9+ - 1.12.2) - Example of setting mob spawn egg (zombie) as a displayed item
+#
+#  displayed: MONSTER_EGG:ZOMBIE 1 name:&9Purchase_a_Zombie_Spawn_Egg!
+#
+#
+#  (1.9+) - Example of setting potion (splash strength II) as a displayed item
+#
+#  displayed: POTION:STRENGTH-strong-splash 1 name:&cSplash_Potion_of_Strength_II
+#
+#
+#  (1.9+) - Example of setting potion (speed I extended) as a displayed item
+#
+#  displayed: POTION:SPEED-extended 1 name:&bPotion_of_Speed_(Extended)
+#
+#
+# - 1.9+ Potions: http://minecraft.gamepedia.com/Potion#Data_values
+#
+#-----------------------------------------------------------------------------------------
+
+shops:
+  war:
+    title: "&nWar Shop"
+    rows: 4
+    auto-close: false
+    confirm-purchase: true
+    items:
+      '0':
+        displayed: 351:14 1 name:____&8◆_&6&nMagma_Crate_Key&r_&8◆ lore:&7You_will_receive_a_&nvirtual&r_&7key|___&7to_open_a_&6&nMagma_Crate&r&7.|&r|&8_◆_&d&nCost:&r_&75_War_Tokens
+        cost: 10
+        message: |-
+          &d(!) You have successfully purchased &n1x Magma Crate Key&r&d.
+          &7* Open a crate with this key at &n/warp crates&r&7.
+        commands:
+        - 'cc give v Magma 1 %player%'
+      '1':
+        displayed: 351:11 1 name:____&8◆_&e&nVolcanic_Crate_Key&r_&8◆ lore:&7You_will_receive_a_&nvirtual&r_&7key|___&7to_open_a_&e&nVolcanic_Crate&r&7.|&r|&8_◆_&d&nCost:&r_&710_War_Tokens
+        cost: 20
+        message: |-
+          &d(!) You have successfully purchased &n1x Volcanic Crate Key&r&d.
+          &7* Open a crate with this key at &n/warp crates&r&7.
+        commands:
+        - 'cc give v Volcanic 1 %player%'
+      '2':
+        displayed: 351:9 1 name:_____&8◆_&c&nDevilish_Crate_Key&r_&8◆ lore:_&7You_will_receive_a_&nvirtual&r_&7key|___&7to_open_a_&c&nDevilish_Crate&r&7.|&r|&8_◆_&d&nCost:&r_&715_War_Tokens
+        cost: 30
+        message: |-
+          &d(!) You have successfully purchased &n1x Devilish Crate Key&r&d.
+          &7* Open a crate with this key at &n/warp crates&r&7.
+        commands:
+        - 'cc give v Devilish 1 %player%'
+      '3':
+        displayed: 351:1 1 name:__&8◆_&4&nNecromancer_Crate_Key&r_&8◆ lore:_&7You_will_receive_a_&nvirtual&r_&7key|&7to_open_a_&4&nNecromancer_Crate&r&7.|&r|&8_◆_&d&nCost:&r_&725_War_Tokens
+        cost: 45
+        message: |-
+          &d(!) You have successfully purchased &n1x Necromancer Crate Key&r&d.
+          &7* Open a crate with this key at &n/warp crates&r&7.
+        commands:
+        - 'cc give v Necromancer 1 %player%'
+      '4':
+        displayed: 52 1 name:___&8◆_&e&nBlaze_Spawner&r_&8◆ lore:&r|&8_◆_&d&nCost:&r_&720_War_Tokens
+        cost: 20
+        message: |-
+          &d(!) You have successfully purchased &n1x Blaze Spawner&r&d.
+        commands:
+        - 'ss give %player% blaze 1'
+      '5':
+        displayed: 52 1 name:___&8◆_&e&nCreeper_Spawner&r_&8◆ lore:&r|&8_◆_&d&nCost:&r_&720_War_Tokens
+        cost: 20
+        message: |-
+          &d(!) You have successfully purchased &n1x Creeper Spawner&r&d.
+        commands:
+        - 'ss give %player% Creeper 1'
+      '6':
+        displayed: 52 1 name:_&8◆_&e&nIron_Golem_Spawner&r_&8◆ lore:&r|&8_◆_&d&nCost:&r_&730_War_Tokens
+        cost: 30
+        message: |-
+          &d(!) You have successfully purchased &n1x Iron Golem Spawner&r&d.
+        commands:
+        - 'ss give %player% irongolem 1'
+      '7':
+        displayed: 395 1 name:______&8◆_&6&nWhite_Scroll&r_&8◆ lore:&r|&8_◆_&d&nCost:&r_&715_War_Tokens
+        cost: 15
+        message: |-
+          &d(!) You have successfully purchased &n1x White Scroll&r&d.
+        commands:
+        - 'ce scroll white 1 %player%'
+      '8':
+        displayed: 351 1 name:______&8◆_&6&nBlack_Scroll&r_&8◆ lore:&r|&8_◆_&d&nCost:&r_&715_War_Tokens
+        cost: 15
+        message: |-
+          &d(!) You have successfully purchased &n1x Black Scroll&r&d.
+        commands:
+        - 'ce scroll black 1 %player%'
+      '9':
+        displayed: 383 1 name:_&8◆_&a&nExclusive_Pet_Egg&r_&8◆ lore:&r|&8_◆_&d&nCost:&r_&725_War_Tokens
+        cost: 25
+        message: |-
+          &d(!) You have successfully purchased &n1x Exclusive Pet Egg&r&d.
+        commands:
+        - 'pets give %player% exclusive 1'
+      '10':
+        displayed: 383 1 name:___&8◆_&e&nUltimate_Pet_Egg&r_&8◆ lore:&r|&8_◆_&d&nCost:&r_&735_War_Tokens
+        cost: 35
+        message: |-
+          &d(!) You have successfully purchased &n1x Ultimate Pet Egg&r&d.
+        commands:
+        - 'pets give %player% ultimate 1'
+      '11':
+        displayed: 383 1 name:_&8◆_&6&nLegendary_Pet_Egg&r_&8◆ lore:&r|&8_◆_&d&nCost:&r_&750_War_Tokens
+        cost: 50
+        message: |-
+          &d(!) You have successfully purchased &n1x Legendary Pet Egg&r&d.
+        commands:
+        - 'pets give %player% legendary 1'
+      '12':
+        displayed: 54 1 name:__&8◆_&b&nMoney_Pouch_(I)&r_&8◆ lore:_&7Range:_&b1,000-10,000_⛃|&r|&8_◆_&d&nCost:&r_&75_War_Tokens
+        cost: 5
+        message: |-
+          &d(!) You have successfully purchased &n1x Money Pouch (Tier I)&r&d.
+        commands:
+        - 'mp 1 %player% 1'
+      '13':
+        displayed: 54 1 name:__&8◆_&b&nMoney_Pouch_(II)&r_&8◆ lore:_&7Range:_&b10,000-50,000_⛃|&r|&8_◆_&d&nCost:&r_&710_War_Tokens
+        cost: 10
+        message: |-
+          &d(!) You have successfully purchased &n1x Money Pouch (Tier II)&r&d.
+        commands:
+        - 'mp 2 %player% 1'
+      '14':
+        displayed: 54 1 name:__&8◆_&b&nMoney_Pouch_(III)&r_&8◆ lore:&7Range:_&b50,000-200,000_⛃|&r|&8_◆_&d&nCost:&r_&720_War_Tokens
+        cost: 20
+        message: |-
+          &d(!) You have successfully purchased &n1x Money Pouch (Tier III)&r&d.
+        commands:
+        - 'mp 3 %player% 1'
+      '15':
+        displayed: 406 1 name:_&8◆_&6&nProtection_Crystal&r_&8◆ lore:&r|&8_◆_&d&nCost:&r_&715_War_Tokens
+        cost: 15
+        message: |-
+          &d(!) You have successfully purchased &n1x Protection Crystal&r&d.
+        commands:
+        - 'ce crystal 1 %player%'
+      '16':
+        displayed: 388 1 name:__&8◆_&e&nScrambling_Rune&r_&8◆ lore:&r|&8_◆_&d&nCost:&r_&710_War_Tokens
+        cost: 10
+        message: |-
+          &d(!) You have successfully purchased &n1x Scrambling Rune&r&d.
+        commands:
+        - 'ce scrambler 1 %player%'
+      '17':
+        displayed: 378 1 name:_________&8◆_&c&nGKit:&r_&c"&eBandit&c"&r_&8◆ lore:&7You_will_get_&nfull&r_&7access_to_this_gkit.|&r|&8_◆_&d&nCost:&r_&7125_War_Tokens
+        cost: 125
+        message: |-
+          &d(!) You have successfully purchased &n1x Bandit GKit&r&d.
+        commands:
+        - 'voucher give %player% banditgkit 1'
+      '18':
+        displayed: 378 1 name:_________&8◆_&c&nGKit:&r_&c"&9Wizard&c"&r_&8◆ lore:&7You_will_get_&nfull&r_&7access_to_this_gkit.|&r|&8_◆_&d&nCost:&r_&7125_War_Tokens
+        cost: 125
+        message: |-
+          &d(!) You have successfully purchased &n1x Wizard GKit&r&d.
+        commands:
+        - 'voucher give %player% wizardgkit 1'
+      '19':
+        displayed: 378 1 name:_________&8◆_&c&nGKit:&r_&c"&fKnight&c"&r_&8◆ lore:&7You_will_get_&nfull&r_&7access_to_this_gkit.|&r|&8_◆_&d&nCost:&r_&7125_War_Tokens
+        cost: 125
+        message: |-
+          &d(!) You have successfully purchased &n1x Knight GKit&r&d.
+        commands:
+        - 'voucher give %player% knightgkit 1'
+      '20':
+        displayed: 378 1 name:_________&8◆_&c&nGKit:&r_&c"&5Enchanter&c"&r_&8◆ lore:&7You_will_get_&nfull&r_&7access_to_this_gkit.|&r|&8_◆_&d&nCost:&r_&7125_War_Tokens
+        cost: 125
+        message: |-
+          &d(!) You have successfully purchased &n1x Enchanter GKit&r&d.
+        commands:
+        - 'voucher give %player% enchantergkit 1'
+      '21':
+        displayed: 154 1 name:____&8◆_&e&nHopper&r_&8◆ lore:&7Purchase_a_hopper.|&r|&8_◆_&d&nCost:&r_&73_War_Tokens
+        cost: 3
+        message: |-
+          &d(!) You have successfully purchased &n1x Hopper&r&d.
+        commands:
+        - 'give %player% 154 1'
+      '22':
+        displayed: 154 1 name:_________&8◆_&e&nCrop_Hopper&r_&8◆ lore:&7Collects_dropped_crops_in_chunk.|&r|&8_◆_&d&nCost:&r_&710_War_Tokens
+        cost: 10
+        message: |-
+          &d(!) You have successfully purchased &n1x Crop Hopper&r&d.
+        commands:
+        - 'mfhoppers give %player% cropHopper 1'
+      '23':
+        displayed: 154 1 name:__&8◆_&e&nBreak_Hopper&r_&8◆ lore:&7Breaks_block_above.|&r|&8_◆_&d&nCost:&r_&735_War_Tokens
+        cost: 35
+        message: |-
+          &d(!) You have successfully purchased &n1x Break Hopper&r&d.
+        commands:
+        - 'mfhoppers give %player% breakHopper 1'

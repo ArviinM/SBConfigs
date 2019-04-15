@@ -1,0 +1,96 @@
+display:
+  title:
+    text:
+    - '&6&lWessex &c&lSkyblock'
+    random: false
+    interval: 1
+  line-1:
+    text:
+    - ' '
+    random: false
+    interval: 200
+    score: 14
+  line-2:
+    text:
+    - '&8&l┌ &6&lYOU'
+    random: false
+    interval: 1000
+    score: 13
+  line-3:
+    text:
+    - '&8&l│ &7Username: &c%player_name%'
+    random: false
+    interval: 1000
+    score: 12
+  line-4:
+    text:
+    - '&8&l│ &7Balance: &a%vault_eco_balance_formatted% ⛃'
+    random: false
+    interval: 20
+    score: 11
+  line-5:
+    text:
+    - '&8&l│ &7Ping: &c%player_ping%'
+    random: false
+    interval: 20
+    score: 10
+  line-6:
+    text:
+    - '&8&l│ &7Kills: &a%statistic_player_kills%'
+    random: false
+    interval: 100
+    score: 9
+  line-7:
+    text:
+    - '&8&l│ &7Deaths: &a%statistic_deaths%'
+    random: false
+    interval: 100
+    score: 8
+  line-8:
+    text:
+    - '&8&l└'
+    random: false
+    interval: 1000
+    score: 7
+  line-9:
+    text:
+    - ''
+    random: false
+    interval: 1000
+    score: 6
+  line-10:
+    text:
+    - '&8&l┌ &6&lIsland'
+    random: false
+    interval: 1000
+    score: 5
+  line-11:
+    text:
+    - '&8&l│ &7Level: &c%askyblock_level%'
+    random: false
+    interval: 100
+    score: 4
+  line-12:
+    text:
+    - '&8&l│ &7Team Size: &c%askyblock_team_size%'
+    random: false
+    interval: 100
+    score: 3
+  line-13:
+    text:
+    - '&8&l└'
+    random: false
+    interval: 1000
+    score: 2
+  line-14:
+    text:
+    - '&r'
+    random: false
+    interval: 100
+    score: 1
+  line-15:
+    text:
+    - '&7    play.wessex.site'
+    random: false
+    interval: 1000
+    score: 0

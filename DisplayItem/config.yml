@@ -1,0 +1,9 @@
+displayitem:
+  itemformat: '&8(&r%item%&f &ex%amount%&8)&r'
+  format: '&7[ITEM SHOWCASE]&r &6%displayname%&7: %message%'
+  cooldown: 5
+  permission-required: true
+  messages:
+    permission: '&c(!) You do not have the permission, &7item.hold&c, to do this.'
+    cooldown: '&c(!) You may not share your item for another &7%cooldown% &cseconds.'
+    not-item: '&c(!) You do not have an item in your hand.'
