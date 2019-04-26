@@ -2423,14 +2423,14 @@ shops:
         buyPrice: 60
         sellPrice: 5
         slot: 24
-      14:
-        type: item
-        item:
-          material: SHIELD
-          quantity: 1
-        buyPrice: 55
-        sellPrice: 0
-        slot: 25 
+      #14:
+      #  type: item
+      #  item:
+      #    material: SHIELD
+      #    quantity: 1
+      #  buyPrice: 55
+      #  sellPrice: 0
+      #  slot: 25 
       15:
         type: item
         item:
