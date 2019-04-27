@@ -852,8 +852,8 @@ shops:
         item:
           material: GOLD_NUGGET
           quantity: 16
-        buyPrice: 60
-        sellPrice: 30
+        buyPrice: 39.63
+        sellPrice: 17.83
         slot: 30
       18:
         type: item
@@ -932,8 +932,8 @@ shops:
         item:
           material: GOLDEN_APPLE
           quantity: 1
-        buyPrice: 100
-        sellPrice: 10
+        buyPrice: 23.04
+        sellPrice: 10.37
         slot: 14
       6:
         type: item
@@ -1077,32 +1077,32 @@ shops:
         item:
           material: COAL
           quantity: 32
-        buyPrice: 80
-        sellPrice: 40
+        buyPrice: 96
+        sellPrice: 43.20
         slot: 10
       2:
         type: item
         item:
           material: IRON_INGOT
           quantity: 16
-        buyPrice: 150
-        sellPrice: 60
+        buyPrice: 259.04
+        sellPrice: 116.57
         slot: 11
       3:
         type: item
         item:
           material: GOLD_INGOT
           quantity: 16
-        buyPrice: 250
-        sellPrice: 160
+        buyPrice: 355.04
+        sellPrice: 159.77
         slot: 12
       4:
         type: item
         item:
           material: REDSTONE
           quantity: 16
-        buyPrice: 100
-        sellPrice: 50
+        buyPrice: 131.20
+        sellPrice: 59.04
         slot: 13
       5:
         type: item
@@ -1134,40 +1134,40 @@ shops:
         item:
           material: COAL_BLOCK
           quantity: 1
-        buyPrice: 23
-        sellPrice: 2
+        buyPrice: 27.10
+        sellPrice: 12.20
         slot: 19
       9:
         type: item
         item:
           material: IRON_BLOCK
           quantity: 1
-        buyPrice: 85
-        sellPrice: 33
+        buyPrice: 145.81
+        sellPrice: 65.61
         slot: 20
       10:
         type: item
         item:
           material: GOLD_BLOCK
           quantity: 1
-        buyPrice: 141
-        sellPrice: 90
+        buyPrice: 199.81
+        sellPrice: 89.91
         slot: 21
       11:
         type: item
         item:
           material: REDSTONE_BLOCK
           quantity: 1
-        buyPrice: 57
-        sellPrice: 27
+        buyPrice: 73.80
+        sellPrice: 33.21
         slot: 22
       12:
         type: item
         item:
           material: LAPIS_BLOCK
           quantity: 1
-        buyPrice: 29
-        sellPrice: 5
+        buyPrice: 31.60
+        sellPrice: 14.22
         slot: 23
       13:
         type: item
@@ -1221,24 +1221,24 @@ shops:
         item:
           material: DISPENSER
           quantity: 16
-        buyPrice: 250
-        sellPrice: 50
+        buyPrice: 422.90
+        sellPrice: 190.31
         slot: 13
       5:
         type: item
         item:
           material: PISTON_BASE
           quantity: 16
-        buyPrice: 150
-        sellPrice: 10
+        buyPrice: 586.44
+        sellPrice: 263.90
         slot: 14
       6:
         type: item
         item:
           material: PISTON_STICKY_BASE
           quantity: 16
-        buyPrice: 170
-        sellPrice: 15
+        buyPrice: 648.04
+        sellPrice: 291.62
         slot: 15
       7:
         type: item
@@ -1261,8 +1261,8 @@ shops:
         item:
           material: REDSTONE_TORCH_ON
           quantity: 16
-        buyPrice: 80
-        sellPrice: 10
+        buyPrice: 145.98
+        sellPrice: 65.69
         slot: 20
       10:
         type: item
@@ -1293,24 +1293,24 @@ shops:
         item:
           material: TRIPWIRE_HOOK
           quantity: 16
-        buyPrice: 75
-        sellPrice: 5
+        buyPrice: 298.58
+        sellPrice: 134.36
         slot: 24
       14:
         type: item
         item:
           material: REDSTONE_LAMP_OFF
           quantity: 8
-        buyPrice: 85
-        sellPrice: 10
+        buyPrice: 264
+        sellPrice: 118.80
         slot: 25
       15:
         type: item
         item:
           material: OBSERVER
           quantity: 8
-        buyPrice: 135
-        sellPrice: 20
+        buyPrice: 227.28
+        sellPrice: 102.28
         slot: 28
       16:
         type: item
@@ -1325,23 +1325,23 @@ shops:
         item:
           material: DROPPER
           quantity: 16
-        buyPrice: 135
-        sellPrice: 20
+        buyPrice: 343.36
+        sellPrice: 154.51
         slot: 30
       18:
         type: item
         item:
           material: NOTE_BLOCK
           quantity: 16
-        buyPrice: 80
-        sellPrice: 0
+        buyPrice: 330.88
+        sellPrice: 148.90
         slot: 31
       19:
         type: item
         item:
           material: GOLD_PLATE
           quantity: 8
-        buyPrice: 50
+        buyPrice: 355.84
         sellPrice: 0
         slot: 32
       20:
@@ -1349,7 +1349,7 @@ shops:
         item:
           material: IRON_PLATE
           quantity: 8
-        buyPrice: 50
+        buyPrice: 259.84
         sellPrice: 0
         slot: 33
       21:
@@ -1950,8 +1950,8 @@ shops:
           material: CONCRETE_POWDER
           damage: 11
           quantity: 16
-        buyPrice: 48.20
-        sellPrice: 21.69
+        buyPrice: 42.80
+        sellPrice: 19.26
         slot: 23
         page: 2
       32:
@@ -2265,8 +2265,8 @@ shops:
           material: STAINED_GLASS
           damage: 11
           quantity: 16
-        buyPrice: 150
-        sellPrice: 30
+        buyPrice: 47.68
+        sellPrice: 21.46
         slot: 23
       13:
         type: item
@@ -2356,7 +2356,7 @@ shops:
         item:
           material: HOPPER
           quantity: 1
-        buyPrice: 500
+        buyPrice: 93.53
         sellPrice: 20
         slot: 14
       6:
@@ -2380,8 +2380,8 @@ shops:
         item:
           material: ANVIL
           quantity: 1
-        buyPrice: 800
-        sellPrice: 20
+        buyPrice: 696.97
+        sellPrice: 313.64
         slot: 19
       9:
         type: item
@@ -2404,24 +2404,24 @@ shops:
         item:
           material: WATER_BUCKET
           quantity: 3
-        buyPrice: 50
-        sellPrice: 5
+        buyPrice: 150.06
+        sellPrice: 67.53
         slot: 22
       12:
         type: item
         item:
           material: LAVA_BUCKET
           quantity: 3
-        buyPrice: 80
-        sellPrice: 5
+        buyPrice: 152.31
+        sellPrice: 68.54
         slot: 23
       13:
         type: item
         item:
           material: MILK_BUCKET
           quantity: 3
-        buyPrice: 60
-        sellPrice: 5
+        buyPrice: 151.56
+        sellPrice: 68.20
         slot: 24
       #14:
       #  type: item
