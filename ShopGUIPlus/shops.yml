@@ -399,8 +399,8 @@ shops:
         item:
           material: RED_NETHER_BRICK
           quantity: 64
-        buyPrice: 195
-        sellPrice: 30
+        buyPrice: 655.36
+        sellPrice: 294.91
         slot: 11
         page: 3
       45:
@@ -435,8 +435,8 @@ shops:
         item:
           material: MAGMA
           quantity: 64
-        buyPrice: 220
-        sellPrice: 45
+        buyPrice: 1804.80
+        sellPrice: 812.16
         slot: 15
         page: 3
       49:
@@ -473,8 +473,8 @@ shops:
           material: PRISMARINE
           damage: 2
           quantity: 64
-        buyPrice: 180
-        sellPrice: 20
+        buyPrice: 2795.52
+        sellPrice: 1257.98
         slot: 21
         page: 3
       53:
@@ -527,8 +527,8 @@ shops:
         item:
           material: BONE_BLOCK
           quantity: 16
-        buyPrice: 120
-        sellPrice: 50
+        buyPrice: 136
+        sellPrice: 61.20
         slot: 29
         page: 3
   farmingnew:
@@ -612,8 +612,8 @@ shops:
         item:
           material: SEEDS
           quantity: 16
-        buyPrice: 50
-        sellPrice: 10
+        buyPrice: 72
+        sellPrice: 32.40
         slot: 20
       10:
         type: item
@@ -628,8 +628,8 @@ shops:
         item:
           material: PUMPKIN_SEEDS
           quantity: 16
-        buyPrice: 50
-        sellPrice: 10
+        buyPrice: 32.40
+        sellPrice: 14.58
         slot: 22
       12:
         type: item
@@ -645,16 +645,16 @@ shops:
           material: INK_SACK
           damage: 3
           quantity: 16
-        buyPrice: 65
-        sellPrice: 15
+        buyPrice: 40
+        sellPrice: 18
         slot: 24
       14:
         type: item
         item:
           material: PUMPKIN
           quantity: 16
-        buyPrice: 60
-        sellPrice: 25
+        buyPrice: 128
+        sellPrice: 57.60
         slot: 25
       15:
         type: item
@@ -693,24 +693,24 @@ shops:
         item:
           material: SUGAR_CANE
           quantity: 16
-        buyPrice: 75
-        sellPrice: 40
+        buyPrice: 70.40
+        sellPrice: 31.68
         slot: 32
       20:
         type: item
         item:
           material: CACTUS
           quantity: 16
-        buyPrice: 75
-        sellPrice: 40
+        buyPrice: 80
+        sellPrice: 36
         slot: 33
       21:
         type: item
         item:
           material: NETHER_STALK
           quantity: 16
-        buyPrice: 70
-        sellPrice: 37
+        buyPrice: 48
+        sellPrice: 21.60
         slot: 34
   mobdropsnew:
     name: "&5&nMob Drops&r &8(&f%page%&7/&f1&8)"
@@ -724,8 +724,8 @@ shops:
         item:
           material: BONE
           quantity: 16
-        buyPrice: 70
-        sellPrice: 35
+        buyPrice: 40
+        sellPrice: 18
         slot: 10
       2:
         type: item
@@ -740,32 +740,32 @@ shops:
         item:
           material: ROTTEN_FLESH
           quantity: 16
-        buyPrice: 35
-        sellPrice: 25
+        buyPrice: 16
+        sellPrice: 7.20
         slot: 12
       4:
         type: item
         item:
           material: SULPHUR
           quantity: 16
-        buyPrice: 150
-        sellPrice: 60
+        buyPrice: 51.20
+        sellPrice: 23.04
         slot: 13
       5:
         type: item
         item:
           material: STRING
           quantity: 16
-        buyPrice: 65
-        sellPrice: 30
+        buyPrice: 12.80
+        sellPrice: 5.76
         slot: 14
       6:
         type: item
         item:
           material: SPIDER_EYE
           quantity: 8
-        buyPrice: 65
-        sellPrice: 30
+        buyPrice: 60
+        sellPrice: 27
         slot: 15
       7:
         type: item
@@ -780,8 +780,8 @@ shops:
         item:
           material: ENDER_PEARL
           quantity: 8
-        buyPrice: 70
-        sellPrice: 40
+        buyPrice: 120
+        sellPrice: 54
         slot: 19
       9:
         type: item
@@ -796,16 +796,16 @@ shops:
         item:
           material: MAGMA_CREAM
           quantity: 16
-        buyPrice: 65
-        sellPrice: 36
+        buyPrice: 112.40
+        sellPrice: 50.58
         slot: 21
       11:
         type: item
         item:
           material: GHAST_TEAR
           quantity: 8
-        buyPrice: 100
-        sellPrice: 50
+        buyPrice: 200
+        sellPrice: 90
         slot: 22
       12:
         type: item
@@ -828,24 +828,24 @@ shops:
         item:
           material: LEATHER
           quantity: 16
-        buyPrice: 70
-        sellPrice: 50
+        buyPrice: 145.60
+        sellPrice: 65.52
         slot: 25
       15:
         type: item
         item:
           material: FEATHER
           quantity: 16
-        buyPrice: 50
-        sellPrice: 25
+        buyPrice: 36.80
+        sellPrice: 16.56
         slot: 28
       16:
         type: item
         item:
           material: RABBIT_FOOT
           quantity: 16
-        buyPrice: 55
-        sellPrice: 30
+        buyPrice: 100.80
+        sellPrice: 45.36
         slot: 29
       17:
         type: item
@@ -868,16 +868,16 @@ shops:
         item:
           material: EGG
           quantity: 16
-        buyPrice: 110
-        sellPrice: 40
+        buyPrice: 128
+        sellPrice: 57.60
         slot: 32
       20:
         type: item
         item:
           material: INK_SACK
           quantity: 16
-        buyPrice: 50
-        sellPrice: 5
+        buyPrice: 17.60
+        sellPrice: 7.92
         slot: 33
       21:
         type: item
@@ -888,6 +888,15 @@ shops:
         buyPrice: 25000
         sellPrice: 5000
         slot: 34
+      22:
+        type: item
+        item:
+          material: RED_ROSE
+          quantity: 16
+        buyPrice: 4
+        sellPrice: 1.80
+        slot: 22
+        page: 2
   foodnew:
     name: "&6&nFood&r &8(&f%page%&7/&f1&8)"
     fillItem:
@@ -974,16 +983,16 @@ shops:
         item:
           material: CAKE
           quantity: 1
-        buyPrice: 15
-        sellPrice: 5
+        buyPrice: 28.35
+        sellPrice: 12.76
         slot: 21
       11:
         type: item
         item:
           material: COOKIE
           quantity: 16
-        buyPrice: 20
-        sellPrice: 5
+        buyPrice: 13.20
+        sellPrice: 5.94
         slot: 22
       12:
         type: item
@@ -1038,8 +1047,8 @@ shops:
         item:
           material: PUMPKIN_PIE
           quantity: 16
-        buyPrice: 75
-        sellPrice: 25
+        buyPrice: 329.60
+        sellPrice: 148.32
         slot: 31
       19:
         type: item
@@ -1118,16 +1127,16 @@ shops:
         item:
           material: DIAMOND
           quantity: 16
-        buyPrice: 500
-        sellPrice: 300
+        buyPrice: 448
+        sellPrice: 201.60
         slot: 15
       7:
         type: item
         item:
           material: EMERALD
           quantity: 16
-        buyPrice: 850
-        sellPrice: 600
+        buyPrice: 704
+        sellPrice: 316.80
         slot: 16
       8:
         type: item
@@ -1174,16 +1183,16 @@ shops:
         item:
           material: DIAMOND_BLOCK
           quantity: 1
-        buyPrice: 282
-        sellPrice: 162
+        buyPrice: 252.10
+        sellPrice: 113.45
         slot: 24
       14:
         type: item
         item:
           material: EMERALD_BLOCK
           quantity: 1
-        buyPrice: 479
-        sellPrice: 337
+        buyPrice: 396.10
+        sellPrice: 178.25
         slot: 25
   redstonenew:
     name: "&4&nRedstone&r &8(&f%page%&7/&f1&8)"
@@ -1277,8 +1286,8 @@ shops:
         item:
           material: TNT
           quantity: 16
-        buyPrice: 400
-        sellPrice: 60
+        buyPrice: 407.36
+        sellPrice: 183.31
         slot: 22
       12:
         type: item
@@ -1722,8 +1731,8 @@ shops:
           material: INK_SACK
           damage: 3
           quantity: 16
-        buyPrice: 65
-        sellPrice: 15
+        buyPrice: 40
+        sellPrice: 18
         slot: 13
       5:
         type: item
@@ -1960,8 +1969,8 @@ shops:
           material: CONCRETE_POWDER
           damage: 12
           quantity: 16
-        buyPrice: 36.20
-        sellPrice: 16.29
+        buyPrice: 40.80
+        sellPrice: 18.36
         slot: 24
         page: 2
       33:
@@ -1990,8 +1999,8 @@ shops:
           material: CONCRETE_POWDER
           damage: 15
           quantity: 16
-        buyPrice: 52.20
-        sellPrice: 23.49
+        buyPrice: 38
+        sellPrice: 17.10
         slot: 32
         page: 2
   claynew:
@@ -2106,8 +2115,8 @@ shops:
           material: STAINED_CLAY
           damage: 11
           quantity: 16
-        buyPrice: 150
-        sellPrice: 30
+        buyPrice: 232.48
+        sellPrice: 104.62
         slot: 23
       13:
         type: item
@@ -2115,8 +2124,8 @@ shops:
           material: STAINED_CLAY
           damage: 12
           quantity: 16
-        buyPrice: 150
-        sellPrice: 30
+        buyPrice: 237.60
+        sellPrice: 106.92
         slot: 24
       14:
         type: item
@@ -2142,8 +2151,8 @@ shops:
           material: STAINED_CLAY
           damage: 15
           quantity: 16
-        buyPrice: 150
-        sellPrice: 30
+        buyPrice: 194.08
+        sellPrice: 87.34
         slot: 31
       17:
         type: item
@@ -2274,8 +2283,8 @@ shops:
           material: STAINED_GLASS
           damage: 12
           quantity: 16
-        buyPrice: 150
-        sellPrice: 30
+        buyPrice: 45.68
+        sellPrice: 20.56
         slot: 24
       14:
         type: item
@@ -2301,8 +2310,8 @@ shops:
           material: STAINED_GLASS
           damage: 15
           quantity: 16
-        buyPrice: 150
-        sellPrice: 30
+        buyPrice: 42.88
+        sellPrice: 19.30
         slot: 31
       17:
         type: item
@@ -2372,8 +2381,8 @@ shops:
         item:
           material: ENCHANTMENT_TABLE
           quantity: 1
-        buyPrice: 750
-        sellPrice: 10
+        buyPrice: 94.14
+        sellPrice: 42.36
         slot: 16
       8:
         type: item
@@ -2388,8 +2397,8 @@ shops:
         item:
           material: END_CRYSTAL
           quantity: 1
-        buyPrice: 40000
-        sellPrice: 0
+        buyPrice: 61.09
+        sellPrice: 27.49
         slot: 20
       10:
         type: item
@@ -3128,5 +3137,5 @@ shops:
           name: "&6&nIron Golem Spawner"
         commands:
           - "ss give %PLAYER% irongolem 1"
-        buyPrice: 800000
+        buyPrice: 5000000
         slot: 32
