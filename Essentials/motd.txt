@@ -3,3 +3,5 @@
           &bType &6/help &bto know all your commands
               &bCheck out our website &6&nwessex.site
 &3@============================================@
+
+&fUpdate &ev3.1.1 &fincludes the Minions Feature. Changelog in &9&lDiscord&f.
