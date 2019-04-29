@@ -31,7 +31,7 @@ PrintGuildsAndChannels: false
 DisabledPluginHooks: []
 
 # Game information, this sets the "Playing ______" indicator for the bot, set to "" to disable
-DiscordGameStatus: "Thank you _DrStrange"
+DiscordGameStatus: "Despicable Me 5: The Minions visits Wessex UK"
 
 # Chat channel information
 # The chat channel is the text channel that all messages in-game will be sent to and all messages sent
