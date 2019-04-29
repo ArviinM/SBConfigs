@@ -7,7 +7,7 @@ Hoppers:
     lore:
     - '&7This hopper teleports specified monster type'
     - '&7To it''s location & freezes them'
-    - '&a&l* &7Current mob: %type%'
+    #- '&a&l* &7Current mob: %type%'
     should_drop_from_explosions: true
     mob: PIG
     mob-blacklist:
@@ -20,6 +20,7 @@ Hoppers:
     linkedLimit: 1
     sellEvery: 10
     sellAmount: 10
+    isGlobal: true
   mobHopper:
     type: Mob
     limitPerChunk: -1
@@ -29,9 +30,9 @@ Hoppers:
     - '&7This hopper picks up mob drops!'
     should_drop_from_explosions: true
     drops:
-    - ROTTEN_FLESH
     - BONE
     - ARROW
+    - ROTTEN_FLESH
     - SULPHUR
     - STRING
     - SPIDER_EYE
@@ -48,7 +49,9 @@ Hoppers:
     - GOLD_NUGGET
     - POISONOUS_POTATO
     - EGG
-    - SKULL_ITEM
+    - INK_SACK
+    - 397:1
+    - RED_ROSE
   cropHopper:
     type: Crop
     limitPerChunk: -1
@@ -58,12 +61,15 @@ Hoppers:
     lore:
     - '&7This hopper picks up crops!'
     crops:
-    - CACTUS
+    - WHEAT
+    - MELON
     - PUMPKIN
-    - MELON_BLOCK
-    - POTATO_ITEM
-    - BEETROOT
     - SUGAR_CANE
+    - POTATO_ITEM
+    - POISONOUS_POTATO
+    - POTATO_ITEM
+    - 351:3
+    - BEETROOT
     - NETHER_STALK
   breakHopper:
     should_drop_from_explosions: true
@@ -74,9 +80,13 @@ Hoppers:
     - '&7Auto breaks blocks above it.'
     breakEvery: 10
     drops:
-    - DIAMOND_ORE:10
-    - GOLD_INGOT:10
-    - IRON_INGOT:10
+    - IRON_ORE:1
+    - COAL_ORE:1-4
+    - LAPIS_ORE:4-32
+    - DIAMOND_ORE:1-4
+    - REDSTONE_ORE:4-32
+    - EMERALD_ORE:1-4
+    - QUARTZ_ORE:1-4
   breakWithUpgrades:
     should_drop_from_explosions: true
     type: Break
@@ -87,9 +97,13 @@ Hoppers:
     - Auto breaks blocks above it
     breakEvery: 10
     drops:
+    - IRON_ORE:1
+    - COAL_ORE:1-4
+    - LAPIS_ORE:4-32
     - DIAMOND_ORE:1-4
-    - GOLD_INGOT:1-4
-    - IRON_INGOT:1-4
+    - REDSTONE_ORE:4-32
+    - EMERALD_ORE:1-4
+    - QUARTZ_ORE:1-4
     upgrades:
       '2':
         breakEvery: 8
@@ -101,9 +115,13 @@ Hoppers:
         lore:
         - '&7Auto breaks blocks above it'
         drops:
-        - DIAMOND_ORE:2-5
-        - GOLD_INGOT:2-5
-        - IRON_INGOT:2-5
+        - IRON_ORE:1
+        - COAL_ORE:1-4
+        - LAPIS_ORE:4-32
+        - DIAMOND_ORE:1-4
+        - REDSTONE_ORE:4-32
+        - EMERALD_ORE:1-4
+        - QUARTZ_ORE:1-4
 GrindConvert:
   convert-inventory:
     title: '&aChange your grinder mob!'
