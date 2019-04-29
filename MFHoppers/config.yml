@@ -50,7 +50,7 @@ Hoppers:
     - POISONOUS_POTATO
     - EGG
     - INK_SACK
-    - 397:1
+    - SKULL_ITEM
     - RED_ROSE
   cropHopper:
     type: Crop
@@ -68,7 +68,7 @@ Hoppers:
     - POTATO_ITEM
     - POISONOUS_POTATO
     - POTATO_ITEM
-    - 351:3
+    - INK_SACK
     - BEETROOT
     - NETHER_STALK
   breakHopper:
