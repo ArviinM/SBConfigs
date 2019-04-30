@@ -4,4 +4,6 @@
               &bCheck out our website &6&nwessex.site
 &3@============================================@
 
-&fUpdate &ev3.1.1 &fincludes the Minions Feature. Changelog in &9&lDiscord&f.
+&fUpdate &e&lv3.1.2 &fintroduces McMMO to the server.
+&fRead the full changelog here:
+&ehttps://discuss.wessex.site/d/101-skyblock-update-v3-1-the-chat-update/5
