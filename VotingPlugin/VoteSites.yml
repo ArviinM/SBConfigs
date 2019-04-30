@@ -1,49 +1,49 @@
 VoteSites:
-  ServerPact:
-    Enabled: true
-    ServiceSite: SERVERPACT.COM
-    VoteURL: http://bit.ly/2Eqzev7
-    VoteDelay: 24
-    Priority: 2
-    Rewards:
-      Commands:
-      - crate give p Magma 1 %player%
-  Planet Minecraft:
-    Enabled: true
-    ServiceSite: PlanetMinecraft.com
-    VoteURL: http://bit.ly/2H666fq
-    VoteDelay: 24
-    Priority: 3
-    Rewards:
-      Commands:
-      - crate give p Magma 1 %player%
-  Minecraft Server List:
-    Enabled: true
-    ServiceSite: Minecraft-Server.net
-    VoteURL: http://bit.ly/2T5PImq
-    VoteDelay: 24
-    Priority: 4
-    Rewards:
-      Commands:
-      - crate give p Magma 1 %player%
   Minecraft Servers:
     Enabled: true
     ServiceSite: MinecraftServers.org
-    VoteURL: http://bit.ly/2UdEtVF
+    VoteURL: http://bit.ly/2PFSKsK
     VoteDelay: 24
-    Priority: 5
+    Priority: 1
+    Rewards:
+      Commands:
+      - crate give p Magma 1 %player%
+  TopG:
+    Enabled: true
+    ServiceSite: TopG.org
+    VoteURL: http://bit.ly/2IPhSN5
+    VoteDelay: 24
+    Priority: 2
     Rewards:
       Commands:
       - crate give p Magma 1 %player%
   Minecraft Multiplayer:
     Enabled: true
     ServiceSite: Minecraft-MP.com
-    VoteURL: http://bit.ly/2GSoHfS
+    VoteURL: http://bit.ly/2GKkvfG
     VoteDelay: 24
-    Priority: 1
+    Priority: 3
     Item:
       Material: DIAMOND
       Amount: 1
+    Rewards:
+      Commands:
+      - crate give p Magma 1 %player%
+  MCSL:
+    Enabled: true
+    ServiceSite: MCSL
+    VoteURL: http://bit.ly/2vCl1qZ
+    VoteDelay: 24
+    Priority: 4
+    Rewards:
+      Commands:
+      - crate give p Magma 1 %player%
+  Planet Minecraft:
+    Enabled: false
+    ServiceSite: PlanetMinecraft.com
+    VoteURL: http://bit.ly/2GUyPDt
+    VoteDelay: 24
+    Priority: 5
     Rewards:
       Commands:
       - crate give p Magma 1 %player%
