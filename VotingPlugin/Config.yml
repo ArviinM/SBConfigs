@@ -16,7 +16,7 @@
 
 # - MYSQL
 
-DataStorage: MYSQL
+DataStorage: SQLITE
 
 
 
