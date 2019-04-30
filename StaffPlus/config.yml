@@ -43,15 +43,15 @@ chat-module:
     periods: (), (dot),
     allowed: bypass, assembly, assassin, compass, assume, assault, asset, assort
 tickets-module:
-  enabled: true
+  enabled: false
   global: false
   keep-open: false
 alerts-module:
-  name-notify: true
-  mention-notify: true
+  name-notify: false
+  mention-notify: false
   sound: ORB_PICKUP
   xray-alerts:
-    enabled: true
+    enabled: false
     blocks: SPAWNER, DIAMOND_ORE
 login:
   enabled: false
