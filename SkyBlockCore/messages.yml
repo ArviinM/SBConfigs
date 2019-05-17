@@ -1,0 +1,57 @@
+# GENERAL MESSAGES
+NO-PERMISSION: "&c&lALERT &8» &cYou're not permitted to do this!"
+ERROR-OCCURRED: "&c&lALERT &8» &cAn error has occurred, please contact an administrator!"
+CONFIG-RELOAD: "&a&lCONFIG &8» &aYou've successfully reloaded all configuration files!"
+PLAYER-NOT-FOUND: "&c&lALERT &8» &cPlayer '{player}' could not be found"
+FROM-INT-TO-TIME: "{h}h {m}m {s}s"
+CMD-FOR-PLAYER: "&c&lALERT &8» &cThis command is for players!"
+YOU-NEED-AN-ISLAND: "&c&lALERT &8» &cYou need an island to use this command!"
+NOT-ISLAND-OWNER: "&c&lALERT &8» &cYou must be the island owner"
+NOT-ENOUGH-MONEY: "&c&lALERT &8» &cYou do not have enough money"
+
+# BOOSTER MESSAGES
+BOOSTER-ACTIVE: "&d&lBOOSTER &8» &7Your &disland &7already has an active &dbooster!"
+BOOSTER-ACTIVED: "&d&lBOOSTER &8» &7A &d{type} booster&7 was &dactivated &7for your &disland"
+BOOSTER-ENDED: "&d&lBOOSTER &8» &7Your previous &dbooster&7 has ended"
+BOOSTER-ITEM-RECEIVE: "&d&lBOOSTER &8» &7You've received a &d{type} booster&7!"
+BOOSTER-SEND: "&d&lBOOSTER &8» &7You've sent a booster to &d{player}&7!"
+CUSTOM-BOOSTER: "&d&lBOOSTER &8» &7You've activated a &dcustom booster&7.\n&7Player: &d{player}\n&7Type: &d{type}\n&7Duration: &d{duration} seconds"
+BOOSTER-RECEIVE: "&d&lBOOSTER &8» &7You've received a booster."
+BOOSTER-TIME-CHANGED: "&d&lBOOSTER &8» &7You've set {player}s &dbooster&7 time to &d{time} &7seconds"
+NO-BOOSTER: "&d&lBOOSTER &8» &d{player} &7has no &dbooster"
+BOOSTER-REMOVED: "&d&lBOOSTER &8» &7You've removed &d{player}s booster"
+
+# SHARD MESSAGES
+SHARD-BALANCE: "&3&lSHARD &8» &3{player} &7have &3{shard} shard(s)&7."
+SHARD-BALANCE-UPDATED: "&3&lSHARD &8» &7You now have &3{shard} shards&7."
+SHARD-GIVE: "&3&lSHARD &8» &7You added &3{shard} shard(s) &7to &3{player}s balance"
+SHARD-WITHDRAW: "&3&lSHARD &8» &7You withdrew &3{shard} shard(s) &7from &3{player}"
+SHARD-SET: "&3&lSHARD &8» &7You set &3{player}s shard balance &7to &3{shard} shard(s)"
+SHARD-GENERATOR-RECEIVED: "&3&lSHARD &8» &7You've received a &3shard generator &7tier &3{tier}&7."
+SHARD-GENERATOR-SENT: "&3&lSHARD &8» &7You've sent a &3shard generator &7tier &3{tier} &7to &3{player}&7."
+SHARDSHOP-PURCHASE: "&3&lSHARD &8» &7You've successfully purchased &3{item}&7."
+SHARDSHOP-LOW-BALANCE: "&3&lSHARD &8» &7Your &3balance &7is to &3low&7!"
+SHARDGEN-START: "&3&lSHARD &8» &7Your &3shard generator &7will start &3in a few seconds&7."
+SHARDGEN-FINISHED: "&3&lSHARD &8» &7Your &3shard generator &7is &3done&7."
+MAKE-SPACE: "&3&lSHARD &8» &7There's not &3enough space &7to place this &3shard generator &7here!"
+SHARDGENERATOR-PLACED-WRONG: "&3&lSHARD &8» &7You can only place a &3shard generator &7at your own &3island&7."
+
+# SELLWAND MESSAGES
+SELLWAND-SEND: "&e&lSELLWAND &8» &7You've sent a sellwand to &e{player}&7."
+SELLWAND-RECEIVE: "&e&lSELLWAND &8» &7You've received a &esellwand."
+SELLWAND-ON-ISLAND: "&e&lSELLWAND &8» &7You may only use this at your own &eisland"
+SELLWAND-SELL: "&e&lSELLWAND &8» &7You earned &e${amount} &7[Hover for details]"
+SELLWAND-SELL-DETAILS: "&e{ordinal-number}. &7Sold &e{amount}x {item} &7for &e${price}"
+SELLWAND-NO-ITEMS: "&e&lSELLWAND &8» &7No &eitems &7are &esellable&7!"
+SELLWAND-BOOSTER-TIP: "&e&lGrab a booster for doubled the income!"
+
+# HARVESTER HOE MESSAGE
+HARVESTERHOE-SEND: "&e&lHARVESTER &8» &7You've sent a sellwand to &e{player}&7."
+HARVESTERHOE-RECEIVE: "&e&lHARVESTER &8» &7You've received a &eharvester hoe."
+
+# ISLAND UPGRADE
+MAX-TIER-REACHED: "&b&lUPGRADES &8» &7You've reached the &bmax tier&7!"
+ISLAND-SIZE-MSG: "&b&lUPGRADES &8» &7You've &bupgraded &7your &bisland size &7to &b{size}&7."
+TEAM-SIZE-MSG: "&b&lUPGRADES &8» &7You've &bupgraded &7your &bteam size &7to &b{size}&7."
+
+

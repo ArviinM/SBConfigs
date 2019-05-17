@@ -1,0 +1,232 @@
+HIDE-PLUGINS: true
+
+DISABLE-ISLAND-UPGRADES: true
+
+DISABLE-VOID-DAMAGE: false
+
+BOOSTER-INVENTORY:
+  title: "&c&lIsland booster"
+  item-name: "&6&lCurrent booster"
+  item-lore:
+  - ""
+  - "&7Type "
+  - "&a{type}"
+  - ""
+  - "&7Duration " 
+  - "&a{duration}"
+  - ""
+
+MONEY-BOOSTER:
+  material: "emerald"
+  damage: 0
+  enchant: true
+  duration: 3600 # in seconds
+  name: "&d&lMoney booster &7(Right click)"
+  lore:
+    - ""
+    - "&5* &d&lDuration: &7{duration}"
+    - ""
+    - "&5* &d&lEffect: &7Gain 2x"
+    - "&7from all selling sources."
+    - "&7Applied for every one in"
+    - "&7your island."
+    - ""
+
+EXP-BOOSTER:
+  material: "emerald"
+  damage: 0
+  enchant: true
+  duration: 3600 # in seconds
+  name: "&d&lExp booster &7(Right click)"
+  lore:
+  - ""
+  - "&5* &d&lDuration: &7{duration}"
+  - ""
+  - "&5* &d&lEffect: &7Gain 2x"
+  - "&7from all exp sources."
+  - "&7Applied for every one in"
+  - "&7your island."
+  - ""
+
+DOUBLEDROP-BOOSTER:
+  material: "emerald"
+  damage: 0
+  enchant: true
+  duration: 3600 # in seconds
+  name: "&d&lDouble drop booster &7(Right click)"
+  lore:
+  - ""
+  - "&5* &d&lDuration: &7{duration}"
+  - ""
+  - "&5* &d&lEffect: &7Gain 2x"
+  - "&7drop loot from entites."
+  - "&7Applied for every one in"
+  - "&7your island."
+  - ""
+  - "&4* &c&lHint: &7They must die within"
+  - "&7your island location"
+  - ""
+
+SHARDBOOSTER-BOOSTER:
+  material: "emerald"
+  damage: 0
+  enchant: true
+  duration: 3600 # in seconds
+  name: "&d&lShard booster &7(Right click)"
+  lore:
+  - ""
+  - "&5* &d&lDuration: &7{duration}"
+  - ""
+  - "&5* &d&lEffect: &7Gain 2x"
+  - "&7shards from all sources."
+  - "&7Applied for every one in"
+  - "&7your island."
+  - ""
+
+SHARD-SHOP-ROTATE-TIME: 10800
+
+# Drop chance for when an
+# entity dies, max is 100
+SHARD-DROP-CHANCE: 50
+
+SHARD-SHOP-INVENTORY-TITLE: "&3&lSHARD SHOP"
+
+SHARD-GENERATOR-DROP-TIME: 90 # in seconds
+
+SHARD-GENERATOR:
+
+  # This sound will send when the
+  # generator is building itself.
+  # Put to none for no sound
+
+  build-sound: "BLOCK_ANVIL_LAND"
+
+  #tier-x-settings are the blocks
+  # around the generator itself
+
+  inventory:
+    name: "&lYour generator"
+    tier-name: "&6&lTIER {tier}"
+    remove-name: "&c&lREMOVE"
+
+  tier-1-settings:
+    material: "stained_glass_pane"
+    damage: 15
+    drop-amount: 2
+
+  tier-2-settings:
+    material: "stained_glass_pane"
+    damage: 11
+    drop-amount: 4
+
+  tier-3-settings:
+    material: "stained_glass_pane"
+    damage: 2
+    drop-amount: 6
+
+  item:
+    material: ender_portal_frame # material must be a block
+    enchant: true
+    damage: 0
+    # Do not add any numbers in the name!!
+    name: "&b&lGENERATOR TIER {tier} &7(Place down)"
+    lore:
+      - ""
+      - "&7&o(( This generator holds the ability to automatically"
+      - "&7&ogenerate shards and drop it for you to claim! ))"
+      - ""
+      - "&3* &b&lGENERATOR TYPE &fShard generator"
+      - ""
+      - "&3* &b&lSPEED &f60 seconds"
+      - ""
+
+SHARD-ITEM:
+  material: "PRISMARINE_SHARD"
+  damage: 0
+  name: "&3&lSHARD &7(Right click)"
+  lore:
+  - ""
+  - "&7&o(( Exclusive currency ))"
+  - ""
+  - "&7Access the shop with &3/shard shop"
+  - ""
+
+SELLWAND-ITEM:
+  name: "&6SellWand"
+  material: "iron_hoe"
+  damage: 0
+  enchant: true
+  lore:
+    - "&7Right click a chest"
+    - "&7to sell its contents."
+
+HARVESTERHOE-ITEM:
+  name: "&6Harvester Hoe"
+  material: "iron_hoe"
+  damage: 0
+  enchant: true
+  lore:
+  - "&7All chopped sugar canes"
+  - "&7is transferred to your"
+  - "&7inventory."
+
+ISLAND-UPGRADE:
+  title: "&lIsland upgrades"
+
+  is-size-item:
+    name: "&b&lIsland size"
+    lore:
+    - "&7Eyy, we need more space folks!"
+    - "&7Is that right? Click to upgrade"
+    - "&7me! You will increase your size"
+    - "&7by &6&l{next_amount} blocks"
+    - ""
+    - "&7Current tier: &6{current_tier}"
+    - "&7Current island size: &6{size}"
+    - "&7Maximum tiers: &6{max_tiers}"
+    - ""
+    - "&7Click to purchase for: &a${price}"
+
+  info-item:
+    name: "&7Leader: &6{leader}"
+    member-format: "&7- &e{member}"
+
+  is-team-item:
+    name: "&b&lIsland Team Size"
+    lore:
+    - "&7Hmmm, we need more members!"
+    - "&7We need to be more productive!"
+    - "&7Well, you could click me to "
+    - "&7upgrade your island &7team "
+    - "&7size to &6&l{next_amount} friends"
+    - ""
+    - "&7Current tier: &6{current_tier}"
+    - "&7Current team size: &6{size}"
+    - "&7Maximum tiers: &6{max_tiers}"
+    - ""
+    - "&7Click to purchase for: &a${price}"
+
+ISLAND-UPGRADE-ITEM:
+  name: "&6&lIsland Upgrades"
+  lore:
+  - "&7Upgrade your island using"
+  - "&7this menu to get &a&namazing"
+  - "&7new perks."
+  - ""
+  - "&c&LWARNING: &7Any upgrades will"
+  - "&7be lost if island is reset."
+  - "&7You must re-log in order for"
+  - "&7the changes to take &aeffect&7."
+
+LIST-MSG:
+
+  # staff permission skyblockcore.staff
+  # {online_players} {max_online_players} {staff}
+
+  - "&8&m------------------------------------------"
+  - "&8» &7Online players: &c{online_players} &7/ &c{max_online_players}"
+  - ""
+  - "&8» &7Online staff: {staff}"
+  - "&8&m------------------------------------------"
+
+

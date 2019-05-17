@@ -1,0 +1,218 @@
+EXCLUSIVE-ITEM:
+  name: "&6&lEXCLUSIVE ITEM"
+  material: watch
+  damage: 0
+  lore:
+    - ""
+    - "&7&o(( You will never see this item again ))"
+    - ""
+SHOP-ITEM:
+  name: "&6&lSHOP ITEMS"
+  material: watch
+  damage: 0
+  lore:
+  - ""
+  - "&e* &6Time remaining: &7{duration}"
+  - ""
+  - "&7&o(( These items will rotate automatically ))"
+  - ""
+PREMIUM-ITEM:
+  name: "&6&lPREMIUM ITEMS"
+  material: watch
+  damage: 0
+  lore:
+  - ""
+  - "&7&o(( We're not going anywhere ))"
+  - ""
+
+SHARD-BALANCE-ITEM:
+  name: "&7You have &3{shard} shard(s)"
+  material: prismarine_shard
+  damage: 0
+  lore:
+    - ""
+
+SHARD-HELP-ITEM:
+  name: "&c&l[HELP]"
+  material: nether_star
+  damage: 0
+  lore:
+  - ""
+  - "&3Shards &7can be obtained by"
+  - "&7killing &c&lANY &7mobs."
+  - "&7However, they're also obtainable"
+  - "&7using &3shard generators"
+  - ""
+  - "&7Want more information ? Type &3/shard"
+  - ""
+
+limited-item:
+  '1':
+    name: "&aFly"
+    lore:
+    - ""
+    - "&3&lCOST &f&l{price} &3&lSHARDS"
+    - ""
+    material: paper
+    damage: 0
+    command: "pex user {player} add essentials.fly"
+    price: 250000
+
+shop-1:
+
+  '1':
+    name: "&6&lAll Tags!"
+    lore:
+    - ""
+    - "&3&lCOST &f&l{price} &3&lSHARDS"
+    - ""
+    material: name_tag
+    damage: 0
+    command: "pex user {player} add deluxetags.tag.*"
+    price: 20000
+
+  '2':
+    name: "&75x &c&lMagma &7key"
+    lore:
+    - ""
+    - "&3&lCOST &f&l{price} &3&lSHARDS"
+    - ""
+    material: tripwire_hook
+    damage: 0
+    command: "cc give p magma 5 {player}"
+    price: 2500
+
+  '3':
+    name: "&a&lKIT PHANTOM"
+    lore:
+    - ""
+    - "&3&lCOST &f&l{price} &3&lSHARDS"
+    - ""
+    material: diamond_sword
+    damage: 0
+    command: "kit phantom {player}"
+    price: 500
+
+  '4':
+    name: "&e128x experience bottles"
+    lore:
+    - ""
+    - "&3&lCOST &f&l{price} &3&lSHARDS"
+    - ""
+    material: exp_bottle
+    damage: 0
+    command: "give {player} expbottle 128"
+    price: 750
+
+  '5':
+    name: "&75x &5&lVolcanic &7key"
+    lore:
+    - ""
+    - "&3&lCOST &f&l{price} &3&lSHARDS"
+    - ""
+    material: tripwire_hook
+    damage: 0
+    command: "cc give p volcanic 5 {player}"
+    price: 5000
+
+  '6':
+    name: "&b&l1000 Experience Points!"
+    lore:
+    - ""
+    - "&3&lCOST &f&l{price} &3&lSHARDS"
+    - ""
+    material: book
+    damage: 0
+    command: "exp give {player} 1000"
+    price: 10000
+
+shop-2:
+
+  '1':
+    name: "&6&lPermanent Fighter GKit"
+    lore:
+    - ""
+    - "&3&lCOST &f&l{price} &3&lSHARDS"
+    - ""
+    material: enchanted_book
+    damage: 0
+    command: "pex user {player} add crazyenchantments.gkitz.fighter"
+    price: 30000
+
+  '2':
+    name: "&9&lPermanent Archer GKit"
+    lore:
+    - ""
+    - "&3&lCOST &f&l{price} &3&lSHARDS"
+    - ""
+    material: enchanted_book
+    damage: 0
+    command: "pex user {player} add crazyenchantments.gkitz.Archer"
+    price: 30000
+
+  '3':
+    name: "&4&lPermanent BeastMaster GKit"
+    lore:
+    - ""
+    - "&3&lCOST &f&l{price} &3&lSHARDS"
+    - ""
+    material: enchanted_book
+    damage: 0
+    command: "pex user {player} add crazyenchantments.gkitz.beastmaster"
+    price: 45000
+
+  '4':
+    name: "&4&lPermanent Easter GKit"
+    lore:
+    - ""
+    - "&3&lCOST &f&l{price} &3&lSHARDS"
+    - ""
+    material: enchanted_book
+    damage: 0
+    command: "pex user {player} add crazyenchantments.gkitz.easter"
+    price: 35000
+
+  '5':
+    name: "&6Access to &f/level &6&lBattlepass"
+    lore:
+    - ""
+    - "&3&lCOST &f&l{price} &3&lSHARDS"
+    - ""
+    material: paper
+    damage: 0
+    command: "pex user {player} add battlepass.use"
+    price: 1000000
+
+  '6':
+    name: "&a&lKIT WARLOCK"
+    lore:
+    - ""
+    - "&3&lCOST &f&l{price} &3&lSHARDS"
+    - ""
+    material: diamond_sword
+    damage: 0
+    command: "kit warlock {player}"
+    price: 15000
+
+premium-shop:
+  '1':
+    name: "&e&lBlaze &f&lSpawner"
+    lore:
+    - ""
+    - "&3&lCOST &f&l{price} &3&lSHARDS"
+    - ""
+    material: MOB_SPAWNER
+    damage: 0
+    command: "ss give {player} blaze 1"
+    price: 35000
+  '2':
+    name: "&e&lEnderman &f&lSpawner"
+    lore:
+    - ""
+    - "&3&lCOST &f&l{price} &3&lSHARDS"
+    - ""
+    material: MOB_SPAWNER
+    damage: 0
+    command: "ss give {player} enderman 1"
+    price: 25000
+  

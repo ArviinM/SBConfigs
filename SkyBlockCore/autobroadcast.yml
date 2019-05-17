@@ -1,0 +1,84 @@
+enabled: false
+
+delay: 600 # in seconds
+
+# put to none if you don't want this
+
+# is surrond isn't "none" it will put
+# what you put in surround before the first
+# and after the last message
+
+# I.E. Putting -------- as your surround
+# will put -------- before '0' and after '7'
+
+surround: "none"
+
+# skips a line before the first message and before the last message
+add-space: true
+
+messages:
+
+  # !All keys must be unique!
+
+  '0':
+  - "&cTip &8» &fYouTube is removing the dislike button!"
+  '1':
+  - "&cTip &8» &fThis server ALWAYS restarts at &l7 PM &fManila time!"
+  '2':
+  - "&cTip &8» &fChat with everyone on &9DISCORD&f! &a/discord"
+  '3':
+  - "&cTip &8» &fDon't forget to &9VOTE&f! &a/vote"
+  '4':
+  - "&cTip &8» &fGot a &aPET&f? Check out &a/mypet &ffor the commands."
+  '5':
+  - "&cTip &8» &fPerk up your island with &aBOOSTERS! &a/spawn"
+  '6':
+  - "&cTip &8» &fCheck out the &6TOP 10 RANKED ISLANDS&f! &a/is top"
+  '7':
+  - "&c&lTip &8» &cISLAND UPGRADE &fwill allow you to expand your island size as well as your team size. Check it out at &a/panel"
+  '8':
+  - "&c&lTip &8» &fFancy a &aTAG&f? Check out &a/tags"
+  '9':
+  - "&c&lTip &8» &fComplete quests and level up with &6&lBATTLEPASS&f! Watch out in &3&lSHARD SHOP &for get a &6RANK &ftoday! &6/buy"
+  '10':
+  - "&c&lTip &8» &6ENCHANT &fis available at spawn! &a/warps"
+  '11':
+  - "&c&lTip &8» &6COBBLESTONE GENERATOR &falso generates &6ORES&f!"
+  '12':
+  - "&c&lTip &8» &f&oRelax and take a break at the &bFishing Area&f... &a/warps"
+  '13':
+  - "&c&lTip &8» &4PVP &fI see? To the &4Arena &fthen! &a/warps"
+  '14':
+  - "&c&lTip &8» &fGot a &eCRATE KEY&f? &a/warps"
+  '15':
+  - "&c&lTIP &8» &fBelieve you found a bug or glitch? Report it to us at &ahttps://discuss.wessex.site"
+  '16':
+  - "&c&lTIP &8» &fBuild your dream island with your friends! &a/is coop"
+  '17':
+  - "&c&lTIP &8» &fLets discuss! Check out &ahttps://discuss.wessex.site"
+  '18':
+  - "&c&lTIP &8» &fWessex Needs &eYOU&f! Be part of the team for the greater good! &ahttps://discuss.wessex.site/d/3-helper-application"
+  '19':
+  - "&c&lTIP &8» &fLink your &9Discord Account &ftoday! &a/discord link"
+  '20':
+  - "&c&lTIP &8» &aPETS &fare companions that can help you in your needs. Get one today on &dPet Crates&f!"
+  '21':
+  - "&c&lTIP &8» &fSupport Wessex Skyblock! &a/buy"
+  '22':
+  - "&c&lTIP &8» &6Wessex &fwas an &lAnglo-Saxon kingdom &fin the south of &lGreat Britain&f, from 519 until England was &lunified &fby &lAthelstan &fin the early 10th century."
+  '23':
+  - "&c&lTIP &8» &dBoosters &fare used to give your island a boost. This means that everyone on your island can use it. Get one today from &a&oAny Crates &for from &a/buy&f."
+  '24':
+  - "&c&lTIP &8» &6Harvester Hoe &fwill automagically add the sugar canes to your invetory easily. Get one today from &a&oAny Crates&f!"
+  '25':
+  - "&c&lTIP &8» &6Sell-wand &fis a tool used to sell everything in a chest quickly. If your island has a money booster the sell-wand will double the income. Get one today from &a&oAny Crates&f!"
+  '26':
+  - "&c&lTIP &8» &bShards &f is a another currency used in the &3Shard Shop&f. You can obtain a shard in two different ways: Either by killing a mob or by shard generators."
+  '27':
+  - "&c&lTIP &8» &1The Crazy Tinkerer &fis a recycling tool to get back some kind of reward instead of just throwing it into lava. &a/tinker"
+  '28':
+  - "&c&lTIP &8» &3The Black Smith &fis used to combine the custom enchantments from items. &a/blacksmith"
+  '29':
+  - "&c&lTIP &8» &fStore your valuables in a &aVault&f! &a/pv <#>"
+  '30':
+  - "&c&lTIP &8» &fSell and Buy at the &b&lAuction House&f! &a/ah &falso check out &a/ah help"
