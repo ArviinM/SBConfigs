@@ -1,0 +1,11 @@
+# Set to none for no prefixes
+PREFIX: "&6&lBattlePass &8»"
+
+LEVEL-UP: "&7You've &6leved&7 up to level &6{level}&7!"
+CHALLENGE-COMPLETED: "&7You've completed a &6challenge &7and gained &6 a point&7!"
+CHALLENGE-PROGRESS: "&8[&6{progress}&8/&6{amount}&8] &6{challenge}"
+LEVEL-LOW: "&7Your &6level&7 is to &6low&7."
+WEEK-NOT-UNLOCKED: "&7This &6week&7 has not been unlocked!"
+REWARD-CLAIMED: "&7You've claimed a &6reward&7!"
+REWARD-ALREADY-CLAIMED: "&7You've already &6claimed &7this reward!"
+BROADCAST-REWARD-CLAIMED: "&6{player} &7has claimed a &6reward&7 from the &6BattlePass&7."

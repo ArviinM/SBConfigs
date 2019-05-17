@@ -1,0 +1,414 @@
+reward-2:
+  desc: '&7Reward: &a$2''500'
+  cmd:
+  - eco give {player} 2500
+reward-3:
+  desc: '&7Reward: &a$5''000'
+  cmd:
+  - eco give {player} 5000
+reward-4:
+  desc: '&7Reward: &a$7''500'
+  cmd:
+  - eco give {player} 7500
+reward-5:
+  desc: '&7Reward: &a$10''000'
+  cmd:
+  - eco give {player} 10000
+reward-6:
+  desc: '&7Reward: &a$15''000'
+  cmd:
+  - eco give {player} 15000
+reward-7:
+  desc: '&7Reward: &a$20''000'
+  cmd:
+  - eco give {player} 20000
+reward-8:
+  desc: '&7Reward: &a$22''500'
+  cmd:
+  - eco give {player} 22500
+reward-9:
+  desc: '&7Reward: &a$25''000'
+  cmd:
+  - eco give {player} 25000
+reward-10:
+  desc: '&7Reward: &a$30''000'
+  cmd:
+  - eco give {player} 30000
+reward-11:
+  desc: '&7Reward: &732x &bdiamond &7blocks'
+  cmd:
+  - give {player} dblock 32
+reward-12:
+  desc: '&7Reward: &71x &5Magma &7Key'
+  cmd:
+  - cc give p magma 1 {player}
+reward-13:
+  desc: '&7Reward: &71x &aPhantom &7kit'
+  cmd:
+  - kit elite {player}
+reward-14:
+  desc: '&7Reward: &a$50''000'
+  cmd:
+  - eco give {player} 50000
+reward-15:
+  desc: '&7Reward: &71x &eZombie &fSpawner'
+  cmd:
+  - ss give {player} zombie 1
+reward-16:
+  desc: '&7Reward: &72x &5Magma &7key'
+  cmd:
+  - cc give p magma 2 {player}
+reward-17:
+  desc: '&7Reward: &75x &eZombie &fSpawner'
+  cmd:
+  - ss give {player} zombie 5
+reward-18:
+  desc: '&7Reward: &71x &6Warlock&7 kit'
+  cmd:
+  - kit warlock {player}
+reward-19:
+  desc: '&7Reward: &71x Gkit &6&lFighter'
+  cmd:
+  - gkit fighter {player}
+reward-20:
+  desc: '&7Reward: &73x &6Blaze &fSpawners'
+  cmd:
+  - ss give {player} blaze 3
+reward-21:
+  desc: '&7Reward: &75x &6Blaze &fSpawners'
+  cmd:
+  - ss give {player} blaze 5
+reward-22:
+  desc: '&7Reward: &73x &eCreeper &fSpawner'
+  cmd:
+  - ss give {player} creeper 3
+reward-23:
+  desc: '&7Reward: &75x &eCreeper &fSpawner'
+  cmd:
+  - ss give {player} creeper 5
+reward-24:
+  desc: '&7Reward: &71x Kit &6&lGhoul'
+  cmd:
+  - kit ghoul {player}
+reward-25:
+  desc: '&7Reward: &73x &eIron Golem &fSpawners'
+  cmd:
+  - ss give {player} irongolem 3
+reward-26:
+  desc: '&7Reward: &73x &2Creeper &7eggs'
+  cmd:
+  - give {player} creeperegg 3
+reward-27:
+  desc: '&7Reward: &71x Gkit &9&lArcher'
+  cmd:
+  - gkit archer {player}
+reward-28:
+  desc: '&7Reward: &21x SellWand'
+  cmd:
+  - sellwand give {player}
+reward-29:
+  desc: '&7Reward: &a$1''000''000'
+  cmd:
+  - eco give {player} 1000000
+reward-30:
+  desc: '&7Reward: &b64x diamond blocks'
+  cmd:
+  - give {player} dblock 64
+reward-31:
+  desc: '&7Reward: &71x Gkit &4&lMiner'
+  cmd:
+  - gkit beatmaster {player}
+reward-32:
+  desc: '&7Reward: &71x &6Legendary &7key'
+  cmd:
+  - cc give p volcanic 1 {player}
+reward-33:
+  desc: '&7Reward: &710x &e&lSURPRISE &f&lSPAWNERS'
+  cmd:
+  - ss give {player} pig 4
+  - ss give {player} cow 3
+  - ss give {player} blaze 3
+reward-34:
+  desc: '&7Reward: &a$1''500''000'
+  cmd:
+  - eco give {player} 1500000
+reward-35:
+  desc: '&7Reward: &7Permanent &6&lFighter &7Gkit'
+  cmd:
+  - pex user {player} add crazyenchantments.gkitz.Fighter
+reward-36:
+  desc: '&7Reward: &a$1''750''000'
+  cmd:
+  - eco give {player} 1500000
+reward-37:
+  desc: '&7Reward: &71x Kit &c&lDemon'
+  cmd:
+  - kit demon {player}
+reward-38:
+  desc: '&7Reward: &22x SellWand'
+  cmd:
+  - sellwands give {player}
+  - sellwands give {player}
+reward-39:
+  desc: '&7Reward: &764x diamond blocks, 12x emerald blocks'
+  cmd:
+  - give {player} diamondblock 64
+  - give {player} emeraldblock 12
+reward-40:
+  desc: '&7Reward: &73x &cDevilish &7key'
+  cmd:
+  - cc give p devilish 3 {player}
+reward-41:
+  desc: '&7Reward: &a$2''000''000'
+  cmd:
+  - eco give {player} 2000000
+reward-42:
+  desc: '&7Reward: &76x &eCreeper &fSpawner'
+  cmd:
+  - ss give {player} creeper 6
+reward-43:
+  desc: '&7Reward: &73x &eIron Golem &fSpawners'
+  cmd:
+  - ss give {player} irongolem 3
+reward-44:
+  desc: '&7Reward: &75x &bBeacons'
+  cmd:
+  - give {player} beacon 5
+reward-45:
+  desc: '&7Reward: &78x &eCreeper &fSpawner'
+  cmd:
+  - ss give {player} creeper 8
+reward-46:
+  desc: '&7Reward: &78x &e&lSURPRISE &f&lSPAWNERS'
+  cmd:
+  - ss give {player} cow 2
+  - ss give {player} zombie 3
+  - ss give {player} blaze 2
+  - ss give {player} enderman 1
+reward-47:
+  desc: '&7Reward: &a$2''500''000'
+  cmd:
+  - eco give {player} 2500000
+reward-48:
+  desc: '&7Reward: &7Access to unlimited houses'
+  cmd:
+  - pex user {player} add essentials.sethome.multiple
+  - pex user {player} add essentials.sethome.multiple.unlimited
+reward-49:
+  desc: '&7Reward: &a$3''000''000'
+  cmd:
+  - eco give {player} 3000000
+reward-51:
+  desc: '&7Reward: &71x &aNecromancer &7key'
+  cmd:
+  - cc give p necromancer 1 {player}
+reward-52:
+  desc: '&7Reward: &72x &eBlaze &fSpawner'
+  cmd:
+  - ss give {player} blaze 2
+reward-53:
+  desc: '&7Reward: &74x &eIron Golem &fSpawners'
+  cmd:
+  - ss give {player} irongolem 4
+reward-54:
+  desc: '&7Reward: &72x &6Necromancer &7key'
+  cmd:
+  - cc give p Necromancer 2 {player}
+reward-55:
+  desc: '&7Reward: &a128 emerald blocks'
+  cmd:
+  - give {player} emeraldblock 128
+reward-56:
+  desc: '&7Reward: 2x &6&lEnchanted golden apples'
+  cmd:
+  - give {player} 322:1 2
+reward-57:
+  desc: '&7Reward: &764x golden apples'
+  cmd:
+  - give {player} 322 64
+reward-58:
+  desc: '&7Reward: &72x money boosters'
+  cmd:
+  - booster give {player} money 2
+reward-59:
+  desc: '&7Reward: &72x exp boosters'
+  cmd:
+  - booster give {player} exp 2
+reward-60:
+  desc: '&7Reward: &72x shard boosters'
+  cmd:
+  - booster give {player} shard_booster 2
+reward-61:
+  desc: '&7Reward: &72x double drop boosters'
+  cmd:
+  - booster give {player} double_drop 2
+reward-62:
+  desc: '&7Reward: &710x &e&lSURPRISE &f&lSPAWNERS'
+  cmd:
+  - ss give {player} cow 2
+  - ss give {player} zombie 3
+  - ss give {player} spider 2
+  - ss give {player} blaze 2
+  - ss give {player} enderman 1
+reward-63:
+  desc: '&7Reward: &7Permanent &9&lArcher &7Gkit'
+  cmd:
+  - pex user {player} add crazyenchantments.gkitz.Archer
+reward-64:
+  desc: '&7Reward: &a$5''000''000'
+  cmd:
+  - eco give {player} 5000000
+reward-65:
+  desc: '&7Reward: &22x SellWand'
+  cmd:
+  - sellwands give {player}
+  - sellwands give {player}
+reward-66:
+  desc: '&7Reward: &b128x diamondblocks'
+  cmd:
+  - give {player} diamondblock 128
+reward-67:
+  desc: '&7Reward: &71x Kit &4&lOverlord'
+  cmd: kit overlord {player}
+reward-68:
+  desc: '&7Reward: &73x &6Devilish &7key'
+  cmd:
+  - crate key {player} Devilish 3
+reward-69:
+  desc: '&7Reward: &75x &5&lVolcanic &7key'
+  cmd:
+  - cc give p volcanic 5 {player}
+reward-70:
+  desc: '&7Reward: &31x shard generator tier 3'
+  cmd:
+  - shard givegen {player} 3
+reward-71:
+  desc: '&7Reward: &71x &6harvester &7hoe'
+  cmd:
+  - hoe give {player}
+reward-72:
+  desc: '&7Reward: &320k shards'
+  cmd:
+  - shard give {player} 20000
+reward-73:
+  desc: '&7Reward: &78x &bBeacons'
+  cmd:
+  - give {player} beacon 8
+reward-74:
+  desc: '&7Reward: &710x &eIron Golem &fSpawners'
+  cmd:
+  - ss give {player} irongolem 10
+reward-75:
+  desc: '&7Reward: &73x &3Shard boosters'
+  cmd:
+  - booster give {player} shard_booster 3
+reward-76:
+  desc: '&7Reward: &715x &eCreeper &fSpawner'
+  cmd:
+  - ss give {player} creeper 15
+reward-77:
+  desc: '&7Reward: &a$8''000''000'
+  cmd:
+  - eco give {player} 8000000
+reward-78:
+  desc: '&7Reward: &a$10''000''000'
+  cmd:
+  - eco give {player} 10000000
+reward-79:
+  desc: '&7Reward: &73x double drop boosters'
+  cmd:
+  - booster give {player} double_drop 3
+reward-80:
+  desc: '&7Reward: &712x &eIron Golem- and &710x &eCreeper &fSpawner'
+  cmd:
+  - ss give {player} iron 12
+  - ss give {player} creeper 10
+reward-81:
+  desc: '&7Reward: &6All Tags'
+  cmd:
+  - pex user {player} add deluxetags.tag.*
+reward-82:
+  desc: '&7Reward: &75x &6Necromancer &7keys'
+  cmd:
+  - crate key {player} necromancer 5
+reward-83:
+  desc: '&7Reward: &74x Ghast spawners'
+  cmd:
+  - ss give {player} ghast 4
+reward-84:
+  desc: '&7Reward: &7OP Helmet'
+  cmd:
+  - give {player} diamondhelmet 1 protection:4, unbreaking:4
+reward-85:
+  desc: '&7Reward: &7OP Boots'
+  cmd:
+  - give {player} diamondboots 1 protection:4, unbreaking:4
+reward-86:
+  desc: '&7Reward: &7OP Leggings'
+  cmd:
+  - give {player} diamondleggings 1 protection:4, unbreaking:4
+reward-87:
+  desc: '&7Reward: &7OP Chestplate'
+  cmd:
+  - give {player} diamondchestplate 1 protection:4, unbreaking:4
+reward-88:
+  desc: '&7Reward: &7OP Sword'
+  cmd:
+  - give {player} diamondsword 1 sharpness:4, fire_aspect:2, looting:3, durability:3
+reward-89:
+  desc: '&7Reward: &715x &eIron Golem &fSpawners and &714x &eCreeper &fSpawner'
+  cmd:
+  - ss give {player} iron 15
+  - ss give {player} creeper 14
+reward-90:
+  desc: '&7Reward: &75x &eIron Golem &fSpawners'
+  cmd:
+  - ss give {player} iron 5
+reward-91:
+  desc: '&7Reward: &73x &aMoney &7Booster'
+  cmd:
+  - booster give {player} money 3
+reward-92:
+  desc: '&7Reward: &73x &aExp &7Booster'
+  cmd:
+  - booster give {player} exp 3
+reward-93:
+  desc: '&7Reward: &73x Harvester hoe'
+  cmd:
+  - harvesterhoe give {player} 3
+reward-94:
+  desc: '&7Reward: &71000 &eexp &7levels'
+  cmd:
+  - xp give {player} 1000
+reward-95:
+  desc: '&7Reward: &7130 &eexp &7levels'
+  cmd:
+  - xp give {player} 58000
+reward-96:
+  desc: '&7Reward: &7Kit &c&lOverlord'
+  cmd:
+  - kit Overlord {player}
+reward-97:
+  desc: '&7Reward: &f&lAccess to fly'
+  cmd:
+  - pex user {player} add essentials.fly
+  - pex user {player} add essentials.fly.safelogin
+reward-98:
+  desc: '&7Reward: &75x &aMoney &7Booster'
+  cmd:
+  - booster give {player} money 5
+reward-99:
+  desc: '&7Reward: &a$10''000''000'
+  cmd:
+  - eco give {player} 10000000
+reward-100:
+  desc: '&d&l30x &e&lSURPRISE &f&lSPAWNERS'
+  cmd:
+  - lp user {player} permission set tags.tag.100 global
+  - ss give {player} cow 5
+  - ss give {player} zombie 3
+  - ss give {player} spider 2
+  - ss give {player} blaze 10
+  - ss give {player} enderman 5
+  - ss give {player} ghast 5
+  - cc give p Legendary 5 {player}

@@ -1,0 +1,528 @@
+week-1:
+  '0':
+    type: KILL
+    entity-type: pig
+    material: grilled_pork
+    amount: 750
+    progress:
+  '1':
+    type: MINE
+    material: cobblestone
+    amount: 2000
+    progress:
+  '2':
+    type: MINE
+    material: stone
+    amount: 2000
+    progress:
+  '3':
+    type: CRAFT
+    material: cake
+    amount: 64
+    progress:
+  '4':
+    type: MINE
+    material: iron_ore
+    amount: 1500
+    progress: []
+  '5':
+    type: MINE
+    material: coal_ore
+    amount: 1500
+    progress: []
+  '6':
+    type: MINE
+    material: gold_ore
+    amount: 1500
+    progress: []
+  '7':
+    type: MINE
+    material: diamond_ore
+    amount: 1500
+    progress: []
+  '8':
+    type: MINE
+    material: emerald_ore
+    amount: 1500
+    progress: []
+  '9':
+    type: USE
+    item-needed: water_bucket
+    material: water_bucket
+    amount: 10
+    pprogress: []
+  '10':
+    type: USE
+    item-needed: lava_bucket
+    material: lava_bucket
+    amount: 10
+    progress: []
+  '11':
+    type: KILL
+    material: arrow
+    entity-type: skeleton
+    amount: 50
+    progress: []
+  '13':
+    type: THROW
+    material: snow_ball
+    entity-type: snowball
+    amount: 200
+    progress: []
+  '14':
+    type: KILL
+    material: cooked_beef
+    entity-type: cow
+    amount: 1000
+    progress: []
+  '15':
+    type: PLACE
+    material: mob_spawner
+    amount: 150
+    progress: []
+  '16':
+    type: THROW
+    material: egg
+    entity-type: egg
+    amount: 1200
+    progress: []
+week-2:
+  '0':
+    type: CRAFT
+    material: furnace
+    amount: 9
+    progress: []
+  '1':
+    type: PLACE
+    material: seeds
+    amount: 16
+    progress: []
+  '2':
+    type: MINE
+    material: obsidian
+    amount: 20
+    progress: []
+  '3':
+    type: PLACE
+    material: stone
+    amount: 1000
+    progress: []
+  '4':
+    type: PLACE
+    material: cobblestone
+    amount: 1000
+    progress: []
+  '5':
+    type: CRAFT
+    material: flint_and_steel
+    amount: 25
+    progress: []
+  '6':
+    type: MINE
+    material: log
+    amount: 500
+    progress: []
+  '7':
+    type: PLACE
+    material: sapling
+    amount: 64
+    progress: []
+  '8':
+    type: EAT
+    material: cooked_chicken
+    amount: 100
+    progress: []
+  '9':
+    type: EAT
+    material: cooked_fish
+    amount: 100
+    progress: []
+  '10':
+    type: CRAFT
+    material: workbench
+    amount: 15
+    progress: []
+  '11':
+    type: MINE
+    material: coal_ore
+    amount: 245
+    progress: []
+  '12':
+    type: MINE
+    material: iron_ore
+    amount: 245
+    progress: []
+  '13':
+    type: KILL
+    entity-type: chicken
+    material: cooked_chicken
+    amount: 128
+    progress: []
+  '14':
+    type: PLACE
+    material: cactus
+    amount: 80
+    progress: []
+  '15':
+    type: CRAFT
+    material: tnt
+    amount: 64
+    progress: []
+  '16':
+    type: KILL
+    entity-type: IRON_GOLEM
+    material: iron_ingot
+    amount: 1000
+    progress: []
+week-3:
+  '0':
+    type: KILL
+    entity-type: blaze
+    material: blaze_powder
+    amount: 1000
+    progress: []
+  '1':
+    type: EAT
+    material: cooked_beef
+    amount: 128
+    progress: []
+  '2':
+    type: PLACE
+    material: emerald_block
+    amount: 1000
+    progress: []
+  '3':
+    type: MINE
+    material: coal_ore
+    amount: 1500
+    progress: []
+  '5':
+    type: KILL
+    entity-type: creeper
+    material: sulphur
+    amount: 500
+    progress: []
+  '6':
+    type: USE
+    item-needed: diamond_hoe
+    material: diamond_hoe
+    amount: 128
+    progress: []
+  '7':
+    type: KILL
+    entity-type: spider
+    material: spider_eye
+    amount: 1000
+    progress: []
+  '8':
+    type: KILL
+    entity-type: zombie
+    material: rotten_flesh
+    amount: 1000
+    progress: []
+  '9':
+    type: MINE
+    material: cobblestone
+    amount: 5000
+    progress: []
+  '10':
+    type: MINE
+    material: stone
+    amount: 5000
+    progress: []
+  '11':
+    type: KILL
+    entity-type: enderman
+    material: ender_pearl
+    amount: 1000
+    progress: []
+  '12':
+    type: EAT
+    material: apple
+    amount: 32
+    progress: []
+  '13':
+    type: EAT
+    material: golden_apple
+    amount: 64
+    progress: []
+  '14':
+    type: PLACE
+    material: rails
+    amount: 32
+    progress: []
+  '15':
+    type: PLACE
+    material: powered_rail
+    amount: 32
+    progress: []
+  '16':
+    type: PLACE
+    material: bookshelf
+    amount: 128
+    progress: []
+week-4:
+  '0':
+    type: EAT
+    material: cooked_beef
+    amount: 64
+    progress: []
+  '1':
+    type: MINE
+    material: iron_ore
+    amount: 1500
+    progress: []
+  '2':
+    type: PLACE
+    material: hopper
+    amount: 128
+    progress: []
+  '3':
+    type: PLACE
+    material: stone
+    amount: 2500
+    progress: []
+  '4':
+    type: KILL
+    entity-type: enderman
+    material: ender_pearl
+    amount: 200
+    progress: []
+  '5':
+    type: KILL
+    entity-type: blaze
+    material: blaze_powder
+    amount: 1500
+    progress: []
+  '6':
+    type: MINE
+    material: emerald_ore
+    amount: 1000
+    progress: []
+  '7':
+    type: KILL
+    entity-type: creeper
+    material: sulphur
+    amount: 750
+    progress: []
+  '8':
+    type: EAT
+    material: golden_apple
+    amount: 32
+    progress: []
+  '9':
+    type: THROW
+    entity-type: arrow
+    material: arrow
+    amount: 1000
+    progress: []
+  '10':
+    type: PLACE
+    material: mob_spawner
+    amount: 64
+    progress: []
+  '11':
+    type: PLACE
+    material: torch
+    amount: 128
+    progress: []
+  '12':
+    type: THROW
+    entity-type: snowball
+    material: snow_ball
+    amount: 500
+    progress: []
+  '13':
+    type: EAT
+    material: baked_potato
+    amount: 128
+    progress: []
+  '14':
+    type: EAT
+    material: cooked_beef
+    amount: 128
+    progress: []
+  '15':
+    type: MINE
+    material: diamond_ore
+    amount: 128
+    progress: []
+  '16':
+    type: MINE
+    material: log
+    amount: 500
+    progress: []
+week-5:
+  '0':
+    type: PLACE
+    material: diamond_block
+    amount: 1000
+    progress: []
+  '1':
+    type: USE
+    item-needed: water_bucket
+    material: water_bucket
+    amount: 20
+    progress: []
+  '2':
+    type: USE
+    item-needed: lava_bucket
+    material: lava_bucket
+    amount: 20
+    progress: []
+  '3':
+    type: PLACE
+    material: gold_block
+    amount: 1000
+    progress: []
+  '4':
+    type: PLACE
+    material: iron_block
+    amount: 1000
+    progress: []
+  '5':
+    type: PLACE
+    material: emerald_block
+    amount: 1000
+    progress: []
+  '6':
+    type: PLACE
+    material: grass
+    amount: 1000
+    progress: []
+  '7':
+    type: PLACE
+    material: vine
+    amount: 12
+    progress: []
+  '8':
+    type: PLACE
+    material: redstone_block
+    amount: 1000
+    progress: []
+  '9':
+    type: PLACE
+    material: coal_block
+    amount: 1000
+    progress: []
+  '10':
+    type: MINE
+    material: coal_ore
+    amount: 1000
+    progress: []
+  '11':
+    type: kill
+    entity-type: creeper
+    material: sulphur
+    amount: 500
+    progress: []
+  '12':
+    type: kill
+    entity-type: blaze
+    material: blaze_powder
+    amount: 500
+    progress: []
+  '13':
+    type: kill
+    entity-type: IRON_GOLEM
+    material: iron_ingot
+    amount: 500
+    progress: []
+  '14':
+    type: kill
+    entity-type: chicken
+    material: cooked_chicken
+    amount: 500
+    progress: []
+  '15':
+    type: kill
+    entity-type: slime
+    material: slime_ball
+    amount: 500
+    progress: []
+week-6:
+  '0':
+    type: PLACE
+    material: slime_block
+    amount: 64
+    progress: []
+  '1':
+    type: PLACE
+    material: glowstone
+    amount: 128
+    progress: []
+  '2':
+    type: USE
+    item-needed: flint_and_steel
+    material: tnt
+    amount: 640
+    progress: []
+  '3':
+    type: KILL
+    entity-type: blaze
+    material: blaze_powder
+    amount: 2000
+    progress: []
+  '4':
+    type: THROW
+    entity-type: snowball
+    material: snow_ball
+    amount: 1000
+    progress: []
+  '5':
+    type: THROW
+    entity-type: firework
+    material: firework
+    amount: 500
+    progress: []
+  '6':
+    type: THROW
+    entity-type: arrow
+    material: arrow
+    amount: 1200
+    progress: []
+  '7':
+    type: PLACE
+    material: jukebox
+    amount: 40
+    progress: []
+  '8':
+    type: PLACE
+    material: redstone
+    amount: 500
+    progress: []
+  '9':
+    type: PLACE
+    material: lever
+    amount: 10
+    progress: []
+  '10':
+    type: MINE
+    material: gold_ore
+    amount: 250
+    progress: []
+  '11':
+    type: MINE
+    material: emerald_ore
+    amount: 50
+    progress: []
+  '12':
+    type: PLACE
+    material: diamond_block
+    amount: 1000
+    progress: []
+  '13':
+    type: PLACE
+    material: iron_block
+    amount: 1000
+    progress: []
+  '14':
+    type: PLACE
+    material: emerald_block
+    amount: 1000
+    progress: []
+  '15':
+    type: PLACE
+    material: gold_block
+    amount: 1000
+    progress: []

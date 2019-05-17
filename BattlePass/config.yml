@@ -1,0 +1,93 @@
+# 
+# If you configure this make sure
+# you have enough dates!
+
+ENABLED: true
+SEASON: 2
+START-DATE: 2019-04-15 00:00
+WEEKS:
+- 2019-04-22 00:00
+- 2019-04-29 00:00
+- 2019-05-06 00:00
+- 2019-05-13 00:00
+- 2019-05-20 00:00
+TOTAL-WEEKS: 6
+NOTIFY-PROGRESS: true
+LEVEL-GAIN-AFTER-QUEST: 1
+week-1:
+  slot: 10
+week-2:
+  slot: 12
+week-3:
+  slot: 14
+week-4:
+  slot: 16
+week-5:
+  slot: 30
+week-6:
+  slot: 32
+WEEK-ITEM:
+  name: '&6&lWeek {week}'
+  material: enchanted_book
+  damage: 0
+  enchant: true
+  lore:
+  - ''
+  - '&e&lStatus'
+  - '{status}'
+MAIN-INVENTORY:
+  title: '&lYou &6Level &r(&6{level}&r)'
+  ACTIVE-ITEM:
+    name: '&7Level: &6{level}'
+  REWARDS-ITEM:
+    name: '&6&lRewards'
+    material: gold_ingot
+    damage: 0
+  PROGRESS-ITEM:
+    name: '&6&lProgress'
+    material: nether_star
+    damage: 0
+    unlocked-lore:
+    - ''
+    - '&eYou'
+    - '  &8» &7Level: &6{level}'
+    - '  &8» &7Next level: &6{nextlevel}'
+    - ''
+    - '&eDates'
+    - '  &8» &7Season: &6{season}'
+    - '  &8» &7Current week: &6{week}'
+    - ''
+    locked-lore:
+    - '&cLocked'
+    - ''
+    - '&7Unlock the &6BattlePass &7and'
+    - '&7get access to &6unique&7 challenges.'
+    - '&7and amazing &6rewards&7!'
+    - ''
+    - '&7A new set of &6challenges&7 unlocks'
+    - '&7every &6week&7!'
+    - ''
+    - '&7Purchase &6@ &7wessex.tebex.io'
+  CHALLENGES-ITEM:
+    name: '&6&lChallenges'
+    material: enchanted_book
+    damage: 0
+REWARDS-INVENTORY:
+  title: '&lRewards'
+  item:
+    name: '&7Level: &6{level}'
+CHALLENGES-INVENTORY:
+  title: '&lChallenges'
+TRANSLATE:
+  NEXT-PAGE-MSG: '&7Next page &6->'
+  LAST-PAGE-MSG: '&6<- &7Last page'
+  LOCKED-STATUS: ' &8[&cLOCKED&8]'
+  COMPLETED-STATUS: ' &8[&aCOMPLETED&8]'
+  PENDING-STATUS: ' &8[&cPENDING&8]'
+  ACTIVE-STATUS: ' &8[&aACTIVE&8]'
+  BATTLEPASS-COMPLETED: '&7You''ve completed the &6BattlePass'
+  STATUS-LOCKED: '&cUnlocks in {time}'
+  STATUS-UNLOCKED: '&aUnlocked'
+  CHALLENGE: '&6Challenge'
+  TASK: '&6Task &8»'
+  PROGRESS: '&6Progress &8»'
