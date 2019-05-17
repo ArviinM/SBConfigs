@@ -745,111 +745,6 @@ Crate:
       Messages:
         - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n2x Protection Rune&r&c.'
       BlackListed-Permissions: []
-    39:
-      DisplayName: '&8◆ &b&nRank:&r &8[&aPhantom&8] &8◆'
-      DisplayItem: '399'
-      DisplayAmount: 1
-      Lore:
-        - "&7This will give you a voucher to"
-        - "&7unlock the rank on this server."
-        - "&r"
-        - "&4◆ &7Chance: &b1%"
-      MaxRange: 100
-      Chance: 1
-      Firework: true
-      Glowing: true
-      Player: ''
-      Unbreakable: false
-      Commands:
-        - 'voucher give %Player% PhantomRank 1'
-        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Phantom Rank&r&c.'
-      Messages:
-        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Phantom Rank&r&c.'
-      BlackListed-Permissions: []
-    40:
-      DisplayName: '&8◆ &b&nRank:&r &8[&dWarlock&8] &8◆'
-      DisplayItem: '399'
-      DisplayAmount: 1
-      Lore:
-        - "&7This will give you a voucher to"
-        - "&7unlock the rank on this server."
-        - "&r"
-        - "&4◆ &7Chance: &b0.75%"
-      MaxRange: 10000
-      Chance: 75
-      Firework: true
-      Glowing: true
-      Player: ''
-      Unbreakable: false
-      Commands:
-        - 'voucher give %Player% WarlockRank 1'
-        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Warlock Rank&r&c.'
-      Messages:
-        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Warlock Rank&r&c.'
-      BlackListed-Permissions: []
-    41:
-      DisplayName: '&8◆ &b&nRank:&r &8[&6Ghoul&8] &8◆'
-      DisplayItem: '399'
-      DisplayAmount: 1
-      Lore:
-        - "&7This will give you a voucher to"
-        - "&7unlock the rank on this server."
-        - "&r"
-        - "&4◆ &7Chance: &b0.5%"
-      MaxRange: 1000
-      Chance: 5
-      Firework: true
-      Glowing: true
-      Player: ''
-      Unbreakable: false
-      Commands:
-        - 'voucher give %Player% GhoulRank 1'
-        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Ghoul Rank&r&c.'
-      Messages:
-        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Ghoul Rank&r&c.'
-      BlackListed-Permissions: []
-    42:
-      DisplayName: '&8◆ &b&nRank:&r &8[&cDemon&8] &8◆'
-      DisplayItem: '399'
-      DisplayAmount: 1
-      Lore:
-        - "&7This will give you a voucher to"
-        - "&7unlock the rank on this server."
-        - "&r"
-        - "&4◆ &7Chance: &b0.2%"
-      MaxRange: 1000
-      Chance: 2
-      Firework: true
-      Glowing: true
-      Player: ''
-      Unbreakable: false
-      Commands:
-        - 'voucher give %Player% DemonRank 1'
-        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Demon Rank&r&c.'
-      Messages:
-        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Demon Rank&r&c.'
-      BlackListed-Permissions: []
-    43:
-      DisplayName: '&8◆ &b&nRank:&r &8[&6&k;&eOverlord&6&k;&8] &8◆'
-      DisplayItem: '399'
-      DisplayAmount: 1
-      Lore:
-        - "&7This will give you a voucher to"
-        - "&7unlock the rank on this server."
-        - "&r"
-        - "&4◆ &7Chance: &b0.1%"
-      MaxRange: 1000
-      Chance: 1
-      Firework: true
-      Glowing: true
-      Player: ''
-      Unbreakable: false
-      Commands:
-        - 'voucher give %Player% OverlordRank 1'
-        - 'broadcast &7%Player% &chas opened a &4&nNecromancer Crate&r &cand won &4&n1x Overlord Rank&r&c.'
-      Messages:
-        - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Overlord Rank&r&c.'
-      BlackListed-Permissions: []
     44:
       DisplayName: '&8◆ &c&nGKit:&r &c"&1Fighter&c" &8◆'
       DisplayItem: '378'
@@ -997,3 +892,60 @@ Crate:
     #  Messages:
     #    - '&c(!) You have opened a &4&nNecromancer Crate&r &cand won &4&n1x Spring GKit&r&c.'
     #  BlackListed-Permissions: []
+    100:
+      DisplayName: '&b&lGENERATOR TIER 1 &7(Place down)'
+      DisplayItem: 'ENDER_PORTAL_FRAME'
+      DisplayAmount: 1
+      Lore:
+        - ""
+        - "&7&o(( This generator holds the ability to automatically"
+        - "&7&ogenerate shards and drop it for you to claim! ))"
+        - ""
+        - "&3* &b&lGENERATOR TYPE &fShard generator"
+        - ""
+        - "&3* &b&lSPEED &f60 seconds"
+        - ""
+      MaxRange: 50
+      Chance: 3
+      Firework: true
+      Glowing: true
+      Commands:
+        - 'shards givegen %player% 1 1'
+    101:
+      DisplayName: '&b&lGENERATOR TIER 2 &7(Place down)'
+      DisplayItem: 'ENDER_PORTAL_FRAME'
+      DisplayAmount: 1
+      Lore:
+        - ""
+        - "&7&o(( This generator holds the ability to automatically"
+        - "&7&ogenerate shards and drop it for you to claim! ))"
+        - ""
+        - "&3* &b&lGENERATOR TYPE &fShard generator"
+        - ""
+        - "&3* &b&lSPEED &f60 seconds"
+        - ""
+      MaxRange: 50
+      Chance: 3
+      Firework: true
+      Glowing: true
+      Commands:
+        - 'shards givegen %player% 2 1'
+    102:
+      DisplayName: '&b&lGENERATOR TIER 3 &7(Place down)'
+      DisplayItem: 'ENDER_PORTAL_FRAME'
+      DisplayAmount: 1
+      Lore:
+        - ""
+        - "&7&o(( This generator holds the ability to automatically"
+        - "&7&ogenerate shards and drop it for you to claim! ))"
+        - ""
+        - "&3* &b&lGENERATOR TYPE &fShard generator"
+        - ""
+        - "&3* &b&lSPEED &f60 seconds"
+        - ""
+      MaxRange: 50
+      Chance: 3
+      Firework: true
+      Glowing: true
+      Commands:
+        - 'shards givegen %player% 3 1'

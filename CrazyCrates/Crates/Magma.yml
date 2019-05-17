@@ -542,3 +542,71 @@ Crate:
       Messages:
         - '&c(!) You have opened a &6&nMagma Crate&r &cand won &6&n2x Rare Enchantment Books&r&c.'
       BlackListed-Permissions: []
+    30:
+      DisplayName: '&6Harvester Hoe'
+      DisplayItem: 'IRON_HOE'
+      DisplayAmount: 1
+      Lore: []
+      MaxRange: 50
+      Chance: 3
+      Firework: true
+      Glowing: true
+      Commands:
+        - 'hoe give %Player% 1'
+    31:
+      DisplayName: '&b&lGENERATOR TIER 1 &7(Place down)'
+      DisplayItem: 'ENDER_PORTAL_FRAME'
+      DisplayAmount: 1
+      Lore:
+        - ""
+        - "&7&o(( This generator holds the ability to automatically"
+        - "&7&ogenerate shards and drop it for you to claim! ))"
+        - ""
+        - "&3* &b&lGENERATOR TYPE &fShard generator"
+        - ""
+        - "&3* &b&lSPEED &f60 seconds"
+        - ""
+      MaxRange: 50
+      Chance: 3
+      Firework: true
+      Glowing: true
+      Commands:
+        - 'shards givegen %player% 1 1'
+    32:
+      DisplayName: '&b&lGENERATOR TIER 2 &7(Place down)'
+      DisplayItem: 'ENDER_PORTAL_FRAME'
+      DisplayAmount: 1
+      Lore:
+        - ""
+        - "&7&o(( This generator holds the ability to automatically"
+        - "&7&ogenerate shards and drop it for you to claim! ))"
+        - ""
+        - "&3* &b&lGENERATOR TYPE &fShard generator"
+        - ""
+        - "&3* &b&lSPEED &f60 seconds"
+        - ""
+      MaxRange: 50
+      Chance: 3
+      Firework: true
+      Glowing: true
+      Commands:
+        - 'shards givegen %player% 2 1'
+    33:
+      DisplayName: '&b&lGENERATOR TIER 3 &7(Place down)'
+      DisplayItem: 'ENDER_PORTAL_FRAME'
+      DisplayAmount: 1
+      Lore:
+        - ""
+        - "&7&o(( This generator holds the ability to automatically"
+        - "&7&ogenerate shards and drop it for you to claim! ))"
+        - ""
+        - "&3* &b&lGENERATOR TYPE &fShard generator"
+        - ""
+        - "&3* &b&lSPEED &f60 seconds"
+        - ""
+      MaxRange: 50
+      Chance: 3
+      Firework: true
+      Glowing: true
+      Commands:
+        - 'shards givegen %player% 3 1'
